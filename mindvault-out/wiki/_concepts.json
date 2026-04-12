@@ -1,4 +1,25 @@
 {
+  "미완료 작업 진행状況 (15:51~)": [
+    "1551-1-ai-thinking.md"
+  ],
+  "1. ai thinking 필터링 🔴 미해결": [
+    "1551-1-ai-thinking.md"
+  ],
+  "2. 재고 입력 기능 ✅ 완료 (b5cd23f)": [
+    "1551-1-ai-thinking.md"
+  ],
+  "3. 출고량 확인 ✅ 이미 구현됨": [
+    "1551-1-ai-thinking.md"
+  ],
+  "4. ai 생산 추천 ✅ 이미 구현됨": [
+    "1551-1-ai-thinking.md"
+  ],
+  "5. 에이전트 위임 체계 🔴 미구현": [
+    "1551-1-ai-thinking.md"
+  ],
+  "6. obsidian mcp 플러그인 🔴 미완료": [
+    "1551-1-ai-thinking.md"
+  ],
   "오전 세션 (07:20~09:05)": [
     "2026-04-12-vf-1432.md"
   ],
@@ -42,13 +63,13 @@
     "2026-04-08-vf-claude-code-5-phase.md"
   ],
   "2026-04-12 일반 세션로그": [
-    "2026-04-12-obsidian-vault.md"
-  ],
-  "obsidian vault 구조": [
-    "2026-04-12-obsidian-vault.md"
+    "2026-04-12-openclaw.md"
   ],
   "알이 (openclaw) 정보": [
-    "2026-04-12-obsidian-vault.md"
+    "2026-04-12-openclaw.md"
+  ],
+  "obsidian vault 구조": [
+    "2026-04-12-openclaw.md"
   ],
   "2026-04-06 vf 프로젝트 세션로그": [
     "2026-04-06-vf-github-token.md"
