@@ -1,23 +1,47 @@
 #!/bin/bash
-# NotebookLM 자동 동기화 스크립트
-# 사용법: ./sync-to-notebooklm.sh [파일경로]
+# NotebookLM 자동 업로드 파이프라인
+# 매일 23:00 크론 실행
 
 NOTEBOOK_ID="461665a7-ed90-4307-8649-650fc6ac3e34"
 VAULT_DIR="/tmp/obsidian-vault"
+LOG_FILE="$VAULT_DIR/logs/notebooklm_sync.log"
+MAX_RETRIES=3
 
-if [ -n "$1" ]; then
-  # 특정 파일 업로드
-  nlm source add "$NOTEBOOK_ID" --file "$1" --title "$(basename "$1")"
-  exit $?
+mkdir -p "$VAULT_DIR/logs"
+echo "========================================" >> "$LOG_FILE"
+echo "[$(date '+%Y-%m-%d %H:%M:%S')] 자동 업로드 시작" >> "$LOG_FILE"
+
+# 최근 24시간 내 수정된 .md 파일
+CHANGED_FILES=$(find "$VAULT_DIR" -type f -name "*.md" -not -path "*/.git/*" -not -path "*/.obsidian/*" -mtime -1)
+
+if [ -z "$CHANGED_FILES" ]; then
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] 변경된 파일 없음" >> "$LOG_FILE"
+    exit 0
 fi
 
-# 오늘 변경된 파일 자동 업로드
-TODAY=$(date +%Y-%m-%d)
-find "$VAULT_DIR" -name "*.md" -type f ! -path "*/.git/*" -newer "$VAULT_DIR/.last_sync" 2>/dev/null | while read f; do
-  rel="${f#$VAULT_DIR/}"
-  echo "업로드: $rel"
-  nlm source add "$NOTEBOOK_ID" --file "$rel" --title "$(basename "$f")" 2>&1
+UPLOADED=0
+FAILED=0
+
+for file in $CHANGED_FILES; do
+    rel="${file#$VAULT_DIR/}"
+    success=0
+    for (( i=1; i<=MAX_RETRIES; i++ )); do
+        output=$(cd "$VAULT_DIR" && nlm source add "$NOTEBOOK_ID" --file "$rel" --title "$(basename "$file")" 2>&1)
+        if [ $? -eq 0 ]; then
+            echo "[$(date '+%H:%M:%S')] ✅ $rel" >> "$LOG_FILE"
+            success=1
+            UPLOADED=$((UPLOADED+1))
+            break
+        else
+            echo "[$(date '+%H:%M:%S')] ⚠️ $rel 실패 ($i/$MAX_RETRIES)" >> "$LOG_FILE"
+            sleep 5
+        fi
+    done
+    if [ $success -eq 0 ]; then
+        echo "[$(date '+%H:%M:%S')] ❌ $rel 최종 실패" >> "$LOG_FILE"
+        FAILED=$((FAILED+1))
+    fi
+    sleep 0.5
 done
 
-touch "$VAULT_DIR/.last_sync"
-echo "동기화 완료"
+echo "[$(date '+%Y-%m-%d %H:%M:%S')] 완료: 성공 $UPLOADED, 실패 $FAILED" >> "$LOG_FILE"
