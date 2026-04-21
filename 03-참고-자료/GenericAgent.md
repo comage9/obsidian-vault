@@ -1,1 +1,0 @@
-https://github.com/lsdefine/GenericAgent.git
