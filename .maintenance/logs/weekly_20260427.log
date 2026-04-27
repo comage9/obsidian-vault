@@ -177,10 +177,6 @@
   발견: weekly_20260420
 
 ✅ 모든 파일이 이미 연결됨
-  File "<string>", line 1
-    rate=; filled=int(rate/10); print('█'*filled + '░'*(10-filled) + f' {rate}%')
-         ^
-SyntaxError: invalid syntax
 
 📄 보고서 생성 완료: /tmp/obsidian-vault/.maintenance/reports/weekly_20260427.md
 🔍 주간 인덱스 검토 완료: 2026. 04. 27. (월) 09:00:02 KST
