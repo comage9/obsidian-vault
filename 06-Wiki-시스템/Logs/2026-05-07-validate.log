@@ -1,0 +1,1838 @@
+[2026-05-07 00:01:38] 🔍 Wiki 검증 시작
+
+
+  ❌ [2026-04-27-세션-카파시-위키-방식-설정.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-04-28-2026-04-27-세션-카파시-위키-방식-설정.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-04-28-2026-04-28-언어-사용-규칙-설정.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-04-29-OpenCode-Hermes-연동-검토.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-01-생산-계획-메모-20260430.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-04-Hermes-Agent-VLLM-Quinn36-세팅.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-201824-테스트-NotebookLM-에이전트.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-201844-테스트-NotebookLM-파이프라인.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Hermes-Agent-VLLM-Quinn36-세팅.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-KI-AI-Trader-시스템-종합-분석-보고서.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Morning-Gap-Trailing-Stop-백테스트-연구.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Morning-Gap-v2-백테스트-결과.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-TRINITY-다중-LLM-오케스트레이션-논문.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-TRINITY-코디에이터-구현.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-2026-05-05-201824-테스트-NotebookLM-에이전트.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-2026-05-05-201844-테스트-NotebookLM-파이프라인.md] 검증 실패: 중복 콘텐츠
+  ⏭️ [2026-05-06-20260505_201935_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_210103_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_220015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_230037_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_231548_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_233057_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_234507_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_000016_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_001556_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_003009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_004520_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_010032_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_011543_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_013049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_014601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_020009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_021552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_023102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_024508_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_030020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_031530_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_033041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_034550_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_040102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_041538_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_043049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_044559_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_050005_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_051512_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_053023_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_054533_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_060041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_061518_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_063026_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_064536_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_070046_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_071558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_073007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_074517_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_080025_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_081601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_083007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_084515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_090024_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_091603_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_093013_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_094525_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_100038_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_101557_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_103005_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_104515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_110026_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_111533_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_113042_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_114554_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_120007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_121558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_123008_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_124516_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_130027_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_131537_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_133049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_134600_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_140009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_142158_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_143009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_144521_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_150031_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_151541_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_153051_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_154601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_160012_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_161505_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_163017_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_164515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_170028_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_171536_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_173046_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_174558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_180009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_181552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_183102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_184511_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_190021_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_191537_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_193053_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_194602_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_200011_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_201506_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_203022_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_204607_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_210020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_211611_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_213015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_214532_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_220102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ❌ [2026-05-06-README.md] 검증 실패: 메타데이터 누락, 출처/참조 없음
+  ❌ [2026-05-06-Wiki-검증-파이프라인-구축.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-자막.md] 검증 실패: 중복 콘텐츠
+  ❌ [키움-API-인증-설정.md] 검증 실패: 중복 콘텐츠
+
+[2026-05-07 00:01:38] 📊 검증 결과
+  ✅ 통과: 0개
+  ❌ 실패: 20개
+  ⏭️ 스킵: 96개 (Telegram 세션)
+
+[2026-05-07 00:01:38] ✅ 검증 완료
+[2026-05-07 02:02:10] 🔍 Wiki 검증 시작
+
+
+  ❌ [2026-04-27-세션-카파시-위키-방식-설정.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-04-28-2026-04-27-세션-카파시-위키-방식-설정.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-04-28-2026-04-28-언어-사용-규칙-설정.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-04-29-OpenCode-Hermes-연동-검토.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-01-생산-계획-메모-20260430.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-04-Hermes-Agent-VLLM-Quinn36-세팅.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-201824-테스트-NotebookLM-에이전트.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-201844-테스트-NotebookLM-파이프라인.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Hermes-Agent-VLLM-Quinn36-세팅.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-KI-AI-Trader-시스템-종합-분석-보고서.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Morning-Gap-Trailing-Stop-백테스트-연구.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Morning-Gap-v2-백테스트-결과.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-TRINITY-다중-LLM-오케스트레이션-논문.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-TRINITY-코디에이터-구현.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-2026-05-05-201824-테스트-NotebookLM-에이전트.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-2026-05-05-201844-테스트-NotebookLM-파이프라인.md] 검증 실패: 중복 콘텐츠
+  ⏭️ [2026-05-06-20260505_201935_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_210103_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_220015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_230037_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_231548_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_233057_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_234507_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_000016_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_001556_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_003009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_004520_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_010032_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_011543_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_013049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_014601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_020009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_021552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_023102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_024508_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_030020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_031530_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_033041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_034550_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_040102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_041538_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_043049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_044559_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_050005_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_051512_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_053023_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_054533_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_060041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_061518_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_063026_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_064536_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_070046_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_071558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_073007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_074517_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_080025_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_081601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_083007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_084515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_090024_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_091603_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_093013_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_094525_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_100038_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_101557_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_103005_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_104515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_110026_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_111533_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_113042_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_114554_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_120007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_121558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_123008_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_124516_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_130027_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_131537_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_133049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_134600_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_140009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_142158_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_143009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_144521_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_150031_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_151541_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_153051_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_154601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_160012_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_161505_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_163017_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_164515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_170028_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_171536_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_173046_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_174558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_180009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_181552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_183102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_184511_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_190021_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_191537_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_193053_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_194602_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_200011_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_201506_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_203022_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_204607_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_210020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_211611_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_213015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_214532_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_220102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ❌ [2026-05-06-README.md] 검증 실패: 메타데이터 누락, 출처/참조 없음
+  ❌ [2026-05-06-Wiki-검증-파이프라인-구축.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-자막.md] 검증 실패: 중복 콘텐츠
+  ❌ [키움-API-인증-설정.md] 검증 실패: 중복 콘텐츠
+
+[2026-05-07 02:02:10] 📊 검증 결과
+  ✅ 통과: 0개
+  ❌ 실패: 20개
+  ⏭️ 스킵: 96개 (Telegram 세션)
+
+[2026-05-07 02:02:10] ✅ 검증 완료
+[2026-05-07 04:00:59] 🔍 Wiki 검증 시작
+
+
+  ❌ [2026-04-27-세션-카파시-위키-방식-설정.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-04-28-2026-04-27-세션-카파시-위키-방식-설정.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-04-28-2026-04-28-언어-사용-규칙-설정.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-04-29-OpenCode-Hermes-연동-검토.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-01-생산-계획-메모-20260430.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-04-Hermes-Agent-VLLM-Quinn36-세팅.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-201824-테스트-NotebookLM-에이전트.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-201844-테스트-NotebookLM-파이프라인.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Hermes-Agent-VLLM-Quinn36-세팅.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-KI-AI-Trader-시스템-종합-분석-보고서.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Morning-Gap-Trailing-Stop-백테스트-연구.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Morning-Gap-v2-백테스트-결과.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-TRINITY-다중-LLM-오케스트레이션-논문.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-TRINITY-코디에이터-구현.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-2026-05-05-201824-테스트-NotebookLM-에이전트.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-2026-05-05-201844-테스트-NotebookLM-파이프라인.md] 검증 실패: 중복 콘텐츠
+  ⏭️ [2026-05-06-20260505_201935_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_210103_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_220015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_230037_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_231548_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_233057_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_234507_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_000016_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_001556_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_003009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_004520_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_010032_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_011543_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_013049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_014601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_020009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_021552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_023102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_024508_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_030020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_031530_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_033041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_034550_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_040102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_041538_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_043049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_044559_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_050005_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_051512_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_053023_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_054533_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_060041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_061518_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_063026_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_064536_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_070046_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_071558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_073007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_074517_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_080025_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_081601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_083007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_084515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_090024_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_091603_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_093013_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_094525_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_100038_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_101557_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_103005_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_104515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_110026_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_111533_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_113042_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_114554_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_120007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_121558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_123008_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_124516_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_130027_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_131537_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_133049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_134600_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_140009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_142158_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_143009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_144521_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_150031_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_151541_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_153051_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_154601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_160012_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_161505_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_163017_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_164515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_170028_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_171536_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_173046_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_174558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_180009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_181552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_183102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_184511_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_190021_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_191537_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_193053_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_194602_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_200011_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_201506_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_203022_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_204607_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_210020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_211611_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_213015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_214532_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_220102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ❌ [2026-05-06-README.md] 검증 실패: 메타데이터 누락, 출처/참조 없음, 중복 콘텐츠
+  ❌ [2026-05-06-Wiki-검증-파이프라인-구축.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-자막.md] 검증 실패: 중복 콘텐츠
+  ⏭️ [2026-05-07-20260506_221647_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_223015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_224547_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_230020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_231521_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_233036_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_234518_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_000031_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_001551_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_003103_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_004538_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_010057_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_011514_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_013029_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_014547_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_020009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ❌ [2026-05-07-README.md] 검증 실패: 메타데이터 누락, 출처/참조 없음
+  ❌ [키움-API-인증-설정.md] 검증 실패: 중복 콘텐츠
+
+[2026-05-07 04:00:59] 📊 검증 결과
+  ✅ 통과: 0개
+  ❌ 실패: 21개
+  ⏭️ 스킵: 112개 (Telegram 세션)
+
+[2026-05-07 04:00:59] ✅ 검증 완료
+[2026-05-07 06:02:54] 🔍 Wiki 검증 시작
+
+
+  ❌ [2026-04-27-세션-카파시-위키-방식-설정.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-04-28-2026-04-27-세션-카파시-위키-방식-설정.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-04-28-2026-04-28-언어-사용-규칙-설정.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-04-29-OpenCode-Hermes-연동-검토.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-01-생산-계획-메모-20260430.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-04-Hermes-Agent-VLLM-Quinn36-세팅.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-201824-테스트-NotebookLM-에이전트.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-201844-테스트-NotebookLM-파이프라인.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Hermes-Agent-VLLM-Quinn36-세팅.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-KI-AI-Trader-시스템-종합-분석-보고서.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Morning-Gap-Trailing-Stop-백테스트-연구.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Morning-Gap-v2-백테스트-결과.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-TRINITY-다중-LLM-오케스트레이션-논문.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-TRINITY-코디에이터-구현.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-2026-05-05-201824-테스트-NotebookLM-에이전트.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-2026-05-05-201844-테스트-NotebookLM-파이프라인.md] 검증 실패: 중복 콘텐츠
+  ⏭️ [2026-05-06-20260505_201935_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_210103_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_220015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_230037_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_231548_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_233057_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_234507_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_000016_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_001556_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_003009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_004520_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_010032_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_011543_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_013049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_014601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_020009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_021552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_023102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_024508_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_030020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_031530_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_033041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_034550_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_040102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_041538_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_043049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_044559_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_050005_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_051512_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_053023_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_054533_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_060041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_061518_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_063026_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_064536_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_070046_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_071558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_073007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_074517_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_080025_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_081601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_083007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_084515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_090024_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_091603_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_093013_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_094525_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_100038_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_101557_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_103005_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_104515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_110026_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_111533_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_113042_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_114554_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_120007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_121558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_123008_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_124516_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_130027_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_131537_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_133049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_134600_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_140009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_142158_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_143009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_144521_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_150031_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_151541_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_153051_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_154601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_160012_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_161505_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_163017_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_164515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_170028_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_171536_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_173046_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_174558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_180009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_181552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_183102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_184511_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_190021_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_191537_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_193053_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_194602_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_200011_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_201506_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_203022_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_204607_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_210020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_211611_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_213015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_214532_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_220102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ❌ [2026-05-06-README.md] 검증 실패: 메타데이터 누락, 출처/참조 없음, 중복 콘텐츠
+  ❌ [2026-05-06-Wiki-검증-파이프라인-구축.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-자막.md] 검증 실패: 중복 콘텐츠
+  ⏭️ [2026-05-07-20260506_221647_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_223015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_224547_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_230020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_231521_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_233036_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_234518_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_000031_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_001551_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_003103_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_004538_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_010057_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_011514_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_013029_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_014547_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_020009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ❌ [2026-05-07-README.md] 검증 실패: 메타데이터 누락, 출처/참조 없음
+  ❌ [키움-API-인증-설정.md] 검증 실패: 중복 콘텐츠
+
+[2026-05-07 06:02:54] 📊 검증 결과
+  ✅ 통과: 0개
+  ❌ 실패: 21개
+  ⏭️ 스킵: 112개 (Telegram 세션)
+
+[2026-05-07 06:02:54] ✅ 검증 완료
+[2026-05-07 08:01:20] 🔍 Wiki 검증 시작
+
+
+  ❌ [2026-04-27-세션-카파시-위키-방식-설정.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-04-28-2026-04-27-세션-카파시-위키-방식-설정.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-04-28-2026-04-28-언어-사용-규칙-설정.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-04-29-OpenCode-Hermes-연동-검토.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-01-생산-계획-메모-20260430.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-04-Hermes-Agent-VLLM-Quinn36-세팅.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-201824-테스트-NotebookLM-에이전트.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-201844-테스트-NotebookLM-파이프라인.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Hermes-Agent-VLLM-Quinn36-세팅.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-KI-AI-Trader-시스템-종합-분석-보고서.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Morning-Gap-Trailing-Stop-백테스트-연구.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Morning-Gap-v2-백테스트-결과.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-TRINITY-다중-LLM-오케스트레이션-논문.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-TRINITY-코디에이터-구현.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-2026-05-05-201824-테스트-NotebookLM-에이전트.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-2026-05-05-201844-테스트-NotebookLM-파이프라인.md] 검증 실패: 중복 콘텐츠
+  ⏭️ [2026-05-06-20260505_201935_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_210103_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_220015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_230037_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_231548_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_233057_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_234507_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_000016_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_001556_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_003009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_004520_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_010032_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_011543_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_013049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_014601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_020009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_021552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_023102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_024508_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_030020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_031530_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_033041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_034550_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_040102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_041538_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_043049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_044559_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_050005_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_051512_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_053023_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_054533_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_060041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_061518_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_063026_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_064536_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_070046_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_071558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_073007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_074517_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_080025_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_081601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_083007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_084515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_090024_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_091603_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_093013_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_094525_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_100038_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_101557_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_103005_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_104515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_110026_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_111533_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_113042_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_114554_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_120007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_121558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_123008_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_124516_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_130027_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_131537_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_133049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_134600_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_140009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_142158_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_143009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_144521_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_150031_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_151541_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_153051_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_154601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_160012_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_161505_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_163017_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_164515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_170028_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_171536_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_173046_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_174558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_180009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_181552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_183102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_184511_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_190021_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_191537_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_193053_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_194602_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_200011_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_201506_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_203022_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_204607_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_210020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_211611_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_213015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_214532_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_220102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ❌ [2026-05-06-README.md] 검증 실패: 메타데이터 누락, 출처/참조 없음, 중복 콘텐츠
+  ❌ [2026-05-06-Wiki-검증-파이프라인-구축.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-자막.md] 검증 실패: 중복 콘텐츠
+  ⏭️ [2026-05-07-20260506_221647_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_223015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_224547_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_230020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_231521_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_233036_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_234518_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_000031_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_001551_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_003103_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_004538_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_010057_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_011514_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_013029_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_014547_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_020009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_021526_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_023037_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_024547_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_030045_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_031511_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_033028_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_034542_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_040009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_041626_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_043110_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_044521_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_050052_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_051520_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_053041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_054552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_060024_telegram_session.md] Telegram 세션 — 검증 스킵
+  ❌ [2026-05-07-README.md] 검증 실패: 메타데이터 누락, 출처/참조 없음
+  ❌ [키움-API-인증-설정.md] 검증 실패: 중복 콘텐츠
+
+[2026-05-07 08:01:20] 📊 검증 결과
+  ✅ 통과: 0개
+  ❌ 실패: 21개
+  ⏭️ 스킵: 128개 (Telegram 세션)
+
+[2026-05-07 08:01:20] ✅ 검증 완료
+[2026-05-07 10:00:45] 🔍 Wiki 검증 시작
+
+
+  ❌ [2026-04-27-세션-카파시-위키-방식-설정.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-04-28-2026-04-27-세션-카파시-위키-방식-설정.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-04-28-2026-04-28-언어-사용-규칙-설정.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-04-29-OpenCode-Hermes-연동-검토.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-01-생산-계획-메모-20260430.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-04-Hermes-Agent-VLLM-Quinn36-세팅.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-201824-테스트-NotebookLM-에이전트.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-201844-테스트-NotebookLM-파이프라인.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Hermes-Agent-VLLM-Quinn36-세팅.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-KI-AI-Trader-시스템-종합-분석-보고서.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Morning-Gap-Trailing-Stop-백테스트-연구.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Morning-Gap-v2-백테스트-결과.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-TRINITY-다중-LLM-오케스트레이션-논문.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-TRINITY-코디에이터-구현.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-2026-05-05-201824-테스트-NotebookLM-에이전트.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-2026-05-05-201844-테스트-NotebookLM-파이프라인.md] 검증 실패: 중복 콘텐츠
+  ⏭️ [2026-05-06-20260505_201935_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_210103_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_220015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_230037_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_231548_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_233057_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_234507_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_000016_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_001556_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_003009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_004520_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_010032_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_011543_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_013049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_014601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_020009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_021552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_023102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_024508_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_030020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_031530_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_033041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_034550_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_040102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_041538_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_043049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_044559_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_050005_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_051512_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_053023_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_054533_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_060041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_061518_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_063026_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_064536_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_070046_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_071558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_073007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_074517_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_080025_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_081601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_083007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_084515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_090024_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_091603_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_093013_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_094525_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_100038_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_101557_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_103005_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_104515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_110026_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_111533_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_113042_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_114554_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_120007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_121558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_123008_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_124516_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_130027_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_131537_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_133049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_134600_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_140009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_142158_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_143009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_144521_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_150031_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_151541_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_153051_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_154601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_160012_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_161505_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_163017_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_164515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_170028_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_171536_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_173046_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_174558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_180009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_181552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_183102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_184511_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_190021_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_191537_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_193053_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_194602_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_200011_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_201506_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_203022_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_204607_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_210020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_211611_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_213015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_214532_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_220102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ❌ [2026-05-06-README.md] 검증 실패: 메타데이터 누락, 출처/참조 없음, 중복 콘텐츠
+  ❌ [2026-05-06-Wiki-검증-파이프라인-구축.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-자막.md] 검증 실패: 중복 콘텐츠
+  ⏭️ [2026-05-07-20260506_221647_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_223015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_224547_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_230020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_231521_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_233036_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_234518_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_000031_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_001551_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_003103_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_004538_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_010057_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_011514_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_013029_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_014547_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_020009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_021526_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_023037_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_024547_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_030045_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_031511_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_033028_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_034542_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_040009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_041626_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_043110_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_044521_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_050052_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_051520_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_053041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_054552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_060024_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_061633_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_063107_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_064525_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_070051_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_071523_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_073107_telegram_session.md] Telegram 세션 — 검증 스킵
+  ❌ [2026-05-07-README.md] 검증 실패: 메타데이터 누락, 출처/참조 없음
+  ❌ [키움-API-인증-설정.md] 검증 실패: 중복 콘텐츠
+
+[2026-05-07 10:00:45] 📊 검증 결과
+  ✅ 통과: 0개
+  ❌ 실패: 21개
+  ⏭️ 스킵: 134개 (Telegram 세션)
+
+[2026-05-07 10:00:45] ✅ 검증 완료
+[2026-05-07 12:00:26] 🔍 Wiki 검증 시작
+
+
+  ❌ [2026-04-27-세션-카파시-위키-방식-설정.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-01-생산-계획-메모-20260430.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-04-Hermes-Agent-VLLM-Quinn36-세팅.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-201824-테스트-NotebookLM-에이전트.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-201844-테스트-NotebookLM-파이프라인.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Hermes-Agent-VLLM-Quinn36-세팅.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-KI-AI-Trader-시스템-종합-분석-보고서.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Morning-Gap-Trailing-Stop-백테스트-연구.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Morning-Gap-v2-백테스트-결과.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-TRINITY-다중-LLM-오케스트레이션-논문.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-TRINITY-코디에이터-구현.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-2026-05-05-201824-테스트-NotebookLM-에이전트.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-2026-05-05-201844-테스트-NotebookLM-파이프라인.md] 검증 실패: 중복 콘텐츠
+  ⏭️ [2026-05-06-20260505_201935_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_210103_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_220015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_230037_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_231548_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_233057_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_234507_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_000016_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_001556_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_003009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_004520_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_010032_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_011543_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_013049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_014601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_020009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_021552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_023102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_024508_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_030020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_031530_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_033041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_034550_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_040102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_041538_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_043049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_044559_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_050005_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_051512_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_053023_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_054533_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_060041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_061518_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_063026_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_064536_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_070046_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_071558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_073007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_074517_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_080025_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_081601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_083007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_084515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_090024_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_091603_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_093013_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_094525_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_100038_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_101557_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_103005_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_104515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_110026_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_111533_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_113042_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_114554_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_120007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_121558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_123008_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_124516_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_130027_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_131537_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_133049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_134600_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_140009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_142158_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_143009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_144521_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_150031_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_151541_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_153051_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_154601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_160012_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_161505_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_163017_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_164515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_170028_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_171536_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_173046_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_174558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_180009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_181552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_183102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_184511_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_190021_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_191537_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_193053_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_194602_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_200011_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_201506_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_203022_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_204607_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_210020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_211611_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_213015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_214532_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_220102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ❌ [2026-05-06-README.md] 검증 실패: 메타데이터 누락, 출처/참조 없음, 중복 콘텐츠
+  ❌ [2026-05-06-Wiki-검증-파이프라인-구축.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-자막.md] 검증 실패: 중복 콘텐츠
+  ⏭️ [2026-05-07-20260506_221647_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_223015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_224547_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_230020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_231521_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_233036_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_234518_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_000031_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_001551_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_003103_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_004538_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_010057_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_011514_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_013029_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_014547_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_020009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_021526_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_023037_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_024547_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_030045_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_031511_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_033028_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_034542_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_040009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_041626_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_043110_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_044521_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_050052_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_051520_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_053041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_054552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_060024_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_061633_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_063107_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_064525_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_070051_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_071523_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_073107_telegram_session.md] Telegram 세션 — 검증 스킵
+  ❌ [2026-05-07-README.md] 검증 실패: 메타데이터 누락, 출처/참조 없음
+  ✅ [키움-API-인증-설정.md] 검증 통과
+
+[2026-05-07 12:00:26] 📊 검증 결과
+  ✅ 통과: 1개
+  ❌ 실패: 17개
+  ⏭️ 스킵: 134개 (Telegram 세션)
+
+[2026-05-07 12:00:26] ✅ 검증 완료
+[2026-05-07 14:00:46] 🔍 Wiki 검증 시작
+
+
+  ❌ [2026-04-27-세션-카파시-위키-방식-설정.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-01-생산-계획-메모-20260430.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-04-Hermes-Agent-VLLM-Quinn36-세팅.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-201824-테스트-NotebookLM-에이전트.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-201844-테스트-NotebookLM-파이프라인.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Hermes-Agent-VLLM-Quinn36-세팅.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-KI-AI-Trader-시스템-종합-분석-보고서.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Morning-Gap-Trailing-Stop-백테스트-연구.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Morning-Gap-v2-백테스트-결과.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-TRINITY-다중-LLM-오케스트레이션-논문.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-TRINITY-코디에이터-구현.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-2026-05-05-201824-테스트-NotebookLM-에이전트.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-2026-05-05-201844-테스트-NotebookLM-파이프라인.md] 검증 실패: 중복 콘텐츠
+  ⏭️ [2026-05-06-20260505_201935_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_210103_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_220015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_230037_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_231548_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_233057_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_234507_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_000016_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_001556_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_003009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_004520_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_010032_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_011543_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_013049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_014601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_020009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_021552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_023102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_024508_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_030020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_031530_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_033041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_034550_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_040102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_041538_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_043049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_044559_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_050005_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_051512_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_053023_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_054533_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_060041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_061518_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_063026_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_064536_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_070046_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_071558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_073007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_074517_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_080025_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_081601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_083007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_084515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_090024_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_091603_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_093013_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_094525_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_100038_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_101557_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_103005_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_104515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_110026_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_111533_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_113042_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_114554_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_120007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_121558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_123008_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_124516_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_130027_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_131537_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_133049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_134600_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_140009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_142158_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_143009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_144521_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_150031_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_151541_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_153051_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_154601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_160012_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_161505_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_163017_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_164515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_170028_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_171536_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_173046_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_174558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_180009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_181552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_183102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_184511_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_190021_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_191537_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_193053_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_194602_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_200011_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_201506_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_203022_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_204607_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_210020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_211611_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_213015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_214532_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_220102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ❌ [2026-05-06-README.md] 검증 실패: 메타데이터 누락, 출처/참조 없음, 중복 콘텐츠
+  ❌ [2026-05-06-Wiki-검증-파이프라인-구축.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-자막.md] 검증 실패: 중복 콘텐츠
+  ⏭️ [2026-05-07-20260506_221647_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_223015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_224547_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_230020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_231521_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_233036_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_234518_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_000031_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_001551_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_003103_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_004538_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_010057_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_011514_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_013029_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_014547_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_020009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_021526_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_023037_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_024547_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_030045_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_031511_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_033028_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_034542_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_040009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_041626_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_043110_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_044521_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_050052_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_051520_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_053041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_054552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_060024_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_061633_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_063107_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_064525_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_070051_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_071523_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_073107_telegram_session.md] Telegram 세션 — 검증 스킵
+  ❌ [2026-05-07-README.md] 검증 실패: 메타데이터 누락, 출처/참조 없음, 중복 콘텐츠
+  ❌ [키움-API-인증-설정.md] 검증 실패: 중복 콘텐츠
+
+[2026-05-07 14:00:46] 📊 검증 결과
+  ✅ 통과: 0개
+  ❌ 실패: 18개
+  ⏭️ 스킵: 134개 (Telegram 세션)
+
+[2026-05-07 14:00:46] ✅ 검증 완료
+[2026-05-07 16:05:55] 🔍 Wiki 검증 시작
+
+
+  ❌ [2026-04-27-세션-카파시-위키-방식-설정.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-01-생산-계획-메모-20260430.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-04-Hermes-Agent-VLLM-Quinn36-세팅.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-201824-테스트-NotebookLM-에이전트.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-201844-테스트-NotebookLM-파이프라인.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Hermes-Agent-VLLM-Quinn36-세팅.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-KI-AI-Trader-시스템-종합-분석-보고서.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Morning-Gap-Trailing-Stop-백테스트-연구.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Morning-Gap-v2-백테스트-결과.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-TRINITY-다중-LLM-오케스트레이션-논문.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-TRINITY-코디에이터-구현.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-2026-05-05-201824-테스트-NotebookLM-에이전트.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-2026-05-05-201844-테스트-NotebookLM-파이프라인.md] 검증 실패: 중복 콘텐츠
+  ⏭️ [2026-05-06-20260505_201935_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_210103_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_220015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_230037_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_231548_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_233057_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_234507_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_000016_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_001556_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_003009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_004520_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_010032_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_011543_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_013049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_014601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_020009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_021552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_023102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_024508_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_030020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_031530_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_033041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_034550_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_040102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_041538_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_043049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_044559_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_050005_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_051512_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_053023_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_054533_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_060041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_061518_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_063026_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_064536_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_070046_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_071558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_073007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_074517_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_080025_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_081601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_083007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_084515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_090024_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_091603_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_093013_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_094525_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_100038_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_101557_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_103005_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_104515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_110026_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_111533_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_113042_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_114554_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_120007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_121558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_123008_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_124516_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_130027_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_131537_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_133049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_134600_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_140009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_142158_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_143009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_144521_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_150031_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_151541_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_153051_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_154601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_160012_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_161505_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_163017_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_164515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_170028_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_171536_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_173046_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_174558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_180009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_181552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_183102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_184511_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_190021_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_191537_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_193053_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_194602_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_200011_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_201506_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_203022_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_204607_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_210020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_211611_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_213015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_214532_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_220102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ❌ [2026-05-06-README.md] 검증 실패: 메타데이터 누락, 출처/참조 없음, 중복 콘텐츠
+  ❌ [2026-05-06-Wiki-검증-파이프라인-구축.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-자막.md] 검증 실패: 중복 콘텐츠
+  ⏭️ [2026-05-07-20260506_221647_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_223015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_224547_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_230020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_231521_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_233036_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_234518_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_000031_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_001551_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_003103_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_004538_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_010057_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_011514_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_013029_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_014547_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_020009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_021526_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_023037_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_024547_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_030045_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_031511_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_033028_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_034542_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_040009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_041626_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_043110_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_044521_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_050052_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_051520_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_053041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_054552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_060024_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_061633_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_063107_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_064525_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_070051_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_071523_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_073107_telegram_session.md] Telegram 세션 — 검증 스킵
+  ❌ [2026-05-07-README.md] 검증 실패: 메타데이터 누락, 출처/참조 없음, 중복 콘텐츠
+  ✅ [키움-API-인증-설정.md] 검증 통과
+
+[2026-05-07 16:05:55] 📊 검증 결과
+  ✅ 통과: 1개
+  ❌ 실패: 17개
+  ⏭️ 스킵: 134개 (Telegram 세션)
+
+[2026-05-07 16:05:55] ✅ 검증 완료
+[2026-05-07 16:06:15] 🔍 Wiki 검증 시작
+
+
+  ❌ [2026-04-27-세션-카파시-위키-방식-설정.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-01-생산-계획-메모-20260430.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-04-Hermes-Agent-VLLM-Quinn36-세팅.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-201824-테스트-NotebookLM-에이전트.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-201844-테스트-NotebookLM-파이프라인.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Hermes-Agent-VLLM-Quinn36-세팅.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-KI-AI-Trader-시스템-종합-분석-보고서.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Morning-Gap-Trailing-Stop-백테스트-연구.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Morning-Gap-v2-백테스트-결과.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-TRINITY-다중-LLM-오케스트레이션-논문.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-TRINITY-코디에이터-구현.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-2026-05-05-201824-테스트-NotebookLM-에이전트.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-2026-05-05-201844-테스트-NotebookLM-파이프라인.md] 검증 실패: 중복 콘텐츠
+  ⏭️ [2026-05-06-20260505_201935_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_210103_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_220015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_230037_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_231548_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_233057_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_234507_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_000016_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_001556_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_003009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_004520_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_010032_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_011543_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_013049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_014601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_020009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_021552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_023102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_024508_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_030020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_031530_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_033041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_034550_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_040102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_041538_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_043049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_044559_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_050005_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_051512_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_053023_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_054533_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_060041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_061518_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_063026_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_064536_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_070046_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_071558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_073007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_074517_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_080025_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_081601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_083007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_084515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_090024_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_091603_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_093013_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_094525_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_100038_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_101557_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_103005_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_104515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_110026_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_111533_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_113042_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_114554_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_120007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_121558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_123008_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_124516_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_130027_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_131537_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_133049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_134600_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_140009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_142158_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_143009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_144521_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_150031_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_151541_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_153051_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_154601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_160012_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_161505_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_163017_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_164515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_170028_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_171536_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_173046_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_174558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_180009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_181552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_183102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_184511_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_190021_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_191537_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_193053_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_194602_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_200011_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_201506_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_203022_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_204607_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_210020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_211611_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_213015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_214532_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_220102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ❌ [2026-05-06-README.md] 검증 실패: 메타데이터 누락, 출처/참조 없음, 중복 콘텐츠
+  ❌ [2026-05-06-Wiki-검증-파이프라인-구축.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-자막.md] 검증 실패: 중복 콘텐츠
+  ⏭️ [2026-05-07-20260506_221647_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_223015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_224547_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_230020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_231521_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_233036_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_234518_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_000031_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_001551_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_003103_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_004538_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_010057_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_011514_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_013029_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_014547_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_020009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_021526_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_023037_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_024547_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_030045_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_031511_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_033028_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_034542_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_040009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_041626_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_043110_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_044521_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_050052_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_051520_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_053041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_054552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_060024_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_061633_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_063107_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_064525_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_070051_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_071523_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_073107_telegram_session.md] Telegram 세션 — 검증 스킵
+  ❌ [2026-05-07-README.md] 검증 실패: 메타데이터 누락, 출처/참조 없음, 중복 콘텐츠
+  ❌ [키움-API-인증-설정.md] 검증 실패: 중복 콘텐츠
+
+[2026-05-07 16:06:15] 📊 검증 결과
+  ✅ 통과: 0개
+  ❌ 실패: 18개
+  ⏭️ 스킵: 134개 (Telegram 세션)
+
+[2026-05-07 16:06:15] ✅ 검증 완료
+[2026-05-07 18:17:49] 🔍 Wiki 검증 시작
+
+
+  ❌ [2026-04-27-세션-카파시-위키-방식-설정.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-01-생산-계획-메모-20260430.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-04-Hermes-Agent-VLLM-Quinn36-세팅.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-201824-테스트-NotebookLM-에이전트.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-201844-테스트-NotebookLM-파이프라인.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Hermes-Agent-VLLM-Quinn36-세팅.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-KI-AI-Trader-시스템-종합-분석-보고서.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Morning-Gap-Trailing-Stop-백테스트-연구.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-Morning-Gap-v2-백테스트-결과.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-TRINITY-다중-LLM-오케스트레이션-논문.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-05-TRINITY-코디에이터-구현.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-2026-05-05-201824-테스트-NotebookLM-에이전트.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-2026-05-05-201844-테스트-NotebookLM-파이프라인.md] 검증 실패: 중복 콘텐츠
+  ⏭️ [2026-05-06-20260505_201935_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_210103_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_220015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_230037_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_231548_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_233057_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_234507_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_000016_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_001556_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_003009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_004520_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_010032_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_011543_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_013049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_014601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_020009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_021552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_023102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_024508_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_030020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_031530_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_033041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_034550_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_040102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_041538_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_043049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_044559_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_050005_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_051512_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_053023_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_054533_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_060041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_061518_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_063026_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_064536_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_070046_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_071558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_073007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_074517_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_080025_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_081601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_083007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_084515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_090024_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_091603_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_093013_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_094525_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_100038_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_101557_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_103005_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_104515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_110026_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_111533_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_113042_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_114554_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_120007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_121558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_123008_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_124516_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_130027_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_131537_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_133049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_134600_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_140009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_142158_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_143009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_144521_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_150031_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_151541_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_153051_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_154601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_160012_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_161505_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_163017_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_164515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_170028_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_171536_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_173046_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_174558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_180009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_181552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_183102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_184511_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_190021_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_191537_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_193053_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_194602_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_200011_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_201506_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_203022_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_204607_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_210020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_211611_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_213015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_214532_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_220102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ❌ [2026-05-06-README.md] 검증 실패: 메타데이터 누락, 출처/참조 없음, 중복 콘텐츠
+  ❌ [2026-05-06-Wiki-검증-파이프라인-구축.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-자막.md] 검증 실패: 중복 콘텐츠
+  ⏭️ [2026-05-07-20260506_221647_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_223015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_224547_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_230020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_231521_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_233036_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_234518_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_000031_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_001551_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_003103_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_004538_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_010057_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_011514_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_013029_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_014547_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_020009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_021526_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_023037_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_024547_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_030045_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_031511_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_033028_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_034542_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_040009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_041626_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_043110_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_044521_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_050052_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_051520_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_053041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_054552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_060024_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_061633_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_063107_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_064525_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_070051_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_071523_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_073107_telegram_session.md] Telegram 세션 — 검증 스킵
+  ❌ [2026-05-07-README.md] 검증 실패: 메타데이터 누락, 출처/참조 없음, 중복 콘텐츠
+  ❌ [2026-05-07-키트레이더-장마감-리포트.md] 검증 실패: 메타데이터 누락, 출처/참조 없음
+  ❌ [키움-API-인증-설정.md] 검증 실패: 중복 콘텐츠
+
+[2026-05-07 18:17:49] 📊 검증 결과
+  ✅ 통과: 0개
+  ❌ 실패: 19개
+  ⏭️ 스킵: 134개 (Telegram 세션)
+
+[2026-05-07 18:17:49] ✅ 검증 완료
+[2026-05-07 20:00:16] 🔍 Wiki 검증 시작
+
+
+  ✅ [2026-04-27-세션-카파시-위키-방식-설정.md] 검증 통과
+  ✅ [2026-05-01-생산-계획-메모-20260430.md] 검증 통과
+  ✅ [2026-05-04-Hermes-Agent-VLLM-Quinn36-세팅.md] 검증 통과
+  ✅ [2026-05-05-201824-테스트-NotebookLM-에이전트.md] 검증 통과
+  ✅ [2026-05-05-201844-테스트-NotebookLM-파이프라인.md] 검증 통과
+  ✅ [2026-05-05-Hermes-Agent-VLLM-Quinn36-세팅.md] 검증 통과
+  ✅ [2026-05-05-KI-AI-Trader-시스템-종합-분석-보고서.md] 검증 통과
+  ✅ [2026-05-05-Morning-Gap-Trailing-Stop-백테스트-연구.md] 검증 통과
+  ✅ [2026-05-05-Morning-Gap-v2-백테스트-결과.md] 검증 통과
+  ✅ [2026-05-05-TRINITY-다중-LLM-오케스트레이션-논문.md] 검증 통과
+  ✅ [2026-05-05-TRINITY-코디에이터-구현.md] 검증 통과
+  ✅ [2026-05-06-2026-05-05-201824-테스트-NotebookLM-에이전트.md] 검증 통과
+  ✅ [2026-05-06-2026-05-05-201844-테스트-NotebookLM-파이프라인.md] 검증 통과
+  ⏭️ [2026-05-06-20260505_201935_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_210103_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_220015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_230037_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_231548_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_233057_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260505_234507_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_000016_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_001556_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_003009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_004520_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_010032_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_011543_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_013049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_014601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_020009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_021552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_023102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_024508_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_030020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_031530_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_033041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_034550_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_040102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_041538_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_043049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_044559_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_050005_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_051512_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_053023_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_054533_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_060041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_061518_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_063026_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_064536_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_070046_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_071558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_073007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_074517_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_080025_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_081601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_083007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_084515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_090024_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_091603_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_093013_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_094525_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_100038_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_101557_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_103005_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_104515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_110026_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_111533_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_113042_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_114554_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_120007_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_121558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_123008_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_124516_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_130027_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_131537_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_133049_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_134600_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_140009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_142158_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_143009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_144521_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_150031_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_151541_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_153051_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_154601_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_160012_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_161505_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_163017_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_164515_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_170028_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_171536_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_173046_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_174558_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_180009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_181552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_183102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_184511_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_190021_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_191537_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_193053_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_194602_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_200011_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_201506_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_203022_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_204607_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_210020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_211611_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_213015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_214532_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_220102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ❌ [2026-05-06-README.md] 검증 실패: 메타데이터 누락, 출처/참조 없음
+  ✅ [2026-05-06-Wiki-검증-파이프라인-구축.md] 검증 통과
+  ✅ [2026-05-06-자막.md] 검증 통과
+  ✅ [2026-05-07-2026-05-07-저녁평가.md] 검증 통과
+  ⏭️ [2026-05-07-20260506_221647_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_223015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_224547_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_230020_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_231521_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_233036_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260506_234518_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_000031_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_001551_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_003103_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_004538_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_010057_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_011514_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_013029_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_014547_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_020009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_021526_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_023037_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_024547_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_030045_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_031511_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_033028_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_034542_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_040009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_041626_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_043110_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_044521_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_050052_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_051520_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_053041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_054552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_060024_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_061633_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_063107_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_064525_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_070051_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_071523_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_073107_telegram_session.md] Telegram 세션 — 검증 스킵
+  ❌ [2026-05-07-README.md] 검증 실패: 메타데이터 누락, 출처/참조 없음
+  ❌ [2026-05-07-키트레이더-장마감-리포트.md] 검증 실패: 메타데이터 누락, 출처/참조 없음
+  ❌ [index.md] 검증 실패: 메타데이터 누락, 출처/참조 없음
+  ✅ [키움-API-인증-설정.md] 검증 통과
+
+[2026-05-07 20:00:16] 📊 검증 결과
+  ✅ 통과: 17개
+  ❌ 실패: 4개
+  ⏭️ 스킵: 134개 (Telegram 세션)
+
+[2026-05-07 20:00:16] ✅ 검증 완료
