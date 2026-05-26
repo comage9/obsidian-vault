@@ -4,6 +4,7 @@
 .obsidian/workspace.json
 .obsidian/plugins/
 .trash/
+.chroma_db/
 .DS_Store
 Thumbs.db
 *.png
