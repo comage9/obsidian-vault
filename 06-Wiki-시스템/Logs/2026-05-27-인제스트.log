@@ -1,0 +1,32 @@
+# 2026-05-27 Wiki 인제스트 로그
+
+## 실행 정보
+- 시간: 2026-05-27 09:05:10
+- 상태: Raw 디렉토리 비어있음 → 인제스트 없음
+
+## 스크립트 상태
+- `scripts/wiki-daily-ingest.sh`: ❌ 존재하지 않음 (`scripts/` 디렉토리 통째로 소실)
+- `scripts/cron_wiki_ingest.sh`: ❌ 존재하지 않음
+- `.scripts/wiki-ingest.sh`: ❌ 존재하지 않음 (`.scripts/` 디렉토리 통째로 소실)
+- `.scripts/wiki-lint.sh`: ❌ 존재하지 않음
+- `.scripts/wiki-cleanup.sh`: ❌ 존재하지 않음
+- `.scripts/wiki-git-push.sh`: ❌ 존재하지 않음
+- `.scripts/wiki-session-start.sh`: ❌ 존재하지 않음
+- `.scripts/wiki-sync.sh`: ❌ 존재하지 않음
+- `.scripts/wiki-query.sh`: ❌ 존재하지 않음
+
+## Raw 디렉토리
+- `Raw/` 내부: 비어있음 (최종 수정: 2026-05-25 09:02)
+- 인제스트할 새 파일: 없음
+
+## Wiki 상태
+- 문서 수: 49개 (2026-05-26 lint 기준)
+- 그래프: 47 nodes / 93 edges (2026-05-26 cleanup 기준)
+
+## Git Sync 문제
+- 마지막 push (2026-05-27 00:00) 실패: remote에 local에 없는 변경사항이 있어 push rejected
+- 해결 필요: `git pull` 후 재시도
+
+## 기타
+- scripts/ 및 .scripts/ 디렉토리 완전 소실됨 — cronjob 복구를 위해 스크립트 재생성 필요
+- Raw 비어있으므로 ingest는 no-op
