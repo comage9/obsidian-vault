@@ -44,3 +44,34 @@
 - `문제-해결/ki-ai-trader-미해결-이슈-20260528.md` 생성
 - Cron 감시 보고서 기반 미해결 이슈 7건 정리 (LLM 실패, 체결 타임아웃, DB accounts 누락, 자본금 부족, 토큰 리프레시, 종목코드 오류, 계좌 API 공백)
 - index.md 갱신 (페이지 수 4개로 증가)
+
+### 2026-05-28 12:04 — Git Auto-Sync: 5개 파일 → GitHub
+
+### 14:50 — Telegram 이상징후 실시간 검증 완료
+- 7개 항목 전수 검증: Arena Trader/매수/매도/LLM/계좌API
+- 실제 장애: 0건, 모두 로그 노이즈 또는 구조적 한계
+- 문서: `개념/telegram-이상징후-검증-20260528.md`
+
+### 15:45 — 2026-05-28 전면 수정 9건 완료
+- `의사결정/ki-ai-trader-20260528-전면수정-완료.md` 생성
+- 수정 9건: trailing_stop 조건개선, LLM NoneType 방어, 가격필터, OHLCV+호가통합, import경로×2, 트레일링표시, Wiki스크립트5종복원, Telegram 1시간정기보고
+- 보류: DB accounts(1회, 재현불가), refresh token(client_credentials 방식)
+- index.md 갱신 (5페이지)
+### 2026-05-28 22:01 — Wiki Lint: ❌0개 오류 / ⚠️7개 경고
+
+| 검사 항목 | 결과 |
+|-----------|------|
+| 깨진 Wikilink | 0개 |
+| 고립 페이지 | 6개 |
+| Frontmatter 누락 | 1개 |
+| 전체 페이지 | 9개 |
+
+### 2026-05-28 23:00 — Cleanup: index.md 5페이지
+  
+### 2026-05-29 00:01 — Git Auto-Sync: 잘못된 script path → 대기 후 workdir 수정
+  
+### 2026-05-29 01:05 — 후속 작업
+- **Wiki Frontmatter 수정**: `문제-해결/ki-ai-trader-is_running-일일손실한도-버그.md`에 YAML frontmatter 추가 (type/created/status/tags)
+- **Wiki 크론잡 5종 workdir 설정**: ingest/lint/cleanup/briefing/git-sync에 `/home/comtop/obsidian-vault/06-Wiki-시스템` workdir 적용
+- **GitHub Token 설정 완료**: `~/.hermes/.env` 및 `~/.env.hermes`에 GITHUB_TOKEN 저장
+- **만두와김밥마을 프로젝트**: GitHub 저장소 생성 (`comage9/mandu-gimbap-lunch-menu`), 코드 push 및 GitHub 실버전(13커밋, 164파일) 로컬에 pull 완료

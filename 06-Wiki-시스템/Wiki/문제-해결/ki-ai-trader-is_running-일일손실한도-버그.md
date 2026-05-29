@@ -1,3 +1,10 @@
+---
+type: 문제-해결
+created: 2026-05-27
+status: 해결완료
+tags: [K.I. Trainer, is_running, 버그, 일일손실한도]
+---
+
 # ki-ai-trader: `is_running=false` 및 일일 손실 한도 글리치 버그
 
 **저장일:** 2026-05-27
