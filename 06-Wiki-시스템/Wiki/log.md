@@ -75,3 +75,30 @@
 - **Wiki 크론잡 5종 workdir 설정**: ingest/lint/cleanup/briefing/git-sync에 `/home/comtop/obsidian-vault/06-Wiki-시스템` workdir 적용
 - **GitHub Token 설정 완료**: `~/.hermes/.env` 및 `~/.env.hermes`에 GITHUB_TOKEN 저장
 - **만두와김밥마을 프로젝트**: GitHub 저장소 생성 (`comage9/mandu-gimbap-lunch-menu`), 코드 push 및 GitHub 실버전(13커밋, 164파일) 로컬에 pull 완료
+### 2026-05-29 22:03 — Wiki Lint: ❌0개 오류 / ⚠️7개 경고
+
+| 검사 항목 | 결과 |
+|-----------|------|
+| 깨진 Wikilink | 0개 |
+| 고립 페이지 | 7개 |
+| Frontmatter 누락 | 0개 |
+| 전체 페이지 | 10개 |
+
+## 2026-05-30
+
+### 01:00 ~ 02:20 — KPP 파렛트 자동화 + LS 쿠팡 연동
+
+#### WPPS 출하통보등록 (PBM140MW)
+- 안성5 IB(605177) — 1호차 18 + 2호차 19 = 총 37파렛트 저장 (2026-06-01)
+- 비고(col36): "1호차"/"2호차" 규칙 확정
+
+#### WPPS 납품/반납요청 (PBM110MW)
+- 6월 납품요청: 1건 (5/29→하차 6/5, N11, 200파렛트)
+
+#### 쿠팡 LS 로그인 및 연동
+- `ls.coupang.com` 로그인 성공 (mokicom)
+- VF67(유원)HUB→부천1HUB 3건 (1호차:경기89바1454 / 2호차:경기90자3674 / 3호차:광주90바1703)
+
+#### 스킬 정리
+- `kpp-pallet-automation` 제거 → `kpp-pallet-management` 통합
+- 워크플로우 C 추가 (Phase1: 15:00 LS검색 + Phase2: 저녁 WPPS등록)
