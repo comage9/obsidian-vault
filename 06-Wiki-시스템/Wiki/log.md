@@ -102,3 +102,13 @@
 #### 스킬 정리
 - `kpp-pallet-automation` 제거 → `kpp-pallet-management` 통합
 - 워크플로우 C 추가 (Phase1: 15:00 LS검색 + Phase2: 저녁 WPPS등록)
+### 2026-05-30 22:01 — Wiki Lint: ❌0개 오류 / ⚠️7개 경고
+
+| 검사 항목 | 결과 |
+|-----------|------|
+| 깨진 Wikilink | 0개 |
+| 고립 페이지 | 7개 |
+| Frontmatter 누락 | 0개 |
+| 전체 페이지 | 10개 |
+
+### 2026-05-30 23:00 — Daily Cleanup: 0개 아카이브, 8개 페이지
