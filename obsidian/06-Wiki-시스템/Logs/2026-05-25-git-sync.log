@@ -1,0 +1,98 @@
+
+[0;34m[2026-05-25 03:27:03] [INFO] === Wiki Git Auto-Sync 시작 ===[0m
+
+[0;34m[2026-05-25 03:27:03] [INFO] 변경사항 확인 중...[0m
+
+[0;34m[2026-05-25 03:27:13] [INFO] === Wiki Git Auto-Sync 시작 ===[0m
+
+[0;34m[2026-05-25 03:27:13] [INFO] 변경사항 확인 중...[0m
+[0;34m[2026-05-25 03:27:13] [INFO] 변경사항 발견: +1 ~0
+0 -0
+0 (총 1개)[0m
+
+?? "06-Wiki-\354\213\234\354\212\244\355\205\234/.scripts/wiki-git-push.sh"
+[0;34m[2026-05-25 03:27:13] [INFO] ⏭️ Dry-run 모드 — 종료[0m
+
+
+[0;34m[2026-05-25 03:27:21] [INFO] === Wiki Git Auto-Sync 시작 ===[0m
+
+[0;34m[2026-05-25 03:27:21] [INFO] 변경사항 확인 중...[0m
+[0;34m[2026-05-25 03:27:21] [INFO] 변경사항 발견: +1 ~0
+0 -0
+0 (총 1개)[0m
+
+[0;34m[2026-05-25 03:27:21] [INFO] Git add -A...[0m
+[0;34m[2026-05-25 03:27:21] [INFO] Git commit: "Wiki auto-sync: 2026-05-25 03:27"...[0m
+[main e9b1da9] Wiki auto-sync: 2026-05-25 03:27
+ 1 file changed, 119 insertions(+)
+ create mode 100755 "06-Wiki-\354\213\234\354\212\244\355\205\234/.scripts/wiki-git-push.sh"
+[0;34m[2026-05-25 03:27:21] [INFO] Git push to origin main...[0m
+To https://github.com/comage9/obsidian-vault.git
+   dbb0fe9..e9b1da9  main -> main
+[0;32m[2026-05-25 03:27:21] [OK] ✅ Push 완료! (1개 파일 동기화)[0m
+[0;34m[2026-05-25 03:27:21] [INFO] Graphify 그래프 재생성...[0m
+Scanning wiki: /home/comtop/obsidian-vault/06-Wiki-시스템/Wiki
+JSON written: /home/comtop/obsidian-vault/06-Wiki-시스템/Wiki/Output/graph.json
+HTML written: /home/comtop/obsidian-vault/06-Wiki-시스템/Wiki/Output/graph.html
+
+📊 Graph Summary:
+   Nodes: 171
+   Edges: 205
+   Avg edges/node: 1.20
+
+[0;32m[2026-05-25 03:27:21] [OK] === Wiki Git Auto-Sync 완료 ===[0m
+
+
+[0;34m[2026-05-25 06:01:32] [INFO] === Wiki Git Auto-Sync 시작 ===[0m
+
+[0;34m[2026-05-25 06:01:32] [INFO] 변경사항 확인 중...[0m
+[0;34m[2026-05-25 06:01:32] [INFO] 변경사항 발견: +0
+0 ~2 -2 (총 2개)[0m
+
+[0;34m[2026-05-25 06:01:32] [INFO] Git add -A...[0m
+[0;34m[2026-05-25 06:01:32] [INFO] Git commit: "Wiki auto-sync: 2026-05-25 06:01"...[0m
+[main 79a4713] Wiki auto-sync: 2026-05-25 06:01
+ 2 files changed, 66 insertions(+), 5 deletions(-)
+[0;34m[2026-05-25 06:01:32] [INFO] Git push to origin main...[0m
+To https://github.com/comage9/obsidian-vault.git
+   a730f30..79a4713  main -> main
+[0;32m[2026-05-25 06:01:32] [OK] ✅ Push 완료! (2개 파일 동기화)[0m
+[0;34m[2026-05-25 06:01:32] [INFO] Graphify 그래프 재생성...[0m
+Scanning wiki: /home/comtop/obsidian-vault/06-Wiki-시스템/Wiki
+JSON written: /home/comtop/obsidian-vault/06-Wiki-시스템/Wiki/Output/graph.json
+HTML written: /home/comtop/obsidian-vault/06-Wiki-시스템/Wiki/Output/graph.html
+
+📊 Graph Summary:
+   Nodes: 40
+   Edges: 78
+   Avg edges/node: 1.95
+
+[0;32m[2026-05-25 06:01:32] [OK] === Wiki Git Auto-Sync 완료 ===[0m
+
+
+[0;34m[2026-05-25 18:01:55] [INFO] === Wiki Git Auto-Sync 시작 ===[0m
+
+[0;34m[2026-05-25 18:01:55] [INFO] 변경사항 확인 중...[0m
+[0;34m[2026-05-25 18:01:55] [INFO] 변경사항 발견: +1 ~1 -1 (총 2개)[0m
+
+[0;34m[2026-05-25 18:01:55] [INFO] Git add -A...[0m
+[0;34m[2026-05-25 18:01:55] [INFO] Git commit: "Wiki auto-sync: 2026-05-25 18:01"...[0m
+[main 4ebcb2d] Wiki auto-sync: 2026-05-25 18:01
+ 2 files changed, 58 insertions(+)
+ create mode 100644 "06-Wiki-\354\213\234\354\212\244\355\205\234/Wiki/\354\235\230\354\202\254\352\262\260\354\240\225/VF2-DB-\355\206\265\355\225\251-PostgreSQL-\353\247\210\354\235\264\352\267\270\353\240\210\354\235\264\354\205\230.md"
+[0;34m[2026-05-25 18:01:55] [INFO] Git push to origin main...[0m
+To https://github.com/comage9/obsidian-vault.git
+   ccb1825..4ebcb2d  main -> main
+[0;32m[2026-05-25 18:01:55] [OK] ✅ Push 완료! (2개 파일 동기화)[0m
+[0;34m[2026-05-25 18:01:55] [INFO] Graphify 그래프 재생성...[0m
+Scanning wiki: /home/comtop/obsidian-vault/06-Wiki-시스템/Wiki
+JSON written: /home/comtop/obsidian-vault/06-Wiki-시스템/Wiki/Output/graph.json
+HTML written: /home/comtop/obsidian-vault/06-Wiki-시스템/Wiki/Output/graph.html
+
+📊 Graph Summary:
+   Nodes: 45
+   Edges: 75
+   Avg edges/node: 1.67
+
+[0;32m[2026-05-25 18:01:55] [OK] === Wiki Git Auto-Sync 완료 ===[0m
+

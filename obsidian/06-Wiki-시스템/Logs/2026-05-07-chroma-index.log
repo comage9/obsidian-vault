@@ -1,0 +1,394 @@
+[2026-05-07 00:01:34] 🔍 ChromaDB 인덱싱 시작
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+[STEP 1/2] Wiki 검증 시작...
+05-06-20260506_213015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_214532_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_220102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ❌ [2026-05-06-README.md] 검증 실패: 메타데이터 누락, 출처/참조 없음
+  ❌ [2026-05-06-Wiki-검증-파이프라인-구축.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-자막.md] 검증 실패: 중복 콘텐츠
+  ❌ [키움-API-인증-설정.md] 검증 실패: 중복 콘텐츠
+
+[2026-05-07 00:01:38] 📊 검증 결과
+  ✅ 통과: 0개
+  ❌ 실패: 20개
+  ⏭️ 스킵: 96개 (Telegram 세션)
+
+[2026-05-07 00:01:38] ✅ 검증 완료
+
+
+[STEP 2/2] ChromaDB 인덱싱 시작...
+임베딩 모델 로드 중 (GPU): nomic-ai/nomic-embed-text-v1.5
+Loading weights:   0%|          | 0/112 [00:00<?, ?it/s]Loading weights: 100%|██████████| 112/112 [00:00<00:00, 10592.63it/s]
+모델 로드 완료 (GPU)
+ChromaDB 컬렉션: obsidian_wiki
+인덱싱 대상 파일: 0개
+새로 인덱싱할 콘텐츠 없음
+[2026-05-07 00:01:49] ✅ ChromaDB 인덱싱 완료
+[2026-05-07 02:02:06] 🔍 ChromaDB 인덱싱 시작
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+[STEP 1/2] Wiki 검증 시작...
+05-06-20260506_213015_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_214532_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-06-20260506_220102_telegram_session.md] Telegram 세션 — 검증 스킵
+  ❌ [2026-05-06-README.md] 검증 실패: 메타데이터 누락, 출처/참조 없음
+  ❌ [2026-05-06-Wiki-검증-파이프라인-구축.md] 검증 실패: 중복 콘텐츠
+  ❌ [2026-05-06-자막.md] 검증 실패: 중복 콘텐츠
+  ❌ [키움-API-인증-설정.md] 검증 실패: 중복 콘텐츠
+
+[2026-05-07 02:02:10] 📊 검증 결과
+  ✅ 통과: 0개
+  ❌ 실패: 20개
+  ⏭️ 스킵: 96개 (Telegram 세션)
+
+[2026-05-07 02:02:10] ✅ 검증 완료
+
+
+[STEP 2/2] ChromaDB 인덱싱 시작...
+임베딩 모델 로드 중 (GPU): nomic-ai/nomic-embed-text-v1.5
+Loading weights:   0%|          | 0/112 [00:00<?, ?it/s]Loading weights: 100%|██████████| 112/112 [00:00<00:00, 14831.62it/s]
+모델 로드 완료 (GPU)
+ChromaDB 컬렉션: obsidian_wiki
+인덱싱 대상 파일: 0개
+새로 인덱싱할 콘텐츠 없음
+[2026-05-07 02:02:20] ✅ ChromaDB 인덱싱 완료
+[2026-05-07 06:02:51] 🔍 ChromaDB 인덱싱 시작
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+[STEP 1/2] Wiki 검증 시작...
+킵
+  ⏭️ [2026-05-07-20260507_011514_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_013029_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_014547_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_020009_telegram_session.md] Telegram 세션 — 검증 스킵
+  ❌ [2026-05-07-README.md] 검증 실패: 메타데이터 누락, 출처/참조 없음
+  ❌ [키움-API-인증-설정.md] 검증 실패: 중복 콘텐츠
+
+[2026-05-07 06:02:54] 📊 검증 결과
+  ✅ 통과: 0개
+  ❌ 실패: 21개
+  ⏭️ 스킵: 112개 (Telegram 세션)
+
+[2026-05-07 06:02:54] ✅ 검증 완료
+
+
+[STEP 2/2] ChromaDB 인덱싱 시작...
+임베딩 모델 로드 중 (GPU): nomic-ai/nomic-embed-text-v1.5
+Loading weights:   0%|          | 0/112 [00:00<?, ?it/s]Loading weights: 100%|██████████| 112/112 [00:00<00:00, 15988.09it/s]
+모델 로드 완료 (GPU)
+ChromaDB 컬렉션: obsidian_wiki
+인덱싱 대상 파일: 0개
+새로 인덱싱할 콘텐츠 없음
+[2026-05-07 06:03:05] ✅ ChromaDB 인덱싱 완료
+[2026-05-07 08:01:17] 🔍 ChromaDB 인덱싱 시작
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+[STEP 1/2] Wiki 검증 시작...
+킵
+  ⏭️ [2026-05-07-20260507_051520_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_053041_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_054552_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_060024_telegram_session.md] Telegram 세션 — 검증 스킵
+  ❌ [2026-05-07-README.md] 검증 실패: 메타데이터 누락, 출처/참조 없음
+  ❌ [키움-API-인증-설정.md] 검증 실패: 중복 콘텐츠
+
+[2026-05-07 08:01:20] 📊 검증 결과
+  ✅ 통과: 0개
+  ❌ 실패: 21개
+  ⏭️ 스킵: 128개 (Telegram 세션)
+
+[2026-05-07 08:01:20] ✅ 검증 완료
+
+
+[STEP 2/2] ChromaDB 인덱싱 시작...
+임베딩 모델 로드 중 (GPU): nomic-ai/nomic-embed-text-v1.5
+Loading weights:   0%|          | 0/112 [00:00<?, ?it/s]Loading weights: 100%|██████████| 112/112 [00:00<00:00, 15863.37it/s]
+모델 로드 완료 (GPU)
+ChromaDB 컬렉션: obsidian_wiki
+인덱싱 대상 파일: 0개
+새로 인덱싱할 콘텐츠 없음
+[2026-05-07 08:01:31] ✅ ChromaDB 인덱싱 완료
+[2026-05-07 10:00:42] 🔍 ChromaDB 인덱싱 시작
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+[STEP 1/2] Wiki 검증 시작...
+킵
+  ⏭️ [2026-05-07-20260507_064525_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_070051_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_071523_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_073107_telegram_session.md] Telegram 세션 — 검증 스킵
+  ❌ [2026-05-07-README.md] 검증 실패: 메타데이터 누락, 출처/참조 없음
+  ❌ [키움-API-인증-설정.md] 검증 실패: 중복 콘텐츠
+
+[2026-05-07 10:00:45] 📊 검증 결과
+  ✅ 통과: 0개
+  ❌ 실패: 21개
+  ⏭️ 스킵: 134개 (Telegram 세션)
+
+[2026-05-07 10:00:45] ✅ 검증 완료
+
+
+[STEP 2/2] ChromaDB 인덱싱 시작...
+임베딩 모델 로드 중 (GPU): nomic-ai/nomic-embed-text-v1.5
+Loading weights:   0%|          | 0/112 [00:00<?, ?it/s]Loading weights: 100%|██████████| 112/112 [00:00<00:00, 13759.07it/s]
+모델 로드 완료 (GPU)
+ChromaDB 컬렉션: obsidian_wiki
+인덱싱 대상 파일: 0개
+새로 인덱싱할 콘텐츠 없음
+[2026-05-07 10:00:57] ✅ ChromaDB 인덱싱 완료
+[2026-05-07 12:00:22] 🔍 ChromaDB 인덱싱 시작
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+[STEP 1/2] Wiki 검증 시작...
+션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_064525_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_070051_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_071523_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_073107_telegram_session.md] Telegram 세션 — 검증 스킵
+  ❌ [2026-05-07-README.md] 검증 실패: 메타데이터 누락, 출처/참조 없음
+  ✅ [키움-API-인증-설정.md] 검증 통과
+
+[2026-05-07 12:00:26] 📊 검증 결과
+  ✅ 통과: 1개
+  ❌ 실패: 17개
+  ⏭️ 스킵: 134개 (Telegram 세션)
+
+[2026-05-07 12:00:26] ✅ 검증 완료
+
+
+[STEP 2/2] ChromaDB 인덱싱 시작...
+임베딩 모델 로드 중 (GPU): nomic-ai/nomic-embed-text-v1.5
+Loading weights:   0%|          | 0/112 [00:00<?, ?it/s]Loading weights: 100%|██████████| 112/112 [00:00<00:00, 14539.22it/s]
+모델 로드 완료 (GPU)
+ChromaDB 컬렉션: obsidian_wiki
+인덱싱 대상 파일: 0개
+새로 인덱싱할 콘텐츠 없음
+[2026-05-07 12:00:36] ✅ ChromaDB 인덱싱 완료 (exit code: 0)
+[2026-05-07 16:06:11] 🔍 ChromaDB 인덱싱 시작
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+[STEP 1/2] Wiki 검증 시작...
+2026-05-07-20260507_064525_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_070051_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_071523_telegram_session.md] Telegram 세션 — 검증 스킵
+  ⏭️ [2026-05-07-20260507_073107_telegram_session.md] Telegram 세션 — 검증 스킵
+  ❌ [2026-05-07-README.md] 검증 실패: 메타데이터 누락, 출처/참조 없음, 중복 콘텐츠
+  ❌ [키움-API-인증-설정.md] 검증 실패: 중복 콘텐츠
+
+[2026-05-07 16:06:15] 📊 검증 결과
+  ✅ 통과: 0개
+  ❌ 실패: 18개
+  ⏭️ 스킵: 134개 (Telegram 세션)
+
+[2026-05-07 16:06:15] ✅ 검증 완료
+
+
+[STEP 2/2] ChromaDB 인덱싱 시작...
+임베딩 모델 로드 중 (GPU): nomic-ai/nomic-embed-text-v1.5
+Loading weights:   0%|          | 0/112 [00:00<?, ?it/s]Loading weights: 100%|██████████| 112/112 [00:00<00:00, 15128.24it/s]
+모델 로드 완료 (GPU)
+ChromaDB 컬렉션: obsidian_wiki
+인덱싱 대상 파일: 0개
+새로 인덱싱할 콘텐츠 없음
+[2026-05-07 16:06:23] ✅ ChromaDB 인덱싱 완료
+
+[STEP 2/2] ChromaDB 인덱싱 시작...
+임베딩 모델 로드 중 (GPU): nomic-ai/nomic-embed-text-v1.5
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[2026-05-07 18:39:24] 🔍 ChromaDB 인덱싱 시작 (--force --no-validate)
+Loading weights:   0%|          | 0/112 [00:00<?, ?it/s]Loading weights: 100%|██████████| 112/112 [00:00<00:00, 14532.02it/s]
+모델 로드 완료 (GPU)
+ChromaDB 컬렉션: obsidian_wiki
+인덱싱 대상 파일: 1048개
+  처리 중: 20/1048
+  처리 중: 40/1048
+  처리 중: 60/1048
+  처리 중: 80/1048
+  처리 중: 100/1048
+  처리 중: 120/1048
+  처리 중: 140/1048
+  처리 중: 160/1048
+  처리 중: 180/1048
+  처리 중: 200/1048
+  처리 중: 220/1048
+  처리 중: 240/1048
+  처리 중: 260/1048
+  처리 중: 280/1048
+  처리 중: 300/1048
+  처리 중: 320/1048
+  처리 중: 340/1048
+  처리 중: 360/1048
+  처리 중: 380/1048
+  처리 중: 400/1048
+  처리 중: 420/1048
+  처리 중: 440/1048
+  처리 중: 460/1048
+  처리 중: 480/1048
+  처리 중: 500/1048
+  처리 중: 520/1048
+  처리 중: 540/1048
+  처리 중: 560/1048
+  처리 중: 580/1048
+  처리 중: 600/1048
+  처리 중: 620/1048
+  처리 중: 640/1048
+  처리 중: 660/1048
+  처리 중: 680/1048
+  처리 중: 700/1048
+  처리 중: 720/1048
+  처리 중: 740/1048
+  처리 중: 760/1048
+  처리 중: 780/1048
+  처리 중: 800/1048
+  처리 중: 820/1048
+  처리 중: 840/1048
+  처리 중: 860/1048
+  처리 중: 880/1048
+  처리 중: 900/1048
+  처리 중: 920/1048
+  처리 중: 940/1048
+  처리 중: 960/1048
+  처리 중: 980/1048
+  처리 중: 1000/1048
+  처리 중: 1020/1048
+  처리 중: 1040/1048
+임베딩 생성 중...
+Batches:   0%|          | 0/284 [00:00<?, ?it/s]Batches:   0%|          | 1/284 [00:08<40:12,  8.52s/it]Batches:   1%|          | 2/284 [00:16<38:39,  8.23s/it]Batches:   1%|          | 3/284 [00:24<38:05,  8.13s/it]Batches:   1%|▏         | 4/284 [00:32<37:43,  8.08s/it]Batches:   2%|▏         | 5/284 [00:40<37:27,  8.06s/it]Batches:   2%|▏         | 6/284 [00:48<37:14,  8.04s/it]Batches:   2%|▏         | 7/284 [00:56<37:04,  8.03s/it]Batches:   3%|▎         | 8/284 [01:04<36:57,  8.03s/it]Batches:   3%|▎         | 9/284 [01:12<36:48,  8.03s/it]Batches:   4%|▎         | 10/284 [01:20<36:39,  8.03s/it]Batches:   4%|▍         | 11/284 [01:28<36:30,  8.03s/it]Batches:   4%|▍         | 12/284 [01:36<36:24,  8.03s/it]Batches:   5%|▍         | 13/284 [01:44<36:15,  8.03s/it]Batches:   5%|▍         | 14/284 [01:52<36:05,  8.02s/it]Batches:   5%|▌         | 15/284 [02:00<35:55,  8.01s/it]Batches:   6%|▌         | 16/284 [02:08<35:48,  8.02s/it]Batches:   6%|▌         | 17/284 [02:16<35:41,  8.02s/it]Batches:   6%|▋         | 18/284 [02:24<35:32,  8.02s/it]Batches:   7%|▋         | 19/284 [02:32<35:25,  8.02s/it]Batches:   7%|▋         | 20/284 [02:40<35:17,  8.02s/it]Batches:   7%|▋         | 21/284 [02:48<35:10,  8.02s/it]Batches:   8%|▊         | 22/284 [02:56<35:02,  8.03s/it]Batches:   8%|▊         | 23/284 [03:04<34:53,  8.02s/it]Batches:   8%|▊         | 24/284 [03:12<34:44,  8.02s/it]Batches:   9%|▉         | 25/284 [03:21<34:38,  8.02s/it]Batches:   9%|▉         | 26/284 [03:29<34:30,  8.02s/it]Batches:  10%|▉         | 27/284 [03:37<34:22,  8.03s/it]Batches:  10%|▉         | 28/284 [03:45<34:14,  8.03s/it]Batches:  10%|█         | 29/284 [03:53<34:06,  8.02s/it]Batches:  11%|█         | 30/284 [04:01<33:57,  8.02s/it]Batches:  11%|█         | 31/284 [04:09<33:48,  8.02s/it]Batches:  11%|█▏        | 32/284 [04:17<33:39,  8.01s/it]Batches:  12%|█▏        | 33/284 [04:25<33:31,  8.01s/it]Batches:  12%|█▏        | 34/284 [04:33<33:21,  8.01s/it]Batches:  12%|█▏        | 35/284 [04:41<33:13,  8.00s/it]Batches:  13%|█▎        | 36/284 [04:49<33:04,  8.00s/it]Batches:  13%|█▎        | 37/284 [04:57<32:56,  8.00s/it]Batches:  13%|█▎        | 38/284 [05:05<32:49,  8.00s/it]Batches:  14%|█▎        | 39/284 [05:13<32:40,  8.00s/it]Batches:  14%|█▍        | 40/284 [05:21<32:31,  8.00s/it]Batches:  14%|█▍        | 41/284 [05:29<32:23,  8.00s/it]Batches:  15%|█▍        | 42/284 [05:37<32:14,  8.00s/it]Batches:  15%|█▌        | 43/284 [05:45<32:06,  7.99s/it]Batches:  15%|█▌        | 44/284 [05:53<31:57,  7.99s/it]Batches:  16%|█▌        | 45/284 [06:01<31:49,  7.99s/it]Batches:  16%|█▌        | 46/284 [06:09<31:40,  7.99s/it]Batches:  17%|█▋        | 47/284 [06:17<32:39,  8.27s/it]Batches:  17%|█▋        | 48/284 [06:26<33:17,  8.47s/it]Batches:  17%|█▋        | 49/284 [06:35<33:40,  8.60s/it]Batches:  18%|█▊        | 50/284 [06:43<32:49,  8.42s/it]Batches:  18%|█▊        | 51/284 [06:52<33:16,  8.57s/it]Batches:  18%|█▊        | 52/284 [07:01<33:32,  8.67s/it]Batches:  19%|█▊        | 53/284 [07:10<33:40,  8.75s/it]Batches:  19%|█▊        | 53/284 [07:11<31:20,  8.14s/it]
+임베딩 생성 실패 (CUDA out of memory. Tried to allocate 864.00 MiB. GPU 0 has a total capacity of 3.68 GiB of which 422.00 MiB is free. Including non-PyTorch memory, this process has 3.25 GiB memory in use. Of the allocated memory 2.10 GiB is allocated by PyTorch, and 1.05 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)) — CPU로 재시도 (배치 4)
+Loading weights:   0%|          | 0/112 [00:00<?, ?it/s]Loading weights: 100%|██████████| 112/112 [00:00<00:00, 13105.01it/s]
+Batches:   0%|          | 0/284 [00:00<?, ?it/s]Batches:   0%|          | 1/284 [00:54<4:17:08, 54.52s/it]Batches:   1%|          | 2/284 [01:49<4:16:21, 54.54s/it]Batches:   1%|          | 3/284 [02:41<4:10:24, 53.47s/it]Batches:   1%|▏         | 4/284 [03:34<4:08:48, 53.32s/it]Batches:   2%|▏         | 5/284 [04:26<4:05:45, 52.85s/it]Batches:   2%|▏         | 6/284 [05:18<4:03:59, 52.66s/it]Batches:   2%|▏         | 7/284 [06:10<4:02:27, 52.52s/it]Batches:   3%|▎         | 8/284 [07:03<4:00:59, 52.39s/it]Batches:   3%|▎         | 9/284 [07:54<3:59:28, 52.25s/it]Batches:   4%|▎         | 10/284 [08:47<3:58:20, 52.19s/it]Batches:   4%|▍         | 11/284 [09:38<3:57:09, 52.12s/it]Batches:   4%|▍         | 12/284 [10:30<3:56:07, 52.09s/it]Batches:   5%|▍         | 13/284 [11:23<3:55:13, 52.08s/it]Batches:   5%|▍         | 14/284 [12:14<3:54:10, 52.04s/it]Batches:   5%|▌         | 15/284 [13:06<3:53:12, 52.02s/it]Batches:   6%|▌         | 16/284 [13:59<3:52:28, 52.05s/it]Batches:   6%|▌         | 17/284 [14:51<3:51:31, 52.03s/it]Batches:   6%|▌         | 17/284 [15:00<3:55:35, 52.94s/it]
+Traceback (most recent call last):
+  File "/home/comage/.hermes/scripts/wiki-embed-index.py", line 279, in index_vault
+    embeddings = self.model.encode(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/sentence_transformers/util/decorators.py", line 41, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/sentence_transformers/sentence_transformer/model.py", line 651, in encode
+    out_features = self.forward(features, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/sentence_transformers/base/model.py", line 486, in forward
+    input = module(input, **module_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/sentence_transformers/base/modules/transformer.py", line 1046, in forward
+    model_output = model_method(**filtered_kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/transformers/utils/generic.py", line 976, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/transformers/utils/output_capturing.py", line 248, in wrapper
+    outputs = func(self, *args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/transformers/models/nomic_bert/modeling_nomic_bert.py", line 458, in forward
+    hidden_states = encoder_layer(
+                    ^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/transformers/modeling_layers.py", line 93, in __call__
+    return super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/transformers/models/nomic_bert/modeling_nomic_bert.py", line 312, in forward
+    attention_output, _ = self.self_attn(
+                          ^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/transformers/models/nomic_bert/modeling_nomic_bert.py", line 262, in forward
+    attn_output, attn_weights = attention_interface(
+                                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/transformers/integrations/sdpa_attention.py", line 92, in sdpa_attention_forward
+    attn_output = torch.nn.functional.scaled_dot_product_attention(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 864.00 MiB. GPU 0 has a total capacity of 3.68 GiB of which 422.00 MiB is free. Including non-PyTorch memory, this process has 3.25 GiB memory in use. Of the allocated memory 2.10 GiB is allocated by PyTorch, and 1.05 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/comage/.hermes/scripts/wiki-embed-index.py", line 390, in <module>
+    main()
+  File "/home/comage/.hermes/scripts/wiki-embed-index.py", line 381, in main
+    indexer.index_vault(
+  File "/home/comage/.hermes/scripts/wiki-embed-index.py", line 295, in index_vault
+    embeddings = self.model.encode(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/sentence_transformers/util/decorators.py", line 41, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/sentence_transformers/sentence_transformer/model.py", line 651, in encode
+    out_features = self.forward(features, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/sentence_transformers/base/model.py", line 486, in forward
+    input = module(input, **module_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/sentence_transformers/base/modules/transformer.py", line 1046, in forward
+    model_output = model_method(**filtered_kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/transformers/utils/generic.py", line 976, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/transformers/utils/output_capturing.py", line 248, in wrapper
+    outputs = func(self, *args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/transformers/models/nomic_bert/modeling_nomic_bert.py", line 458, in forward
+    hidden_states = encoder_layer(
+                    ^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/transformers/modeling_layers.py", line 93, in __call__
+    return super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/transformers/models/nomic_bert/modeling_nomic_bert.py", line 312, in forward
+    attention_output, _ = self.self_attn(
+                          ^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/transformers/models/nomic_bert/modeling_nomic_bert.py", line 251, in forward
+    query_states = self.q_proj(hidden_states).view(hidden_shape).transpose(1, 2)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/hermes-agent/venv/lib/python3.11/site-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comage/.hermes/scripts/wiki-embed-index.py", line 291, in timeout_handler
+    raise TimeoutError("CPU 임베딩 생성 900초 초과")
+TimeoutError: CPU 임베딩 생성 900초 초과
