@@ -112,11 +112,15 @@
 | 전체 페이지 | 10개 |
 
 ### 2026-05-30 23:00 — Daily Cleanup: 0개 아카이브, 8개 페이지
-### 2026-05-31 22:03 — Wiki Lint: ❌0개 오류 / ⚠️8개 경고
 
-| 검사 항목 | 결과 |
-|-----------|------|
-| 깨진 Wikilink | 0개 |
-| 고립 페이지 | 8개 |
-| Frontmatter 누락 | 0개 |
-| 전체 페이지 | 11개 |
+### 2026-06-05 18:01 — Git Auto-Sync: 5개 파일 커밋됨, Push 실패 (수동 확인 필요)
+- 커밋: `89b4ecf` (Wiki auto-sync: 2026-06-05 18:01, 5 files, +368/-25)
+  - M `06-Wiki-시스템/Wiki/index.md`
+  - M `06-Wiki-시스템/Wiki/의사결정/reasonix-acp-도입-20260531.md`
+  - A `06-Wiki-시스템/Wiki/도구/openai-codex-통합가이드.md`
+  - A `06-Wiki-시스템/Wiki/의사결정/ki-ai-trader-텔레그램봇-통합-20260603.md`
+  - A `06-Wiki-시스템/Wiki/의사결정/vf2-실행정리-외부IP-20260603.md`
+- Push 실패: 원격 PAT(ghp_Ds*Oh3U) 만료/폐기 - HTTP 401 Bad credentials
+- 재시도(rebase) 불가 - 자격증명 없음
+- 로컬 main 브랜치는 origin/main보다 1 커밋 앞섬
+- 조치 필요: GitHub PAT 재발급 후 `git remote set-url origin https://<NEW_PAT>@github.com/comage9/obsidian-vault.git`
