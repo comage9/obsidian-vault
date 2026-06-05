@@ -1,0 +1,232 @@
+{
+  "main": {
+    "id": "deac1840e5291f32",
+    "type": "split",
+    "children": [
+      {
+        "id": "c1cc2dd72f6bdbd1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "920dc1db7a29e349",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "그래프 뷰"
+            }
+          },
+          {
+            "id": "7fc17632cac64069",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "그래프 뷰"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2ea081988423e12a",
+    "type": "split",
+    "children": [
+      {
+        "id": "c32d840aff745cfe",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "636ca574b24e8c3f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "파일 탐색기"
+            }
+          },
+          {
+            "id": "74d54ce31972d8e5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "검색"
+            }
+          },
+          {
+            "id": "cbf0de7191b5092a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "북마크"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "f165fdd9f7382cdf",
+    "type": "split",
+    "children": [
+      {
+        "id": "892d154004277fe9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bb01b3af59efe763",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "2026-04-09-vf.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "2026-04-09-vf 의 백링크"
+            }
+          },
+          {
+            "id": "5815794794b66fbe",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "2026-04-09-vf.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "2026-04-09-vf 의 나가는 링크"
+            }
+          },
+          {
+            "id": "5120d94a1b652e42",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "태그"
+            }
+          },
+          {
+            "id": "ea0890dba6726d33",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "모든 속성"
+            }
+          },
+          {
+            "id": "035bdbb03aec7832",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "2026-04-09-vf.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "2026-04-09-vf 의 개요"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:빠른 전환기 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 일일 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false,
+      "bases:새 베이스 생성하기": false
+    }
+  },
+  "active": "7fc17632cac64069",
+  "lastOpenFiles": [
+    "2026-04-08-vf.md",
+    "윈도우_동기화_명령어.md",
+    "옵시디언_윈도우_동기화_가이드.md",
+    "옵시디언_동기화_Windows_가이드.md",
+    "빈파일_정리_완료_2026-04-18.md",
+    "메모리-시스템-가이드.md",
+    "동기화_설치_가이드.md",
+    "동기화_사용가이드_실습.md",
+    "vf_production_mobile_ui_test_report.md",
+    "vf_mobile_ui_testing_summary.md",
+    "vf_mobile_ui_mockups.md",
+    "omo_coding_task.md",
+    "mobile-card-spec.md",
+    "log.md",
+    "index.md",
+    "entities/금형.md",
+    "entities/제품.md",
+    "entities/기계.md",
+    "entities/VF-생산-계획-최종-색상-매핑.md",
+    "entities/VF-생산-계획-색상-매핑.md",
+    "entities/vf-67.md",
+    "entities/api-endpoints.md",
+    "entities/vf-67-todos.md",
+    "entities/openclaw.md",
+    "entities/index.md",
+    "entities/claude-code.md",
+    "entities",
+    "concepts",
+    "backup_2026-04-18/graph.json",
+    "backup_2026-04-18/core-plugins.json",
+    "backup_2026-04-18/app.json",
+    "backup_2026-04-18",
+    "obsidian-sync.bat",
+    "새 텍스트 문서.txt",
+    "01-VF-프로젝트/문서/프로젝트-기록",
+    "01-VF-프로젝트/문서/기술문서"
+  ]
+}

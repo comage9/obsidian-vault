@@ -1,0 +1,661 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "2026-04-12 \uc77c\ubc18 \uc138\uc158\ub85c\uadf8",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/04-\uc77c\ubc18/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "source_location": "line 1",
+      "id": "04___________2026_04_12_md::header::2026_04_12________"
+    },
+    {
+      "label": "\uc54c\uc774 (OpenClaw) \uc815\ubcf4",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/04-\uc77c\ubc18/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "source_location": "line 3",
+      "id": "04___________2026_04_12_md::header::____openclaw____"
+    },
+    {
+      "label": "Obsidian Vault \uad6c\uc870",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/04-\uc77c\ubc18/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "source_location": "line 23",
+      "id": "04___________2026_04_12_md::header::obsidian_vault___"
+    },
+    {
+      "label": "2026-04-06 VF \ud504\ub85c\uc81d\ud2b8 \uc138\uc158\ub85c\uadf8",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-06.md",
+      "source_location": "line 1",
+      "id": "01_vf_____________2026_04_06_md::header::2026_04_06_vf__________"
+    },
+    {
+      "label": "vf-production \uc2a4\ud0ac \uc5c5\uadf8\ub808\uc774\ub4dc",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-06.md",
+      "source_location": "line 5",
+      "id": "01_vf_____________2026_04_06_md::header::vf_production_________"
+    },
+    {
+      "label": "GitHub Token",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-06.md",
+      "source_location": "line 16",
+      "id": "01_vf_____________2026_04_06_md::header::github_token"
+    },
+    {
+      "label": "2026-04-09 VF \ud504\ub85c\uc81d\ud2b8 \uc138\uc158\ub85c\uadf8",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-09.md",
+      "source_location": "line 1",
+      "id": "01_vf_____________2026_04_09_md::header::2026_04_09_vf__________"
+    },
+    {
+      "label": "VF \ud504\ub85c\uc81d\ud2b8 - AI API \ubc84\uadf8 \uc218\uc815",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-09.md",
+      "source_location": "line 3",
+      "id": "01_vf_____________2026_04_09_md::header::vf________ai_api______"
+    },
+    {
+      "label": "2026-04-10 VF \ud504\ub85c\uc81d\ud2b8 \uc138\uc158\ub85c\uadf8",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-10.md",
+      "source_location": "line 1",
+      "id": "01_vf_____________2026_04_10_md::header::2026_04_10_vf__________"
+    },
+    {
+      "label": "AI \ubc30\uc1a1 \uc608\uce21 \ubd84\uc11d \uc601\uc5b4+\ud55c\uae00 \ud63c\uc6a9 \ubb38\uc81c \ud83d\udd34 \ubbf8\ud574\uacb0",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-10.md",
+      "source_location": "line 3",
+      "id": "01_vf_____________2026_04_10_md::header::ai___________________________"
+    },
+    {
+      "label": "2026-04-07 VF \ud504\ub85c\uc81d\ud2b8 \uc138\uc158\ub85c\uadf8",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-07.md",
+      "source_location": "line 1",
+      "id": "01_vf_____________2026_04_07_md::header::2026_04_07_vf__________"
+    },
+    {
+      "label": "ACP (Claude Code) \uc5f0\uacb0",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-07.md",
+      "source_location": "line 3",
+      "id": "01_vf_____________2026_04_07_md::header::acp__claude_code____"
+    },
+    {
+      "label": "DnD \uc218\uc815 \uc791\uc5c5",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-07.md",
+      "source_location": "line 8",
+      "id": "01_vf_____________2026_04_07_md::header::dnd______"
+    },
+    {
+      "label": "GLM 5.1 \ud55c\ub3c4 \ub3c4\ub2ec",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-07.md",
+      "source_location": "line 13",
+      "id": "01_vf_____________2026_04_07_md::header::glm_5_1______"
+    },
+    {
+      "label": "2026-04-08 VF \ud504\ub85c\uc81d\ud2b8 \uc138\uc158\ub85c\uadf8",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-08.md",
+      "source_location": "line 1",
+      "id": "01_vf_____________2026_04_08_md::header::2026_04_08_vf__________"
+    },
+    {
+      "label": "VF- \ud504\ub85c\uc81d\ud2b8 \uc885\ud569 \uac80\ud1a0 (Hermes-agent)",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-08.md",
+      "source_location": "line 3",
+      "id": "01_vf_____________2026_04_08_md::header::vf______________hermes_agent_"
+    },
+    {
+      "label": "Hermes-agent \uc124\uce58 \ubc0f \uad6c\uc131",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-08.md",
+      "source_location": "line 8",
+      "id": "01_vf_____________2026_04_08_md::header::hermes_agent________"
+    },
+    {
+      "label": "Claude Code \ucf54\ub4dc \uc218\uc815 (5 Phase \uc644\ub8cc)",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-08.md",
+      "source_location": "line 13",
+      "id": "01_vf_____________2026_04_08_md::header::claude_code________5_phase____"
+    },
+    {
+      "label": "2026-04-11 VF \ud504\ub85c\uc81d\ud2b8 \uc138\uc158\ub85c\uadf8",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-11.md",
+      "source_location": "line 1",
+      "id": "01_vf_____________2026_04_11_md::header::2026_04_11_vf__________"
+    },
+    {
+      "label": "VF \ubaa8\ubc14\uc77c \ud398\uc774\uc9c0 (/production) \uc218\uc815",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-11.md",
+      "source_location": "line 19",
+      "id": "01_vf_____________2026_04_11_md::header::vf___________production____"
+    },
+    {
+      "label": "Git Commits",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-11.md",
+      "source_location": "line 33",
+      "id": "01_vf_____________2026_04_11_md::header::git_commits"
+    },
+    {
+      "label": "2026-04-12 VF \ud504\ub85c\uc81d\ud2b8 \uc138\uc158\ub85c\uadf8",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "source_location": "line 1",
+      "id": "01_vf_____________2026_04_12_md::header::2026_04_12_vf"
+    },
+    {
+      "label": "\uc624\uc804 \uc138\uc158 (07:20~09:05)",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "source_location": "line 3",
+      "id": "01_vf_____________2026_04_12_md::header::07_20_09_05"
+    },
+    {
+      "label": "\uc624\uc804 \uc138\uc158 (11:29~)",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "source_location": "line 9",
+      "id": "01_vf_____________2026_04_12_md::header::11_29"
+    },
+    {
+      "label": "Obsidian Vault \uc0dd\uc131",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "source_location": "line 14",
+      "id": "01_vf_____________2026_04_12_md::header::obsidian_vault"
+    },
+    {
+      "label": "\uc624\ud6c4 \uc138\uc158 (14:32~)",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "source_location": "line 29",
+      "id": "01_vf_____________2026_04_12_md::header::14_32"
+    },
+    {
+      "label": "Windows \ubc30\uce58 \ud30c\uc77c \uacbd\ub85c \uc218\uc815 (ededd17)",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "source_location": "line 31",
+      "id": "01_vf_____________2026_04_12_md::header::windows______________ededd17"
+    },
+    {
+      "label": "\uc624\ud6c4 \uc138\uc158 (15:51~) - \ubbf8\uc644\ub8cc \uc791\uc5c5 \uc9c4\ud589",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "source_location": "line 44",
+      "id": "01_vf_____________2026_04_12_md::header::15_51"
+    },
+    {
+      "label": "\uc791\uc5c5 \uc21c\uc11c: 2-3-4-5-6-1",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "source_location": "line 46",
+      "id": "01_vf_____________2026_04_12_md::header::2_3_4_5_6_1"
+    },
+    {
+      "label": "2. \uc7ac\uace0 \uc785\ub825 \uae30\ub2a5 \u2705 \uc644\ub8cc (b5cd23f)",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "source_location": "line 48",
+      "id": "01_vf_____________2026_04_12_md::header::2_________________b5cd23f"
+    },
+    {
+      "label": "3. \ucd9c\uace0\ub7c9 \ud655\uc778 \u2705 \uc774\ubbf8 \uad6c\ud604\ub428",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "source_location": "line 54",
+      "id": "01_vf_____________2026_04_12_md::header::3"
+    },
+    {
+      "label": "4. AI \uc0dd\uc0b0 \ucd94\ucc9c \u2705 \uc774\ubbf8 \uad6c\ud604\ub428",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "source_location": "line 59",
+      "id": "01_vf_____________2026_04_12_md::header::4__ai"
+    },
+    {
+      "label": "5. \uc5d0\uc774\uc804\ud2b8 \uc704\uc784 \uccb4\uacc4 \ud83d\udd34 \ubbf8\uad6c\ud604",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "source_location": "line 64",
+      "id": "01_vf_____________2026_04_12_md::header::5"
+    },
+    {
+      "label": "6. Obsidian MCP \ud50c\ub7ec\uadf8\uc778 \ud83d\udd34 \ubbf8\uc644\ub8cc",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "source_location": "line 69",
+      "id": "01_vf_____________2026_04_12_md::header::6__obsidian_mcp"
+    },
+    {
+      "label": "1. AI thinking \ud544\ud130\ub9c1 \ud83d\udd34 \ubbf8\ud574\uacb0",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "source_location": "line 73",
+      "id": "01_vf_____________2026_04_12_md::header::1__ai_thinking"
+    },
+    {
+      "label": "GitHub Commits (2026-04-12)",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "source_location": "line 81",
+      "id": "01_vf_____________2026_04_12_md::header::github_commits__2026_04_12"
+    },
+    {
+      "label": "API \ubaa9\ub85d (\ucc38\uace0)",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "source_location": "line 92",
+      "id": "01_vf_____________2026_04_12_md::header::api"
+    },
+    {
+      "label": "Backend APIs",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "source_location": "line 94",
+      "id": "01_vf_____________2026_04_12_md::header::backend_apis"
+    },
+    {
+      "label": "Frontend Components",
+      "file_type": "document",
+      "entity_type": "header",
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "source_location": "line 102",
+      "id": "01_vf_____________2026_04_12_md::header::frontend_components"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/04-\uc77c\ubc18/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "weight": 1.0,
+      "source": "04___________2026_04_12_md::header::2026_04_12________",
+      "target": "04___________2026_04_12_md::header::____openclaw____"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/04-\uc77c\ubc18/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "weight": 1.0,
+      "source": "04___________2026_04_12_md::header::2026_04_12________",
+      "target": "04___________2026_04_12_md::header::obsidian_vault___"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-06.md",
+      "weight": 1.0,
+      "source": "01_vf_____________2026_04_06_md::header::2026_04_06_vf__________",
+      "target": "01_vf_____________2026_04_06_md::header::vf_production_________"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-06.md",
+      "weight": 1.0,
+      "source": "01_vf_____________2026_04_06_md::header::2026_04_06_vf__________",
+      "target": "01_vf_____________2026_04_06_md::header::github_token"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-09.md",
+      "weight": 1.0,
+      "source": "01_vf_____________2026_04_09_md::header::2026_04_09_vf__________",
+      "target": "01_vf_____________2026_04_09_md::header::vf________ai_api______"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-10.md",
+      "weight": 1.0,
+      "source": "01_vf_____________2026_04_10_md::header::2026_04_10_vf__________",
+      "target": "01_vf_____________2026_04_10_md::header::ai___________________________"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-07.md",
+      "weight": 1.0,
+      "source": "01_vf_____________2026_04_07_md::header::2026_04_07_vf__________",
+      "target": "01_vf_____________2026_04_07_md::header::acp__claude_code____"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-07.md",
+      "weight": 1.0,
+      "source": "01_vf_____________2026_04_07_md::header::2026_04_07_vf__________",
+      "target": "01_vf_____________2026_04_07_md::header::dnd______"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-07.md",
+      "weight": 1.0,
+      "source": "01_vf_____________2026_04_07_md::header::2026_04_07_vf__________",
+      "target": "01_vf_____________2026_04_07_md::header::glm_5_1______"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-08.md",
+      "weight": 1.0,
+      "source": "01_vf_____________2026_04_08_md::header::2026_04_08_vf__________",
+      "target": "01_vf_____________2026_04_08_md::header::vf______________hermes_agent_"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-08.md",
+      "weight": 1.0,
+      "source": "01_vf_____________2026_04_08_md::header::2026_04_08_vf__________",
+      "target": "01_vf_____________2026_04_08_md::header::hermes_agent________"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-08.md",
+      "weight": 1.0,
+      "source": "01_vf_____________2026_04_08_md::header::2026_04_08_vf__________",
+      "target": "01_vf_____________2026_04_08_md::header::claude_code________5_phase____"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-11.md",
+      "weight": 1.0,
+      "source": "01_vf_____________2026_04_11_md::header::2026_04_11_vf__________",
+      "target": "01_vf_____________2026_04_11_md::header::vf___________production____"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-11.md",
+      "weight": 1.0,
+      "source": "01_vf_____________2026_04_11_md::header::2026_04_11_vf__________",
+      "target": "01_vf_____________2026_04_11_md::header::git_commits"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "weight": 1.0,
+      "source": "01_vf_____________2026_04_12_md::header::2026_04_12_vf",
+      "target": "01_vf_____________2026_04_12_md::header::07_20_09_05"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "weight": 1.0,
+      "source": "01_vf_____________2026_04_12_md::header::2026_04_12_vf",
+      "target": "01_vf_____________2026_04_12_md::header::11_29"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "weight": 1.0,
+      "source": "01_vf_____________2026_04_12_md::header::2026_04_12_vf",
+      "target": "01_vf_____________2026_04_12_md::header::obsidian_vault"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "weight": 1.0,
+      "source": "01_vf_____________2026_04_12_md::header::2026_04_12_vf",
+      "target": "01_vf_____________2026_04_12_md::header::14_32"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "weight": 1.0,
+      "source": "01_vf_____________2026_04_12_md::header::2026_04_12_vf",
+      "target": "01_vf_____________2026_04_12_md::header::15_51"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "weight": 1.0,
+      "source": "01_vf_____________2026_04_12_md::header::2026_04_12_vf",
+      "target": "01_vf_____________2026_04_12_md::header::github_commits__2026_04_12"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "weight": 1.0,
+      "source": "01_vf_____________2026_04_12_md::header::2026_04_12_vf",
+      "target": "01_vf_____________2026_04_12_md::header::api"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "weight": 1.0,
+      "source": "01_vf_____________2026_04_12_md::header::14_32",
+      "target": "01_vf_____________2026_04_12_md::header::windows______________ededd17"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "weight": 1.0,
+      "source": "01_vf_____________2026_04_12_md::header::15_51",
+      "target": "01_vf_____________2026_04_12_md::header::2_3_4_5_6_1"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "weight": 1.0,
+      "source": "01_vf_____________2026_04_12_md::header::15_51",
+      "target": "01_vf_____________2026_04_12_md::header::2_________________b5cd23f"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "weight": 1.0,
+      "source": "01_vf_____________2026_04_12_md::header::15_51",
+      "target": "01_vf_____________2026_04_12_md::header::3"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "weight": 1.0,
+      "source": "01_vf_____________2026_04_12_md::header::15_51",
+      "target": "01_vf_____________2026_04_12_md::header::4__ai"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "weight": 1.0,
+      "source": "01_vf_____________2026_04_12_md::header::15_51",
+      "target": "01_vf_____________2026_04_12_md::header::5"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "weight": 1.0,
+      "source": "01_vf_____________2026_04_12_md::header::15_51",
+      "target": "01_vf_____________2026_04_12_md::header::6__obsidian_mcp"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "weight": 1.0,
+      "source": "01_vf_____________2026_04_12_md::header::15_51",
+      "target": "01_vf_____________2026_04_12_md::header::1__ai_thinking"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "weight": 1.0,
+      "source": "01_vf_____________2026_04_12_md::header::api",
+      "target": "01_vf_____________2026_04_12_md::header::backend_apis"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/home/comage/obsidian-vault/01-VF-\ud504\ub85c\uc81d\ud2b8/\uc138\uc158\ub85c\uadf8/2026-04-12.md",
+      "weight": 1.0,
+      "source": "01_vf_____________2026_04_12_md::header::api",
+      "target": "01_vf_____________2026_04_12_md::header::frontend_components"
+    }
+  ],
+  "communities": {
+    "0": [
+      "01_vf_____________2026_04_12_md::header::15_51",
+      "01_vf_____________2026_04_12_md::header::1__ai_thinking",
+      "01_vf_____________2026_04_12_md::header::2_3_4_5_6_1",
+      "01_vf_____________2026_04_12_md::header::2_________________b5cd23f",
+      "01_vf_____________2026_04_12_md::header::3",
+      "01_vf_____________2026_04_12_md::header::4__ai",
+      "01_vf_____________2026_04_12_md::header::5",
+      "01_vf_____________2026_04_12_md::header::6__obsidian_mcp"
+    ],
+    "1": [
+      "01_vf_____________2026_04_12_md::header::07_20_09_05",
+      "01_vf_____________2026_04_12_md::header::11_29",
+      "01_vf_____________2026_04_12_md::header::14_32",
+      "01_vf_____________2026_04_12_md::header::2026_04_12_vf",
+      "01_vf_____________2026_04_12_md::header::github_commits__2026_04_12",
+      "01_vf_____________2026_04_12_md::header::obsidian_vault",
+      "01_vf_____________2026_04_12_md::header::windows______________ededd17"
+    ],
+    "2": [
+      "01_vf_____________2026_04_07_md::header::2026_04_07_vf__________",
+      "01_vf_____________2026_04_07_md::header::acp__claude_code____",
+      "01_vf_____________2026_04_07_md::header::dnd______",
+      "01_vf_____________2026_04_07_md::header::glm_5_1______"
+    ],
+    "3": [
+      "01_vf_____________2026_04_08_md::header::2026_04_08_vf__________",
+      "01_vf_____________2026_04_08_md::header::claude_code________5_phase____",
+      "01_vf_____________2026_04_08_md::header::hermes_agent________",
+      "01_vf_____________2026_04_08_md::header::vf______________hermes_agent_"
+    ],
+    "4": [
+      "04___________2026_04_12_md::header::2026_04_12________",
+      "04___________2026_04_12_md::header::____openclaw____",
+      "04___________2026_04_12_md::header::obsidian_vault___"
+    ],
+    "5": [
+      "01_vf_____________2026_04_06_md::header::2026_04_06_vf__________",
+      "01_vf_____________2026_04_06_md::header::github_token",
+      "01_vf_____________2026_04_06_md::header::vf_production_________"
+    ],
+    "6": [
+      "01_vf_____________2026_04_11_md::header::2026_04_11_vf__________",
+      "01_vf_____________2026_04_11_md::header::git_commits",
+      "01_vf_____________2026_04_11_md::header::vf___________production____"
+    ],
+    "7": [
+      "01_vf_____________2026_04_12_md::header::api",
+      "01_vf_____________2026_04_12_md::header::backend_apis",
+      "01_vf_____________2026_04_12_md::header::frontend_components"
+    ],
+    "8": [
+      "01_vf_____________2026_04_09_md::header::2026_04_09_vf__________",
+      "01_vf_____________2026_04_09_md::header::vf________ai_api______"
+    ],
+    "9": [
+      "01_vf_____________2026_04_10_md::header::2026_04_10_vf__________",
+      "01_vf_____________2026_04_10_md::header::ai___________________________"
+    ]
+  }
+}

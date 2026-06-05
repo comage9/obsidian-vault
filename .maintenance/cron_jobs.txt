@@ -1,0 +1,16 @@
+# 옵시디언 정기 유지보수 크론 작업
+
+# 매주 월요일 09:00 - 주간 인덱스 검토
+0 9 * * 1 cd /tmp/obsidian-vault && ./.maintenance/scripts/weekly_index_review.sh
+
+# 매일 18:00 - 연결률 모니터링
+0 18 * * * cd /tmp/obsidian-vault && ./.maintenance/scripts/connection_monitor.sh
+
+# 실시간 파일 감시 (백그라운드 실행)
+# @reboot cd /tmp/obsidian-vault && ./.maintenance/scripts/auto_index_new_files.sh &
+
+# 매일 08:00 - 로그 정리 (7일 이상된 로그 삭제)
+0 8 * * * find /tmp/obsidian-vault/.maintenance/logs -name "*.log" -mtime +7 -delete
+
+# 매월 1일 10:00 - 월간 보고서 생성
+0 10 1 * * cd /tmp/obsagen-vault && ./.maintenance/scripts/monthly_report.sh
