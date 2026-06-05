@@ -77,3 +77,8 @@ vf_mobile_ui_testing_summary
 VF-OUTBOUND-TEST-REPORT
 vf_production_mobile_ui_test_report
 VF-PROJECT-RESTORATION-REPORT
+obsidian/06-Wiki-시스템/Wiki/의사결정/Hermes-에이전트-온보딩-적용결과-20260606
+obsidian/06-Wiki-시스템/Wiki/의사결정/ki-ai-trader-매매손실-원인진단-20260605
+obsidian/06-Wiki-시스템/Wiki/의사결정/ki-ai-trader-손절익절-트레일링-재검증-20260605
+obsidian/06-Wiki-시스템/Wiki/의사결정/보조-운영원칙-음성인식-인용문-git검증-20260606
+obsidian/06-Wiki-시스템/Wiki/의사결정/사용자-작업방식-상세-20260606
