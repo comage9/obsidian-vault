@@ -285,6 +285,64 @@ class WPPS_CDP_FullAutomation:
         print("[INFO] 저장 요청 전송 (fn_save 호출)")
         time.sleep(4)
 
+    def print_pdf(self, pdf_path, title=""):
+        """CDP로 PDF를 열고 Chrome PDF 뷰어의 인쇄 버튼 클릭"""
+        import os
+        abs_path = os.path.abspath(pdf_path)
+        file_url = urllib.parse.quote(abs_path)
+        pdf_url = f"file:///{file_url.replace('%3A', ':').replace('%5C', '/')}"
+        
+        print(f"[INFO] PDF 인쇄 준비 중: {title or pdf_path}")
+        
+        # 새 탭에 PDF 열기
+        pages_before = self._get_pages()
+        self.cmd('Target.createTarget', {'url': pdf_url, 'newWindow': False})
+        time.sleep(3)
+        
+        pages_after = self._get_pages()
+        new_pages = [p for p in pages_after if p.get('id') not in [pb.get('id','') for pb in pages_before]]
+        
+        if new_pages:
+            pdf_page = new_pages[0]
+            print(f"[INFO] PDF 뷰어 로드됨: {pdf_page.get('url','')[:60]}")
+            
+            # PDF 뷰어 인쇄 버튼 클릭 (shadow DOM)
+            try:
+                pws = websocket.create_connection(pdf_page['webSocketDebuggerUrl'], timeout=10)
+                pws.settimeout(10)
+                pws.send(json.dumps({'id': 1, 'method': 'Runtime.evaluate', 'params': {
+                    'expression': '''
+                    (function() {
+                        try {
+                            var viewer = document.querySelector('pdf-viewer');
+                            if (!viewer) return 'no pdf-viewer';
+                            var toolbar = viewer.shadowRoot.querySelector('viewer-toolbar');
+                            if (!toolbar) return 'no toolbar';
+                            var printBtn = toolbar.shadowRoot.getElementById('print');
+                            if (!printBtn) return 'no print btn';
+                            printBtn.click();
+                            return 'print clicked';
+                        } catch(e) { return 'ERR: ' + e.message; }
+                    })()
+                    ''',
+                    'returnByValue': True
+                }}))
+                time.sleep(1)
+                try:
+                    while True:
+                        r = json.loads(pws.recv())
+                        if 'id' in r:
+                            print(f"[INFO] PDF 인쇄: {r.get('result',{}).get('result',{}).get('value','')}")
+                            break
+                except:
+                    print("[INFO] 인쇄 다이얼로그 열림 (CDP 타임아웃=정상)")
+                pws.close()
+                print(f"[INFO] ✅ 인쇄 다이얼로그가 열렸습니다. 프린터(Canon G2010 series) 선택 후 인쇄하세요.")
+            except Exception as e:
+                print(f"[WARN] PDF 인쇄 버튼 클릭 실패: {e}")
+        else:
+            print("[WARN] PDF 탭을 찾을 수 없습니다.")
+
     def close(self):
         if self.ws:
             self.ws.close()
@@ -537,6 +595,16 @@ def main():
             print("[ERROR] 최종 등록 확인 결과 누락된 차량이 존재합니다. KPP UI를 직접 확인하십시오.")
     else:
         print("[INFO] 신규 추가된 차량이 없어 저장을 수행하지 않고 종료합니다.")
+    
+    # 9. PDF 인쇄 (등록된 차량의 간선출차확인서 출력)
+    if final_vehicles_data:
+        print("\n=== PDF 인쇄 ===")
+        for v_data, v_info in zip(final_vehicles_data, ls_vehicles):
+            truck_req_id = v_info.get("truckRequestId", "")
+            pdf_path = f"E:\\coding\\skill\\KPP\\slip_{truck_req_id}.pdf"
+            if os.path.exists(pdf_path):
+                w.print_pdf(pdf_path, title=v_data['hoche'])
+                time.sleep(2)
         
     w.close()
     print("========================================================")
