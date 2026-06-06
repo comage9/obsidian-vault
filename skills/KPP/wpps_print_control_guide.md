@@ -53,6 +53,23 @@ python E:\coding\skill\KPP\wpps_register_2_3.py --print 1,3
 python E:\coding\skill\KPP\wpps_register_2_3.py --print none
 ```
 
+### 예제 5: KPP에서 특정 호차의 EDI 전표만 단독 자동 인쇄
+이미 출하통보등록이 완료된 상태에서, **KPP EDI 전표 팝업을 띄우고 백그라운드에서 자동으로 Enter 키를 입력**하여 인쇄까지 100% 무인 완료합니다. (예: 2호차만 단독 출력)
+```bash
+python E:\coding\skill\KPP\wpps_register_2_3.py --kpp-print 2
+```
+
+---
+
+## 3.1 프린터 자동 확인 및 기본 프린터 변경 기능
+
+본 자동화 프로그램은 실행 즉시 Windows 시스템의 기본 프린터 설정을 강제로 검사하고 교정합니다.
+
+* **동작 원리**: 
+  - 스크립트 가동 즉시 OS 기본 프린터를 조회하여 `Canon G2010 series`로 지정되어 있는지 확인합니다.
+  - 만약 다른 프린터(예: 사무용 대형 복합기 등)가 기본으로 지정되어 있을 경우, **자동으로 `Canon G2010 series`로 기본 프린터를 변경**하여 스풀러 오작동을 방지합니다.
+  - 이 조치를 통해 **LS PDF 인쇄** 및 **KPP 크롬 인쇄 다이얼로그의 기본 인쇄 대상(Destination) 설정**이 항상 안전하게 `Canon G2010 series` 프린터로 자동 포커싱됩니다.
+
 ---
 
 ## 4. 트러블슈팅 요약

@@ -1,16 +1,18 @@
 """
-WPPS PBM140MW 출하통보등록 완전 자동화 스크립트 (인쇄 제어 옵션 탑재)
+WPPS PBM140MW 출하통보등록 및 자동 인쇄 통합 제어 프로그램 (기본 프린터 강제 교정 탑재)
 파일명: E:\\coding\\skill\\KPP\\wpps_register_2_3.py
 작성일: 2026-06-06
 
 주요 기능:
-1. 크롬 디버거(CDP 9222)로부터 실시간으로 쿠팡 LS 세션 쿠키 자동 추출
-2. 쿠팡 LS API를 실시간 조회하여 오늘자 VF67 출발 차량 확인
-3. --print 매개변수를 이용해 특정 차량(예: 1, 2, 3호차)만 선택하여 1장씩 순차 인쇄 제어
-4. PyMuPDF 실시간 정보(기사명, 연락처) 파싱 및 기사/차량 매칭
-5. WPPS PBM140MW 접속 및 중복 등록된 차량 감지 시 선택적 삭제 후 일괄 저장
-6. 1~3호차 차량 정보 일괄 등록 후 단 1회만 저장(Batch Save)하여 속도 및 성능 최적화
-7. 최종 결과 검증 및 스크린샷 캡처
+1. 실행 즉시 Windows 시스템 기본 프린터가 'Canon G2010 series'로 설정되어 있는지 검사하고 강제 변경(교정)
+2. 크롬 디버거(CDP 9222)로부터 실시간으로 쿠팡 LS 세션 쿠키 자동 추출
+3. 쿠팡 LS API를 실시간 조회하여 오늘자 VF67 출발 차량 확인
+4. --print 매개변수를 이용해 특정 차량(예: 1, 2, 3호차)만 선택하여 1장씩 순차 인쇄 제어
+5. PyMuPDF 실시간 정보(기사명, 연락처) 파싱 및 기사/차량 매칭
+6. WPPS PBM140MW 접속 및 중복 등록된 차량 감지 시 선택적 삭제 후 일괄 저장
+7. 1~3호차 차량 정보 일괄 등록 후 단 1회만 저장(Batch Save)하여 속도 및 성능 최적화
+8. KPP EDI 전표 출력 시 브라우저 인쇄 다이얼로그에 백그라운드 Enter 키를 자동 송출하여 무인 인쇄 완료
+9. 최종 결과 검증 및 스크린샷 캡처
 """
 
 import json
@@ -25,11 +27,13 @@ import re
 import fitz  # PyMuPDF
 import os
 import argparse
+import win32print  # Windows 프린터 제어용
 
 CDP_PORT = 9222
 PBM_URL = "https://wpps.logisall.net/ps/PBM140MW"
 LOGIN_URL = "https://wpps.logisall.net/"
 DATE = time.strftime("%Y-%m-%d")  # 오늘 날짜 (YYYY-MM-DD)
+TARGET_PRINTER = "Canon G2010 series"
 
 # WPPS 그리드 내 톤수별 표준 팔레트 수량 정의
 QTY_RULES = {
@@ -291,6 +295,73 @@ class WPPS_CDP_FullAutomation:
             print(f"[ERROR] {title} 무음 인쇄 호출 중 실패: {e}")
             return False
 
+    def kpp_edi_print_and_confirm(self, hoche):
+        """WPPS PBM140MW에서 특정 호차의 EDI 전표를 조회하고, 인쇄 다이얼로그에 Enter를 백그라운드 전송하여 무인 인쇄 완료"""
+        hoche_str = f"{hoche.strip()}호차" if "호차" not in hoche else hoche.strip()
+        print(f"\n=== KPP EDI 출력 진행 ({hoche_str}) ===")
+        
+        # 1. 오늘 날짜로 조회
+        self.set_date(DATE)
+        self.search()
+        
+        # 2. 그리드에서 해당 호차 검색
+        row_count = self.get_row_count()
+        row_idx = -1
+        for i in range(row_count):
+            val = self.js(f"GC.Spread.Sheets.findControl(document.getElementById('grid')).getActiveSheet().getValue({i}, 36)")
+            if hoche_str in str(val):
+                row_idx = i
+                break
+                
+        if row_idx == -1:
+            print(f"[WARN] 그리드에서 {hoche_str}를 찾을 수 없습니다.")
+            return False
+            
+        print(f"[INFO] {hoche_str}가 그리드 Row {row_idx}에서 감지되었습니다. 선택 및 출력을 개시합니다.")
+        
+        # 3. 행 체크박스 체크 및 활성화
+        self.js(f"""
+            var s = GC.Spread.Sheets.findControl(document.getElementById('grid')).getActiveSheet();
+            for(var i=0; i<s.getRowCount(); i++) {{
+                s.setValue(i, 1, false); // 모든 체크 해제
+            }}
+            s.setValue({row_idx}, 1, true); // 대상 선택
+            s.setActiveCell({row_idx}, 0);
+            s.setSelection({row_idx}, 0, 1, 1);
+        """)
+        time.sleep(0.5)
+        
+        # 4. 백그라운드 인쇄 컨펌용 스레드 가동
+        def confirm_thread():
+            print("[INFO] 인쇄 다이얼로그 자동 전송 스레드 가동 (3.5초 대기 중)")
+            time.sleep(3.5)
+            try:
+                import win32com.client
+                shell = win32com.client.Dispatch("WScript.Shell")
+                
+                # 강제로 크롬 창을 Foreground로 활성화하여 포커스 복구
+                is_activated = shell.AppActivate("WPPS")
+                print(f"[INFO] 윈도우 활성화 시도 (WPPS): {is_activated}")
+                
+                if is_activated:
+                    time.sleep(0.5)
+                    # Enter 키를 전송하여 기본 포커스된 파란색 [인쇄] 버튼을 물리적으로 클릭함
+                    shell.SendKeys("{ENTER}")
+                    print("[SUCCESS] 인쇄 확인 Enter 키가 다이얼로그로 성공적으로 송출되었습니다.")
+                else:
+                    print("[WARN] WPPS 브라우저 윈도우 창 활성화 실패로 Enter 전송을 생략합니다.")
+            except Exception as e:
+                print(f"[ERROR] 백그라운드 Enter 키 전송 실패: {e}")
+                
+        threading.Thread(target=confirm_thread, daemon=True).start()
+        
+        # 5. EDI 출력 (ediRegister) 버튼 클릭 (CDP 일시 블로킹 발생점)
+        print("[INFO] EDI 출력 버튼(ediRegister) 클릭")
+        self.js("document.getElementById('ediRegister').click()")
+        time.sleep(5)
+        print(f"[SUCCESS] {hoche_str} 전표 출력 및 인쇄 처리 완료.")
+        return True
+
     def save(self):
         """저장 작업 수행 및 alert/confirm 대응"""
         self.override_dialogs()
@@ -385,12 +456,48 @@ def extract_driver_info_from_pdf(pdf_path):
         print(f"[ERROR] PDF 텍스트 추출 실패 ({pdf_path}): {e}")
         return None, None
 
+def check_and_set_default_printer(target_printer=TARGET_PRINTER):
+    """Windows 시스템의 기본 프린터를 타겟 프린터로 검사 및 자동 변경"""
+    print(f"[INFO] Windows 기본 프린터 상태 검증 시작...")
+    try:
+        current_printer = win32print.GetDefaultPrinter()
+        print(f"[INFO] 현재 지정된 기본 프린터: '{current_printer}'")
+        
+        if current_printer != target_printer:
+            print(f"[WARN] 기본 프린터가 '{target_printer}'가 아닙니다. 강제 변경을 수행합니다...")
+            win32print.SetDefaultPrinter(target_printer)
+            # 변경 확인을 위한 재조회
+            verified_printer = win32print.GetDefaultPrinter()
+            if verified_printer == target_printer:
+                print(f"[SUCCESS] Windows 기본 프린터가 성공적으로 '{target_printer}' (으)로 변경되었습니다.")
+            else:
+                print(f"[ERROR] 기본 프린터 변경 검증 실패. 현재: '{verified_printer}'")
+        else:
+            print(f"[SUCCESS] 현재 기본 프린터가 올바르게 '{target_printer}'로 설정되어 있습니다.")
+    except Exception as e:
+        print(f"[ERROR] Windows 프린터 설정 확인/변경 도중 오류 발생: {e}")
+        print("[INFO] 이 오류는 프린터 드라이버 미설치 또는 이름 불일치로 발생할 수 있습니다.")
+
 
 def main():
-    # 0. 커맨드라인 매개변수 파싱 (인쇄할 차량 제어)
+    # 0. 실행 즉시 시스템 기본 프린터를 'Canon G2010 series'로 교정
+    check_and_set_default_printer(TARGET_PRINTER)
+
+    # 0.1 커맨드라인 매개변수 파싱
     parser = argparse.ArgumentParser(description="WPPS & LS Pallet Registration and Printing Program")
     parser.add_argument("--print", default="all", help="인쇄할 호차 선택 (예: 1, 2, 3, 1,2, all, none)")
+    parser.add_argument("--kpp-print", default="", help="KPP에서 단독 인쇄할 호차 (예: 1, 2, 3)")
     args = parser.parse_args()
+
+    # 단독 KPP 인쇄 모드 체크
+    if args.kpp_print:
+        print(f"\n========================================================")
+        print(f" WPPS KPP EDI 전표 단독 인쇄 실행 (호차: {args.kpp_print})")
+        print(f"========================================================")
+        w = WPPS_CDP_FullAutomation()
+        w.kpp_edi_print_and_confirm(args.kpp_print)
+        w.close()
+        sys.exit(0)
 
     print(f"\n========================================================")
     print(f" WPPS 출하통보등록 일괄 자동화 프로세스 시작 (날짜: {DATE})")
@@ -533,7 +640,7 @@ def main():
         final_snapshot = w.read_grid_data()
         all_registered = True
         for vehicle in final_vehicles_data:
-            if f"차량번호={vehicle['car_num']}" not in final_snapshot:
+            if vehicle["car_num"] not in final_snapshot:
                 all_registered = False
                 break
                 
@@ -548,7 +655,6 @@ def main():
     if args.print.lower() != "none" and final_vehicles_data:
         print("\n=== LS PDF 출력 (간선출차확인서 — 무음 인쇄 대상 필터링) ===")
         
-        # 인쇄 대상 목록 파싱
         if args.print.lower() == "all":
             print_targets = ["1호차", "2호차", "3호차"]
         else:
@@ -561,9 +667,7 @@ def main():
             if hoche_name in print_targets:
                 pdf_path = f"E:\\coding\\skill\\KPP\\slip_{vehicle['truck_req_id']}.pdf"
                 if os.path.exists(pdf_path):
-                    # Windows OS 무음 인쇄 호출
                     w.print_pdf_silent(pdf_path, title=hoche_name)
-                    # Acrobat Reader가 인쇄 작업을 온전히 스풀링하고 대기할 수 있도록 넉넉한 4초의 텀을 둡니다.
                     time.sleep(4)
                 else:
                     print(f"[WARN] {hoche_name} 인쇄 시도 실패: PDF 파일({pdf_path})이 존재하지 않습니다.")

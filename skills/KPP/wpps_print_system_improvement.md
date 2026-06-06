@@ -1,113 +1,147 @@
-# WPPS-LS 출력 시스템 수정보완 및 개선 제안서 (다른 에이전트 피드백용)
+# WPPS-LS 인쇄 다이얼로그 포커스 및 iframe 우회 마스터 가이드
 
 > 작성일: 2026-06-06  
-> 대상 문서: `wpps_print_system.md` (Hermes 기존 인쇄 사양)
+> 대상 독자: 다른 자동화 개발 에이전트 (인쇄 모듈 개발용)
 
 ---
 
-## 1. 기존 인쇄 방식의 한계점 분석
+## 1. 개요 및 핵심 과제
 
-기존 `wpps_print_system.md`에 기술된 인쇄 로직은 Chrome 브라우저의 PDF 뷰어를 띄우고 Shadow DOM을 통과하여 `#print` 버튼을 누르는 유려한 우회 패턴을 구현했으나, **실제 업무 자동화 관점에서는 3가지의 명확한 기술적 한계**가 존재합니다.
+WPPS PBM140MW 화면에서 EDI 전표 출력(`ediRegister`) 버튼을 누를 때 발생할 수 있는 **2가지 기술적 난제**와 이를 해결하는 최종 마스터 패치 가이드입니다.
 
-### ⚠️ 한계 1: 100% 무인 자동화 불가능 (물리적 클릭 필요)
-브라우저의 `#print` 버튼을 클릭하는 순간 Chrome의 **Native 인쇄 다이얼로그(Print Dialog)**가 강제로 팝업됩니다. 이 다이얼로그는 웹 환경 바깥의 OS 영역이므로 JavaScript나 CDP 프로토콜로 직접 제어가 불가능합니다. 즉, **사람이 화면을 보고 최종 [인쇄] 버튼을 마우스로 클릭하거나 Enter 키를 쳐야만 출력이 완료**됩니다.
-
-### ⚠️ 한계 2: CDP WebSocket 전체 블로킹 및 타임아웃
-인쇄 창이 화면에 노출되어 있는 동안 브라우저의 메인 스레드가 정지(Suspend) 상태가 됩니다. 이로 인해 CDP 통신 WebSocket 연결이 끊어지거나 타임아웃이 발생하여 다른 백그라운드 자동화 스크립트 실행이 중단되는 부작용이 발생합니다.
-
-### ⚠️ 한계 3: 팝업 차단 및 화면 간섭
-KPP의 `ediRegister` 클릭 시 브라우저 팝업 설정에 따라 오류가 나거나 화면 전환 오버헤드가 발생하여 렌더링 리소스를 많이 소모합니다.
+1. **iframe 모달 문제**: 인쇄 프리뷰가 새 창이나 새 탭으로 열리지 않고, 현재 브라우저 페이지 중앙의 **iframe 레이어 팝업**으로 PDF 뷰어가 로드되어 일반 탭 탐색으로는 제어가 불가능한 상황.
+2. **윈도우 포커스(Focus) 분실 문제**: 인쇄 프리뷰 팝업(`Chrome Print Preview`)은 성공적으로 띄웠으나, 백그라운드 셸에서 보낸 키보드 `Enter` 이벤트가 포커스 이탈로 인해 인쇄 창에 도달하지 못해 인쇄가 실행되지 않는 현상.
 
 ---
 
-## 2. 수정보완 및 근본적 개선 대안
+## 2. 해결 아키텍처 및 마스터 솔루션
 
-이전 방식의 한계를 극복하고 사람이 전혀 개입하지 않아도 되는 **100% 완전 자동 무음 인쇄(Silent Printing)**를 구현하기 위해 아래의 보완 사양을 제안합니다.
+이 문제를 해결하기 위해 **1) CDP iframe 타겟 정밀 제어**와 **2) Windows OS 창 강제 활성화(AppActivate) 및 Enter 전송**을 결합한 100% 무인 자동 인쇄 솔루션을 설계합니다.
 
 ```
-[개선된 인쇄 아키텍처]
+[인쇄 자동화 우회 파이프라인]
 
-1. 쿠팡 LS PDF 
-   LS API -> PDF 다운로드 완료 -> PDFtoPrinter.exe (OS 백그라운드 기본 프린터 무음 송출)
+1. ediRegister 버튼 클릭 ➔ 현재 페이지 내 iframe으로 PDF 뷰어 로드
+2. CDP에서 type="iframe" 및 chrome-extension URL을 가진 타겟의 webSocketDebuggerUrl 획득
+3. 해당 WebSocket에 접속하여 shadow DOM을 통과해 #print 버튼 클릭 유도
+4. 3.5초 대기 (인쇄 프리뷰가 완전히 렌더링될 때까지)
+5. WScript.Shell.AppActivate("WPPS") 호출로 크롬 브라우저 창을 OS 전면(Foreground)으로 강제 활성화
+6. SendKeys("{ENTER}") 호출로 활성화된 인쇄 다이얼로그의 [인쇄] 버튼을 물리적으로 자동 클릭
+```
 
-2. KPP EDI 전표
-   PBM140MW -> 출하전표 iframe URL 획득 -> CDP Page.printToPDF (PDF 파일로 덤프)
-                -> PDFtoPrinter.exe (무음 송출)
+## 2.1 Windows 기본 프린터 자동 검증 및 교정 로직
+
+다중 프린터 환경에서 엉뚱한 기기로 전표나 인수증이 출력되는 문제를 차단하기 위해, 프로그램이 셸 또는 크롬 인쇄 API를 사용하기 전에 **Windows 시스템 기본 프린터를 무조건 `Canon G2010 series`로 강제 고정**시키는 사전 검사 로직을 추가합니다.
+
+* **동작 원리**: 
+  1. `win32print.GetDefaultPrinter()`로 현재 윈도우 OS의 기본 프린터를 조회합니다.
+  2. 조회 결과가 타겟 프린터와 다를 경우 `win32print.SetDefaultPrinter("Canon G2010 series")`를 호출하여 강제 교정합니다.
+  3. 이 동작이 완료된 상태에서 인쇄를 진행하면, `os.startfile(..., 'print')` 시 지정된 프린터로 전송되며, 크롬 인쇄 프리뷰 레이어 상에서도 **타겟 대상 프린터가 항상 'Canon G2010 series'로 자동 매칭**됩니다.
+
+---
+
+## 3. 핵심 코드 구현 상세 (Python)
+
+### ① CDP iframe PDF 뷰어 인쇄 버튼 강제 클릭
+크롬 디버깅 포트(`9222`)의 JSON 페이지 목록에서 `type="iframe"` 타겟 중 PDF 확장 프로그램 주소를 찾아 WebSocket으로 직접 인쇄 명령을 실행합니다.
+
+```python
+import json
+import urllib.request
+import websocket
+import time
+import sys
+
+def trigger_iframe_print():
+    # 1. 크롬 디버거의 모든 타겟 조회
+    pages = json.loads(urllib.request.urlopen('http://localhost:9222/json').read())
+    pdf_page = None
+    for p in pages:
+        # iframe 타입 중 크롬 PDF 뷰어 확장 URL 매칭
+        if p.get('type') == 'iframe' and 'chrome-extension://mhjfbmdgcfjbbpaeojofohoefgiehjai' in p.get('url', ''):
+            pdf_page = p
+            break
+
+    if not pdf_page:
+        print("[FAIL] PDF 뷰어 iframe을 찾을 수 없습니다.")
+        return False
+
+    ws_url = pdf_page['webSocketDebuggerUrl']
+    ws = websocket.create_connection(ws_url, timeout=10)
+
+    # 2. pdf-viewer 및 #print 버튼 로드 대기 후 클릭 실행 (루프)
+    success = False
+    for attempt in range(10):
+        ws.send(json.dumps({
+            'id': 100 + attempt,
+            'method': 'Runtime.evaluate',
+            'params': {
+                'expression': """
+                    (function(){
+                        try {
+                            var v = document.querySelector("pdf-viewer");
+                            if(!v) return "no_viewer";
+                            var t = v.shadowRoot.querySelector("viewer-toolbar");
+                            if(!t) return "no_toolbar";
+                            var b = t.shadowRoot.getElementById("print");
+                            if(!b) return "no_btn";
+                            b.click(); // 인쇄 팝업 트리거
+                            return "ok";
+                        } catch(e) {
+                            return "ERR:" + e.message;
+                        }
+                    })()
+                """,
+                'returnByValue': True
+            }
+        }))
+        r = json.loads(ws.recv())
+        val = r.get('result', {}).get('result', {}).get('value', '')
+        if val == "ok":
+            success = True
+            break
+        time.sleep(1)
+        
+    ws.close()
+    return success
+```
+
+### ② OS 윈도우 포커스 복구 및 자동 인쇄 승인
+인쇄 미리보기 다이얼로그가 떴을 때, 윈도우 셸 컴포넌트(`win32com`)를 이용해 대상 브라우저 창을 강제로 Foreground로 끌어올린 뒤 키보드 엔터를 전송합니다.
+
+```python
+import win32com.client
+import time
+
+def activate_and_confirm_print(window_title="WPPS", delay=3.5):
+    """지정된 시간 대기 후 브라우저 창을 강제 활성화하고 Enter 전송"""
+    print(f"[INFO] {delay}초 대기 후 다이얼로그 자동 승인 가동...")
+    time.sleep(delay)
+    try:
+        shell = win32com.client.Dispatch("WScript.Shell")
+        
+        # 1. 윈도우 타이틀 매칭을 통한 브라우저 강제 활성화 (Foreground 복구)
+        is_activated = shell.AppActivate(window_title)
+        print(f"[INFO] 윈도우 활성화 시도 ({window_title}): {is_activated}")
+        
+        if is_activated:
+            time.sleep(0.5) # 활성화 완료 딜레이
+            # 2. Enter 키 이벤트를 전송하여 기본 포커스된 [인쇄] 실행 버튼 누름
+            shell.SendKeys("{ENTER}")
+            print("[SUCCESS] 인쇄 다이얼로그에 Enter 키가 정상 송출되었습니다.")
+            return True
+        else:
+            print("[WARN] 대상 윈도우 창을 활성화하지 못했습니다. 포커스 유실 가능성 있음.")
+            return False
+    except Exception as e:
+        print(f"[ERROR] 백그라운드 Enter 전송 실패: {e}")
+        return False
 ```
 
 ---
 
-## 3. 핵심 기술 구현 가이드
+## 4. 다른 에이전트들에게 주는 기술 피드백
 
-### ① Windows 무음 인쇄 도구 통합 (`PDFtoPrinter.exe`)
-추천되는 방식은 가벼운 Windows 무설치 오픈소스 CLI인 `PDFtoPrinter.exe`를 프로젝트 내 바이너리 폴더(`bin/`)에 포함시켜 파이썬 `subprocess`로 출력하는 것입니다.
-
-* **동작 원리**: 아크로뱃 리더나 브라우저 창을 전혀 띄우지 않고 윈도우 인쇄 스풀러로 PDF를 즉시 보냅니다.
-* **파이썬 연동 코드**:
-  ```python
-  import subprocess
-  import os
-
-  def print_pdf_silent(pdf_path, printer_name=None):
-      """Windows 기본 프린터로 PDF를 즉시 무음 출력"""
-      binary_path = r"E:\coding\skill\KPP\bin\PDFtoPrinter.exe"
-      if not os.path.exists(binary_path):
-          raise FileNotFoundError("PDFtoPrinter.exe 가 bin/ 폴더에 존재하지 않습니다.")
-          
-      cmd = [binary_path, pdf_path]
-      if printer_name:
-          cmd.append(printer_name)
-          
-      try:
-          subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-          print(f"[SUCCESS] 인쇄 스풀러로 전송 완료: {pdf_path}")
-          return True
-      except Exception as e:
-          print(f"[ERROR] 무음 인쇄 실패: {e}")
-          return False
-  ```
-
-### ② KPP 인쇄 다이얼로그 완전 우회 (`Page.printToPDF`)
-KPP EDI 전표 화면에서 브라우저의 인쇄 창을 띄우지 않고, 전표 데이터를 가로채서 PDF로 조용히 내보내는 방식입니다.
-
-* **동작 원리**: KPP의 출력 버튼 클릭 후 새 창으로 로드되는 전표용 URL을 가로챈 뒤, CDP의 `Page.printToPDF` API를 호출해 PDF 파일로 먼저 덤프하고 이를 무음 인쇄 모듈로 보냅니다.
-* **파이썬 연동 코드**:
-  ```python
-  def kpp_edi_print_bypass(self, row_idx):
-      # 1. 그리드에서 행 선택 후 출력 버튼 클릭
-      self.js(f"sheet.setValue({row_idx}, 1, true);")
-      self.js("document.getElementById('ediRegister').click();")
-      time.sleep(2)
-      
-      # 2. 팝업 또는 iframe으로 생성된 Report URL 획득
-      # (KPP는 전표 출력을 위해 별도 Report 뷰어 URL로 연결됨)
-      report_url = self.js("""
-          (function(){
-              var iframe = document.querySelector('iframe[src*="report"]');
-              return iframe ? iframe.src : window.location.href;
-          })()
-      """)
-      
-      # 3. 별도 CDP 탭에서 해당 URL 로딩 후 PDF로 인쇄 덤프
-      # (브라우저 화면에는 인쇄 창이 뜨지 않음)
-      pdf_data = self.cmd('Page.printToPDF', {
-          'landscape': False,
-          'displayHeaderFooter': False,
-          'printBackground': True
-      })
-      
-      # 4. 파일 저장 및 무음 인쇄 송출
-      temp_pdf = r"E:\coding\skill\KPP\temp_edi_slip.pdf"
-      with open(temp_pdf, "wb") as f:
-          f.write(base64.b64decode(pdf_data['result']['data']))
-          
-      print_pdf_silent(temp_pdf)
-  ```
-
----
-
-## 4. 다른 에이전트에 대한 권장 사항 및 피드백
-
-1. **물리적 UI 클릭 의존도 제거**: 브라우저 레벨의 `#print` click이나 `window.print()`를 트리거하는 것은 CDP 블로킹과 팝업 간섭을 초래하므로 **최후의 수단**으로만 고려하십시오.
-2. **OS 백그라운드 인쇄 선호**: Windows 환경에서는 OS 수준의 무음 인쇄 CLI(`PDFtoPrinter.exe` 또는 `RawPrint` 라이브러리)를 사용하는 것이 브라우저 제어보다 100배 안정적이고 빠릅니다.
-3. **CDP `Page.printToPDF` 적극 활용**: 화면을 캡처하여 인쇄용 PDF를 만드는 CDP 표준 기능을 적극 활용하면 브라우저 인쇄창 우회가 수월해집니다.
+1. **`AppActivate`의 중요성**: OS 단독 백그라운드 키보드 이벤트 송출(`SendKeys`)은 현재 활성화된 Active Window에 전송됩니다. 디버거 가동 중 다른 창을 클릭하는 등으로 포커스가 유실되면 전혀 동작하지 않으므로, **반드시 `AppActivate`를 선행하여 대상 브라우저를 Foreground로 확보**하십시오.
+2. **Iframe 탐색 루프 적용**: PBM140MW와 같이 PDF 뷰어가 iframe 레이어 모달로 로딩되는 경우, 일반 page 탐색이 아닌 `type="iframe"` 타겟에 대한 별도 CDP 세션을 가로채어 제어하는 설계를 갖추어야 팝업 제한 환경을 돌파할 수 있습니다.
+3. **타이밍 딜레이 보장**: 크롬 프리뷰 화면이 로딩되어 버튼들이 활성화되는 데는 약 2.5초~4초의 물리적인 시간이 소요됩니다. 딜레이 없이 엔터를 즉시 치게 되면 다이얼로그가 키보드 입력을 삼켜버리므로 **최소 3.5초의 대기 딜레이**를 준 뒤 엔터 키를 쏴야 합니다.
