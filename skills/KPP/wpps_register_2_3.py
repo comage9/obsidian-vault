@@ -343,6 +343,89 @@ class WPPS_CDP_FullAutomation:
         else:
             print("[WARN] PDF 탭을 찾을 수 없습니다.")
 
+    def kpp_edi_print(self, hoche):
+        """KPP PBM140MW에서 특정 호차 EDI 출력 (ediRegister 버튼)"""
+        print(f"[INFO] KPP EDI 출력 시작: {hoche}")
+        
+        # 조회
+        self.set_date(DATE)
+        self.search()
+        time.sleep(3)
+        
+        # 해당 호차 찾기
+        row_idx = None
+        for i in range(self.get_row_count()):
+            try:
+                val = self.js(f"GC.Spread.Sheets.findControl(document.getElementById('grid')).getActiveSheet().getValue({i}, 36)")
+                if hoche in str(val):
+                    row_idx = i
+                    break
+            except:
+                pass
+        
+        if row_idx is None:
+            print(f"[ERROR] {hoche}를 그리드에서 찾을 수 없습니다.")
+            return
+        
+        print(f"[INFO] {hoche} 발견 (Row {row_idx})")
+        
+        # 해당 행 선택 (체크 + active cell)
+        self.js(f"""
+        (function(){{
+            var s = GC.Spread.Sheets.findControl(document.getElementById('grid')).getActiveSheet();
+            s.setValue({row_idx}, 1, true);
+            s.setActiveCell({row_idx}, 0);
+            s.setSelection({row_idx}, 0, 1, 1);
+            return 'selected';
+        }})()
+        """)
+        time.sleep(1)
+        
+        # EDI 출력 버튼 클릭
+        self.js("document.getElementById('ediRegister').click()")
+        print(f"[INFO] EDI 출력 버튼 클릭됨. {hoche} PDF 뷰어가 열립니다.")
+        time.sleep(3)
+        
+        # 새로 열린 탭/iframe에서 PDF 인쇄
+        pages = self._get_pages()
+        for p in pages:
+            if p.get('type') == 'page' and 'chrome-extension://' in p.get('url', ''):
+                try:
+                    pws = websocket.create_connection(p['webSocketDebuggerUrl'], timeout=10)
+                    pws.settimeout(10)
+                    pws.send(json.dumps({'id': 1, 'method': 'Runtime.evaluate', 'params': {
+                        'expression': '''
+                        (function() {
+                            try {
+                                var viewer = document.querySelector('pdf-viewer');
+                                if (!viewer) return 'no pdf-viewer';
+                                var toolbar = viewer.shadowRoot.querySelector('viewer-toolbar');
+                                if (!toolbar) return 'no toolbar';
+                                var printBtn = toolbar.shadowRoot.getElementById('print');
+                                if (!printBtn) return 'no print btn';
+                                printBtn.click();
+                                return 'print clicked';
+                            } catch(e) { return 'ERR: ' + e.message; }
+                        })()
+                        ''',
+                        'returnByValue': True
+                    }}))
+                    time.sleep(1)
+                    try:
+                        while True:
+                            r = json.loads(pws.recv())
+                            if 'id' in r:
+                                print(f"[INFO] KPP EDI 출력: {r.get('result',{}).get('result',{}).get('value','')}")
+                                break
+                    except:
+                        print("[INFO] 출력 다이얼로그 열림")
+                    pws.close()
+                except:
+                    pass
+                break
+        
+        print(f"[INFO] ✅ {hoche} EDI 출력 완료")
+
     def close(self):
         if self.ws:
             self.ws.close()
