@@ -285,6 +285,20 @@ class WPPS_CDP_FullAutomation:
         print("[INFO] 저장 요청 전송 (fn_save 호출)")
         time.sleep(4)
 
+    def print_pdf_silent(self, pdf_path, title=""):
+        """Windows OS 무음 인쇄 — 브라우저/CDP/다이얼로그 완전 불필요"""
+        import os
+        if not os.path.exists(pdf_path):
+            print(f"[WARN] PDF 파일 없음: {pdf_path}")
+            return
+        try:
+            os.startfile(pdf_path, 'print')
+            print(f"[SUCCESS] {title} 인쇄 작업 전송 완료 (백그라운드 무음)")
+            return True
+        except Exception as e:
+            print(f"[ERROR] 인쇄 실패: {e}")
+            return False
+
     def print_pdf(self, pdf_path, title=""):
         """CDP로 PDF를 열고 Chrome PDF 뷰어의 인쇄 버튼 클릭"""
         import os
@@ -679,15 +693,15 @@ def main():
     else:
         print("[INFO] 신규 추가된 차량이 없어 저장을 수행하지 않고 종료합니다.")
     
-    # 9. LS PDF 출력 (간선출차확인서 인쇄)
+    # 9. LS PDF 출력 (간선출차확인서 — Windows 무음 인쇄)
     if final_vehicles_data:
-        print("\n=== LS PDF 출력 (간선출차확인서) ===")
+        print("\n=== LS PDF 출력 (간선출차확인서 — 무음 인쇄) ===")
         for v_data, v_info in zip(final_vehicles_data, ls_vehicles):
             truck_req_id = v_info.get("truckRequestId", "")
             pdf_path = f"E:\\coding\\skill\\KPP\\slip_{truck_req_id}.pdf"
             if os.path.exists(pdf_path):
-                w.print_pdf(pdf_path, title=v_data['hoche'])
-                time.sleep(2)
+                w.print_pdf_silent(pdf_path, title=v_data['hoche'])
+                time.sleep(1)
         
     w.close()
     print("========================================================")
