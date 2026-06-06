@@ -292,7 +292,7 @@ class WPPS_CDP_FullAutomation:
         file_url = urllib.parse.quote(abs_path)
         pdf_url = f"file:///{file_url.replace('%3A', ':').replace('%5C', '/')}"
         
-        print(f"[INFO] PDF 인쇄 준비 중: {title or pdf_path}")
+        print(f"[INFO] LS PDF 출력 준비 중: {title or pdf_path}")
         
         # 새 탭에 PDF 열기
         pages_before = self._get_pages()
@@ -332,12 +332,12 @@ class WPPS_CDP_FullAutomation:
                     while True:
                         r = json.loads(pws.recv())
                         if 'id' in r:
-                            print(f"[INFO] PDF 인쇄: {r.get('result',{}).get('result',{}).get('value','')}")
+                            print(f"[INFO] LS PDF 출력: {r.get('result',{}).get('result',{}).get('value','')}")
                             break
                 except:
-                    print("[INFO] 인쇄 다이얼로그 열림 (CDP 타임아웃=정상)")
+                    print("[INFO] 출력 다이얼로그 열림 (CDP 타임아웃=정상)")
                 pws.close()
-                print(f"[INFO] ✅ 인쇄 다이얼로그가 열렸습니다. 프린터(Canon G2010 series) 선택 후 인쇄하세요.")
+                print(f"[INFO] ✅ LS PDF 출력 다이얼로그가 열렸습니다. Canon G2010 series 선택 후 인쇄하세요.")
             except Exception as e:
                 print(f"[WARN] PDF 인쇄 버튼 클릭 실패: {e}")
         else:
@@ -596,9 +596,9 @@ def main():
     else:
         print("[INFO] 신규 추가된 차량이 없어 저장을 수행하지 않고 종료합니다.")
     
-    # 9. PDF 인쇄 (등록된 차량의 간선출차확인서 출력)
+    # 9. LS PDF 출력 (간선출차확인서 인쇄)
     if final_vehicles_data:
-        print("\n=== PDF 인쇄 ===")
+        print("\n=== LS PDF 출력 (간선출차확인서) ===")
         for v_data, v_info in zip(final_vehicles_data, ls_vehicles):
             truck_req_id = v_info.get("truckRequestId", "")
             pdf_path = f"E:\\coding\\skill\\KPP\\slip_{truck_req_id}.pdf"
