@@ -1,15 +1,16 @@
 """
-WPPS PBM140MW 출하통보등록 완전 자동화 스크립트 (올인원 에디션)
+WPPS PBM140MW 출하통보등록 완전 자동화 스크립트 (인쇄 제어 옵션 탑재)
 파일명: E:\\coding\\skill\\KPP\\wpps_register_2_3.py
 작성일: 2026-06-06
 
 주요 기능:
 1. 크롬 디버거(CDP 9222)로부터 실시간으로 쿠팡 LS 세션 쿠키 자동 추출
 2. 쿠팡 LS API를 실시간 조회하여 오늘자 VF67 출발 차량 확인
-3. 2호차/3호차의 truckRequestId로 출차확인서 PDF 다운로드 및 PyMuPDF 실시간 정보(기사명, 연락처) 파싱
-4. WPPS PBM140MW 접속 및 중복 등록된 차량 감지 시 선택적 삭제 후 일괄 저장
-5. 1~3호차 차량 정보 일괄 등록 후 단 1회만 저장(Batch Save)하여 속도 및 성능 최적화
-6. 최종 결과 검증 및 스크린샷 캡처
+3. --print 매개변수를 이용해 특정 차량(예: 1, 2, 3호차)만 선택하여 1장씩 순차 인쇄 제어
+4. PyMuPDF 실시간 정보(기사명, 연락처) 파싱 및 기사/차량 매칭
+5. WPPS PBM140MW 접속 및 중복 등록된 차량 감지 시 선택적 삭제 후 일괄 저장
+6. 1~3호차 차량 정보 일괄 등록 후 단 1회만 저장(Batch Save)하여 속도 및 성능 최적화
+7. 최종 결과 검증 및 스크린샷 캡처
 """
 
 import json
@@ -23,6 +24,7 @@ import sys
 import re
 import fitz  # PyMuPDF
 import os
+import argparse
 
 CDP_PORT = 9222
 PBM_URL = "https://wpps.logisall.net/ps/PBM140MW"
@@ -94,10 +96,7 @@ class WPPS_CDP_FullAutomation:
         """크롬 디버거의 Network.getCookies API를 사용하여 브라우저 내의 쿠팡 LS 쿠키 추출"""
         print("[INFO] 크롬 브라우저 세션에서 쿠팡 LS 쿠키를 자동으로 획득하는 중...")
         try:
-            # Network 기능 활성화
             self.cmd('Network.enable')
-            
-            # ls.coupang.com 도메인의 쿠키 가져오기
             res = self.cmd('Network.getCookies', {'urls': ['https://ls.coupang.com']})
             cookies = res.get('result', {}).get('cookies', [])
             
@@ -156,12 +155,12 @@ class WPPS_CDP_FullAutomation:
             print(f"[INFO] 닫힌 팝업 요소: {c}")
 
     def override_dialogs(self):
-        """기본 alert/confirm 창의 차단을 방지하기 위해 JavaScript 단에서 오버라이드 (const 에러 회피)"""
+        """기본 alert/confirm 창의 차단을 방지하기 위해 JavaScript 단에서 오버라이드"""
         self.js("""
-            try { window.alert = function(msg){ console.log("Alert bypassed: " + msg); return true; }; } catch(e){}
-            try { window.confirm = function(msg){ console.log("Confirm bypassed: " + msg); return true; }; } catch(e){}
-            try { window.gfn_alert = function(msg){ console.log("gfn_alert bypassed: " + msg); return msg; }; } catch(e){}
-            try { window.gfn_confirm = function(msg){ console.log("gfn_confirm bypassed: " + msg); return true; }; } catch(e){}
+            window.alert = function(msg){ console.log("Alert bypassed: " + msg); return true; };
+            window.confirm = function(msg){ console.log("Confirm bypassed: " + msg); return true; };
+            gfn_alert = function(msg){ console.log("gfn_alert bypassed: " + msg); return msg; };
+            gfn_confirm = function(msg){ console.log("gfn_confirm bypassed: " + msg); return true; };
         """)
         print("[INFO] 브라우저 alert/confirm 오버라이드 완료")
 
@@ -276,6 +275,22 @@ class WPPS_CDP_FullAutomation:
         """
         self.js(s)
 
+    def print_pdf_silent(self, pdf_path, title=""):
+        """Windows OS 기본 프린터로 PDF를 즉시 무음 출력 (Acrobat 창 블로킹 우회)"""
+        if not os.path.exists(pdf_path):
+            print(f"[WARN] PDF 파일이 존재하지 않습니다: {pdf_path}")
+            return False
+            
+        normalized_path = os.path.normpath(os.path.abspath(pdf_path))
+        try:
+            print(f"[INFO] {title} 인쇄 작업 전송 중: {normalized_path}")
+            os.startfile(normalized_path, 'print')
+            print(f"[SUCCESS] {title} 인쇄 작업이 시스템 스풀러로 정상 전송되었습니다.")
+            return True
+        except Exception as e:
+            print(f"[ERROR] {title} 무음 인쇄 호출 중 실패: {e}")
+            return False
+
     def save(self):
         """저장 작업 수행 및 alert/confirm 대응"""
         self.override_dialogs()
@@ -284,161 +299,6 @@ class WPPS_CDP_FullAutomation:
         self.js("fn_save()")
         print("[INFO] 저장 요청 전송 (fn_save 호출)")
         time.sleep(4)
-
-    def print_pdf_silent(self, pdf_path, title=""):
-        """Windows OS 무음 인쇄 — 브라우저/CDP/다이얼로그 완전 불필요"""
-        import os
-        if not os.path.exists(pdf_path):
-            print(f"[WARN] PDF 파일 없음: {pdf_path}")
-            return
-        try:
-            os.startfile(pdf_path, 'print')
-            print(f"[SUCCESS] {title} 인쇄 작업 전송 완료 (백그라운드 무음)")
-            return True
-        except Exception as e:
-            print(f"[ERROR] 인쇄 실패: {e}")
-            return False
-
-    def print_pdf(self, pdf_path, title=""):
-        """CDP로 PDF를 열고 Chrome PDF 뷰어의 인쇄 버튼 클릭"""
-        import os
-        abs_path = os.path.abspath(pdf_path)
-        file_url = urllib.parse.quote(abs_path)
-        pdf_url = f"file:///{file_url.replace('%3A', ':').replace('%5C', '/')}"
-        
-        print(f"[INFO] LS PDF 출력 준비 중: {title or pdf_path}")
-        
-        # 새 탭에 PDF 열기
-        pages_before = self._get_pages()
-        self.cmd('Target.createTarget', {'url': pdf_url, 'newWindow': False})
-        time.sleep(3)
-        
-        pages_after = self._get_pages()
-        new_pages = [p for p in pages_after if p.get('id') not in [pb.get('id','') for pb in pages_before]]
-        
-        if new_pages:
-            pdf_page = new_pages[0]
-            print(f"[INFO] PDF 뷰어 로드됨: {pdf_page.get('url','')[:60]}")
-            
-            # PDF 뷰어 인쇄 버튼 클릭 (shadow DOM)
-            try:
-                pws = websocket.create_connection(pdf_page['webSocketDebuggerUrl'], timeout=10)
-                pws.settimeout(10)
-                pws.send(json.dumps({'id': 1, 'method': 'Runtime.evaluate', 'params': {
-                    'expression': '''
-                    (function() {
-                        try {
-                            var viewer = document.querySelector('pdf-viewer');
-                            if (!viewer) return 'no pdf-viewer';
-                            var toolbar = viewer.shadowRoot.querySelector('viewer-toolbar');
-                            if (!toolbar) return 'no toolbar';
-                            var printBtn = toolbar.shadowRoot.getElementById('print');
-                            if (!printBtn) return 'no print btn';
-                            printBtn.click();
-                            return 'print clicked';
-                        } catch(e) { return 'ERR: ' + e.message; }
-                    })()
-                    ''',
-                    'returnByValue': True
-                }}))
-                time.sleep(1)
-                try:
-                    while True:
-                        r = json.loads(pws.recv())
-                        if 'id' in r:
-                            print(f"[INFO] LS PDF 출력: {r.get('result',{}).get('result',{}).get('value','')}")
-                            break
-                except:
-                    print("[INFO] 출력 다이얼로그 열림 (CDP 타임아웃=정상)")
-                pws.close()
-                print(f"[INFO] ✅ LS PDF 출력 다이얼로그가 열렸습니다. Canon G2010 series 선택 후 인쇄하세요.")
-            except Exception as e:
-                print(f"[WARN] PDF 인쇄 버튼 클릭 실패: {e}")
-        else:
-            print("[WARN] PDF 탭을 찾을 수 없습니다.")
-
-    def kpp_edi_print(self, hoche):
-        """KPP PBM140MW에서 특정 호차 EDI 출력 (ediRegister 버튼)"""
-        print(f"[INFO] KPP EDI 출력 시작: {hoche}")
-        
-        # 조회
-        self.set_date(DATE)
-        self.search()
-        time.sleep(3)
-        
-        # 해당 호차 찾기
-        row_idx = None
-        for i in range(self.get_row_count()):
-            try:
-                val = self.js(f"GC.Spread.Sheets.findControl(document.getElementById('grid')).getActiveSheet().getValue({i}, 36)")
-                if hoche in str(val):
-                    row_idx = i
-                    break
-            except:
-                pass
-        
-        if row_idx is None:
-            print(f"[ERROR] {hoche}를 그리드에서 찾을 수 없습니다.")
-            return
-        
-        print(f"[INFO] {hoche} 발견 (Row {row_idx})")
-        
-        # 해당 행 선택 (체크 + active cell)
-        self.js(f"""
-        (function(){{
-            var s = GC.Spread.Sheets.findControl(document.getElementById('grid')).getActiveSheet();
-            s.setValue({row_idx}, 1, true);
-            s.setActiveCell({row_idx}, 0);
-            s.setSelection({row_idx}, 0, 1, 1);
-            return 'selected';
-        }})()
-        """)
-        time.sleep(1)
-        
-        # EDI 출력 버튼 클릭
-        self.js("document.getElementById('ediRegister').click()")
-        print(f"[INFO] EDI 출력 버튼 클릭됨. {hoche} PDF 뷰어가 열립니다.")
-        time.sleep(3)
-        
-        # 새로 열린 탭/iframe에서 PDF 인쇄
-        pages = self._get_pages()
-        for p in pages:
-            if p.get('type') == 'page' and 'chrome-extension://' in p.get('url', ''):
-                try:
-                    pws = websocket.create_connection(p['webSocketDebuggerUrl'], timeout=10)
-                    pws.settimeout(10)
-                    pws.send(json.dumps({'id': 1, 'method': 'Runtime.evaluate', 'params': {
-                        'expression': '''
-                        (function() {
-                            try {
-                                var viewer = document.querySelector('pdf-viewer');
-                                if (!viewer) return 'no pdf-viewer';
-                                var toolbar = viewer.shadowRoot.querySelector('viewer-toolbar');
-                                if (!toolbar) return 'no toolbar';
-                                var printBtn = toolbar.shadowRoot.getElementById('print');
-                                if (!printBtn) return 'no print btn';
-                                printBtn.click();
-                                return 'print clicked';
-                            } catch(e) { return 'ERR: ' + e.message; }
-                        })()
-                        ''',
-                        'returnByValue': True
-                    }}))
-                    time.sleep(1)
-                    try:
-                        while True:
-                            r = json.loads(pws.recv())
-                            if 'id' in r:
-                                print(f"[INFO] KPP EDI 출력: {r.get('result',{}).get('result',{}).get('value','')}")
-                                break
-                    except:
-                        print("[INFO] 출력 다이얼로그 열림")
-                    pws.close()
-                except:
-                    pass
-                break
-        
-        print(f"[INFO] ✅ {hoche} EDI 출력 완료")
 
     def close(self):
         if self.ws:
@@ -509,7 +369,6 @@ def extract_driver_info_from_pdf(pdf_path):
                 p1 = lines[idx+1]
                 p2 = lines[idx+2]
                 
-                # 연락처 포맷 정리 (예: 010-3940-9811 구조 대응)
                 if p1.startswith("010"):
                     if p2.isdigit() or "-" in p2:
                         driver_phone = p1 + p2
@@ -518,7 +377,6 @@ def extract_driver_info_from_pdf(pdf_path):
                 else:
                     driver_phone = p1
                     
-        # 특수 공백(\xa0) 등 제거
         driver_name = driver_name.replace('\xa0', '').strip()
         driver_phone = driver_phone.replace('\xa0', '').replace(' ', '').strip()
         
@@ -529,8 +387,14 @@ def extract_driver_info_from_pdf(pdf_path):
 
 
 def main():
+    # 0. 커맨드라인 매개변수 파싱 (인쇄할 차량 제어)
+    parser = argparse.ArgumentParser(description="WPPS & LS Pallet Registration and Printing Program")
+    parser.add_argument("--print", default="all", help="인쇄할 호차 선택 (예: 1, 2, 3, 1,2, all, none)")
+    args = parser.parse_args()
+
     print(f"\n========================================================")
     print(f" WPPS 출하통보등록 일괄 자동화 프로세스 시작 (날짜: {DATE})")
+    print(f" 선택된 인쇄 대상 호차: {args.print}")
     print(f"========================================================")
     
     w = WPPS_CDP_FullAutomation()
@@ -551,11 +415,9 @@ def main():
         
     print(f"[INFO] 오늘 조회된 쿠팡 차량 건수: {len(ls_vehicles)}건")
     
-    # 3. 각 차량의 상세 정보 파싱 (PDF 다운로드 및 텍스트 추출)
+    # 3. 각 차량의 상세 정보 파싱
     final_vehicles_data = []
     
-    # 차량 매칭용 호차 할당 규칙 (템플릿 기준 매칭)
-    # 90626(5T) = 1호차, 90628(5T) = 2호차, 90269(11T) = 3호차
     hoche_rules = {
         90626: "1호차",
         90628: "2호차",
@@ -566,15 +428,11 @@ def main():
         tid = v.get("truckOrderTemplateId")
         hoche = hoche_rules.get(tid, "추가차량")
         
-        # 차량번호 변환 (숫자만 6자리)
         raw_plate = v.get("truckInfo", {}).get("plateNumber", "")
         car_num = re.sub(r'[^0-9]', '', raw_plate)
-        if len(car_num) > 6:
-            # 뒷자리 6자리만 취하거나 하는 보정이 필요할 수 있으나, 일반적으로 '경기89바1454'에서 숫자는 6자리임
-            pass
             
         ton = v.get("truckType", {}).get("name", "5T")
-        qty = QTY_RULES.get(ton, 12)  # 5T=12개, 11T=14개 표준
+        qty = QTY_RULES.get(ton, 12)
         
         truck_req_id = v.get("truckRequestId")
         
@@ -583,7 +441,7 @@ def main():
         driver, phone = extract_driver_info_from_pdf(pdf_file)
         
         if not driver or not phone:
-            print(f"[WARN] 차량 {raw_plate} (ID: {truck_req_id})의 기사 정보 파싱 실패. 수동 입력이 필요합니다.")
+            print(f"[WARN] 차량 {raw_plate} (ID: {truck_req_id})의 기사 정보 파싱 실패.")
             continue
             
         print(f"[PARSED] {hoche} -> 차량: {raw_plate}(숫자: {car_num}), 기사: {driver}, 연락처: {phone}, 수량: {qty}")
@@ -594,7 +452,8 @@ def main():
             "driver": driver,
             "phone": phone,
             "qty": qty,
-            "raw_plate": raw_plate
+            "raw_plate": raw_plate,
+            "truck_req_id": truck_req_id
         })
         
     if not final_vehicles_data:
@@ -611,21 +470,19 @@ def main():
     
     row_count = w.get_row_count()
     if row_count == 0:
-        print("[WARN] 첫 조회 결과가 0개입니다. 재조회를 수행합니다. (SpreadJS 초기화 대응)")
+        print("[WARN] 첫 조회 결과가 0개입니다. 재조회를 수행합니다.")
         w.search()
         row_count = w.get_row_count()
         
     print(f"[INFO] WPPS 1차 조회된 행 수: {row_count}")
     print(f"[INFO] WPPS 1차 그리드 상태: {w.read_grid_data()}")
     
-    # 5. 중복 차량 감지 및 삭제 처리 (삭제 조회 로직)
-    # 2호차와 3호차 데이터가 이미 존재한다면 중복 제거를 위해 해당 차량들을 먼저 삭제 처리합니다.
+    # 5. 중복 차량 감지 및 삭제 처리
     grid_snapshot = w.read_grid_data()
     duplicate_cars = []
     
-    # 1호차(956464)는 완료된 정상 상태이므로 삭제 목록에서 원천 제외
     for vehicle in final_vehicles_data:
-        if vehicle["car_num"] != "956464" and f"차량번호={vehicle['car_num']}" in grid_snapshot:
+        if vehicle["car_num"] != "956464" and vehicle["car_num"] in grid_snapshot:
             print(f"[WARN] {vehicle['hoche']} ({vehicle['car_num']})가 이미 존재합니다. 삭제 작업을 선행합니다.")
             duplicate_cars.append(vehicle["car_num"])
             
@@ -633,7 +490,6 @@ def main():
         w.screenshot(r"C:\Users\kis\AppData\Local\Temp\wpps_before_delete.png")
         w.delete_existing_hoche(duplicate_cars)
         
-        # 삭제 후 재확인
         row_count = w.get_row_count()
         print(f"[INFO] 삭제 적용 후 최종 행 수: {row_count}")
         print(f"[INFO] 삭제 적용 후 그리드 상태: {w.read_grid_data()}")
@@ -641,15 +497,11 @@ def main():
     else:
         print("[INFO] 중복 차량 데이터가 없어 바로 입력을 진행합니다.")
 
-    # 6. 차량 정보 일괄 등록 (성능 최적화: Batch Input)
-    # 1호차가 행 index 0에 있는 경우, row_count=1이고 2호차/3호차는 각각 row_idx 1, 2에 순차 주입됩니다.
-    # 만약 1호차조차 없는 완전 빈 상태라면 1호차부터 3호차까지 전부 새로 순차 주입됩니다.
-    
+    # 6. 차량 정보 일괄 등록 (Batch Input)
     added_count = 0
     for vehicle in final_vehicles_data:
-        # 이미 등록된 차량번호가 그리드에 남아있다면 스킵 (1호차 등)
-        if f"차량번호={vehicle['car_num']}" in w.read_grid_data():
-            print(f"[INFO] {vehicle['hoche']} ({vehicle['car_num']})는 이미 그리드에 올라와 있으므로 신규 추가를 건너뜁니다.")
+        if vehicle["car_num"] in w.read_grid_data():
+            print(f"[INFO] {vehicle['hoche']} ({vehicle['car_num']})는 이미 그리드에 존재하므로 신규 입력을 건너뜁니다.")
             continue
             
         target_idx = row_count + added_count
@@ -666,13 +518,12 @@ def main():
 
     print(f"[INFO] 일괄 데이터 주입 완료. 최종 저장 전 그리드 상태: {w.read_grid_data()}")
     
-    # 7. 단 1회만 fn_save() 호출로 일괄 저장 (일괄 저장 최적화)
+    # 7. 단 1회만 fn_save() 호출로 일괄 저장
     if added_count > 0:
         w.screenshot(r"C:\Users\kis\AppData\Local\Temp\wpps_before_save.png")
         w.save()
         print(f"[INFO] 총 {added_count}개 행 일괄 저장 완료. 결과 검증을 위해 재조회 중...")
         
-        # 8. 최종 결과 검증 및 저장 후 스크린샷 캡처
         w.search()
         final_count = w.get_row_count()
         print(f"[INFO] 저장 완료 후 최종 행 수: {final_count}")
@@ -692,17 +543,33 @@ def main():
             print("[ERROR] 최종 등록 확인 결과 누락된 차량이 존재합니다. KPP UI를 직접 확인하십시오.")
     else:
         print("[INFO] 신규 추가된 차량이 없어 저장을 수행하지 않고 종료합니다.")
-    
-    # 9. LS PDF 출력 (간선출차확인서 — Windows 무음 인쇄)
-    if final_vehicles_data:
-        print("\n=== LS PDF 출력 (간선출차확인서 — 무음 인쇄) ===")
-        for v_data, v_info in zip(final_vehicles_data, ls_vehicles):
-            truck_req_id = v_info.get("truckRequestId", "")
-            pdf_path = f"E:\\coding\\skill\\KPP\\slip_{truck_req_id}.pdf"
-            if os.path.exists(pdf_path):
-                w.print_pdf_silent(pdf_path, title=v_data['hoche'])
-                time.sleep(1)
         
+    # 8. 원하는 차량만 순차적 1장씩 출력 실행 (Acrobat 충돌 방지 4초 딜레이 추가)
+    if args.print.lower() != "none" and final_vehicles_data:
+        print("\n=== LS PDF 출력 (간선출차확인서 — 무음 인쇄 대상 필터링) ===")
+        
+        # 인쇄 대상 목록 파싱
+        if args.print.lower() == "all":
+            print_targets = ["1호차", "2호차", "3호차"]
+        else:
+            print_targets = [f"{h.strip()}호차" for h in args.print.split(",") if h.strip()]
+            
+        print(f"[INFO] 인쇄가 허용된 차량 목록: {print_targets}")
+        
+        for vehicle in final_vehicles_data:
+            hoche_name = vehicle["hoche"]
+            if hoche_name in print_targets:
+                pdf_path = f"E:\\coding\\skill\\KPP\\slip_{vehicle['truck_req_id']}.pdf"
+                if os.path.exists(pdf_path):
+                    # Windows OS 무음 인쇄 호출
+                    w.print_pdf_silent(pdf_path, title=hoche_name)
+                    # Acrobat Reader가 인쇄 작업을 온전히 스풀링하고 대기할 수 있도록 넉넉한 4초의 텀을 둡니다.
+                    time.sleep(4)
+                else:
+                    print(f"[WARN] {hoche_name} 인쇄 시도 실패: PDF 파일({pdf_path})이 존재하지 않습니다.")
+            else:
+                print(f"[INFO] {hoche_name}는 인쇄 제외 대상으로 지정되어 출력을 스킵합니다.")
+                
     w.close()
     print("========================================================")
 
