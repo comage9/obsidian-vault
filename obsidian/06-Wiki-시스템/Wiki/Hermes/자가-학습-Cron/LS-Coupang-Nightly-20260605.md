@@ -1,26 +1,21 @@
-# LS Coupang (ls.coupang.com) 자가 학습 Cron
+# 자가 학습 Cron — LS (Coupang) Nightly
 
-생성일: 2026-06-05
-목적: 사용 안 하는 시간대에 LS Coupang 트럭오더 API/Keycloak 인증 흐름 변화 추적
+**Cron ID:** `6fcf4d848e14`
+**시간:** 매일 00:30 KST (`30 0 * * *`)
+**사용 스킬:** `mandatory-verification`, `ls-coupang`
+**생성일:** 2026-06-05
+**배달 대상:** origin (대화방)
 
-## 운영 정책 (KPP와 동일)
+## 점검 대상
 
-1. 시간대: 사용자 명령 외 전 시간
-2. 사용자 명령 시 즉시 중단 + commit
-3. 순차: KPP(23:30) → LS(00:30) → 서플라이허브(01:30) → Syncthing(02:30) → Hermes(03:30)
-4. 분야당 cron 1개
+1. Keycloak OAuth2 인증 방식
+2. Akamai Bot Manager 차단 현황
+3. 브라우저 쿠키 우회 방식 (CDP Network.getCookies)
+4. Tracking API 파라미터 (pageSize, statuses, locationStart)
+5. PDF 다운로드 엔드포인트
+6. Pitfalls #1~#12
 
-## LS cron이 점검/갱신하는 대상
+## 변경 이력
 
-| 대상 | 점검 내용 | 갱신 위치 |
-|:----|:---------|:---------|
-| Keycloak OAuth | `xauth.coupang.com/auth/realms/fts/protocol/openid-connect/auth` action URL 패턴 | `ls-coupang/SKILL.md` §로그인 |
-| Akamai 우회 | User-Agent, Accept-Language 헤더 | `ls-coupang/SKILL.md` §Akamai |
-| Tracking API | `statuses=SUBMITTED,CONFIRMED,CANCELED,BACK` 필수, locationStart=VF67 | `ls-coupang/SKILL.md` §Tracking |
-| 쿠키/JWT 만료 | Keycloak access_token TTL | 스킬 §인증 |
-
-## Cron 정의
-
-- **ID**: `ls-coupang-nightly`
-- **schedule**: 매일 00:30
-- **skills**: `ls-coupang`, `mandatory-verification`
+- 2026-06-07: Pitfall #7/#8 추가 (VF67_H, curl -H Cookie)
+- 2026-06-07: Watchdog 3-Way 응답 체계 추가
