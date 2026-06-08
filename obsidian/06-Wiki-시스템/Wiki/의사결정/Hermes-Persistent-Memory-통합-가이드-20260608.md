@@ -236,6 +236,9 @@ wc -c ~/.hermes/memories/MEMORY.md
 - [x] **log.md 자동 생성** (cron) — ✅ 완료
 - [x] **Cross-device memory sync 절차 강화** — ✅ 온보딩 가이드 갱신
 - [ ] Linux/Telegram Hermes에 Holographic 동일 설정
+- [x] **Sources 폴더 신설** (2026-06-08) — 원본자료 아카이브, 바이너리 Git 차단
+- [x] **Output 폴더 신설** (2026-06-08) — AI 결과물 날짜별 보관
+- [x] **용량 검증 cron** (2026-06-08) — 매일 12시, 50/100MiB 임계
 
 ---
 
