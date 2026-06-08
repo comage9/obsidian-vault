@@ -184,3 +184,11 @@
 - **온보딩 가이드 §7 갱신**: 장기기억 5종 + Holographic 설정 추가
 - **통합-가이드 상태 변경**: "결정 대기"→"✅ Windows 활성 완료"
 - **Git 커밋**: `f114237` (3 files) + `9b51dc0` (1 file)
+### 19:00 ~ 20:00 — Sources/Output 폴더 신설 + 용량 검증 cron
+- **Sources 폴더**: `Wiki/Sources/` 원본 자료 보관소 (텍스트 Git 추적, 바이너리 차단)
+- **Output 폴더**: `Wiki/Output/` AI 생성 결과물 날짜별 아카이브
+- **바이너리 Sources**: `Wiki/Sources/바이너리/README.md` — Git 제외, 파일 목록만 기록
+- **`.gitignore` 강화**: `*.pdf *.png *.jpg *.zip *.xlsx` 등 바이너리 확장자 Git 차단
+- **용량 검증 cron**: 매일 12시 `d3349950eecd` — 50MiB 경고 / 100MiB 위험
+- **온보딩 가이드 §7**: Sources/Output + 용량 검증 cron 추가
+- **Git 커밋**: `5a91c83` (통합-가이드+log)
