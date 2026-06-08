@@ -192,3 +192,8 @@
 - **용량 검증 cron**: 매일 12시 `d3349950eecd` — 50MiB 경고 / 100MiB 위험
 - **온보딩 가이드 §7**: Sources/Output + 용량 검증 cron 추가
 - **Git 커밋**: `5a91c83` (통합-가이드+log)
+### 20:00 ~ 20:30 — 표준 프롬프트 템플릿 3종 신설 (wiki-workflow 스킬)
+- **wiki-workflow 스킬 생성**: `/ingest`(Source→Wiki), `/update`(Source→Wiki업데이트), `/output`(Wiki→결과물)
+- **템플릿 문서 3건**: `Output/템플릿/01-ingest / 02-update / 03-output`
+- **온보딩 가이드 §7**: wiki-workflow 스킬 + Output/템플릿 추가
+- **Git 커밋**: `cc332f8` (Sources/Output/용량검증)
