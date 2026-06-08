@@ -75,7 +75,7 @@
 
 > "When memory is above 80% capacity, consolidate entries before adding new ones."
 
-곰너이 님 MEMORY.md 현재 상태: 2,197/2,200 chars = **99.85%** — 80% 임계점 한참 초과. **곧 통합(consolidation) 필요**.
+곰너이 님 MEMORY.md 현재 상태 (6/8 00:08 기준): 2,197/2,200 chars = **99.85%** — 당시 80% 임계점 한참 초과. **2026-06-08 작업 후: 1,681/2,200 (76.4%)로 정리 완료.**
 
 ---
 
@@ -116,7 +116,7 @@ Hermes는 built-in memory 외에 **8개 외부 provider plugin** 제공. **단, 
 
 | Hermes 공식 | 곰너이 님 시스템 | 일치도 |
 |------------|---------------|--------|
-| MEMORY.md (2,200 chars) | MEMORY.md (2,197/2,200) | ✅ 정확히 일치 |
+|| MEMORY.md (2,200 chars) | MEMORY.md (1,681/2,200, 76.4%) | ✅ 정리 완료 |
 | USER.md (1,375 chars) | USER.md (1,087/1,375) | ✅ 정확히 일치 |
 | `~/.hermes/memories/` | `AppData\Local\hermes\memories\` | ✅ 표준 구조 |
 | Frozen snapshot 자동 주입 | System Prompt 자동 주입 | ✅ |
@@ -145,7 +145,15 @@ Hermes는 built-in memory 외에 **8개 외부 provider plugin** 제공. **단, 
 2. **카르파티 LLM Wiki 패턴** — 공식 Hermes는 markdown 메모리만, 곰너이 님은 human-readable wiki
 3. **자가학습 cron 5개** — 공식은 memory provider에 자동 위임, 곰너이 님은 명시적 cron
 4. **3중 검증 의무 (Wiki + README + Git push)** — 공식은 자동 저장만, 곰너이 님은 검증 단계
-5. **89개 명시적 스킬** — 공식은 memory 도구만, 곰너이 님은 광범위한 스킬 생태계
+**강점 5: 89개 명시적 스킬** — 공식은 memory 도구만, 곰너이 님은 광범위한 스킬 생태계
+
+---
+
+## 관련 문서
+- [AI-에이전트-장기기억-아키텍처-20260608.md](./AI-에이전트-장기기억-아키텍처-20260608.md) — 전체 표준 LTM 조사
+- [카르파티-LLM-Wiki-패턴-분석-20260608.md](./카르파티-LLM-Wiki-패턴-분석-20260608.md) — 3-Layer 패턴 매핑
+- [하네스-장기기억-분석-20260608.md](./하네스-장기기억-분석-20260608.md) — Harness 시스템 메모리 분석
+- 긴밀 통합: `hermes-agent` SKILL.md §Persistent Memory (v2.3.0, built-in + 8 external provider)
 
 ---
 

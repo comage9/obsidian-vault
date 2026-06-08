@@ -9,7 +9,7 @@
 - **카르파티 LLM Wiki**: 3-Layer (Raw Sources / Wiki / Schema), 3-Operation (Ingest/Query/Lint), 2-Special-File (index.md/log.md)
 - **mem0/Letta/MemGPT/VikingMem**: 3-tier (Semantic/Episodic/Procedural) + "Read-Before-Reasoning" 자동 recall
 - **공식 Hermes Persistent Memory**: MEMORY.md (2,200) + USER.md (1,375) + 8개 External Provider
-- **곰너이 님 시스템**: 2,197/2,200 + 1,087/1,375 정확히 일치, frozen snapshot, SQLite FTS5 session_search
+- **곰너이 님 시스템**: 1,681/2,200 (76.4%) + 1,087/1,375 정확히 일치 (6/8 정리 완료), frozen snapshot, SQLite FTS5 session_search
 
 **차이점 (곰너이 님 시스템이 미보유):**
 - 8개 외부 Memory Provider (Holographic 1순위 추천 — 로컬/무료)
@@ -67,11 +67,18 @@
 
 ## 5. 후속 작업 후보 (검토 대기)
 
-- Holographic 도입 (로컬/무료, 1순위 추천)
+- Holographic 도입 (로컬/무료, 1순위 추천, ⚠️ 곰너이 님 결정 대기)
 - OpenViking 도입 (카르파티 LLM Wiki와 통합)
-- MEMORY.md 80% 임계점 회복 (현재 99.85% → 50-60%)
+- MEMORY.md 80% 임계점 회복 (완료: 76.4% ✅)
 - index.md 수동 작성 (Wiki 카탈로그)
 - log.md 자동 생성 (cron)
+
+---
+
+## 관련 문서
+- [카르파티-LLM-Wiki-패턴-분석-20260608.md](./카르파티-LLM-Wiki-패턴-분석-20260608.md) — 3-Layer/3-Operation 표준
+- [Hermes-공식-Memory-시스템-분석-20260608.md](./Hermes-공식-Memory-시스템-분석-20260608.md) — 8개 External Provider 상세
+- [Hermes-Persistent-Memory-통합-가이드-20260608.md](./Hermes-Persistent-Memory-통합-가이드-20260608.md) — 다른 에이전트 적용 가이드
 
 ---
 

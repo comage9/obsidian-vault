@@ -2,7 +2,7 @@
 
 > **목적:** 다른 Hermes Agent(Windows/Linux/Telegram/Discord)가 이 문서 하나로 즉시 동일한 Persistent Memory 시스템을 적용할 수 있도록 함
 > **버전:** 1.0 (2026-06-08 15:00 KST)
-> **작성:** Hermes (minimax-m3)
+> **작성:** Hermes (minimax-m3 → deepseek-v4-flash, 6/8 모델 교체)
 > **GitHub raw URL:** https://raw.githubusercontent.com/comage9/obsidian-vault/master/obsidian/06-Wiki-시스템/Wiki/의사결정/Hermes-Persistent-Memory-통합-가이드-20260608.md
 
 ---
@@ -63,6 +63,8 @@
 | Supermemory | Semantic recall + user profiling | Cloud | Semantic profiling | 중간 |
 
 ### 4-2. 1순위 추천: Holographic 활성화 절차
+
+> ⚠️ **곰너이 님 결정 대기: 미확정 사항.** 아래 절차는 참고용입니다. 곰너이 님 승인 후 진행.
 
 ```bash
 # 1. 설치
@@ -236,6 +238,15 @@ wc -c ~/.hermes/memories/MEMORY.md
 
 ---
 
+## 관련 문서
+- [AI-에이전트-장기기억-아키텍처-20260608.md](./AI-에이전트-장기기억-아키텍처-20260608.md) — LTM 표준 분류
+- [카르파티-LLM-Wiki-패턴-분석-20260608.md](./카르파티-LLM-Wiki-패턴-분석-20260608.md) — 3-Layer 패턴
+- [Hermes-공식-Memory-시스템-분석-20260608.md](./Hermes-공식-Memory-시스템-분석-20260608.md) — 8개 External Provider
+- [하네스-장기기억-분석-20260608.md](./하네스-장기기억-분석-20260608.md) — Harness 시스템 메모리
+- 긴밀 통합: `hermes-agent` SKILL.md §Persistent Memory (v2.3.0)
+
+---
+
 저장: 2026-06-08 15:00 KST
-최종 작성자: Hermes (minimax-m3)
+최종 작성자: Hermes (minimax-m3 → deepseek-v4-flash)
 검토 대기: 곰너이 님
