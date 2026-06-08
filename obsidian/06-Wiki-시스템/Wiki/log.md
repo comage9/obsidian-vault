@@ -176,3 +176,11 @@
 - **Holographic External Provider 활성화**: `pip install holographic` + `hermes memory setup`
 - **index.md 전면 갱신**: 12→90페이지
 - **Git 커밋 8개**: `be43c94` ~ `09edd5e`
+### 18:00 ~ 19:00 — Holographic 활성화 + index/log 전면 갱신 + Cross-device sync 강화
+- **Holographic External Provider 활성화**: `pip install holographic` → `hermes config set memory.provider holographic` → Status: available ✅
+- **index.md 전면 갱신**: 12→90페이지, 디렉토리별 구분 카탈로그
+- **log.md 6월 기록 추가**: 6/1~6/8 작업 내역 보강
+- **log.md 자동 cron 생성**: 매일 23:30 `2de1e4b75f8f`, Discord 보고
+- **온보딩 가이드 §7 갱신**: 장기기억 5종 + Holographic 설정 추가
+- **통합-가이드 상태 변경**: "결정 대기"→"✅ Windows 활성 완료"
+- **Git 커밋**: `f114237` (3 files) + `9b51dc0` (1 file)

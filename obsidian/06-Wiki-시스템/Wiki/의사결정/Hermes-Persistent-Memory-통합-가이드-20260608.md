@@ -47,7 +47,7 @@
 
 ---
 
-## 🛠️ §4. 8개 External Memory Provider 활성화 (선택, 1순위: Holographic)
+## 🛠️ §4. 8개 External Memory Provider 활성화 (선택, 활성 완료: Holographic)
 
 ### 4-1. Provider 비교표
 
@@ -62,9 +62,9 @@
 | RetainDB | Vector+BM25+Reranking, 7 memory types | $20/month | RetainDB 사용자 | 중간 |
 | Supermemory | Semantic recall + user profiling | Cloud | Semantic profiling | 중간 |
 
-### 4-2. 1순위 추천: Holographic 활성화 절차
+### 4-2. ✅ Windows Holographic 활성화 완료 (2026-06-08)
 
-> ⚠️ **곰너이 님 결정 대기: 미확정 사항.** 아래 절차는 참고용입니다. 곰너이 님 승인 후 진행.
+> 아래 절차는 Windows Hermes에서 이미 완료. Linux/Telegram에서 동일하게 실행하면 적용됩니다.
 
 ```bash
 # 1. 설치
@@ -228,13 +228,14 @@ wc -c ~/.hermes/memories/MEMORY.md
 
 ---
 
-## ✅ §10. 다음 단계 (검토 대기)
+## ✅ §10. 다음 단계
 
-- [ ] Holographic 도입 (`pip install holographic` + `hermes memory setup`)
+- [x] **Holographic 도입** (`pip install holographic` + `hermes config set memory.provider holographic`) — ✅ Windows 활성 완료 (2026-06-08)
 - [ ] OpenViking 검토 (카르파티 LLM Wiki와 통합)
-- [ ] index.md 수동 작성 (Wiki 카탈로그)
-- [ ] log.md 자동 생성 (cron)
-- [ ] Cross-device memory sync 절차 강화
+- [ ] index.md 수동 작성 (Wiki 카탈로그) — ✅ 완료
+- [x] **log.md 자동 생성** (cron) — ✅ 완료
+- [x] **Cross-device memory sync 절차 강화** — ✅ 온보딩 가이드 갱신
+- [ ] Linux/Telegram Hermes에 Holographic 동일 설정
 
 ---
 
