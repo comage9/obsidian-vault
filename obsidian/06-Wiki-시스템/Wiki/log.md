@@ -84,24 +84,69 @@
 | Frontmatter 누락 | 0개 |
 | 전체 페이지 | 10개 |
 
-## 2026-05-30
+## 2026-06-01 ~ 2026-06-02
 
-### 01:00 ~ 02:20 — KPP 파렛트 자동화 + LS 쿠팡 연동
-
-#### WPPS 출하통보등록 (PBM140MW)
-- 안성5 IB(605177) — 1호차 18 + 2호차 19 = 총 37파렛트 저장 (2026-06-01)
+### WPPS PBM140MW 출하통보등록 정상화
+- 안성5 IB (605177) — 1호차 18 + 2호차 19 = 총 37파렛트
 - 비고(col36): "1호차"/"2호차" 규칙 확정
+- CAR_OWN_TYP='02' USER운송, data_typ='01' 확정
 
-#### WPPS 납품/반납요청 (PBM110MW)
-- 6월 납품요청: 1건 (5/29→하차 6/5, N11, 200파렛트)
+## 2026-06-03
 
-#### 쿠팡 LS 로그인 및 연동
-- `ls.coupang.com` 로그인 성공 (mokicom)
-- VF67(유원)HUB→부천1HUB 3건 (1호차:경기89바1454 / 2호차:경기90자3674 / 3호차:광주90바1703)
+### KPP PBM110MW 검증 함정 발견
+- **핵심**: fn_save는 200 OK + msg=성공 반환하지만 실제 미저장
+- **해결책**: 반드시 GET 재조회로 row 존재 확인
+- 인증 토큰 60분 만료, 자동 갱신 없음 → fn_login 재호출 필수
+- `kpp-verify-search.py` 스크립트 작성
 
-#### 스킬 정리
-- `kpp-pallet-automation` 제거 → `kpp-pallet-management` 통합
-- 워크플로우 C 추가 (Phase1: 15:00 LS검색 + Phase2: 저녁 WPPS등록)
+### KPP 6가지 Silent Drop 발견
+1. data_typ '02'→'01' (가이드 오류)
+2. dlv_dat 10자리 필수
+3. truckRequestId는 호차순 정렬 안 됨 (truckSeq 기준 매핑)
+4. fn_newRow→그리드 row→fn_save 서버 session 추적 구조
+5. PBM140MW.save 직접 신규등록 불가능 (Playwright UI 또는 사용자 수동만)
+6. fn_new에 ZIP1_NUM=482 필수
+
+## 2026-06-04
+
+### LS 차량 정보 DB 동기화 완료
+- PostgreSQL `ls_vehicle` DB 생성
+- 차량-운전자 매핑, 매일 자동 동기화 Cron
+
+### PBM140MW 재시도 금지 규칙 확정
+- 중복 등록 방지 규칙 수립
+- 재시도 금지, 조회 후 미등록 건만 등록
+
+## 2026-06-05 ~ 2026-06-06
+
+### VF2 전면 점검 (89개 이상 작업)
+- DB 통일: SQLite 제거 → PostgreSQL 단일 체계
+- 생산대기 표기 `생산대기` 통일
+- color2 대문자+공백 통일 (`WHITE 180`)
+- 색상 규칙: 크림(Cream)=Ivory, IVORY 1060 로트 적용
+- KI AI Trader 트레일링 step 1.2%→2.0% 완화
+- Cron 8개 prompt 구조 개선 (발견/제안/액션)
+
+### Hermes 시스템 개선
+- Holographic Memory 도입 (SQLite 전용, NumPy 2.4.6)
+- hermes-agent 스킬 v2.2.0 통합
+- 에이전트 온보딩 가이드 4-Step 확정
+- Wiki 74페이지 → GitHub auto-sync
+
+### 이카운트 발주서 작업 (윈도우)
+- 윈도우 이카운트 발주서 생성/수정/전체 작업 완료
+
+## 2026-06-07
+
+### Hermes SOUL.md 업데이트
+- mandatory-verification 스킬 참조 제거 → 5단계 체크리스트 자체 내장
+- Codex CLI → codewhale exec --auto
+- agent-runner.sh → delegate_task subagent
+
+### index.md 카탈로그 갱신
+- 12페이지 → 74페이지 전체 목록
+- Hermes/물류/운영원칙/의사결정 등 모든 카테고리 최신화
+
 ### 2026-05-30 22:01 — Wiki Lint: ❌0개 오류 / ⚠️7개 경고
 
 | 검사 항목 | 결과 |

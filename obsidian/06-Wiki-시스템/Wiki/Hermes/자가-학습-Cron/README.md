@@ -30,6 +30,9 @@ Hermes Agent가 **사용자가 명령하지 않는 시간대**(야간/새벽)에
 | 3 | **01:30** | 서플라이허브 | `cf856531b78f` | `mandatory-verification` | 발주서 API, EUC-KR ZIP, 텔레그램 전송 점검 |
 | 4 | **02:30** | Syncthing | `fc42d7ad9ff6` | `mandatory-verification` | sendonly/sendreceive, 양방향 동기화 점검 |
 | 5 | **03:30** | Hermes Self | `bf08d649e866` | `mandatory-verification` | Hermes Agent 명령어, 스킬 카탈로그, 메모리 정책 점검 |
+| **6** | **04:30** | **KI AI Trader** | `0608378496ca` | `mandatory-verification`, `ki-ai-trader`, `ki-ai-trader-ai`, `ki-ai-trader-config` | AI 모델 연결, 설정 정합성, 포지션 현황, 프로세스 상태 점검 |
+| **7** | **05:30** | **VF2 생산계획** | `48144ff13cee` | `mandatory-verification`, `vf2-production-plan-conventions` | 색상코드/금형명/upsert/CAP 코드 정합성, DB vs 기준 문서 비교 |
+| **8** | **06:30** | **VF2 프로젝트** | `27c1b2555f38` | `mandatory-verification` | 백엔드/프론트엔드 상태, POST 라우트 점검, DB 건수, 시스템 리소스 |
 
 ---
 
@@ -115,7 +118,9 @@ cronjob(action='update', job_id='...', prompt='...')
 | **Supplier Hub Nightly** | `Wiki/Hermes/자가-학습-Cron/Supplier-Hub-Nightly-20260605.md` |
 | **Syncthing Nightly** | `Wiki/Hermes/자가-학습-Cron/Syncthing-Nightly-20260605.md` |
 | **Hermes Self Nightly** | `Wiki/Hermes/자가-학습-Cron/Hermes-Self-Nightly-20260605.md` |
-| **표준 사양** | `Wiki/Hermes/자가-학습-Cron/표준-사양-20260605.md` |
+| **KI AI Trader Nightly (신규)** | `Wiki/Hermes/자가-학습-Cron/KI-AI-Trader-Nightly.md` |
+| **VF2 생산계획 Nightly (신규)** | `Wiki/Hermes/자가-학습-Cron/VF2-Production-Plan-Nightly.md` |
+| **VF2 프로젝트 Nightly (신규)** | `Wiki/Hermes/자가-학습-Cron/VF2-Project-Nightly.md` |
 | **로컬 스킬 (참고)** | `C:\Users\kis\AppData\Local\hermes\skills\devops\self-learning-cron\SKILL.md` |
 
 ---
@@ -126,3 +131,4 @@ cronjob(action='update', job_id='...', prompt='...')
 |:----|:---------|
 | 2026-06-05 | 자가 학습 Cron 시스템 최초 구축 (5개 분야) |
 | 2026-06-07 | Git Wiki 업로드 (다른 에이전트 온보딩용) |
+| 2026-06-07 | KI AI Trader(04:30) / VF2 생산계획(05:30) / VF2 프로젝트(06:30) 신규 추가 |
