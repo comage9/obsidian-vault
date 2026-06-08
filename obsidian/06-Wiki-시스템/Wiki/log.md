@@ -242,3 +242,25 @@
 - **템플릿 문서 3건**: `Output/템플릿/01-ingest / 02-update / 03-output`
 - **온보딩 가이드 §7**: wiki-workflow 스킬 + Output/템플릿 추가
 - **Git 커밋**: `cc332f8` (Sources/Output/용량검증)
+
+## 2026-06-08
+
+### 20:30 ~ 20:40 — Linux Hermes: Git merge + SOUL.md/크론 정리
+- **Git pull**: Windows `bd60f04` 병합 성공 → `2af00cb` (index.md 충돌 해결, upstream 채택)
+- **wiki-workflow 템플릿 3종 수신**: `/ingest`, `/update`, `/output` — Output/템플릿/ 적용 완료
+- **Sources/Output 구조 동기화 완료**
+- Linux 푸시: `2af00cb` → GitHub origin/master
+
+## 2026-06-07
+
+### Hermes SOUL.md 업데이트
+- mandatory-verification 스킬 참조 제거 → 5단계 체크리스트 자체 내장
+- Codex CLI → codewhale exec --auto
+- agent-runner.sh → delegate_task subagent
+- 크론 3개 프롬프트 동기화 (KI AI Trader/VF2 생산계획/VF2 프로젝트)
+
+### index.md 카탈로그 갱신 (본 세션, 병합 전)
+- 충돌 해소: Windows 버전(91페이지) 채택 — 테이블 형식 카탈로그 유지
+
+### log.md 일일 자동 기록 cron 생성
+- ID: `2ed0ab22c954` / 매일 23:30 / session_search 기반 / Git push 포함
