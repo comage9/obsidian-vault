@@ -5,3 +5,6 @@ key.txt
 payload.json
 query.py
 query2.py
+
+# Snapshots with .env
+hermes-snapshot-*/
