@@ -291,12 +291,11 @@
 - **Wiki/index.md 갱신**: 74→77 페이지, 마지막 갱신 6/10
 - **3-WAY 완료**: Wiki + README + Git push
 
-### 22:12 — LS 차량 DB 전면 재구축 (Windows)
-- 기존 DB 폐기 후 PDF 검증 데이터로 재구축
-- 6/5~6/10: 18 PDF-verified records (12개 차량)
-- 5/1~6/4: 100개 records → 전부 LS 정책 `[DELETED]`로 DB 미포함
-- 오늘(6/10) 제외 접안 계산: 1호차=신규, 2호차=5회, 3호차=1회
-|- views.py field명 수정: `plate`→`plateNumber`, `ls_history`→`dates[]`
+### 23:00 — [SOUL개편] LLM Wiki 3전략 하네스 검증 + 3틱 적용 / 이유: 거울형/기억형 전략을 현재 시스템에 적용 / 다음: cron 실행 결과 모니터링
+- 하네스 검증: LLM Wiki 두뇌/기억/거울 3전략 분석 완료
+- 틱①: §0 Auto-Recall에 `read_file(log.md, offset=-20)` 추가
+- 틱②: log.md 템플릿 `- [작업] 설명 / 이유: X / 다음: Y` 형식으로 개선
+- 틱③: 자료 섭취 cron 생성 (d56641a9a113, 매일 06:00, wiki-workflow)
 
 ### 23:30 — Wiki log.md 일일 갱신 (cron)
 |- 누락된 6/10 페이지 6건 log.md 추가
