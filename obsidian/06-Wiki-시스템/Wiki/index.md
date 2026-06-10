@@ -1,7 +1,7 @@
 # Wiki Index
 
 > 콘텐츠 카탈로그 — 모든 Wiki 페이지를 분류별로 정리
-> 마지막 갱신: 2026-06-10 | 전체 페이지: 96
+> 마지막 갱신: 2026-06-11 | 전체 페이지: 97
 
 ---
 
@@ -108,9 +108,11 @@
 - [[Hermes/VF2-생산계획-엑셀문서-기준]] — VF2 생산 계획 기준 (엑셀 기반)
 - [[Hermes/VF2-생산계획-제품목록-참고용]] — VF2 생산 계획 & 제품 목록 참고용
 
-### 자가 학습 Cron (7)
+### 자가 학습 Cron (12)
 - [[Hermes/자가-학습-Cron/표준-사양-20260605]] — 자가 학습 Cron 표준 사양
-- [[Hermes/자가-학습-Cron/Hermes-Self-Nightly-20260605]] — Hermes Self Nightly
+- [[Hermes/자가-학습-Cron/Hermes-Self-Nightly-20260605]] — Hermes Self Nightly 6/5
+- [[Hermes/자가-학습-Cron/Hermes-Self-Nightly-20260609]] — Hermes Self Nightly 6/9
+- [[Hermes/자가-학습-Cron/Hermes-Self-Nightly-20260611]] — Hermes Self Nightly 6/11
 - [[Hermes/자가-학습-Cron/KI-AI-Trader-Nightly]] — KI AI Trader Nightly
 - [[Hermes/자가-학습-Cron/KPP-Pitfall-Nightly-20260605]] — KPP (WPPS) Nightly
 - [[Hermes/자가-학습-Cron/LS-Coupang-Nightly-20260605]] — LS (Coupang) Nightly

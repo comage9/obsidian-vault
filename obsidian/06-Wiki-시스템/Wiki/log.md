@@ -333,6 +333,18 @@
 |- Holographic(SQLite) → PostgreSQL 마이그레이션 완료 (Linux)
 
 ### (~18:00) — 유훈식 AI&UX 세미나 시리즈 분석
-|- `의사결정/유훈식-AI-세미나-시리즈-분석-20260610.md` 생성
-|- 3개 YouTube 영상 기반 AI&UX 세미나 분석 정리
+||- `의사결정/유훈식-AI-세미나-시리즈-분석-20260610.md` 생성
+||- 3개 YouTube 영상 기반 AI&UX 세미나 분석 정리
+
+## 2026-06-11
+
+### 03:30 — Hermes Self Nightly 자가 학습 실행
+- `Hermes/자가-학습-Cron/Hermes-Self-Nightly-20260611.md` 생성
+- 발견된 변경:
+  - mandatory-verification SKILL.md 2026-06-10 대규모 갱신 (데이터신선도/ASK/정책)
+  - MEMORY.md 3,432/2,200 chars (156%) — 용량 초과 지속
+  - USER.md 2,000/1,375 chars (145%) — 용량 초과 (최초 발견)
+  - hermes-agent SKILL.md v2.3.0 — 변경 없음
+  - 스킬 카탈로그 102개 — 변경 없음
+- **운영정책 갱신**: `운영원칙/에이전트-운영-정책.md` — MEMORY/USER 용량 현황 업데이트 + 2026-06-10 정책 6종 추가
 
