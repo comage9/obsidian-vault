@@ -104,3 +104,28 @@
 - ✅ **복합 쿼리** (entities, fact_entities, tsvector FTS, ts_rank)
 - ✅ **MVCC 동시성** (다중 writer 안전)
 - ⚠️ Wiki 6/8 4개 문서 = outdated (Holographic SQLite 기준). 후속 문서 우선 참조.
+### 11:29 — 스킬 체계화 1차 일괄 적용
+- 50+개 스킬 중 25개에 `trigger_condition` + 일부 `output_template` 적용 (automation 11, devops 4, github 5)
+- Wiki Knowledge Graph 구축: `kpp-mcp-server/references/wiki-knowledge-graph.json` (94 nodes / 102 edges, 물류·의사결정·Hermes 카테고리)
+### 11:29 — 스킬 체계화 2차 적용 + Wiki Graph MCP
+- 전 카테고리 43/43 스킬 적용 완료 (creative 18/18 추가, 이전 미적용분 해소)
+- `kpp-mcp-server/wiki-graph/server.py` MCP 서버 신규 (`wiki_graph_search`/`wiki_node_info`/`wiki_graph_stats` 도구)
+- OpenRouter 키 관리 시스템: `scripts/key_manager.py` + `E:/coding/.openrouter-keys.json` (Git 제외), 신규 키로 4개 모델(코드/문서/설계/종합) 검증
+### 18:35 — SOUL.md 개편 전파 가이드 추가
+- 메모리 3계층(L1 MEMORY / L2 USER / L3 fact_store), Wiki LLM 워크플로우, rules.json prefill 패턴 정리
+- 다른 에이전트(Windows/Telegram/Discord)로의 전파 절차 문서화
+### 21:20 ~ 21:32 — 유훈식 AI 세미나 시리즈 분석 적용
+- 3개 영상(옵시디언+Hermes UX / 옵시디언 필수 / 2026 LLM 실무 sLLM·GraphRAG·환각) 분석
+- 우리 시스템 적용: UX/UI 항목 → 곰너이 브랜드 가이드로 통합, GraphRAG → Wiki Graph MCP와 정합
+### 21:28 — 곰너이 브랜드 가이드 통합 문서화
+- SOUL.md / USER.md / MEMORY.md 데이터 소스, 필수 규칙 7개 + 결정 고정(Decision Lock) 신규 추가
+- Hermes Agent 페르소나·메모리 3계층·Wiki LLM 워크플로우 한 페이지 정리
+### 21:28 — LS 크론 통합 (16 → 12개)
+- 13시 등록확인/13:10 텍스트전달/15시 재확인/16시 2차재확인/15:30 DB매칭/16:30 PDF인쇄 → **13시 통합 크론(8a776545148d)**으로 일원화
+- 30분 watchdog·17시 리포트·PDF 인쇄(비활성)는 유지, 중복 4개 크론 제거
+### 22:06 — 거울형 주간 자기 분석 (2026-06-03 ~ 06-10)
+- 미결 질문 10건, 반복 패턴 Top 15 분석 (mirror_report.py weekly cron)
+- "이거 먼저 수정하고" / "사실인가?" / "지금부터 적용하려면?" 패턴 다수 → Decision Lock·Pre-flight Check 강화 근거
+### 22:16 — 작업일지/INDEX 자동 갱신
+- 2026-06-10 작업일지(27.4KB) + INDEX·index.md 동기화, Git commit `95630b8`
+###
