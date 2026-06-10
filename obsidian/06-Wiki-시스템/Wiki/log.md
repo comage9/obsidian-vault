@@ -308,9 +308,18 @@
 - 틱③: 자료 섭취 cron 생성 (d56641a9a113, 매일 06:00, wiki-workflow)
 
 ### 23:30 — Wiki log.md 일일 갱신 (cron)
-|- 누락된 6/10 페이지 6건 log.md 추가
+|- 누락된 페이지 log.md 추가
 |- index.md 갱신 (페이지 카탈로그 + 수량 업데이트)
 |- Git add + commit + push
+
+## 2026-06-11
+
+### 07:08 — Loop Engineering 적용 / 이유: Addy Osmani "Loop Engineering" 기반, 엔지니어 대신 실행버튼 역할 / 다음: cron 정상 실행 확인
+- Wiki 문서 `운영원칙/Loop-Engineering-20260611` 생성
+- `loop_orchestrator.py` — Master Loop (상태/리포트/건강체크)
+- Master Loop cron (c65565b3f32c, 매일 07:00, no_agent, SILENT)
+- 기존 13개 cron을 6개 Loop로 체계화 (LS/메모리/거울/섭취/감시/마스터)
+- SOUL.md §Loop 추가
 
 ### (~21:30) — 스킬 체계화 일괄 적용
 |- `의사결정/스킬-체계화-일괄-적용-20260610.md` 생성
