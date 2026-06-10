@@ -49,3 +49,58 @@
 - 의사결정/ 폴더 신규 파일 없음
 - 시스템/ 폴더의 쿠팡-LS 문서화만 반영
 ###
+
+## 2026-06-10
+
+### 10:30 ~ 11:30 — Holographic (SQLite) → holographic-pg (PostgreSQL) 마이그레이션
+**사유**: `~/.hermes/memory_store.db` 6/8 22:48 손상 (magic `2CS\x8a` ≠ SQLite `SQLi`). 6/9, 6/10 백업 모두 이미 손상 → **복구 가능한 정상본 0건**. 무한 확장 가능 PostgreSQL로 전환 결정.
+
+**변경 사항**:
+- **손상 DB**: `cp memory_store.db → memory_store.db.corrupted-20260610` + `rm` (백업 후 폐기)
+- **PostgreSQL 스키마**: `vf2_db` 안에 `memory` 스키마 격리 생성 (4 tables / 10 indexes / 1 trigger)
+  - `facts` (BIGSERIAL, tsvector GENERATED, BYTEA HRR)
+  - `entities` / `fact_entities` (many-to-many)
+  - `memory_banks` (HRR compositional bank)
+- **의존성**: `psycopg2-binary 2.9.12` (`uv pip install`)
+- **새 provider**: `holographic_pg/{__init__.py, store_pg.py, plugin.yaml}` (~1,200 LOC)
+  - `HolographicPgMemoryProvider` (MemoryProvider ABC)
+  - `MemoryStore` (psycopg2 + RealDictCursor + tsvector FTS)
+  - `holographic` (SQLite) API 1:1 호환 — 호출 코드 변경 0건
+- **Config**: `hermes config set memory.provider holographic-pg` (직접 patch는 security gate로 거부됨)
+
+**검증 (전체 통과)**:
+- 헤더 magic 확인 (`2CS\x8a` 손상)
+- 백업 11개 (5/24~6/10) `memory_store.db` 추출 → 모두 손상/부재
+- vf2_db schema 4 tables + 10 indexes + 1 trigger
+- psycopg2 2.9.12 venv 설치
+- Plugin import + `is_available()` + `initialize()` + `system_prompt_block()` (stats 표시)
+- `fact_store` 11개 action (add/search/probe/related/list/stats/update/remove/feedback) E2E 통과
+- `hermes memory status` → `Provider: holographic-pg` ✅
+
+**핵심 Pitfall**:
+- psycopg2 `RealDictCursor`는 `[0]` 인덱싱 불가 — `cur.fetchone()['colname']` 필수 (SQLite와 다름)
+- `asyncmode=False` 옵션은 psycopg2 미지원 (psycopg3 전용)
+- `~/.hermes/plugins/` 사용자 디렉토리 vs `/opt/hermes/.../plugins/memory/` 시스템 디렉토리 구분
+- `hermes memory status` "NOT installed" 메시지는 사용자 plugin 디렉토리 기준. 시스템 디렉토리에 있으면 자동 로드.
+
+**다른 에이전트 (Windows/Telegram/Discord) 적용 절차**: `의사결정/Hermes-Persistent-Memory-PostgreSQL-마이그레이션-20260610.md` §6 참조
+
+**Wiki**:
+- 신규: `의사결정/Hermes-Persistent-Memory-PostgreSQL-마이그레이션-20260610.md` (9,864 bytes, 8 sections)
+- 기존 6/8 4개 문서에 §6 후속 작업 섹션 추가 (`Hermes-공식-Memory-시스템-분석-20260608.md`)
+
+**스킬 (영구 저장)**:
+- `/opt/hermes/skills/hermes-persistent-memory-postgresql/` (v1.0.0)
+  - `SKILL.md` (13,041 bytes)
+  - `references/postgresql-ddl.sql` (DDL)
+  - `references/holographic-pg-plugin-source.md` (plugin source verbatim)
+  - `references/2026-06-10-migration-session.md` (7,591 bytes, T+0~T+16 timeline)
+  - `references/sqlite-to-postgres-mapping.md` (매핑 가이드)
+
+**효과**:
+- ✅ **무한 확장** (PostgreSQL DB 기반, char 제한 없음)
+- ✅ **시스템 memory 한도(2,200자) 문제 해결** (별도 채널)
+- ✅ **영구 보존** (VF2 PostgreSQL 백업과 함께 자동 백업)
+- ✅ **복합 쿼리** (entities, fact_entities, tsvector FTS, ts_rank)
+- ✅ **MVCC 동시성** (다중 writer 안전)
+- ⚠️ Wiki 6/8 4개 문서 = outdated (Holographic SQLite 기준). 후속 문서 우선 참조.

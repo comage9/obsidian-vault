@@ -249,3 +249,31 @@ Hermes는 built-in memory 외에 **8개 외부 provider plugin** 제공. **단, 
 작성: Hermes (minimax-m3)
 상태: §0 Auto-Recall 3종 발동, 공식 문서 2개 페이지 168KB 직접 fetch, 곰너이 님 시스템 표준 매핑 완료
 곰너이 님 검토 대기: Holographic (또는 다른 provider) 도입 여부
+
+---
+
+## 6. 후속 작업: PostgreSQL 마이그레이션 (2026-06-10)
+
+**⚠️ 본 문서는 6/8 시점 기준. 현재(2026-06-10) Holographic(SQLite) → holographic-pg(PostgreSQL) 마이그레이션 완료로 다음 변경됨:**
+
+| 항목 | 6/8 결정 | 6/10 현재 |
+|:-----|:---------|:---------|
+| Provider | `holographic` (SQLite) | **`holographic-pg` (PostgreSQL)** |
+| 저장소 | `~/.hermes/memory_store.db` | `vf2_db.memory.*` |
+| 손상 상태 | ❌ 6/8 22:48 손상 | ✅ 깨끗 (PostgreSQL) |
+| 복구 가능 | ❌ 백업 0건 정상 | ✅ 자동 백업 + 무한 확장 |
+| 무한 확장 | ⚠️ SQLite 한계 | ✅ 진짜 무한 |
+| HRR 벡터 | BLOB | BYTEA (동일) |
+| FTS | FTS5 | tsvector + GIN |
+| 플러그인 | `/opt/hermes/.../memory/holographic/` | `/opt/hermes/.../memory/holographic_pg/` |
+
+**상세 후속 문서**: `Wiki/의사결정/Hermes-Persistent-Memory-PostgreSQL-마이그레이션-20260610.md` (9,864 bytes, 8 sections)
+
+**구현 스킬**: `/opt/hermes/skills/hermes-persistent-memory-postgresql/` (v1.0.0)
+
+**핵심 Pitfall**:
+- `~/.hermes/memory_store.db` 6/8 22:48 손상 (magic `2CS\x8a` ≠ SQLite)
+- 6/9, 6/10 백업 둘 다 이미 손상 → **복구 가능한 정상본 0건**
+- 깨끗하게 PostgreSQL로 마이그레이션 후 모든 검증 통과
+
+**다음 에이전트 (Windows/Telegram/Discord) 적용**: `Hermes-Persistent-Memory-PostgreSQL-마이그레이션-20260610.md` §6 참조
