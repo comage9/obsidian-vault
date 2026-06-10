@@ -296,5 +296,34 @@
 - 6/5~6/10: 18 PDF-verified records (12개 차량)
 - 5/1~6/4: 100개 records → 전부 LS 정책 `[DELETED]`로 DB 미포함
 - 오늘(6/10) 제외 접안 계산: 1호차=신규, 2호차=5회, 3호차=1회
-- views.py field명 수정: `plate`→`plateNumber`, `ls_history`→`dates[]`
+|- views.py field명 수정: `plate`→`plateNumber`, `ls_history`→`dates[]`
+
+### 23:30 — Wiki log.md 일일 갱신 (cron)
+|- 누락된 6/10 페이지 6건 log.md 추가
+|- index.md 갱신 (페이지 카탈로그 + 수량 업데이트)
+|- Git add + commit + push
+
+### (~21:30) — 스킬 체계화 일괄 적용
+|- `의사결정/스킬-체계화-일괄-적용-20260610.md` 생성
+|- 전체 50+개 스킬 중 25개에 trigger_condition + output_template 적용
+
+### (~21:30) — 스킬 체계화 2차 적용 + Wiki Graph MCP
+|- `의사결정/스킬-체계화-2차적용-20260610.md` 생성
+|- 2차 스킬 체계화 적용 (체계화 미적용 스킬 처리)
+
+### (~21:00) — LS 크론 통합
+|- `의사결정/LS-크론-통합-20260610.md` 생성
+|- 16개 → 12개로 LS 크론 통합 정리
+
+### (~21:00) — SOUL.md 개편 전파 가이드
+|- `운영원칙/SOUL-개편-전파-가이드-20260610.md` 생성
+|- 다른 Hermes 에이전트(Telegram/Linux)용 SOUL 개편 + rules.json 전파 절차 문서화
+
+### (~20:30) — Hermes Persistent Memory PostgreSQL 마이그레이션
+|- `의사결정/Hermes-Persistent-Memory-PostgreSQL-마이그레이션-20260610.md` 생성
+|- Holographic(SQLite) → PostgreSQL 마이그레이션 완료 (Linux)
+
+### (~18:00) — 유훈식 AI&UX 세미나 시리즈 분석
+|- `의사결정/유훈식-AI-세미나-시리즈-분석-20260610.md` 생성
+|- 3개 YouTube 영상 기반 AI&UX 세미나 분석 정리
 
