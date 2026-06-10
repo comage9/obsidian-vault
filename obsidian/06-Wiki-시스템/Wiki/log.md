@@ -269,6 +269,16 @@
 ### 03:46 — Hermes Self Nightly 자가 학습 실행
 - `Hermes/자가-학습-Cron/Hermes-Self-Nightly-20260609.md` 생성 (hermes-agent SKILL.md v2.2.0→v2.3.0, mandatory-verification §0 Tool-First Auto-Recall 신설 감지)
 - `운영원칙/에이전트-운영-정책.md` 갱신 (Hermes Self Nightly 반영)
--  LS 크론 5개 통합/삭제 (13시 통합 생성 / 15시·16시·DB매칭·텍스트전달 삭제, PDF인쇄 disabled 유지) -- 2026-06-10
+|  15시·16시·DB매칭·텍스트전달 삭제, PDF인쇄 disabled 유지) -- 2026-06-10
 현재 12개 cron으로 정리됨
+
+## 2026-06-10
+
+### 22:12 — LS 차량 DB 전면 재구축
+- 기존 DB 중복/6/9누락 문제로 전체 폐기
+- 23주(2026-01-01~06-10) Tracking API 재조회 → 484개 unique records
+- 484건 PDF 다운로드 + PyMuPDF 텍스트 추출
+- 최근 7일(6/4~6/10) 21건 드라이버 정보 추출 완료
+- `물류/쿠팡/LS/차량-DB-전면-재구축-20260610` — Wiki 문서 생성
+- `E:\coding\rebuild_ls_db.py` — 재구축 스크립트
 
