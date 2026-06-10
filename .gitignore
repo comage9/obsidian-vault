@@ -1,40 +1,10 @@
-# Obsidian Vault Git
+# Secrets
+key.txt
 
-# OS files
-.DS_Store
-Thumbs.db
-desktop.ini
+# Temp files
+payload.json
+query.py
+query2.py
 
-# Environment
-.env
-.env.local
-
-# IDE
-.idea/
-.vscode/
-*.swp
-*.swo
-
-# Temp
-*.tmp
-*.temp
-
-# Binary files in Sources/바이너리 — 용량 보호
-Sources/바이너리/*
-!Sources/바이너리/README.md
-
-# Binary file types (any location)
-*.pdf
-*.png
-*.jpg
-*.jpeg
-*.gif
-*.bmp
-*.xlsx
-*.xls
-*.pptx
-*.docx
-*.zip
-*.tar.gz
-*.exe
-*.dll
+# Snapshots with .env
+hermes-snapshot-*/

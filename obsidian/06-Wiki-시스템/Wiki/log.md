@@ -264,3 +264,8 @@
 
 ### log.md 일일 자동 기록 cron 생성
 - ID: `2ed0ab22c954` / 매일 23:30 / session_search 기반 / Git push 포함
+
+## 2026-06-09
+### 03:46 — Hermes Self Nightly 자가 학습 실행
+- `Hermes/자가-학습-Cron/Hermes-Self-Nightly-20260609.md` 생성 (hermes-agent SKILL.md v2.2.0→v2.3.0, mandatory-verification §0 Tool-First Auto-Recall 신설 감지)
+- `운영원칙/에이전트-운영-정책.md` 갱신 (Hermes Self Nightly 반영)
