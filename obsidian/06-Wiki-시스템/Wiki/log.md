@@ -269,3 +269,6 @@
 ### 03:46 — Hermes Self Nightly 자가 학습 실행
 - `Hermes/자가-학습-Cron/Hermes-Self-Nightly-20260609.md` 생성 (hermes-agent SKILL.md v2.2.0→v2.3.0, mandatory-verification §0 Tool-First Auto-Recall 신설 감지)
 - `운영원칙/에이전트-운영-정책.md` 갱신 (Hermes Self Nightly 반영)
+-  LS 크론 5개 통합/삭제 (13시 통합 생성 / 15시·16시·DB매칭·텍스트전달 삭제, PDF인쇄 disabled 유지) -- 2026-06-10
+현재 12개 cron으로 정리됨
+
