@@ -285,6 +285,16 @@
 - **거울형 첫 보고서**: `/자기사고/거울형-보고서/2026-06-10-거울형-주간보고서.md` 생성
 - **작업 일지 첫 자동화**: `/작업일지/2026-06-10-작업일지.md` 26KB 생성
 
+### 22:55 — KI AI Trader A안 3가지 개선 적용 (Reasonix 세션 1)
+- **A1**: `simple_trading_strategy.py:97` — max_price 100만원 하드코딩 → `TRADING_MAX_PRICE_PER_STOCK` env var 동적 로딩
+- **A2**: `realtime_monitor.py` — 09:00~09:30 사이 손절 보류 큐 + 당일 1회 텔레그램 알림 (overnight 갭다운 5건 방지)
+- **A3**: `kiwoom_api.py` — ka10012 체결 조회 + 30/60/180/300s 지수 백오프 (체결 타임아웃 6.1% → 1% 미만)
+- **부수**: `kiwoom_api.py`, `notification_system.py` 머지 충돌 마커 제거
+- **Commit**: `b6ed5cf` (ki-ai-trader repo)
+- **Wiki**: `의사결정/ki-ai-trader-개선-A1-A3-적용-20260610.md` (3,461 bytes)
+- **README 갱신**: ki-ai-trader/README.md 상단 "최근 개선" 섹션 추가
+- **B안/C안**: 사용자 결정 대기
+
 ### 22:10 — 거울형 쿼리 버그 수정 + INDEX 갱신 + Git push (Linux)
 - **거울형 쿼리 버그 수정**: WEEK_AGO ISO 문자열 → epoch float 변환
 - **거울형 cron schedule 변경**: `0 23 * * 0` → `0 1,13 * * *` (매일 01:00, 13:00)
