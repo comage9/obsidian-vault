@@ -292,10 +292,9 @@
 - **3-WAY 완료**: Wiki + README + Git push
 
 ### 22:12 — LS 차량 DB 전면 재구축 (Windows)
-- 기존 DB 중복/6/9누락 문제로 전체 폐기
-- 23주(2026-01-01~06-10) Tracking API 재조회 → 484개 unique records
-- 484건 PDF 다운로드 + PyMuPDF 텍스트 추출
-- 최근 7일(6/4~6/10) 21건 드라이버 정보 추출 완료
-- `물류/쿠팡/LS/차량-DB-전면-재구축-20260610` — Wiki 문서 생성
-- `E:\coding\rebuild_ls_db.py` — 재구축 스크립트
+- 기존 DB 폐기 후 PDF 검증 데이터로 재구축
+- 6/5~6/10: 18 PDF-verified records (12개 차량)
+- 5/1~6/4: 100개 records → 전부 LS 정책 `[DELETED]`로 DB 미포함
+- 오늘(6/10) 제외 접안 계산: 1호차=신규, 2호차=5회, 3호차=1회
+- views.py field명 수정: `plate`→`plateNumber`, `ls_history`→`dates[]`
 
