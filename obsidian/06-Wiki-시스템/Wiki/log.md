@@ -274,7 +274,24 @@
 
 ## 2026-06-10
 
-### 22:12 — LS 차량 DB 전면 재구축
+### 21:30 — LLM Wiki 3-Type 활용 (영상 기반) + vf-dashboard 통합 (Linux)
+- **vf-dashboard 통합**: VF2 사이드바 "VF 출차관리" 메뉴 추가 완료
+- **SOUL.md 개편 전파**: Linux CLI에 SOUL.md 3개 섹션 + rules.json 8개 prefill 적용
+- **LLM Wiki 3-Type 활용 (YouTube: LLM Wiki 천배 가치)**: 거울형/두뇌형/기억형 통합 4작업
+  - **A. 거울형 cron** (`a4ff6603273d`, `0 1,13 * * *`, mirror_report.py)
+  - **B. Wiki 카테고리 4분할** (브랜드/사업/기술/자기사고)
+  - **C. 세션 작업 일지 cron** (`977012de5665`, 매일 23:30)
+  - **D. 곰너이님 브랜드 가이드** (`브랜드/곰너이-브랜드-가이드-20260610.md`)
+- **거울형 첫 보고서**: `/자기사고/거울형-보고서/2026-06-10-거울형-주간보고서.md` 생성
+- **작업 일지 첫 자동화**: `/작업일지/2026-06-10-작업일지.md` 26KB 생성
+
+### 22:10 — 거울형 쿼리 버그 수정 + INDEX 갱신 + Git push (Linux)
+- **거울형 쿼리 버그 수정**: WEEK_AGO ISO 문자열 → epoch float 변환
+- **거울형 cron schedule 변경**: `0 23 * * 0` → `0 1,13 * * *` (매일 01:00, 13:00)
+- **Wiki/index.md 갱신**: 74→77 페이지, 마지막 갱신 6/10
+- **3-WAY 완료**: Wiki + README + Git push
+
+### 22:12 — LS 차량 DB 전면 재구축 (Windows)
 - 기존 DB 중복/6/9누락 문제로 전체 폐기
 - 23주(2026-01-01~06-10) Tracking API 재조회 → 484개 unique records
 - 484건 PDF 다운로드 + PyMuPDF 텍스트 추출
