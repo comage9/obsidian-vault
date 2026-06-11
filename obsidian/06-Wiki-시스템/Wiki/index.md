@@ -62,6 +62,7 @@
 - [[운영원칙/자동-적용-시스템-SOUL-위키캐시]] — SOUL.md + 위키 캐시 동기화
 - [[운영원칙/Git-단일-브랜치-정책-20260606]] — Git 단일 브랜치 정책 (master only)
 - [[운영원칙/Loop-Engineering-20260611]] — Loop Engineering: 5+1 블록 기반 루프 설계
+- [[운영원칙/Agent-Loop-Engineering-Onboarding]] — 다른 에이전트용 Loop Engineering 온보딩
 - [[운영원칙/SOUL-개편-전파-가이드-20260610]] — SOUL 개편 전파 가이드
 
 ## 의사결정 (29)
