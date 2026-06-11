@@ -373,3 +373,8 @@
   - **과다인쇄 방지**: MEMORY.md #16의 "70장+ 과다인쇄" 사고. SKILL.md §Pitfalls에 정식 등록 (인쇄 1회만 + 전 대수 확인).
 - 조치: SKILL.md §Pitfalls append (2항목) + Wiki `KPP-인쇄-함정-ZM600-과다인쇄-20260611.md` 생성
 - 검증: 기존 Wiki 9개와 중복 없음. 변경 사항 Git push 필요.
+
+## 2026-06-12
+
+### 06:00 — [자료섭취] 자료 섭취 cron 실행 (Wiki/Sources/ 확인) / 이유: Sources/텍스트/ 디렉터리 미존재, Sources/바이너리/ README.md만 존재 — 새 자료 없음 / 다음: 매일 06:00 재실행
+
