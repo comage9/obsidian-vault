@@ -364,3 +364,12 @@
 - `물류/VF/VF-LS-데이터-파이프라인-오류-20260611.md` — VF-LS 데이터 파이프라인 오류 기록
 - `물류/VF/인쇄-대량-중복-전송-사고-20260611.md` — 인쇄 대량 중복 전송 사고 기록
 - `물류/VF/호차-Phase-로직-20260611.md` — 호차 Phase 1/2 로직 정의
+
+### 23:30 — KPP 자가 점검 Cron 실행 (SKILL + Wiki 12개 비교)
+- (a) 대상: SKILL.md(kpp-pallet-management) §Pitfalls + references/ 3개 + Wiki KPP 9개
+- (b) 방법: 문서 전면 읽기 → SKILL.md §Pitfalls와 Wiki/Reference 비교 → 신규 갭 식별
+- (c) 결과: **2개 신규 함정 발견** (2026-06-11 사고 기반, 기존 MEMORY.md에만 존재)
+  - **ZM600 기본프린터 함정**: MEMORY.md #18/#26/#27 USER.md에만 있던 ZM600→Canon G2010 명시 규칙. SKILL.md §Pitfalls에 정식 등록 (`os.startfile` 금지 → `ShellExecute("printto")` 필수).
+  - **과다인쇄 방지**: MEMORY.md #16의 "70장+ 과다인쇄" 사고. SKILL.md §Pitfalls에 정식 등록 (인쇄 1회만 + 전 대수 확인).
+- 조치: SKILL.md §Pitfalls append (2항목) + Wiki `KPP-인쇄-함정-ZM600-과다인쇄-20260611.md` 생성
+- 검증: 기존 Wiki 9개와 중복 없음. 변경 사항 Git push 필요.
