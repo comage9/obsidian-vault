@@ -162,3 +162,24 @@
 - 미결 질문·반복 패턴·콘텐츠 소재·시스템 개선점·사업 신호 모두 0건 (입력 메시지 0개)
 - 지난주(06-04~06-11) 0건 → 재차 0건 — 처리 누적이 안정적으로 해소 국면 진입
 - 메타: mirror_report.py weekly cron, Telegram Home 자동 알림 발송
+## [2026-06-13 12:01:19] Wiki Git Auto-Sync 실행
+
+### 명령
+```
+.scripts/wiki-git-push.sh
+```
+
+### 결과
+- 대상 경로 (`.scripts/wiki-git-push.sh`)는 comage 사용자 디렉터리에 위치하여 comtop cron 컨텍스트에서 직접 실행 불가
+- 대안 실행: `/home/comtop/workspace/Wiki`에서 git add/commit/push 수행
+- 커밋: `5b8cf0c chore: cron wiki-git-push 실행 (2026-06-13)`
+- Push: `528d285..5b8cf0c master -> master` ✅
+- 포함된 변경:
+  - `wiki-sync.sh` 실행 권한 부여 (100644 → 100755)
+  - `VF2-Project-Nightly-20260613.md` 추가 (자가학습 Cron)
+  - `2026-06-13-거주형-주간보고서.md` 추가 (거주형 보고서)
+
+### 비고
+- `wiki-git-push.sh`는 comage 사용자 영역 스크립트이므로, 향후 동일 cron 작업은 comage crontab 또는 공용 경로 스크립트로 통합 필요
+
+---
