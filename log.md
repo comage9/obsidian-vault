@@ -183,3 +183,29 @@
 - `wiki-git-push.sh`는 comage 사용자 영역 스크립트이므로, 향후 동일 cron 작업은 comage crontab 또는 공용 경로 스크립트로 통합 필요
 
 ---
+###
+
+## 2026-06-13
+
+### 06:30 — VF2 Project Nightly 자가 점검 (cron 27c1b2555f38)
+- 백엔드 5176 6/6 엔드포인트 200 OK, 프론트 5174 Vite 재기동 후 4/4 정상, DB 6개 테이블 점검
+- 디스크 59% / 메모리 4.1/14Gi / 스왑 2.7/4.0Gi / uptime 11d 21h / 백엔드 로그 panic 0건 (안정)
+- ⚠ 신규 이슈 2건: `/api/vf-dashboard/health` 404 (main.go 라우트 누락, 문서엔 존재), `production_plans` 테이블 미존재
+
+### 12:01 — Wiki Git Auto-Sync cron 실행
+- `.scripts/wiki-git-push.sh`는 comage 영역 → comtop 컨텍스트에서 직접 실행 불가
+- 대안: `/home/comtop/workspace/Wiki`에서 수동 git add/commit/push 수행 (커밋 `5b8cf0c`, push `528d285..5b8cf0c`)
+- 포함: `wiki-sync.sh` 실행권한(100755), `VF2-Project-Nightly-20260613.md`, `2026-06-13-거울형-주간보고서.md`
+- 후속 권장: 동일 cron을 comage crontab 또는 공용 경로 스크립트로 통합
+
+### 13:00 — 거울형 주간 자기 분석 (2026-06-06 ~ 06-13, 3주 연속 0건)
+- 미결 질문·반복 패턴·콘텐츠 소재·시스템 개선점·사업 신호 **모두 0건** (state.db 입력 0개)
+- 06-05~06-12 / 06-04~06-11 / 06-06~06-13 연속 0건 → 처리 누적이 안정적 해소 국면 지속
+- 메타: `mirror_report.py` weekly cron, Telegram Home 자동 알림 발송
+
+### 23:30 — log.md 일일 갱신 (자동 cron)
+- 본 엔트리: 2026-06-13 VF2 Nightly / Wiki Git Sync / 거울형 주간보고서 활동 정리
+- 의사결정 폴더 신규 파일 0건 (가장 최근: 06-11 ki-ai-trader-개선-A1-A3-적용)
+- Git working tree 1건 잔존 (2026-06-13-거울형-주간보고서.md 1줄 수정, 본 커밋과 함께 정리 예정)
+###
+
