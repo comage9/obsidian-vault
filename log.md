@@ -247,3 +247,23 @@
 - 의사결정 폴더 신규 파일 0건 (가장 최근: 06-11 ki-ai-trader-개선-A1-A3-적용)
 - Git working tree 잔존 보고서 2건 (거울형 06-15, VF2 Nightly 06-15) — 본 커밋과 함께 정리 예정
 ###
+
+## 2026-06-16
+### 05:32 — VF2 Project Nightly 자가 점검 (cron 27c1b2555f38)
+- 점검 보고서: `Wiki/Hermes/자가-학습-Cron/VF2-Project-Nightly-20260616.md` (v2.0)
+- ✅ 백엔드/프론트/DB 9개 테이블/로그 정상, GET 5/6 200 (1개 404 의도)
+- ⚠ 06-15와 동일 이슈 2건 미해결: `/api/vf-dashboard/health` 404, `production_plans` 테이블 미존재
+- 🚨 **HIGH 1건 신규**: **운영 침묵 ≥3일 임계치 도달** (2026-06-14 06:32 마지막 production-log POST, 06-15·06-16 0건) — 사용자 확인 요청
+- ⚠ **MEDIUM 1건**: 디스크 64% (06-15 62% → +2%p 가속 재개)
+- ⚠ LOW 회귀 2건: 운영 6-튜플 중복 2건 (mold 111 Butter, 06-08·06-09, 8일째 미해결), 데크타일 Ivory 빈 color2 1건 (2026-06-07, 9일째 미해결)
+- INFO: GET 라우트 30→29 (1개 감소), (mold, productName) 1:1 위반 15개 (historical), `White 180` 10건 (운영 8건), `M01` 1건, `생산 대기` 1,551건 (1.xlsx 회귀)
+- DB row counts: production_logs 15,886 (변동 0), totalDates 375, latest_date 2026-06-09
+- 신규 컨벤션: `production-plan-conventions` 스킬 §19·§20 체크리스트 적용 (6-튜플/38일 표본, started 비율, 운영 침묵, 디스크 가속, mold 1:1, 색상/기계 변형, 빈 필드)
+- SQL 컬럼명 정정: GORM 스키마 → `machineNumber`/`moldNumber`/`unitQuantity`는 DB에서 `machine_number`/`mold_number`/`unit_quantity` (snake_case). 향후 nightly SQL 작성 시 필수.
+
+### 23:30 — log.md 일일 갱신 (자동 cron)
+- 본 엔트리: 2026-06-16 일일 작업 요약
+- 의사결정 폴더 신규 파일 0건 (가장 최근: 06-11 ki-ai-trader-개선-A1-A3-적용)
+- **VF2 Project Nightly 자가 점검** (05:32 KST): 백엔드/프론트/DB 9개 테이블/로그 정상, GET 5/6 200 (1개 404 의도). 🚨 **HIGH 신규**: 운영 침묵 ≥3일 임계치 도달 (06-14 06:32 마지막 production-log POST, 06-15·06-16 0건) — 사용자 확인 요청. ⚠ **MEDIUM 1건**: 디스크 64% (06-15 62% → +2%p 가속 재개). ⚠ LOW 회귀 2건: 운영 6-튜플 중복 2건 (mold 111 Butter, 8일째), 데크타일 Ivory 빈 color2 1건 (9일째). SQL 컬럼명 정정: GORM `machineNumber`/`moldNumber`/`unitQuantity` → DB `machine_number`/`mold_number`/`unit_quantity` (snake_case). 신규 컨벤션 `production-plan-conventions` 스킬 §19·§20 적용.
+- **거울형 주간 자기 분석 보고서** (06-09~06-16, 7일): 미결 질문 0건, 반복 패턴 0건, 콘텐츠/스킬 소재 0건, 시스템 개선점 0건, 사업 신호 0건 — 활동 적은 한 주 (cron 자동 생성, 데이터 소스 state.db)
+- 보고서: `Wiki/Hermes/자가-학습-Cron/VF2-Project-Nightly-20260616.md`, `Wiki/자기사고/거울형-보고서/2026-06-16-거울형-주간보고서.md`
