@@ -374,7 +374,20 @@
 - 조치: SKILL.md §Pitfalls append (2항목) + Wiki `KPP-인쇄-함정-ZM600-과다인쇄-20260611.md` 생성
 - 검증: 기존 Wiki 9개와 중복 없음. 변경 사항 Git push 필요.
 
-## 2026-06-12
+| 2026-06-12 06:00 — [자료섭취] 자료 섭취 cron 실행 (Wiki/Sources/ 확인) / 이유: Sources/텍스트/ 디렉터리 미존재, Sources/바이너리/ README.md만 존재 — 새 자료 없음 / 다음: 매일 06:00 재실행
+|
+|## 2026-06-18
+|
+|### 03:30 — [Self-Nightly] Hermes 자가 점검 cron 실행
+|- (a) 대상: hermes-agent SKILL.md + mandatory-verification SKILL.md + skills_list + MEMORY/USER 용량 + Wiki 카운트 + rules.json
+|- (b) 방법: SOUL/USER/MEMORY 로드 → skill_view(hermes-agent) + skill_view(mandatory-verification) + skills_list() → Wiki 검색 → 이전 보고서 대조
+|- (c) 결과: 3개 변경 사항 발견
+|  - **USER.md 용량 심각 악화**: 2,000→2,519 chars (183.4%)
+|  - **MEMORY.md 여전히 초과**: 3,432→3,315 chars (150.7%)
+|  - **Self-Nightly 7일간 미실행**: 마지막 실행 6/11, log.md 6/12 이후 미갱신
+|  - Wiki 페이지 96→121 (+25) 정상 증가. hermes-agent/mandatory-verification SKILL.md 변경 없음.
+- (d) 조치: Wiki Hermes-Self-Nightly-20260618.md 생성 + 운영정책.md MEMORY/USER 통계 갱신 + 참조문서 목록 추가
+- (e) 권장: USER.md consolidation 긴급. MEMORY.md consolidation. cron 활성화 확인.
 
 ### 06:00 — [자료섭취] 자료 섭취 cron 실행 (Wiki/Sources/ 확인) / 이유: Sources/텍스트/ 디렉터리 미존재, Sources/바이너리/ README.md만 존재 — 새 자료 없음 / 다음: 매일 06:00 재실행
 
