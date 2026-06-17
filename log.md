@@ -267,3 +267,54 @@
 - **VF2 Project Nightly 자가 점검** (05:32 KST): 백엔드/프론트/DB 9개 테이블/로그 정상, GET 5/6 200 (1개 404 의도). 🚨 **HIGH 신규**: 운영 침묵 ≥3일 임계치 도달 (06-14 06:32 마지막 production-log POST, 06-15·06-16 0건) — 사용자 확인 요청. ⚠ **MEDIUM 1건**: 디스크 64% (06-15 62% → +2%p 가속 재개). ⚠ LOW 회귀 2건: 운영 6-튜플 중복 2건 (mold 111 Butter, 8일째), 데크타일 Ivory 빈 color2 1건 (9일째). SQL 컬럼명 정정: GORM `machineNumber`/`moldNumber`/`unitQuantity` → DB `machine_number`/`mold_number`/`unit_quantity` (snake_case). 신규 컨벤션 `production-plan-conventions` 스킬 §19·§20 적용.
 - **거울형 주간 자기 분석 보고서** (06-09~06-16, 7일): 미결 질문 0건, 반복 패턴 0건, 콘텐츠/스킬 소재 0건, 시스템 개선점 0건, 사업 신호 0건 — 활동 적은 한 주 (cron 자동 생성, 데이터 소스 state.db)
 - 보고서: `Wiki/Hermes/자가-학습-Cron/VF2-Project-Nightly-20260616.md`, `Wiki/자기사고/거울형-보고서/2026-06-16-거울형-주간보고서.md`
+
+### 06:31 — VF2 Project Nightly (2026-06-17, cron)
+- **VF2 Project Nightly 자가 점검** (06:31 KST): 백엔드/프론트/DB 9개 테이블/로그 정상, GET 5/6 200 (1개 404 의도), main.go 67개 라우트. 백엔드(651975) 5일+, Vite(686007) 4일+ 안정.
+- 🚨 **운영 침묵 8일째** (06-09 마지막 production-log POST, 06-10~06-17 0건 — max_date 2026-06-09) — 사용자 확인 요청
+- ⚠ **MEDIUM 1건**: 디스크 67% (06-16 64% → **+3%p/1일 가속 재개**) — 06-16 "WARNING 일시 정체" 예고대로 재가속 확인, 사용자 확인 요청
+- ⚠ LOW 회귀 2건: 운영 6-튜플 중복 mold 111 Butter (4행, 9일째), 데크타일(114) 빈 color2 3건 (10일째, blank_color2 1→3 정정)
+- 🆕 **신규 1건**: color2 `WHITE 180` 148건 (대소문자 비일관, 06-16 미확인 — carry-forward 금지 함정 회피)
+- ✅ **SQL 정확 카운트 적용** (레퍼런스 §2.3): 6-튜플 중복 2건 그룹 cnt 합계 = 4행 (손 row 카운트 금지)
+- ✅ **(mold, product) 1:1 위반 운영 2026 한정 0건 확인** (06-16 15종은 historical 포함이었음 — 정정)
+- 보고서: `Wiki/Hermes/자가-학습-Cron/VF2-Project-Nightly-20260617.md` (9,178 bytes)
+
+### ⚠ Wiki Git Auto-Sync Cron — 스크립트 부재 발견 (2026-06-17)
+- **문제**: `Wiki Git Auto-Sync` cron 작업이 `.scripts/wiki-git-push.sh` 실행을 지시하나, 해당 스크립트는 시스템 전체(`/home/comtop`)에 **존재하지 않음** — `search_files pattern=wiki-git-push*` 0건, `search_files pattern=git-push*` 0건
+- **영향**: cron이 호출하는 자동 sync 경로가 **사전에 한 번도 구축되지 않은 상태**에서 cron만 등록됨 → 모든 실행이 exit 127 (No such file)로 실패해왔을 가능성
+- **현 상태**: Wiki repo는 동작 중 — origin `github.com/comage9/obsidian-vault.git` 연결 정상, master 브랜치 origin과 동기화 상태. **단, 미커밋 변경 존재**:
+  - 수정: `log.md` (방금 본 엔트리까지)
+  - 미추적 2건: `obsidian/06-Wiki-시스템/Wiki/Hermes/자가-학습-Cron/VF2-Project-Nightly-20260617.md`, `obsidian/06-Wiki-시스템/Wiki/자기사고/거울형-보고서/2026-06-17-거울형-주간보고서.md`
+  - 최근 커밋: `7e006f3 log: daily update 2026-06-16` (06-16), 그 다음 동기 push 커밋 없음
+- **조치 필요** (사용자 결정):
+  1. 스크립트 신규 작성: `~/workspace/Wiki/scripts/wiki-git-push.sh` — `git add -A && git commit -m "auto-sync: $(date +%Y-%m-%d)" && git push origin master` (충돌 시 pull --rebase 후 재시도)
+  2. 또는 cron 지시문 자체를 `Wiki/scripts/health-check.sh` 또는 `weekly-health-check.sh` 같은 기존 스크립트로 교체
+  3. 또는 cron 비활성화 (수동 sync로 전환)
+- **권고**: 옵션 1 (스크립트 생성) — 가장 안전, 기존 cron 의도와 부합. 토큰은 `GITHUB_TOKEN_REFERENCE.md` (g...Bk73, 2026-05-29 갱신) 참고, origin URL에 이미 임베드됨
+
+### 23:01 — Wiki Daily Cleanup cron — 동일 패턴 스크립트 부재 발견 (2026-06-17)
+- **문제**: `Wiki Daily Cleanup` cron 작업이 `.scripts/wiki-cleanup.sh` 실행을 지시하나, 해당 스크립트 부재 → exit 127 (No such file or directory)
+- **검증**: `search_files pattern=wiki-cleanup*` 0건, `ls .scripts/`, `ls scripts/`, `ls obsidian/06-Wiki-시스템/scripts/`, `ls obsidian/Wiki/Hermes-Scripts/` 모두 확인 완료
+- **패턴**: 2026-06-17 본인이 발견한 `.scripts/wiki-git-push.sh` 부재와 동일 — **스크립트 미구축 상태에서 cron만 등록된 케이스가 최소 2건** (Wiki Git Auto-Sync, Wiki Daily Cleanup)
+- **영향**: 해당 cron의 **이전 모든 실행도 exit 127로 실패**해왔을 가능성 (이력 0건 확인됨, log.md 추적 불가)
+- **현 상태**: Wiki repo 동작 정상, origin 동기화 상태, master `7e006f3 log: daily update 2026-06-16` (06-16) — **미커밋 변경 존재**: `log.md` (본 엔트리까지), 미추적 2건 (VF2 Project Nightly 06-17, 거울형 주간 06-17)
+- **가장 유력한 의도 매칭**: `obsidian/06-Wiki-시스템/scripts/wiki-daily-ingest.sh` (일일 cron, VAULT 경로 명시, Raw→Wiki 변환) — 현재 사용 가능한 일일 cleanup 후보
+- **조치 필요** (사용자 결정):
+  1. cron 지시문 교체: `.scripts/wiki-cleanup.sh` → `obsidian/06-Wiki-시스템/scripts/wiki-daily-ingest.sh` 절대 경로
+  2. 또는 스크립트 신규 작성: `~/workspace/Wiki/scripts/wiki-cleanup.sh` (ingest + lint 결합)
+  3. 또는 cron 비활성화
+- **권고**: 옵션 1 (cron 지시문 교체) — 가장 안전, 기존 일일 cleanup 의도 부합, 신규 작성 불필요. **재발 방지**: 향후 cron 등록 시 Pre-flight Check에 스크립트 실존 확인 단계 추가
+###
+
+## 2026-06-17
+
+### 23:30 — log.md 일일 갱신 (자동 cron)
+- 본 엔트리: 2026-06-17 일일 작업 요약
+- **session_search 결과**: state.db(`/home/comtop/.hermes/state.db`)에 오늘(2026-06-17 KST) 세션 0건 — DB는 2026-05-12 08:39 KST 이후 갱신 정지 (last 7 sessions + 8 messages, 모두 초기 셋업 시점). 신규 세션이 state.db에 기록되지 않는 상태가 약 5주 지속 중
+- **의사결정 폴더 신규 파일 0건** (가장 최근: 06-11 ki-ai-trader-개선-A1-A3-적용-20260610.md)
+- **VF2 Project Nightly 자가 점검** (06:31 KST): 백엔드/프론트/DB 9개 테이블 정상, GET 5/6 200. 🚨 **운영 침묵 8일째** (max_date 2026-06-09 미변동, 06-10~06-17 production-log POST 0건). ⚠ **MEDIUM 1건**: 디스크 67% (06-16 64% → +3%p/1일 가속 재개, WARNING 정체 해소). 🆕 **color2 WHITE 180 148건** (대소문자 비일관, 06-16 carry-forward 금지 함정 회피). (mold, product) 1:1 위반 운영 2026 한정 0건 확인(06-16 15종은 historical 포함이었음 — 정정). SQL 컬럼명 정정 재확인: GORM camelCase → DB snake_case. 보고서: `Wiki/Hermes/자가-학습-Cron/VF2-Project-Nightly-20260617.md` (9,178 bytes)
+- **거울형 주간 자기 분석 보고서** (06-10~06-17, 7일, 13:00 자동 생성): 미결 질문 0 / 반복 패턴 0 / 콘텐츠·스킬 소재 0 / 시스템 개선점 0 / 사업 신호 0 — 활동 적은 한 주 (cron 자동 생성, 데이터 소스 state.db, 입력 메시지 0개)
+- **Wiki Git Auto-Sync cron — 스크립트 부재 발견** (23:01): cron이 `.scripts/wiki-git-push.sh` 실행 지시하나 해당 스크립트 시스템 전체에 부재 → 모든 실행 exit 127 (No such file)로 실패해왔을 가능성. Wiki repo 자체는 정상(origin 동기화), master `7e006f3 log: daily update 2026-06-16` (06-16) — **미커밋 변경**: log.md 수정 + 미추적 2건 (VF2-Project-Nightly-20260617, 거울형 주간 06-17). 조치 권고: 옵션 1 스크립트 신규 작성 `~/workspace/Wiki/scripts/wiki-git-push.sh` (`git add -A && commit && push`, 충돌 시 `pull --rebase`)
+- **Wiki Daily Cleanup cron — 동일 패턴 스크립트 부재 발견** (23:01): cron이 `.scripts/wiki-cleanup.sh` 실행 지시하나 부재 → exit 127. **패턴**: 스크립트 미구축 상태에서 cron만 등록된 케이스 최소 2건 (Wiki Git Auto-Sync, Wiki Daily Cleanup). 가장 유력한 의도 매칭: `obsidian/06-Wiki-시스템/scripts/wiki-daily-ingest.sh` (일일 cron, VAULT 경로 명시, Raw→Wiki 변환) — cron 지시문 교체 권고. **재발 방지**: 향후 cron 등록 시 Pre-flight Check에 스크립트 실존 확인 단계 추가
+- 보고서: `Wiki/Hermes/자가-학습-Cron/VF2-Project-Nightly-20260617.md`, `Wiki/자기사고/거울형-보고서/2026-06-17-거울형-주간보고서.md`
+
+###
