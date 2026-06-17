@@ -318,3 +318,23 @@
 - 보고서: `Wiki/Hermes/자가-학습-Cron/VF2-Project-Nightly-20260617.md`, `Wiki/자기사고/거울형-보고서/2026-06-17-거울형-주간보고서.md`
 
 ###
+### 06:01 — Wiki Git Auto-Sync cron 정상 실행
+- 스크립트: `obsidian/06-Wiki-시스템/.scripts/wiki-git-push.sh` (절대 경로, 어제 발견된 부재 문제 해소됨)
+- 실행 결과: `[2026-06-18 06:01] Git-Sync: 변경사항 없음`, exit 0
+- 상태: master `7e006f3 log: daily update 2026-06-16` (06-16 커밋이 마지막) — 어제 보고된 미커밋 변경분(log.md + VF2-Project-Nightly-20260617 + 거울형 주간 06-17)이 미반영 상태로 잔존
+- **조치 권고**: master가 06-16에서 멈춰있고 어제(06-17) 추가 보고 3건이 커밋되지 않음 → 다음 일일 업데이트 또는 수동 push 필요
+
+## 2026-06-18
+
+### 06:32 — VF2 Project Nightly 자가 점검 (cron 27c1b2555f38)
+- 백엔드/프론트/DB 9개 테이블/로그 정상, GET 5/6 200 (1개 404 의도, vf-dashboard/health 6일째), main.go 67개 라우트
+- 백엔드(651975) 6일+, Vite(686007) 5일+ 안정
+- 표준 SQL 7종: 변동 0 (06-17과 완전 일치, carry-forward 금지 검증)
+- (e) 6-튜플 중복 = 2 그룹 × 2행 = 총 4행 (정확 카운트)
+- (d) 운영 0건 / historical 15종 (06-17 정정 유지)
+- (g) color2 ILIKE '%WHITE 180%' = WHITE 180 148 + White 180 10 = 158건 (총)
+- ⚠️ **MEDIUM 1건**: 디스크 70% (06-17 67% → +3%p/1일 **3일 연속 가속 패턴 확립**), canonical §4.2 "1~2일 정체는 외삽 무효" 적용
+- 🆕 디스크 70% 절대값 도달 (06-15 62% WARNING 진입 → 정확히 3일 만에 70% 도달)
+- 🚨 **운영 침묵 9일째** (06-17 8일째 → +1일, 단순 계산 4일 / max_date 기준 9일)
+- Git working tree: M 10 + ?? 19 = 29건 (06-17 30건 → 1건 해소, 다수 잔존)
+- 보고서: `Wiki/Hermes/자가-학습-Cron/VF2-Project-Nightly-20260618.md` (9,822 bytes)
