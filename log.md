@@ -338,3 +338,14 @@
 - 🚨 **운영 침묵 9일째** (06-17 8일째 → +1일, 단순 계산 4일 / max_date 기준 9일)
 - Git working tree: M 10 + ?? 19 = 29건 (06-17 30건 → 1건 해소, 다수 잔존)
 - 보고서: `Wiki/Hermes/자가-학습-Cron/VF2-Project-Nightly-20260618.md` (9,822 bytes)
+
+### 18:01 — Wiki Git Auto-Sync cron 실행 (c268b22e9074)
+- 실행: `bash obsidian/06-Wiki-시스템/.scripts/wiki-git-push.sh` (cwd=`/home/comtop/workspace/Wiki`)
+- **결과: exit 0 (스크립트 자체 성공)**, 출력: `[2026-06-18 18:01] Git-Sync: 변경사항 없음`
+- ⚠️ **실질 변경 미반영**: `git status`상 `M obsidian/06-Wiki-시스템/Wiki/자기사고/거울형-보고서/2026-06-18-거울형-주간보고서.md` 1건 미커밋 잔존
+- **원인**: 스크립트 내부 `git status -- "$WIKI_DIR/Wiki/"` 필터(`06-Wiki-시스템/Wiki/`)가 스크립트 VAULT(`/home/comtop/obsidian-vault`) 기준으로 평가됨 — 실제 repo(`/home/comtop/workspace/Wiki`)와 경로 불일치 + 해당 경로에 staging할 변경이 없어 항상 "변경 없음"으로 false-negative
+- **추가 버그**: 스크립트는 `git push origin main` 시도하지만 Wiki repo의 실제 원격 브랜치는 `master` → push 자체가 실패할 가능성 (현재 스크립트는 변경 없음으로 early-exit하여 도달하지 않음)
+- **선행 사례**: log.md §2026-06-17(286행), 06-15 BUG-NOTE에서도 동일 `VAULT`/`main` 하드코딩 결함 지적됨 — 미수정 상태
+- **조치 권고** (다음 일일 업데이트에서):
+  1. 스크립트 VAULT를 `/home/comtop/workspace/Wiki`로, push 브랜치를 `master`로 정정, 또는
+  2. cron 명령을 `git -C /home/comtop/workspace/Wiki add -A && git commit && git push origin master` 단일 라인으로 단순화 (스크립트 폐기)
