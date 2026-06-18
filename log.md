@@ -349,3 +349,10 @@
 - **조치 권고** (다음 일일 업데이트에서):
   1. 스크립트 VAULT를 `/home/comtop/workspace/Wiki`로, push 브랜치를 `master`로 정정, 또는
   2. cron 명령을 `git -C /home/comtop/workspace/Wiki add -A && git commit && git push origin master` 단일 라인으로 단순화 (스크립트 폐기)
+
+### 23:31 -- daily log update (cron)
+- 의사결정/ 신규 파일 0건 (L3 facts 신규/갱신 0건 동반)
+- 오늘 main 세션: ki-ai-trader 00:05 log_cleanup, 05:30 VF2 Production Plan Nightly, 06:30 VF2 Project Nightly(디스크 70% 3일 연속 +3%p, 침묵 9일째), 08:30 ki-ai-trader Daily Runner, 13:00 거울형 주간보고서, 18:01 Wiki Git Auto-Sync(스크립트 결함으로 M 1 미커밋), 23:14~23:30 hermes kanban.db 오류 4회
+- [ALERT] kanban.db invalid SQLite 오류 23:14/23:19/23:24/23:29에 4회 반복 -- dispatcher가 5분 간격 quarantine timer 도래 시 재시도하나 동일 오류 지속, `hermes kanban init` 또는 파일 복구 필요
+- [ALERT] 18:01 wiki-git-push의 uncommitted M 잔존(거울형 주간보고서)이 본 일일 업데이트에서 정리 예정
+###
