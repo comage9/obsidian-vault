@@ -376,7 +376,18 @@
 
 | 2026-06-12 06:00 — [자료섭취] 자료 섭취 cron 실행 (Wiki/Sources/ 확인) / 이유: Sources/텍스트/ 디렉터리 미존재, Sources/바이너리/ README.md만 존재 — 새 자료 없음 / 다음: 매일 06:00 재실행
 |
-|## 2026-06-18
+|## 2026-06-19
+
+### 05:31 — VF2 Production Plan Nightly 자가 점검 (cron 48144ff13cee)
+- DB 9/9 정상, production_logs 15,886행 (2026 한정 355행, max_date 06-09)
+- MEDIUM 1건: 디스크 4일 연속 +3%p/1일 가속 (70→73%, 절대값 73%) — MEDIUM 단계 진입 검토
+- LOW 8건 (06-18과 동일 잔존): 6-튜플 중복 mold 111 Butter (11일째), id=19416 빈 mold/color1/color2, 데크타일 빈 color2 2건, machine 비일관 15건, color2 WHITE 180 148건, started 10,916건
+- 신규 결함 0건 (06-18 대비 모든 SQL 결과 동일)
+- 운영 침묵 10일째 (max_date 06-09 미변동, 06-10~06-19 production-log POST 0건)
+- 보고서: `Hermes/자가-학습-Cron/VF2-Production-Plan-Nightly-20260619.md`
+- Skip: `vf2-production-plan-conventions` 단일 스킬, `mandatory-verification` 스킬 부재 → umbrella `vf2` + references 우회
+
+## 2026-06-18
 |
 |### 03:30 — [Self-Nightly] Hermes 자가 점검 cron 실행
 |- (a) 대상: hermes-agent SKILL.md + mandatory-verification SKILL.md + skills_list + MEMORY/USER 용량 + Wiki 카운트 + rules.json
