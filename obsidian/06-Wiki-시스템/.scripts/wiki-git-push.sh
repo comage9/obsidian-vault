@@ -3,8 +3,8 @@
 # 실행: bash .scripts/wiki-git-push.sh
 set -euo pipefail
 
-VAULT="/home/comtop/obsidian-vault"
-WIKI_DIR="06-Wiki-시스템"
+VAULT="/home/comtop/workspace/Wiki"
+WIKI_DIR="obsidian/06-Wiki-시스템"
 LOG="$VAULT/$WIKI_DIR/Wiki/log.md"
 DATE=$(date '+%Y-%m-%d %H:%M')
 
@@ -29,16 +29,16 @@ git commit -m "Wiki auto-sync: $(date '+%Y-%m-%d %H:%M')" 2>/dev/null || {
 }
 
 # Push (재시도: rebase on reject)
-if git push origin main 2>/dev/null; then
+if git push origin master 2>/dev/null; then
     echo "  ✅ Push 성공"
 else
     echo "  ⚠️  Push 실패 — rebase 후 재시도"
     sleep 2
-    git pull --rebase origin main 2>/dev/null || {
+    git pull --rebase origin master 2>/dev/null || {
         echo "  ❌ Rebase 실패 — 수동 확인 필요"
         exit 1
     }
-    if git push origin main 2>/dev/null; then
+    if git push origin master 2>/dev/null; then
         echo "  ✅ Push 성공 (rebase 후)"
     else
         echo "  ❌ Push 실패 — 수동 확인 필요"
