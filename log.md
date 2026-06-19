@@ -355,4 +355,12 @@
 - 오늘 main 세션: ki-ai-trader 00:05 log_cleanup, 05:30 VF2 Production Plan Nightly, 06:30 VF2 Project Nightly(디스크 70% 3일 연속 +3%p, 침묵 9일째), 08:30 ki-ai-trader Daily Runner, 13:00 거울형 주간보고서, 18:01 Wiki Git Auto-Sync(스크립트 결함으로 M 1 미커밋), 23:14~23:30 hermes kanban.db 오류 4회
 - [ALERT] kanban.db invalid SQLite 오류 23:14/23:19/23:24/23:29에 4회 반복 -- dispatcher가 5분 간격 quarantine timer 도래 시 재시도하나 동일 오류 지속, `hermes kanban init` 또는 파일 복구 필요
 - [ALERT] 18:01 wiki-git-push의 uncommitted M 잔존(거울형 주간보고서)이 본 일일 업데이트에서 정리 예정
+
+### 12:00 — Wiki Git Auto-Sync cron 실행 (51b1607)
+- 명령: `bash obsidian/06-Wiki-시스템/.scripts/wiki-git-push.sh` (cwd=`/home/comtop/workspace/Wiki`)
+- **결과: exit 0 (스크립트 자체 성공)**, 출력: `[2026-06-19 12:00] Git-Sync: 변경사항 없음`
+- ⚠️ **버그 지속 (어제 18:01과 동일 패턴)**: 스크립트 내부 `VAULT=/home/comtop/obsidian-vault` 하드코딩 + `git push origin main` (master 아님). 해당 경로는 **git repo가 아닌 폴더**라 `git status --porcelain`이 빈 결과 반환 → 항상 "변경사항 없음"으로 거짓 보고. 실제 master repo는 `/home/comtop/workspace/Wiki`로 origin과 sync 정상.
+- **수동 sync 수행**: `git pull --rebase origin master` (origin 3개 신규 커밋: `의사결정/OKF-vs-llm-wiki-비교-20260618.md`, `의사결정/꿈틀-양도-방지-패턴트랜스-20260618.md`, `의사결정/카파시-OKF-동시적용-로드맵-20260618.md`) → `git add -A && commit && push origin master` → push 성공 `b181aea..51b1607`
+- **커밋 내용**: 2개 신규 파일 동기화 (`VF2-Project-Nightly-20260619.md`, `2026-06-19-거울형-주간보고서.md`)
+- **조치 권고 (3일째 반복)**: `obsidian/06-Wiki-시스템/.scripts/wiki-git-push.sh`의 (a) `VAULT` 경로를 `$(git rev-parse --show-toplevel)`로 동적 탐지, (b) `git push origin main` → `$(git symbolic-ref --short HEAD)`로 브랜치 동적 사용. cron이 수정본을 호출하도록 cron job definition도 갱신 필요
 ###
