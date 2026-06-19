@@ -6,7 +6,7 @@ K.I. Trainer (키트레이너) 자동매매 시스템 — 백테스트, 전략, 
 ## Conventions
 - File names: lowercase-korean, hyphens (e.g., `백테스트-v3-엔진-완료-20260528.md`)
 - Every wiki page starts with YAML frontmatter (type, created, status, tags)
-- Use `[[wikilinks]]` between related pages
+- Use `[wikilinks](wikilinks.md)` between related pages
 - Every action must be appended to `log.md`
 
 ## Frontmatter
@@ -26,7 +26,7 @@ sources: [raw/articles/source-name.md]  # 옵션
 
 > **OKF v0.1 호환 메모 (2026-06-18 추가)**
 > - `okf_version: 0.1` 추가 → OKF spec 호환 표시 (생략 가능, 기본값 0.1로 간주)
-> - `[[wikilinks]]` + 표준 마크다운 링크 둘 다 허용 (옵시디언 호환)
+> - `[wikilinks](wikilinks.md)` + 표준 마크다운 링크 둘 다 허용 (옵시디언 호환)
 > - 충돌 방지: `Wiki/의사결정/규칙-충돌-방지-매트릭스-20260618.md`
 
 ## Tag Taxonomy

@@ -9,7 +9,7 @@ tags: [K.I. Trainer, Arena Trader, 버그, LLM, 체결, DB]
 
 **작성일:** 2026-05-28
 **출처:** Cron 실시간 감시 보고서 (09:30 / 10:02 / 10:30 / 11:01 KST)
-**관련 페이지:** [[문제-해결/ki-ai-trader-is_running-일일손실한도-버그]]
+**관련 페이지:** [문제-해결/ki-ai-trader-is_running-일일손실한도-버그](문제-해결/ki-ai-trader-is_running-일일손실한도-버그.md)
 
 ---
 
@@ -164,7 +164,7 @@ tags: [K.I. Trainer, Arena Trader, 버그, LLM, 체결, DB]
 
 | 문제 | 해결일 | 해결 방법 | 참고 |
 |:----|:-----:|:---------|:----:|
-| `is_running=false` | 5/27 | PID 파일 체크 로직 추가 | [[문제-해결/ki-ai-trader-is_running-일일손실한도-버그]] |
+| `is_running=false` | 5/27 | PID 파일 체크 로직 추가 | [문제-해결/ki-ai-trader-is_running-일일손실한도-버그](문제-해결/ki-ai-trader-is_running-일일손실한도-버그.md) |
 | 일일 손실 한도 글리치 | 5/27 | 50,000원 미만 API 글리치 방어 조건 추가 | 동일 |
 
 ---

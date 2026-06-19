@@ -14,7 +14,7 @@
 | **인덱스** | `index.md` (디렉토리별) | `Wiki/index.md` (전체) | ✅ |
 | **로그** | `log.md` (append-only) | 동일 | ✅ |
 | **type** | 자유 (consumer 관용) | 5종 강제 (entity/concept/comparison/query/summary) | ⚠️ |
-| **링크** | `/path/file.md` 표준 | `[[wikilinks]]` 옵시디언 | ❌ |
+| **링크** | `/path/file.md` 표준 | `[wikilinks](wikilinks.md)` 옵시디언 | ❌ |
 | **오류 관용** | 강함 (soft guidance) | 약함 (lint 강제) | ❌ |
 | **벤더** | 중립 | Hermes 전용 | ⚠️ |
 | **spec 진화** | v0.1 → 진행 중 | 2.3.0 안정 | ⚠️ |
@@ -39,7 +39,7 @@
 | `type` | entity / concept / comparison / query / summary 5종 강제 |
 | `index.md` | 전체 Wiki 카탈로그 |
 | `log.md` | append-only timeline |
-| link | `[[wikilinks]]` 옵시디언 호환 |
+| link | `[wikilinks](wikilinks.md)` 옵시디언 호환 |
 | lint | strict (`scripts/lint.py` ERROR 시 exit 1) |
 | Taxonomy | SCHEMA.md에 tag taxonomy 정의 필수 |
 | Obsidian | `.obsidian/` 호환 |
@@ -55,7 +55,7 @@
 
 ### 충돌 2: link 정책
 - **OKF**: `/path/file.md` 표준 마크다운 링크
-- **llm-wiki**: `[[wikilinks]]` 옵시디언 호환
+- **llm-wiki**: `[wikilinks](wikilinks.md)` 옵시디언 호환
 - **해결**: **두 형식 모두 허용**. lint가 자동 인식 + 정규화. 사용자 "옵시디언 유지" 시 1순위 = wikilinks
 
 ### 충돌 3: 오류 관용
@@ -78,7 +78,7 @@
 | **3-2** | type 추가 (5종 + Service, Resource, Tool) | `llm-wiki/SKILL.md` SCHEMA.md | 🟡 중간 |
 | **3-3** | frontmatter `okf_version: "0.1"` 추가 (호환 표시) | 자동 | 🟢 낮음 |
 | **3-4** | validate.sh OKF §10 호환 추가 | `scripts/` | 🟡 중간 |
-| **3-5** | (선택) 전면 마이그레이션 — `[[wikilinks]]` → 표준 링크 일괄 변환 | 다수 | 🔴 높음 |
+| **3-5** | (선택) 전면 마이그레이션 — `[wikilinks](wikilinks.md)` → 표준 링크 일괄 변환 | 다수 | 🔴 높음 |
 
 **3-1만 즉시 적용. 3-2~3-5는 사용자 별도 지시 시.**
 
@@ -93,10 +93,10 @@ llm-wiki SKILL.md Link 섹션에 추가:
 
 허용 형식 2가지:
 
-### 1순위: `[[wikilinks]]` (옵시디언 호환)
+### 1순위: `[wikilinks](wikilinks.md)` (옵시디언 호환)
 - 기존 워크플로우 보존
 - 옵시디언 그래프 뷰 자동 인식
-- 예: `[[카르파티-LLM-Wiki-패턴]]`
+- 예: `[카르파티-LLM-Wiki-패턴](카르파티-LLM-Wiki-패턴.md)`
 
 ### 2순위: 표준 마크다운 링크 (OKF 권장)
 - 새 문서 작성 시 권장
@@ -116,7 +116,7 @@ lint 동작:
 
 | # | 이유 | 영향 |
 |---|------|------|
-| 1 | 옵시디언 사용자 워크플로우 깨짐 | `[[wikilinks]]` 링크 일괄 깨짐 |
+| 1 | 옵시디언 사용자 워크플로우 깨짐 | `[wikilinks](wikilinks.md)` 링크 일괄 깨짐 |
 | 2 | lint 정책 약화 위험 | OKF 관용 vs Hermes strict 충돌 |
 | 3 | SPEC v0.1 초기 불안정 | 빠른 변경 시 마이그레이션 비용 반복 |
 | 4 | 도메인 특수성 | KPP/LS/Supplier 강제 규칙은 별도 정의 필요 |

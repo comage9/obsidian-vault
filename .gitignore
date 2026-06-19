@@ -1,10 +1,2 @@
-# Secrets
-key.txt
-
-# Temp files
-payload.json
-query.py
-query2.py
-
-# Snapshots with .env
-hermes-snapshot-*/
+Wiki.backup-*
+*.backup
