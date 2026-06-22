@@ -373,4 +373,10 @@
 - 디스크: **75%** (+2%p/4일 = ~0.5%p/일, 가속 둔화 추세)
 - 보고서: `Hermes/자가-학습-Cron/VF2-Production-Plan-Nightly-20260623.md`
 - **최우선 액션**: 백엔드/프론트엔드 복구 (사용자 지시 대기)
+
+### 06:31 — VF2 Project Nightly 자가 점검 (2차 cron)
+- **06-23 1차(05:34) 대비 변동 0건**: 백엔드/프론트엔드 DOWN 지속, DB 15,886건 동일, 디스크 75%
+- uptime 10h 18m (재부팅 없음), PostgreSQL Up 10 hours
+- 모든 SQL 7종 결과 1차와 완전 동일 (status, 6-튜플, WHITE 180 158건 등)
+- 보고서: `Hermes/자가-학습-Cron/VF2-Project-Nightly-20260623.md`
 ###
