@@ -402,6 +402,10 @@
 
 ### 06:00 — [자료섭취] 자료 섭취 cron 실행 (Wiki/Sources/ 확인) / 이유: Sources/텍스트/ 디렉터리 미존재, Sources/바이너리/ README.md만 존재 — 새 자료 없음 / 다음: 매일 06:00 재실행
 
+## 2026-06-19
+
+### 09:00 — [cronjob-에러-2건-자동수정] KPP+LS 30분 새로고침 에러 해결 + LS 일일 리포트 보류 / 이유: (a) `refresh_ctp.py` venv에 `websocket-client==1.9.0` 설치 → `ModuleNotFoundError` 해결 검증 완료 (b) `d32fea78a14f` LS 일일 리포트는 DeepSeek API HTTP 429 토큰 한도 초과 — 코드 수정 불가, 사용자 결정 대기 / 다음: 에러 2 해결 방법 선택 후 적용 + cron resume 결정
+
 ### 23:30 — [2026-06-18 23:30] new-page | Hermes/자가-학습-Cron/Hermes-Self-Nightly-20260618.md
 ### 23:30 — [2026-06-18 23:30] new-page | 운영원칙/루프-엔지니어링-상태보드.md
 ### 23:30 — [2026-06-18 23:30] new-page | 운영원칙/에이전트-운영-정책.md
