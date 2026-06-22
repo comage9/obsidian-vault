@@ -363,4 +363,14 @@
 - **수동 sync 수행**: `git pull --rebase origin master` (origin 3개 신규 커밋: `의사결정/OKF-vs-llm-wiki-비교-20260618.md`, `의사결정/꿈틀-양도-방지-패턴트랜스-20260618.md`, `의사결정/카파시-OKF-동시적용-로드맵-20260618.md`) → `git add -A && commit && push origin master` → push 성공 `b181aea..51b1607`
 - **커밋 내용**: 2개 신규 파일 동기화 (`VF2-Project-Nightly-20260619.md`, `2026-06-19-거울형-주간보고서.md`)
 - **조치 권고 (3일째 반복)**: `obsidian/06-Wiki-시스템/.scripts/wiki-git-push.sh`의 (a) `VAULT` 경로를 `$(git rev-parse --show-toplevel)`로 동적 탐지, (b) `git push origin main` → `$(git symbolic-ref --short HEAD)`로 브랜치 동적 사용. cron이 수정본을 호출하도록 cron job definition도 갱신 필요
+
+## 2026-06-23
+
+### 05:32 — VF2 Production Plan Nightly 자가 점검 (cron)
+- **🚨 CRITICAL: 백엔드/프론트엔드 DOWN 발견** — 시스템 재부팅(~06-22 20:13 KST) 후 vf2_backend_bin(5176) + vite(5174) 미복구. PostgreSQL 컨테이너는 Docker restart policy로 자동 복구됨.
+- DB 정상: production_logs 15,886건 (06-19 대비 변동 0), 28개 테이블 존재, `production_plans` 부재 (`to_regclass → NULL`)
+- 운영 침묵: max_date 기준 **14일째** (06-09 → 06-23), 백엔드 다운으로 06-22 이후 POST 불가
+- 디스크: **75%** (+2%p/4일 = ~0.5%p/일, 가속 둔화 추세)
+- 보고서: `Hermes/자가-학습-Cron/VF2-Production-Plan-Nightly-20260623.md`
+- **최우선 액션**: 백엔드/프론트엔드 복구 (사용자 지시 대기)
 ###
