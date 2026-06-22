@@ -420,3 +420,12 @@
 ### 23:30 — [2026-06-18 23:30] new-page | 자기사고/거울형-보고서/2026-06-17-거울형-주간보고서.md
 ### 23:30 — [2026-06-18 23:30] new-page | 자기사고/거울형-보고서/2026-06-18-거울형-주간보고서.md
 
+
+## 2026-06-22
+
+### 23:34 — daily log update (cron)
+- 오늘 기록된 주요 작업:
+  - **feat(wiki): SCHEMA.md + SHA-256 dedup cache** — 로컬 Hermes 에이전트가 SCHEMA.md 생성 (frontmatter 신뢰도 컨벤션: EXTRACTED/INFERRED), `.wiki-hash-cache.json` SHA-256 기반 중복 방지 스크립트 추가, llm-wiki 스킬 설치
+  - **원격 동기화 (merge)** — GitHub origin master에서 index.md + log.md 갱신, 의사결정 2건 신규 동기화 (`cronjob-에러-2건-자동수정-20260619.md`, `playwright-전환-20260621.md`)
+  - 의사결정/ 폴더: 신규 로컬 생성 0건
+  - Git working tree: clean
