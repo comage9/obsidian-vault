@@ -381,19 +381,29 @@
 - 모든 SQL 7종 결과 1차와 완전 동일 (status, 6-튜플, WHITE 180 158건 등)
 - 보고서: `Hermes/자가-학습-Cron/VF2-Project-Nightly-20260623.md`
 ###
-## [2026-04-13] rename | 프로젝트 명명 분리
-- "VF 보노하우스 프로젝트" → "VF-67 (밴드플렉스 67번 센터 웹 서비스)"
-- 전체 시스템: comage
-- 코딩 프로젝트: VF-67
-- RULES/ 7개 파일, wiki/entities/ 7개, wiki/concepts/ 3개 생성 완료
-- **결과:** migration 17개 전부 적용 완료, API에 sort_order 포함 확인
-- **로컬:** 정상 작동 ✅
-- **Windows 서버:** sort_order 컬럼 미반영 (별도 migrate 필요)
 
-## [2026-06-23] sync | daily_outbound_sync
+## [2026-06-23] sync | daily_outbound_sync (곰너이 Windows)
 - **명령:** manage.py daily_outbound_sync
 - **DB 최신일:** 2026-06-22
 - **신규:** 0건 | **갱신:** 420건
 - **범위:** 2026-06-21~
 - **결과:** ✅ 정상 완료
->>>>>>> e6314b2 (daily_outbound_sync: 2026-06-23 완료 (갱신 420건))
+
+### 23:30 — Daily Log Update (cron)
+
+#### VF2 시스템 점검 (05:32 + 06:31 cron)
+- 🚨 CRITICAL: 백엔드/프론트엔드 DOWN — 시스템 재부팅(~06-22 20:13 KST) 후 vf2_backend_bin(5176) + vite(5174) 미복구. PostgreSQL 컨테이너는 Docker restart policy로 자동 복구됨.
+- DB 정상: production_logs 15,886건 (06-19 대비 변동 0), 28개 테이블 존재
+- 운영 침묵: max_date 기준 14일째 (06-09 → 06-23)
+- 디스크: 75% (+2%p/4일 = ~0.5%p/일, 가속 둔화 추세)
+
+#### 거울형 주간보고서 (13:00 cron)
+- 2026-06-16~23 기간 생성 — 미결 질문 0건, 반복 패턴 0건, 시스템 개선점 0건
+- 입력 메시지 0건 (지난 주 사용자 메시지 없음)
+
+#### 의사결정 폴더
+- 오늘 생성된 의사결정 파일 0건
+
+#### Git 커밋 (오늘)
+- bfe90e4 — VF2 nightly: backend/frontend DOWN, DB 정상 15,886건 변동0
+- b0138d4 — VF2 Project Nightly 2차: 변동0, backend DOWN 지속
