@@ -407,3 +407,25 @@
 #### Git 커밋 (오늘)
 - bfe90e4 — VF2 nightly: backend/frontend DOWN, DB 정상 15,886건 변동0
 - b0138d4 — VF2 Project Nightly 2차: 변동0, backend DOWN 지속
+
+## 2026-06-24
+
+### 05:37 — VF2 Production Plan Nightly 자가 점검 (cron)
+- **🚨 CRITICAL: 백엔드/프론트엔드 DOWN 지속 (2일째)** — 시스템 재부팅(~06-22 20:13 KST) 후 vf2_backend_bin(5176) + vite(5174) 미복구 지속. PostgreSQL 컨테이너는 Docker restart policy로 자동 복구됨.
+- DB 정상: production_logs 15,886건 (06-23 1차 대비 변동 0), 28개 테이블 존재, `production_plans` 부재
+- 운영 침묵: max_date 기준 **15일째** (06-09 → 06-24), 백엔드 다운으로 06-22 이후 POST 불가
+- 디스크: **79%** (+4%p/1일, **가속 재개** — 90%까지 ~11일 잔여, 긴급)
+- 6-튜플 중복 mold 111 Butter 4행 (16일째), WHITE 180 158건 (변동 0), 빈 필드 mold 1/color1 1/color2 3건
+- 보고서: `Hermes/자가-학습-Cron/VF2-Production-Plan-Nightly-20260624.md`
+- **최우선 액션**: (1) 백엔드/프론트엔드 복구, (2) 디스크 정리 (79% → +4%p/1일 가속)
+
+### 23:30 — Daily Log Update (cron)
+
+#### VF2 시스템 점검 (05:37 cron)
+- 🚨 CRITICAL: 백엔드/프론트엔드 DOWN 지속 (2일째) — 시스템 재부팅(~06-22 20:13 KST) 후 미복구
+- DB 정상: production_logs 15,886건 (06-23 대비 변동 0), 28개 테이블 존재
+- 운영 침묵: max_date 기준 15일째 (06-09 → 06-24)
+- 디스크: 79% (+4%p/1일, 가속 재개 — 90%까지 ~11일, 긴급)
+
+#### Git 커밋 (오늘)
+- [커밋 대기 중 — 보고서 작성 후 push 필요]
