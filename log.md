@@ -278,6 +278,7 @@
 - ✅ **(mold, product) 1:1 위반 운영 2026 한정 0건 확인** (06-16 15종은 historical 포함이었음 — 정정)
 - 보고서: `Wiki/Hermes/자가-학습-Cron/VF2-Project-Nightly-20260617.md` (9,178 bytes)
 
+<<<<<<< HEAD
 ### ⚠ Wiki Git Auto-Sync Cron — 스크립트 부재 발견 (2026-06-17)
 - **문제**: `Wiki Git Auto-Sync` cron 작업이 `.scripts/wiki-git-push.sh` 실행을 지시하나, 해당 스크립트는 시스템 전체(`/home/comtop`)에 **존재하지 않음** — `search_files pattern=wiki-git-push*` 0건, `search_files pattern=git-push*` 0건
 - **영향**: cron이 호출하는 자동 sync 경로가 **사전에 한 번도 구축되지 않은 상태**에서 cron만 등록됨 → 모든 실행이 exit 127 (No such file)로 실패해왔을 가능성
@@ -380,3 +381,19 @@
 - 모든 SQL 7종 결과 1차와 완전 동일 (status, 6-튜플, WHITE 180 158건 등)
 - 보고서: `Hermes/자가-학습-Cron/VF2-Project-Nightly-20260623.md`
 ###
+## [2026-04-13] rename | 프로젝트 명명 분리
+- "VF 보노하우스 프로젝트" → "VF-67 (밴드플렉스 67번 센터 웹 서비스)"
+- 전체 시스템: comage
+- 코딩 프로젝트: VF-67
+- RULES/ 7개 파일, wiki/entities/ 7개, wiki/concepts/ 3개 생성 완료
+- **결과:** migration 17개 전부 적용 완료, API에 sort_order 포함 확인
+- **로컬:** 정상 작동 ✅
+- **Windows 서버:** sort_order 컬럼 미반영 (별도 migrate 필요)
+
+## [2026-06-23] sync | daily_outbound_sync
+- **명령:** manage.py daily_outbound_sync
+- **DB 최신일:** 2026-06-22
+- **신규:** 0건 | **갱신:** 420건
+- **범위:** 2026-06-21~
+- **결과:** ✅ 정상 완료
+>>>>>>> e6314b2 (daily_outbound_sync: 2026-06-23 완료 (갱신 420건))
