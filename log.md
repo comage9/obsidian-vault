@@ -459,3 +459,35 @@
 #### Git 커밋 (오늘)
 - 9156e5a — VF2 nightly 2026-06-24: backend/frontend DOWN 2일째, 디스크 79% 가속 재개, 운영 침묵 15일째
 - 85042c0 — VF2 Project Nightly 2026-06-24: 백엔드/프론트 DOWN 2일째, 디스크 79%(+4%p) 가속 재개, 침묵 15일째
+
+### 23:30 — Daily Log Update (cron)
+
+#### VF2 Project Nightly (06:33 cron)
+- 백엔드/프론트엔드 DOWN 6일째 (06-19 → 06-25) — vf2_backend_bin + vite 자동 시작 실패, systemd/s6 미등록
+- 디스크 82% — 06-23 75% → 06-25 82% (+7%p/2일, +3.5%p/1일 가속 재개). 90%까지 2~3일 잔여
+- 침묵 16일째 (max_date 06-09), 단순 침묵 6일째 — 백엔드 DOWN으로 POST 자체 불가
+- DB 정상: production_logs 15,886건 (변동 0), PostgreSQL Docker 정상
+- 파일: obsidian/06-Wiki-시스템/Wiki-okf/Hermes/자가-학습-Cron/VF2-Project-Nightly-20260625.md
+
+#### Python 3.11 → 3.12 업그레이드
+- 3.11.15 → 3.12.13, uv 0.11.13 (CPython 격리 다운로드) 사용
+- venv: .venv → .venv-3.12 (백업: .venv-3.11.bak)
+- 목적: PixelRAG 통합 + 패키지 호환성 확보 (Ubuntu 26.04 시스템 패키지는 3.14만 제공)
+- 파일: obsidian/06-Wiki-시스템/Wiki/리서치/python-312-업그레이드-20260625.md
+
+#### KI AI Trader 순차 작업 (1차 + 2차)
+- 1차 4단계: 대시보드 cron(매시 0분), 백업 cron(17:00), Neo4j 109 노드 도입, 손절/익절 튜닝 +42%
+- 2차 7단계: Neo4j Order JOIN 개선(노드 111→119, 관계 1→9, Stock 100→108) — get_stocks(5000)으로 변경해 stock_code 매칭
+- 파일: ki-ai-trader-순차작업-보고서-20260625.md, ki-ai-trader-순차-7단계-보고서-20260625-v2.md
+
+#### KI AI Trader — Automation Blueprints
+- Hermes v0.17+ cron 문법 대체 블루프린트 5종 정의: collect-data(16:00), daily-report(16:30), monitor-market(09~15시 10분 간격), sync-stocks(09:00), crawl-news(월 09:00)
+- 파일: obsidian/06-Wiki-시스템/Wiki/리서치/Automation-Blueprints-20260625.md
+
+#### 거울형 주간보고서 (13:00 cron)
+- 2026-06-18~25 기간: 미결 질문 0건, 반복 패턴 0건, 시스템 개선점 0건
+- 입력 메시지 0건 (지난 주 사용자 메시지 없음)
+- 파일: obsidian/06-Wiki-시스템/Wiki/자기사고/거울형-보고서/2026-06-25-거울형-주간보고서.md
+
+#### 의사결정 폴더
+- 오늘 생성된 의사결정 파일 0건
