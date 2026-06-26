@@ -491,3 +491,15 @@
 
 #### 의사결정 폴더
 - 오늘 생성된 의사결정 파일 0건
+
+### 06:30 — VF2 Project Nightly 자가 점검 (cron 06-27 2회차)
+- **DB 변동 0건**: production_logs 15,886건, 28 tables (06-26과 동일)
+- **🔴 CRITICAL 3건**:
+  1. 백엔드/프론트 5일째 DOWN (06-23 재부팅 후 미복구, systemd 등록 미실행 2회 반복)
+  2. 디스크 93% CRITICAL (06-26 89% → 06-27 93%, +4%p/1일 가속 재개)
+  3. 운영 침묵 18일 (max_date 06-09 → 06-27, 백엔드 DOWN 인위적 침묵)
+- **carry-forward 정정 1건**: 6-튜플 중복 06-26 보고서 5행 → 06-27 SQL 재측정 4행 (-1행, §7 #2)
+- **SQL 7종 정밀 카운트**: 운영 1:1 위반 0건, historical 15종, 6-튜플 운영 4행, color2 WHITE 180 158건, blank_color2 3건
+- **사용자 즉시 액션 권장**: `./start.sh` + `npm run dev` + systemd 등록 + 디스크 정리
+- **다음 점검**: 06-28 (24h 후)
+- **보고서**: `/home/comtop/workspace/Wiki/Hermes/자가-학습-Cron/VF2-Project-Nightly-20260627.md`
