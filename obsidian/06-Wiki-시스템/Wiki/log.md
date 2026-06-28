@@ -71,3 +71,10 @@
 - 오늘 생성된 의사결정 파일 0건
 
 ###
+
+### 2026-06-29 06:01 — Git Auto-Sync: 1개 파일 → GitHub
+
+### 2026-06-29 06:01 — Wiki Git Auto-Sync 결과 기록 (cron 컨텍스트)
+- **상황**: cron workdir `/home/comtop/obsidian-vault/06-Wiki-시스템`에서 정상 실행, 1개 파일 (06-29 거울형-주간보고서) commit `97c06bd` + push 성공
+- **함정 진단**: 작업 컨텍스트 workdir `/home/comtop/workspace/ki-ai-trader`에서는 `.scripts/wiki-git-push.sh` 부재처럼 보였으나 — **스크립트 부재 아님** (3개 인스턴스 모두 존재). N+2 메타-함정이 아닌 **크로스 프로젝트 workdir 함정**(2026-06-16 실측 패턴) 동시 발화였음
+- **log.md commit 순서 race 임시 우회**: 스크립트 성공 분기(commit→push→log.md append) 특성상 이번 commit `97c06bd`에 log 항목 미포함. 잔존 modified log.md 별도 commit 필요
