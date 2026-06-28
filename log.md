@@ -503,3 +503,20 @@
 - **사용자 즉시 액션 권장**: `./start.sh` + `npm run dev` + systemd 등록 + 디스크 정리
 - **다음 점검**: 06-28 (24h 후)
 - **보고서**: `/home/comtop/workspace/Wiki/Hermes/자가-학습-Cron/VF2-Project-Nightly-20260627.md`
+
+## 2026-06-29
+
+### 06:31 — VF2 Project Nightly 자가 점검 (cron 27c1b2555f38)
+- 2일 부재 후 재개 (06-28, 06-29 06:30 이전 부재, §7 #23 단기 부재)
+- **DB 변동 0건**: production_logs 15,886건, 28 tables (06-27과 동일)
+- **🆕 디스크 41% cleanup 추정**: 06-27 93% → 06-29 41% (-52%p/2일), nightly 2일 부재로 cleanup 메커니즘 미감지
+- **🔴 CRITICAL 3건**:
+  1. 백엔드/프론트 7일째 DOWN (06-22 재부팅 후 미복구 6일 경과, **systemd 등록 미실행 3회 반복** — 06-23 → 06-26 → 06-27 → 06-29, §7 #26 즉시 실행 의무 CRITICAL)
+  2. 디스크 cleanup 원인 미확인 (-52%p/2일, 사용자 수동 cleanup 추정)
+  3. 운영 침묵 19일 (max_date 06-09 → 06-29, 백엔드 DOWN 인위적 침묵 + 1일 추가)
+- **🆕 inventory_stock 침묵 18일 19시간**: max_updated 06-10 01:42 UTC, §7 #28 `updated_at` 컬럼 정책 적용
+- **🆕 nightly 2일 부재 (06-28, 06-29 06:30 이전)**: cleanup 미감지 사례 → **watchdog cron 별도 권고**
+- **SQL 7종 정밀 카운트**: 운영 1:1 위반 0건, historical 15종, 6-튜플 운영 4행 (06-27과 일치), color2 WHITE 180 158건, blank_color2 3건
+- **사용자 즉시 액션 권장**: `./start.sh` + `npm run dev` + systemd 등록 + 디스크 cleanup 원인 확인 + watchdog cron 설치
+- **다음 점검**: 06-30 (24h 후)
+- **보고서**: `/home/comtop/workspace/Wiki/Hermes/자가-학습-Cron/VF2-Project-Nightly-20260629.md`
