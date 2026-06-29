@@ -1,0 +1,70 @@
+{
+  "showTags": true,
+  "showAttachments": false,
+  "showOrphans": true,
+  "filterTags": [],
+  "filterPaths": [],
+  "groupColors": {
+    "리서치": "#E67E22",
+    "기타": "#95A5A6"
+  },
+  "nodeSizeMultiplier": 1.2,
+  "edgeWidthMultiplier": 0.8,
+  "physics": {
+    "enabled": true,
+    "stabilization": 100,
+    "barnesHut": {
+      "gravitationalConstant": -8000,
+      "springLength": 150,
+      "springConstant": 0.04
+    }
+  },
+  "layout": {},
+  "zoom": 1.0,
+  "center": {
+    "x": 0,
+    "y": 0
+  },
+  "collapsedGroups": [],
+  "hiddenNodes": [],
+  "pinnedNodes": [],
+  "_hermes_meta": {
+    "last_sync": "2026-06-29T20:19:08.925397",
+    "graph_index_version": "1.0",
+    "stats": {
+      "total_nodes": 19,
+      "total_edges": 0,
+      "document_nodes": 19,
+      "entity_nodes": 0,
+      "orphan_nodes": 19,
+      "orphan_node_ids": [
+        "SCHEMA",
+        "log",
+        "naver_크롤링_20260624_080516",
+        "2026-06-24-거울형-주간보고서",
+        "2026-06-28-거울형-주간보고서",
+        "2026-06-29-거울형-주간보고서",
+        "2026-06-25-거울형-주간보고서",
+        "2026-06-23-거울형-주간보고서",
+        "2026-06-26-거울형-주간보고서",
+        "2026-06-27-거울형-주간보고서",
+        "유튜브-인사이트-20260624",
+        "react-mindmap-ui-20260626",
+        "Automation-Blueprints-20260625",
+        "python-312-업그레이드-20260625",
+        "ki-ai-trader-순차-보고서-20260626",
+        "pixel-rag-studio-통합-20260625",
+        "system-issues-20260626",
+        "ki-ai-trader-순차작업-보고서-20260625",
+        "ki-ai-trader-순차-7단계-보고서-20260625-v2"
+      ],
+      "max_degree": 0,
+      "avg_degree": 0.0,
+      "groups_count": 2,
+      "tags_count": 0,
+      "entities_count": 0
+    },
+    "node_count": 19,
+    "edge_count": 0
+  }
+}

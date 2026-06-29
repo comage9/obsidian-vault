@@ -78,3 +78,28 @@
 - **상황**: cron workdir `/home/comtop/obsidian-vault/06-Wiki-시스템`에서 정상 실행, 1개 파일 (06-29 거울형-주간보고서) commit `97c06bd` + push 성공
 - **함정 진단**: 작업 컨텍스트 workdir `/home/comtop/workspace/ki-ai-trader`에서는 `.scripts/wiki-git-push.sh` 부재처럼 보였으나 — **스크립트 부재 아님** (3개 인스턴스 모두 존재). N+2 메타-함정이 아닌 **크로스 프로젝트 workdir 함정**(2026-06-16 실측 패턴) 동시 발화였음
 - **log.md commit 순서 race 임시 우회**: 스크립트 성공 분기(commit→push→log.md append) 특성상 이번 commit `97c06bd`에 log 항목 미포함. 잔존 modified log.md 별도 commit 필요
+
+### 2026-06-29 18:01 — Git Auto-Sync: 1개 파일 → GitHub
+
+###
+## 2026-06-29
+
+### 06:33 — VF2 Nightly 자가 점검
+- 백엔드/프론트 7일째 DOWN (5176/5174 미응답, 프로세스 0건)
+- 디스크 93%→41% 급락 (-52%p/2일), 사용자 수동 cleanup 추정
+- 운영 침묵 19일 (max_date 기준 06-09)
+
+### 13:00 — 거울형 주간보고서 (2026-06-22~29)
+- 미결 질문 0건, 반복 패턴 0건, 사업 신호 0건
+- 입력 메시지 0건 (지난 주 사용자 메시지 없음)
+- 파일: 자기사고/거울형-보고서/2026-06-29-거울형-주간보고서.md
+
+### 06:01/18:01 — Git Auto-Sync
+- 06:01: 1개 파일 → GitHub (97c06bd)
+- 06:01: 로그 누락분 보완 (d7cfb8f)
+- 18:01: 1개 파일 → GitHub (1f3e938)
+
+### 의사결정 폴더
+- 오늘 생성된 의사결정 파일 0건
+
+###
