@@ -1,0 +1,8 @@
+[2026-06-30 00:00:52] [INFO] === GitHub Wiki AI Sync 시작 ===
+[2026-06-30 00:00:52] [WARN] 로컬 변경사항 있음:
+?? "06-Wiki-\354\213\234\354\212\244\355\205\234/Logs/"
+https://github.com/comage9/obsidian-vault URL에서
+ * branch            master     -> FETCH_HEAD
+[2026-06-30 00:00:52] [INFO] 로컬:  3c57ef0c59862f38c61592b19d246b1d6c3b8d21
+[2026-06-30 00:00:52] [INFO] 원격:  3c57ef0c59862f38c61592b19d246b1d6c3b8d21
+[2026-06-30 00:00:52] [OK] 동기화 상태 - 변경사항 없음
