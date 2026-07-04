@@ -530,3 +530,35 @@
 - VF2 Project Nightly (06:30 cron 2차): 백엔드/프론트 14일째 DOWN, DB 완전 동결(15,886행), 디스크 52% WARNING(4일째 +2.67%p/일 가속), 침묵 24일째, swap 95%
 - VF2 Production Plan Nightly (05:30 cron 1차): 위와 동일 지표, systemd 미등록 6회째 미실행(CRITICAL)
 - Git 상태: 미커밋 1건(거울형 보고서 1줄 수정), 커밋 대기 중
+###
+## 2026-07-04
+
+### 05:30 — VF2 Production Plan Nightly 자가 점검 (1차 cron)
+- **백엔드/프론트엔드 15일째 DOWN** (06-19 마지막 로그, 06-23 재부팅 후 미복구 지속)
+- **디스크 52% WARNING** (07-01 47% → 07-04 52%, +5%p/3일 ≈ +1.67%p/일 가속 지속)
+- **DB 완전 동결**: production_logs 15,886건, 28 tables (06-19 이후 변동 0건)
+- **운영 침묵 25일째**: max_date 2026-06-09 → 07-04 (백엔드 DOWN으로 POST 불가)
+- **systemd 미등록 7회째 미실행** (CRITICAL, §7 #26 즉시 실행 의무)
+- **swap 95%** (13.7/14.4 GiB) — 메모리 압박 지속
+- 보고서: `Hermes/자가-학습-Cron/VF2-Production-Plan-Nightly-20260704.md`
+
+### 06:32 — VF2 Project Nightly 자가 점검 (2차 cron, 이중 검증)
+- 1차 cron과 **완전 동일** — 모든 지표 변동 0건 독립 재확인
+- 백엔드/프론트 15일째 DOWN 지속, PID 0건, Listen 포트 0건
+- 디스크 52% 유지, 메모리 4.9Gi/14Gi, swap 13.7/14.4Gi (95%)
+- DB 15,886건 동결, PostgreSQL Docker 정상 (컨테이너 재시작 정책 작동)
+- SQL 7종 정밀 카운트: 운영 1:1 위반 0건, historical 15종, 6-튜플 운영 4행, color2 WHITE 180 158건, blank_color2 3건
+- **systemd 미등록 7회 누적** (§7 #26 CRITICAL), watchdog cron 미설치 (§7 #29)
+- 보고서: `Hermes/자가-학습-Cron/VF2-Project-Nightly-20260704.md`
+
+### 13:00 — 거울형 주간 자기 분석 보고서 (cron weekly)
+- 기간: 2026-06-27 ~ 2026-07-04 (7일)
+- 미결 질문 0건, 반복 패턴 0건, 콘텐츠 소재 0건
+- 입력 user 메시지 0개 (cron-only 기간 지속)
+- Telegram Home 자동 알림 발송
+- 파일: `자기사고/거울형-보고서/2026-07-04-거울형-주간보고서.md`
+
+### 의사결정 폴더
+- 오늘 생성된 의사결정 파일 0건
+
+###
