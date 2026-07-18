@@ -606,3 +606,15 @@
 - 보고서: `Hermes/자가-학습-Cron/VF2-Project-Nightly-20260707.md`
 
 ###
+
+### 11:35 — VF2 Project Nightly 자가 점검 (cron)
+- **시스템 재부팅 감지** (uptime 4분, 07-18 09:28경 재부팅) → **백엔드/프론트 미복구** (systemd 미등록 25일째, CRITICAL)
+- **디스크 63% WARNING 재가속 완만 지속** (07-07 62% → 07-18 63%, +1%p/11일, 백엔드 다운 기간 포함)
+- **운영 침묵 39일째** (max_date 06-09 고정, 임계치 ≥3일 대폭 초과, 백엔드 가동 11일간도 미등록)
+- **systemd 미등록 25일째 미실행** (06-23 권고 → 07-18 재부팅 후 재발, 즉시 실행 의무 §7 #38)
+- production_logs 15,886건 동결, 28 tables 정체, production_plans 부재 30일째
+- SQL 7종 정밀 카운트: 운영 1:1 위반 0건, historical 15종, 6-튜플 운영 4행, color2 WHITE 180 158건, blank_color2 3건
+- **Swap 0% (재부팅으로 해소, 근본 원인 미해결 시 재발 가능 §7 #36)**
+- 보고서: `Hermes/자가-학습-Cron/VF2-Project-Nightly-20260718.md`
+
+###
