@@ -277,6 +277,15 @@
 - **DB 변동 0건**: production_logs 15,886건, 28 tables (06-30와 동일)
 - 파일: `Hermes/자가-학습-Cron/VF2-Production-Plan-Nightly-20260707.md`
 
+### 11:31 — VF2 Production Plan Nightly 자가 점검 (cron)
+- **백엔드/프론트엔드 재부팅 후 미복구**: 07-07 수동 UP 후 재부팅 발생(up 4 min), systemd/s6 미등록 5회째로 자동 복구 실패 — 재부팅 함정 입증
+- **디스크 72% WARNING 초과** — 06-30 44% 해소 후 18일 만에 +28%p 재증가, 85% CRITICAL까지 ~13일 잔여
+- **운영 침묵 39일째** (max_date 2026-06-09 → 07-18, +11일), 임계치 ≥3일 대폭 초과
+- **DB 완전 정적 11일째**: production_logs 15,886건, status 분포, 6-튜플 중복, 빈 필드, color2 variant 모두 변동 0
+- **production_plans 테이블 부재 지속** (to_regclass → NULL), 1.xlsx import 누락 단서
+- PostgreSQL Docker restart policy로 자동 복구(Up 4 min), DB 28 tables 정상
+- 파일: `Hermes/자가-학습-Cron/VF2-Production-Plan-Nightly-20260718.md`
+
 ### 의사결정 폴더
 - 오늘 생성된 의사결정 파일 0건
 
