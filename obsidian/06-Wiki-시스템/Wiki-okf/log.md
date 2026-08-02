@@ -479,3 +479,20 @@
 - 온보딩: 운영원칙/Wiki-SSOT-온보딩-20260802.md 신규
 - index: 156→160 (lint리포트+온보딩+지시서3)
 - push: 사용자 승인 대기
+
+### 21:30 — ingest | 개념/VF-go-이관-현황-20260802.md
+- VF-go Django→Go 이관 현황 요약 (4차 N1, 누적 40소단위 완료)
+- Source: E:/coding/VF-go/docs/handoff-tasks/INDEX.md
+- index +1 (개념 섹션), 헤더 161
+
+### 21:45 — ingest | 운영원칙/VF-제품번호-조회규칙-20260802.md
+- 제품 번호=로케이션 파생 규칙 + 양방향 조회 방법 + 약칭=카테고리 매핑
+- index +1, 헤더 162
+
+### 22:00 — ingest | 개념/Knowledge-Graph-확장도구-후보-20260802.md
+- 영상(1DEh042Rovg) 분석: Gbrain + nashsu LLM Wiki 앱 후보 기록
+- 현재 불필요, 500페이지 이상 시 검토. index +1, 헤더 163
+
+## [2026-08-03] ingest | 개념/AI-Agent-Stack-Harness-Loop-Graph-20260803.md
+- 영상(9WOpQqSO5aA, Cloud Codes) 분석: Harness→Loop→Graph 올바른 구축 순서
+- 우리 시스템 대비 표 포함 — 이미 준수, Graph는 의도적 보류. index +1, 헤더 164
