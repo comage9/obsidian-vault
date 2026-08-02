@@ -1,0 +1,12 @@
+Wiki Phase 4 Smoke Test — 2026-08-02
+=====================================
+
+확정 사실 (실측 기반):
+1. SSOT = E:\hermes-backup\obsidian\06-Wiki-시스템\Wiki-okf (155 md)
+2. Phase 1: WIKI_PATH + .wiki_location + vault_gate.py 수정 완료
+3. Phase 2: SCHEMA 개정 (보노하우스 VF/물류/Hermes), index 155동기화
+4. Phase 3: okf↔obsidian 단방향 복사 11건, 양방향 diff 0
+5. Wiki-okf = 쓰기 SSOT, Wiki-obsidian = read-only 미러
+6. Wiki/ = 리다이렉트 README만, junction 없음
+
+출처: LLM-Wiki-시스템-구축-계획서-20260802.md + Phase 1~3 log.md 기록

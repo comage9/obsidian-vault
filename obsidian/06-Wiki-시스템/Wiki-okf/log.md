@@ -429,3 +429,53 @@
   - **원격 동기화 (merge)** — GitHub origin master에서 index.md + log.md 갱신, 의사결정 2건 신규 동기화 (`cronjob-에러-2건-자동수정-20260619.md`, `playwright-전환-20260621.md`)
   - 의사결정/ 폴더: 신규 로컬 생성 0건
   - Git working tree: clean
+
+## 2026-08-02
+
+### 19:40 — create | 의사결정/LLM-Wiki-시스템-구축-계획서-20260802.md
+- Wiki 구축 계획서 작성 (실행 전 문서). SSOT 권장=Wiki-okf. Phase 0~5.
+- 근거: llm-wiki + wiki-workflow + 실측 경로. Telegram 장세션 장애 반영.
+- 다음: 사용자 Phase 승인 후 진행.
+
+### 20:15 — update | Phase 1 완료: 경로·포인터 고정
+- vault_gate.py line 1 stray `>` 제거 (SyntaxError 수정)
+- ~/.wiki_location 생성 → E:\hermes-backup\obsidian\06-Wiki-시스템\Wiki-okf
+- Hermes .env에 WIKI_PATH 추가
+- Wiki/README.md 리다이렉트 안내 생성
+- 검증: vault_gate.py → "Wiki vault: E:\hermes-backup\obsidian\06-Wiki-시스템\Wiki-okf" ✅
+- 다음: Phase 2 (SCHEMA·index·log 정비)
+
+### 20:30 — update | Phase 2 완료: SCHEMA·index·log 정비
+- SCHEMA.md 개정: Domain "K.I. Trainer" → "보노하우스 VF + 물류 + Hermes 운영"
+- Tag Taxonomy 7그룹 재편 (시스템/생산/물류/트레이딩/지식/품질/상태)
+- Frontmatter: 신뢰도(EXTRACTED|INFERRED) + updated 필드 추가
+- index.md: 누락 38건 추가, 고아 1건(에이전트-루프-텔레그램-연동) 제거
+- index 헤더: 140→155 페이지, 2026-08-02 갱신
+- Sources/텍스트/ 폴더 생성
+- 검증: disk 155 = index 149 + system 3 + infra 3 → missing 0, stale 0 ✅
+- 다음: Phase 3 (이중 트리 정리)
+
+### 20:45 — update | Phase 3 완료: 이중 트리 정리
+- AppData\Local\hermes\.wiki_location 보강 (Phase 1 경미 보완)
+- only_okf 11건 → Wiki-obsidian에 cp -n 단방향 복사 (덮어쓰기 0)
+- 역방향 only_obsidian: 0건
+- Wiki/ README 리다이렉트 유지 (Phase 1 생성분)
+- junction 생략 (빈 Wiki/ 현행 유지)
+- okf 삭제·덮어쓰기 없음 ✅
+- 다음: Phase 4 (워크플로우 가동)
+
+### 21:00 — ingest | Phase 4 워크플로우 스모크
+- Source: Sources/텍스트/wiki-smoke/2026-08-02-phase4-smoke.txt 생성
+- /ingest → 의사결정/Wiki-Phase4-워크플로우-스모크-20260802.md (신규)
+- /output → Output/2026-08-02/wiki-ssot-한줄요약.md (신규)
+- index.md: +1줄 (의사결정), 헤더 155→156
+- Daily Maintenance: 헤더·신규만 갱신 (대규모 재번호 없음)
+- push: 사용자 승인 대기
+
+### 21:15 — lint | Phase 5 완료: Lint·Graph·온보딩
+- Lint: broken 41 (레거시, 미수정), orphan 4 (정상), index missing 4→0 수정
+- Hub top10: 카르파티-LLM-Wiki(6) > 구축계획서(4) > 하네스-장기기억(4)
+- 용량: Wiki 0.81MB, Git pack 3.98MiB ✅
+- 온보딩: 운영원칙/Wiki-SSOT-온보딩-20260802.md 신규
+- index: 156→160 (lint리포트+온보딩+지시서3)
+- push: 사용자 승인 대기
