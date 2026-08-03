@@ -502,3 +502,6 @@
 
 ## [2026-08-03] ingest | Hermes/OpenCodex-사용설정-ClaudeCode-위임-20260803.md
 - OpenCodex 2.10.0 업데이트 + Claude Code 위임 가능 실측 검증. index +1, 헤더 166
+
+## [2026-08-03] create | 의사결정/클로드코드-교재-적용-20260803.md
+- s2 교재 적용: 글로벌+ki-ai-trader CLAUDE.md 신설, 접수표 5칸 템플릿 스킬화. index +1, 헤더 167
