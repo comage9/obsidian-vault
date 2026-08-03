@@ -499,3 +499,6 @@
 
 ## [2026-08-03] ingest | 개념/디스코드-하네스-대시보드-컨텍스트-폴더봇-20260803.md
 - 영상(v40AFadpg4w, AI 치트키) 저장 — 검토 대기. index +1, 헤더 165
+
+## [2026-08-03] ingest | Hermes/OpenCodex-사용설정-ClaudeCode-위임-20260803.md
+- OpenCodex 2.10.0 업데이트 + Claude Code 위임 가능 실측 검증. index +1, 헤더 166
