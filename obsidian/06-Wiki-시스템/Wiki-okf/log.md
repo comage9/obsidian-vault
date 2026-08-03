@@ -496,3 +496,6 @@
 ## [2026-08-03] ingest | 개념/AI-Agent-Stack-Harness-Loop-Graph-20260803.md
 - 영상(9WOpQqSO5aA, Cloud Codes) 분석: Harness→Loop→Graph 올바른 구축 순서
 - 우리 시스템 대비 표 포함 — 이미 준수, Graph는 의도적 보류. index +1, 헤더 164
+
+## [2026-08-03] ingest | 개념/디스코드-하네스-대시보드-컨텍스트-폴더봇-20260803.md
+- 영상(v40AFadpg4w, AI 치트키) 저장 — 검토 대기. index +1, 헤더 165
