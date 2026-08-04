@@ -523,3 +523,9 @@
 
 - [결정] `의사결정/VF-제품번호-저사양모델-조회대책-20260804.md` 신규 — v4-flash가 제품번호 조회 실패(위키 미확인+빈 inventory_items 보고) 원인 분석. A=lookup 스크립트(검증: 2115번=북트롤리 화이트5단 51개, 178번=옷정리트레이 44개), B=rules.json 키워드 라우팅 추가, C=MEMORY 현재고 SoT 정정(master/specs current_stock), D=master_specs 제품번호 컬럼(Claude Code 위임 예정). / 이유: 저사양 모델 회수 실패 재발 방지 / 다음: D 위임, 게이트웨이 재시작(rules.json 반영)
 - [완료] VF 제품번호 저사양모델 조회대책 A/B/C/D 전체 완료 — A=lookup 스크립트(2115번=51개/178번=44개 실측), B=rules.json 키워드 라우팅, C=MEMORY 현재고 SoT 정정, D=master_specs product_number 컬럼(마이그레이션 0036/0037 적용+push, 프론트 컬럼 추가 tsc 검증). 문서: 의사결정/VF-제품번호-저사양모델-조회대책-20260804.md
+## 2026-08-04 14:00 — ❌ LS 14시 통합 루프 실패 (ls-daily 크론)
+- 증상: LS 세션 완전 만료. 쿠키파일(7/1) HTTP 302, CDP Chrome LS 미로그인(Keycloak 리다이렉트)
+- Keycloak 자동 로그인 시도 2회 실패: "사용자 이름 또는 비밀번호가 유효하지 않습니다" (mokicom/.bashrc 저장 비밀번호)
+- 부수 발견: ls-coupang 스킬 부재(8/3 정리 시 삭제 추정, .archive에도 없음), cron 프롬프트가 여전히 참조
+- 오늘 VF 출차관리 데이터 0건(14:02 기준) — 등록 대상 자체도 아직 없음
+- 조치: breaker.json 실패 기록, LS 로그인 탭(9222) 열어둠. 사용자 조치 필요: 비밀번호 변경 확인 또는 수동 1회 로그인
