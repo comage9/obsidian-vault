@@ -520,3 +520,5 @@
 - [정리] A안 환경 정리 — Hermes v0.19.1 업데이트(681 commits behind 경고 해소, 게이트웨이 재시작), 크론 7종 삭제→총 6종 잔존(출고동기화+업무 5종), 미사용 스킬 13종 아카이브(django-go-api-migration은 VF-go 직결로 유지). / 이유: 사용자 지시 A안 / 다음: 없음
 - [수정] fallback_providers 402 원인 규명+교체 — DeepSeek 공식 API 직접 연결이 잔액 $2.91 소진으로 402. `/model`에서 flash 선택 시 이 고장 항목이 잡혀 발생. 동작 검증된 `qwen3.6-flash`(OpenCodex)로 교체(백업 config.yaml.bak.20260803-4). flash-0731 자체는 정상(200 OK). / 이유: 고장 fallback 제거 / 다음: 게이트웨이 재시작 후 반영 (사용자 요청 대기)
 - [검증] KPP+LS 새로고침 크론(6a2267104bab) — 20:30 수정 후 23:06 자동 실행 silent 정상 통과(rc=0), 수정 유효 확인. LS 감시 크론(4c8d8807617e)도 정상
+
+- [결정] `의사결정/VF-제품번호-저사양모델-조회대책-20260804.md` 신규 — v4-flash가 제품번호 조회 실패(위키 미확인+빈 inventory_items 보고) 원인 분석. A=lookup 스크립트(검증: 2115번=북트롤리 화이트5단 51개, 178번=옷정리트레이 44개), B=rules.json 키워드 라우팅 추가, C=MEMORY 현재고 SoT 정정(master/specs current_stock), D=master_specs 제품번호 컬럼(Claude Code 위임 예정). / 이유: 저사양 모델 회수 실패 재발 방지 / 다음: D 위임, 게이트웨이 재시작(rules.json 반영)
