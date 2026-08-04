@@ -522,3 +522,4 @@
 - [검증] KPP+LS 새로고침 크론(6a2267104bab) — 20:30 수정 후 23:06 자동 실행 silent 정상 통과(rc=0), 수정 유효 확인. LS 감시 크론(4c8d8807617e)도 정상
 
 - [결정] `의사결정/VF-제품번호-저사양모델-조회대책-20260804.md` 신규 — v4-flash가 제품번호 조회 실패(위키 미확인+빈 inventory_items 보고) 원인 분석. A=lookup 스크립트(검증: 2115번=북트롤리 화이트5단 51개, 178번=옷정리트레이 44개), B=rules.json 키워드 라우팅 추가, C=MEMORY 현재고 SoT 정정(master/specs current_stock), D=master_specs 제품번호 컬럼(Claude Code 위임 예정). / 이유: 저사양 모델 회수 실패 재발 방지 / 다음: D 위임, 게이트웨이 재시작(rules.json 반영)
+- [완료] VF 제품번호 저사양모델 조회대책 A/B/C/D 전체 완료 — A=lookup 스크립트(2115번=51개/178번=44개 실측), B=rules.json 키워드 라우팅, C=MEMORY 현재고 SoT 정정, D=master_specs product_number 컬럼(마이그레이션 0036/0037 적용+push, 프론트 컬럼 추가 tsc 검증). 문서: 의사결정/VF-제품번호-저사양모델-조회대책-20260804.md
