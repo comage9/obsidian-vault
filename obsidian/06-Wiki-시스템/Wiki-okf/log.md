@@ -535,4 +535,10 @@
 - [개념] 개념/칸반-멀티에이전트-사람없이-굴러가는-AI팀-20260804.md 신규 — chutzrit 영상(qaGbNkFXiP8) 분석: 칸반으로 에이전트 팀 연결, 오케스트레이터 분배, 크론 자동 도착. 판정: Loop 단계 핸드오프 자동화 실전편, 도입은 시기상조(병렬 워크스트림 부재), 저사양 모델 카탈로그 선행 필요 / 다음: 검토 대기
 
 ## 2026-08-09
+
+### LS 인쇄 printto 벡터 확정
+- 코드: VF-new `backend/departure/views.py` `_print_pdf_on_server` — GDI 비트맵 폐기, ShellExecute printto만
+- Wiki §4 / 카탈로그 §4 / README §6.0d / 스킬 departure-dispatch-system 반영
+- 검증: 3호차 API → `✅ 서버 printto 전송` 확인
+
 - [Hermes] `Hermes/OmniRoute-Hermes-모델목록-정리-20260809.md` 신규 — Telegram /model OmniRoute 289개 정리. providers.omniroute.discover_models:false + 실동작 13개만 고정. chat 스모크 PASS 13. / 이유: 실사용 불가 목록 과다 / 다음: 게이트웨이 재시작 후 Telegram 확인
