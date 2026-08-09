@@ -547,3 +547,6 @@
 - 검증: 3호차 API → `✅ 서버 printto 전송` 확인
 
 - [Hermes] `Hermes/OmniRoute-Hermes-모델목록-정리-20260809.md` 신규 — Telegram /model OmniRoute 289개 정리. providers.omniroute.discover_models:false + 실동작 13개만 고정. chat 스모크 PASS 13. / 이유: 실사용 불가 목록 과다 / 다음: 게이트웨이 재시작 후 Telegram 확인
+
+## 2026-08-10
+- [Hermes] OmniRoute 일일 스모크 cron `f27aea7bb126` + Telegram retry backoff 수정(fallback OpenCodex 429 제거, default=xai-oauth/grok-4.5). 문서 `Hermes/OmniRoute-Hermes-모델목록-정리-20260809.md` 보강. / 이유: 600s backoff 무응답 / 다음: gateway 재시작

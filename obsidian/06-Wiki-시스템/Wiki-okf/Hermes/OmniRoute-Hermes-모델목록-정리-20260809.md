@@ -63,3 +63,23 @@ PASS 13 / FAIL 0
 ## 관련
 - 스킬: `omniroute-gateway`, `hermes-provider-troubleshooting`
 - fact_store #65 갱신
+
+
+## 2026-08-10 추가 — Telegram retry backoff + 일일 스모크
+
+### Telegram `Working — error retry backoff` 원인
+실측 로그 (`errors.log` 2026-08-10 00:46):
+1. primary `omniroute` / `xao/grok-4.5` → **HTTP 503** `chat_admission_busy`
+2. fallback `custom` OpenCodex `alibaba-token-plan-intl/qwen3.6-flash` → **HTTP 429** token-plan 1-week quota exhausted (reset **2026-08-16 02:59 UTC**)
+3. Hermes `Retrying API call in **600s**` → 텔레그램에 Working/backoff 표시, 실질 무응답
+
+### 조치
+- default model → **xai-oauth / grok-4.5** (직접 SuperGrok)
+- fallback 교체: OpenCodex flash 제거 → OmniRoute `auto/best-chat` → `zai/glm-4.7-flash` → `felo/felo-chat` → `xai-oauth/grok-4.5`
+- 일일 cron **f27aea7bb126** `0 7 * * *` no_agent script=`omniroute_daily_smoke.py`
+  - PASS 모델만 `providers.omniroute.models` 재기록 (`discover_models:false` 유지)
+  - 리포트: `~/.hermes/cache/omniroute_daily_smoke_latest.json`
+- 2026-08-10 01:02 스모크: PASS 13 allowlist, FAIL qwen-web empty content
+
+### 게이트웨이
+config 변경 후 **gateway 재시작** 필요 (텔레그램 세션 반영).
