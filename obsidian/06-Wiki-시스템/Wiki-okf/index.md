@@ -1,7 +1,7 @@
 # Wiki Index
 
 > 콘텐츠 카탈로그 — 모든 Wiki 페이지를 분류별로 정리
-> 마지막 갱신: 2026-08-04 | 전체 페이지: 170
+> 마지막 갱신: 2026-08-09 | 전체 페이지: 171
 
 ---
 
@@ -146,7 +146,8 @@
 - [의사결정/Wiki-Phase4-검증-및-Phase5-지시서-20260802](의사결정/Wiki-Phase4-검증-및-Phase5-지시서-20260802.md) — Phase 4 검증 및 Phase 5 지시서
 - [의사결정/Wiki-Phase5-lint-리포트-20260802](의사결정/Wiki-Phase5-lint-리포트-20260802.md) — Phase 5 Lint 리포트 (broken 41, orphan 4, hub top10)
 
-## Hermes (18)
+## Hermes (19)
+- [Hermes/OmniRoute-Hermes-모델목록-정리-20260809](Hermes/OmniRoute-Hermes-모델목록-정리-20260809.md) — OmniRoute /model 목록 정리, 실동작 13개 고정 (2026-08-09)
 - [Hermes/OpenCodex-사용설정-ClaudeCode-위임-20260803](Hermes/OpenCodex-사용설정-ClaudeCode-위임-20260803.md) — OpenCodex 2.10.0 설정 + Claude Code 위임 가능 실측
 ### 문서 (7)
 - [Hermes/2026-06-06-학습-및-적용-내역](Hermes/2026-06-06-학습-및-적용-내역.md)
