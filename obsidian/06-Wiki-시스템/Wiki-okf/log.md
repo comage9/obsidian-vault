@@ -536,6 +536,11 @@
 
 ## 2026-08-09
 
+### KPP 인쇄도 printto 벡터
+- `backend/kpp_session.py` `_print_pdf_file` GDI 150dpi 폐기 → 벡터 회전+printto
+- 검증: 3호차 PLT16 → `printto 벡터 전송` 확인
+
+
 ### LS 인쇄 printto 벡터 확정
 - 코드: VF-new `backend/departure/views.py` `_print_pdf_on_server` — GDI 비트맵 폐기, ShellExecute printto만
 - Wiki §4 / 카탈로그 §4 / README §6.0d / 스킬 departure-dispatch-system 반영
