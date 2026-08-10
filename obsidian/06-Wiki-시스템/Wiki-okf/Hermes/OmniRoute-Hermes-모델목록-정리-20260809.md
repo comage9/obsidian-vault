@@ -83,3 +83,13 @@ PASS 13 / FAIL 0
 
 ### 게이트웨이
 config 변경 후 **gateway 재시작** 필요 (텔레그램 세션 반영).
+
+
+## 2026-08-10 — 매일 03:00 패키지 업데이트+재시작
+
+- cron job_id: `2587522b4350`
+- schedule: `0 3 * * *`
+- script: `AppData/Local/hermes/scripts/omniroute_daily_update_restart.py` (no_agent)
+- 절차: `npm install -g omniroute` → kill `:20128` → `node --max-old-space-size=4096 .../dist/server-ws.mjs` → `GET /v1/models` health
+- 로그: `logs/omniroute-update.log`, 리포트: `cache/omniroute_daily_update_latest.json`
+- 관련: 07:00 모델 스모크 `f27aea7bb126` (별개)

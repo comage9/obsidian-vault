@@ -558,3 +558,6 @@
 
 ## 2026-08-10
 - [Hermes] OmniRoute 일일 스모크 cron `f27aea7bb126` + Telegram retry backoff 수정(fallback OpenCodex 429 제거, default=xai-oauth/grok-4.5). 문서 `Hermes/OmniRoute-Hermes-모델목록-정리-20260809.md` 보강. / 이유: 600s backoff 무응답 / 다음: gateway 재시작
+
+## 2026-08-10
+- [Hermes] OmniRoute 매일 03:00 업데이트+재시작 cron `2587522b4350` 등록 — script=omniroute_daily_update_restart.py (npm -g update → :20128 kill → server-ws.mjs start → /v1/models health). 기존 07:00 스모크 `f27aea7bb126`와 분리. / 이유: 사용자 지시 / 다음: 내일 03:00 자동 실행
