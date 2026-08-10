@@ -6,6 +6,24 @@
 - Hermes `mcp_servers.vf` 등록. Gateway 재시작 필요.
 - wiki-graph args 문자열 버그 → list 수정
 
+### KPP MCP v2 보안 + Py3.11 재생성
+- mcp 버전 상한 `<2` + venv Python 3.11.7 (3.13에서 pydantic_core 깨짐 방지), tools 4/4 검증
+- 문서: `의사결정/KPP-MCP-v2-보안-20260810.md`
+
+### 출력 이력 PrintLog
+- LS/KPP 출력 시 PrintLog 자동 저장 + `GET /departure/api/print-logs` + 대시보드 🖨️ 패널
+- 문서: `의사결정/출력-이력-PrintLog-20260810.md` (커밋 998a094)
+
+### 전산재고 개선
+- VF 마스터 비단종 전산재고 목록 포함, 미출고=부족 분류, 행 수정=제품마스터 SpecEditDialog 연동 (커밋 c7cc4f4/ec1e7d4/a87f412)
+
+### KPP PBM140 다중센터 by_both
+- 타센터 전표 보존 + 차량번호 매칭으로 VF 신규등록/수정 (호차만 보지 않음, 커밋 48b64e8)
+
+### OmniRoute cron 2종 등록
+- 03:00 패키지 업데이트+재시작 (2587522b4350), 07:00 일일 스모크 (f27aea7bb126, `omniroute_daily_smoke.py`)
+- Telegram retry backoff(600s) 원인 수정 — 문서: `Hermes/OmniRoute-Hermes-모델목록-정리-20260809.md`
+
 # 작업 로그
 
 ## 2026-05-28
