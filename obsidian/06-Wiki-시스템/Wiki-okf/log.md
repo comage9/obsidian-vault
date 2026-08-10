@@ -1,3 +1,11 @@
+
+## 2026-08-10
+### VF MCP 서버 추가
+- 경로: `E:/coding/skill/VF/vf-mcp-server`
+- tools: status/departure/regions/plt/print_ls/print_kpp/stock/production
+- Hermes `mcp_servers.vf` 등록. Gateway 재시작 필요.
+- wiki-graph args 문자열 버그 → list 수정
+
 # 작업 로그
 
 ## 2026-05-28

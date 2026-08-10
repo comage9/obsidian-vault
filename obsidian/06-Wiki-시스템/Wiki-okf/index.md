@@ -203,3 +203,5 @@
 - [SCHEMA](SCHEMA.md) — Wiki 구조 및 규칙 (domain, conventions, frontmatter, tag taxonomy)
 - [log](log.md) — 작업 로그 (append-only)
 - [index](index.md) — 현재 페이지
+
+- [[의사결정/VF-MCP-서버-20260810]] — VF Hermes MCP (출차/재고/생산)
