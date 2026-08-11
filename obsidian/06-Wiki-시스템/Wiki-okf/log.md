@@ -19,6 +19,11 @@
 - FastMCP→MCPServer, Sampling/Roots deprecated, WebSocket 제거
 - 현 VF/KPP: stdio → 영향 없음, v1→v2 하위호환
 
+### 재고 현황: 비고(notes) 툴팁 컬럼
+- inventory-table: notesMap (barcodeMasterData 매핑)
+- '비고' 컬럼: notes 있으면 '📝 내용 있음' + title 툴팁
+- 커밋: 01ff5f0
+
 ## 2026-08-10
 ### VF MCP 서버 추가
 - 경로: `E:/coding/skill/VF/vf-mcp-server`
