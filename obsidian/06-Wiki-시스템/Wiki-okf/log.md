@@ -1,4 +1,24 @@
 
+
+## 2026-08-11
+### VF-new 검색: 로케이션 전역 검색 구현
+- Backend: ?location= on master/specs + inventory/integrated
+- Frontend: isLocationPattern() + inventory-table 정확일치 부스트
+- 커밋: 939fa69, 473b1ae, 7c4af42, 44fa627
+
+### VF 3개월 미출고: 수동 지정 보존
+- _sync_vf_no_outbound_to_db: OFF 방향 sync 제거
+- spec-edit-dialog: "VF 3개월 미출고" 버튼
+
+### KPP MCP 서버 py3.11 venv 전환
+- py3.13 pydantic_core → py3.11 venv
+- Hermes config: command=venv/python.exe 직접 실행, PYTHONPATH env 추가
+- 게이트웨이 재시작 필요
+
+### MCP v2 업데이트 분석 (Bloom AI 영상)
+- FastMCP→MCPServer, Sampling/Roots deprecated, WebSocket 제거
+- 현 VF/KPP: stdio → 영향 없음, v1→v2 하위호환
+
 ## 2026-08-10
 ### VF MCP 서버 추가
 - 경로: `E:/coding/skill/VF/vf-mcp-server`
