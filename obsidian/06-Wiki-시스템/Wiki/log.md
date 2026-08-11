@@ -290,3 +290,24 @@
 - 오늘 생성된 의사결정 파일 0건
 
 ###
+
+## 2026-08-11 (화)
+
+### 16:00~17:30 — VF-new 로케이션 전역 검색 구현
+- 모든 페이지에서 로케이션 코드로 검색 → 해당 로케이션 품목 표시
+- Backend: ?location= param on master/specs + inventory/integrated
+- Frontend: isLocationPattern() 유틸, inventory-table 정확일치 부스트
+- 커밋: 939fa69, 473b1ae, 7c4af42, 44fa627
+
+### 16:40 — VF 3개월 미출고 자동 동기화 + 수동 지정 보존
+- _sync_vf_no_outbound_to_db: OFF 방향 sync 제거 (수동 지정 보존)
+- spec-edit-dialog: "VF 3개월 미출고" 버튼 추가
+
+### 17:30 — KPP MCP 서버 py3.11 venv 전환
+- py3.13+pydantic_core → py3.11 venv (VF와 동일 패턴)
+- Hermes config: command=venv/python.exe 직접 실행
+- 게이트웨이 재시작 필요
+
+### 17:45 — MCP v2 업데이트 분석 (Bloom AI 영상)
+- FastMCP→MCPServer, Sampling/Roots deprecated, WebSocket 제거
+- 현재 VF/KPP MCP: stdio → 영향 없음, SDK v1→v2 마이그레이션 하위호환
