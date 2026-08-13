@@ -1,4 +1,63 @@
+###
 
+## 2026-08-13
+
+### VF-new 전산재고: 장기 미발주 + 비고 수정
+- [기능] BarcodeMaster `is_long_term_no_order` 추가 (migration 0038) — 수동 설정 시 critical(위험) 집계 제외, 상단 카드 '장기 미발주 요청 품목' 별도 집계
+- [수정] 비고(notes) 표기: MasterSpec 우선 + BarcodeMaster 폴백, inventory/unified 응답에 notes·is_long_term_no_order·is_no_outbound_3m 포함
+- [다음] 모바일 inventory/enhanced 탭 UI(재고현황·VF 재고조사) 가시성 요청 미완 / finish_type 저장 롤백 이슈 조사 중(R003750270003 테스트 중단)
+
+### VF-go 이관: U1–U3 완결 + S1 스키마 확정
+- [완료] U1 inventory/unified 확장 · U2 PATCH `/api/inventory/unified/{_id}` · U3 barcode-master/master-specs notes·장기미발주 패리티 — **U 시리즈 완결** (build/vet/test + curl 검증)
+- [완료] S1 machine PIN/plans 스키마 확정 (7 API, machine_users 10col/91행, machine_plans 18col/2행, PIN SHA-256·5회실패→5분잠금, 함정 9건)
+- [다음] CURRENT_TASK=**S2** machine PIN/plans Go 구현 → S3 parity
+
+### Claude Code → OmniRoute 위임 설정
+- [시스템] `~/.claude/settings.json` ANTHROPIC_BASE_URL=http://127.0.0.1:20128, MODEL=auto/best-coding (OmniRoute 라우팅 확인)
+- [함정] subagent 600s 타임아웃 반복(deleg_35e3429d, deleg_da0b1d54) — 한 소단위만 짧게 위임 권장. U1 실제 완료는 Hermes 직접 검증 경로
+
+### LS 14시 통합 cron 재실패 (8/13)
+- [차단] ls-coupang 스킬 유실 + LS Keycloak OAuth 미인증(쿠키 없음, API 302) — 8/4·8/12에 이은 동일 차단
+- [상태] VF 5176 정상·work_date=8/13, 출차 차량 0건 → 등록 대상 없음. 수동 LS 로그인·쿠키 재발급 필요
+
+## 2026-08-12
+
+### Hermes OmniRoute config.yaml 최적화 + Gateway 재시작
+- config.yaml auxiliary 역할 16개 중 3개 모델 교체: skills_hub→aug/glm-5.2, approval→pplx-web/pplx-grok-4.5, mcp→oc/deepseek-v4-flash-free
+- 미지정 10개 역할 auto/best-fast로 채움, 백업 `config.yaml.bak.20260812_192623` 보존
+- OmniRoute 실제 목록 458개 중 16/16 존재 확인 (glm-5.2, pplx-grok-4.5, deepseek-v4-flash-free 모두 ✅)
+- Gateway PID 9664 → **9356** 재시작 (19:56 시작, config 수정 19:28 이후 → 새 구성 로드 확정)
+- Scheduled Task(Hermes_Gateway) 정상 등록
+
+### OmniRoute CLI 에이전트 감지 버그 진단
+- `/api/cli-tools/detect` (구버전, ~/.hermes/config.yaml) → Hermes Agent ✅ configured: true
+- `/api/cli-tools/all-statuses` (신규 동적 감지, HERMES_HOME/config.yaml) → Hermes Agent ❌ not_configured
+- **원인**: OmniRoute v3.8.49 내 `checkToolConfigStatus()` 파일 읽기/문자열 검색 버그. 두 config 파일 모두 `provider: omniroute` + 포트 20128 정상 포함
+- **영향**: 표시 문제만. 실제 Hermes Agent는 OmniRoute/auto/best-free로 정상 동작 중 (이 세션 자체가 증명)
+- 수정 불가 (OmniRoute 소스 코드 내부). 03:00 cron 업데이트에서 패치 가능성
+
+### LLM-wiki 스킬(v2.3.0) 검증 + Gateway 재시작
+- 스킬 구조 확인: SKILL.md(31,291B) + references 5개 + scripts 3개(migrate_wikilinks.py, validate.sh, vault_gate.py)
+- 실제 Wiki Vault: **E:\hermes-backup\obsidian\06-Wiki-시스템\Wiki-okf** (154개 md) — Wiki/는 껍데기, 별개
+- vault_gate.py 경로 결정 3단계: ①WIKI_PATH env ②~/.wiki_location ③OS 기본값 ~/wiki
+- Gateway PID 9664 실행 확인 후 재시작 (sleep 8 후 상태 확인)
+
+### 매일 출고데이터 동기화 cron 정상 완료
+- 명령: `manage.py daily_outbound_sync` (Python313)
+- DB 최신 날짜 2026-08-10 → 오늘 2026-08-12 기준
+- **신규 211건 추가, 기존 220건 갱신** (기준일 2026-08-10~), Auto-Watcher 신규 차량 3대 등록
+- Exit code 0, 정상 종료
+
+### LS 14시 통합 크론 — 데이터 0건 + 근본 차단 2건
+- VF 출차관리 데이터: **0건** (서버 5176 정상, 8/12 ls_count=0, vehicles=[]) → 등록 대상 없음
+- **차단 ① ls-coupang 스킬 유실**: skills/automation/ls-coupang/ 디렉토리 및 coupang_cookies_browser.txt 쿠키 파일 모두 없음 → 인증우회·템플릿 Batch Create 실행 불가 (Skill-First Lock 위반)
+- **차단 ② LS 인증 단절**: 회로차단 ls-daily 8/4 기록 — Keycloak 자격증명 거부 2회 + 쿠키파일 7/1 만료(302) → 8월 초부터 폼 인증 깨짐
+- 복구 필요: ls-coupang 스킬 복원 + LS Coupang 로그인 재수립 (Keycloak 자격증명 + 쿠키 재발급)
+
+### FC 입고 단가 업로드 반영 누락 원인 확인 시작
+- 파일: `C:\Users\kis\Downloads\Coupang_Stocked_Data_List(2026-08-01~2026-08-12).xlsx`
+- 증상: 8/3 입고 데이터 있는데 막대 그래프는 8/10,8/11,8/12만 표기, 다른 기간도 동일 현상
+- Pre-flight Tool-First Auto-Recall 시작: 스킬·위키·세션·fact_store 병렬 확인 중 (진행 중, 결론 대기)
 
 ## 2026-08-11
 ### VF-new 검색: 로케이션 전역 검색 구현
