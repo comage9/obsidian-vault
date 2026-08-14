@@ -11,6 +11,23 @@
 - [업데이트] 실행 계획: VF 3개월 미출고→FC 우선 전환, VF 출고 상위 순 파레트 재배치, 그 외 다품종 파레트 / 이유: 사용자 확정 방향 / 다음: 통합 보고서 Output
 - [output] `Output/2026-08-14/VF-로케이션-정비-공간확장-통합보고서.md` 통합 보고서 생성 / 이유: 사용자 보고서 형태 요청 / 다음: A/B·야외계약·FC 전환 실행
 
+### VF-go 이관: S2 완료
+- [완료] S2 machine PIN/plans Go 구현 — `internal/db/machine.go` + `http/machine/handlers.go` + router, curl 17시나리오 PASS (login/users/plans/apply/delete)
+- [함정] identity desync → INSERT `MAX(id)+1`; token timestamp `%.6f` (과학표기 방지); apply → production_logs
+- [다음] CURRENT_TASK=**S3** machine 패리티 (실측 진행 중, 미완)
+
+### OmniRoute 통로 확장
+- [시스템] `~/.omniroute/.env` → `OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT=3` (기본 1→3), 재시작 후 health 200 (v3.8.49)
+- [이유] 텔레그램+로컬 Hermes 동시 사용 시 admission 503 완화 / 다음: 잔여 503 시 무료 모델 한도 점검
+
+### Cron 운영 결과·차단 (8/14)
+- [실패] 매일 출고데이터 동기화 `7fb0ae1fa347` 09:03 — agent HTTP **503** admission busy (`Structurally heavy chat…`) → 동기화 미실행
+- [실패] LS 14시 통합 `8a776545148d` — VF 출차 **0건**(신선·빈값), LS 조회 0건·템플릿 Batch Create **Keycloak 고착**/WEB-GATEWAY-SESSION 미확보, **ls-coupang 스킬 부재** 지속
+- [실패] LS PDF 인쇄 `8c57a12b627d` 16:30 — 쿠키 파일 없음 (`…/ls-coupang/references/coupang_cookies_browser.txt`)
+- [정상] OmniRoute 03:00 업데이트+재시작 OK (이미 3.8.49 latest, pid health ok) · Wiki 용량 검증 OK (git pack 4.54 MiB)
+- [참고] OmniRoute 07:00 스모크 — 당시 :20128 DOWN으로 probe skip (03:00 재기동 이후 별도 이슈 아님으로 기록)
+- [다음] 사용자 LS 수동 로그인·쿠키/스킬 복원 + 출고 sync 재실행(503 회피 또는 no_agent 경로)
+
 ## 2026-08-13
 
 ### VF-new 전산재고: 장기 미발주 + 비고 수정
