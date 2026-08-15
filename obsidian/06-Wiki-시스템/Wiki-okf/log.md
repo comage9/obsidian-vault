@@ -9,6 +9,20 @@
 - Auto-Watcher: downloads 스캔, 신규 차량 3대 등록
 - [참고] 전일(8/14)은 OmniRoute admission 503으로 미실행 → 금일 정상 회복
 
+### VF-go 이관: S 완결 + T1–T5
+- [완료] **S3** machine 패리티 — Django vs Go 9케이스 일치, POST `/plans`→405 맞춤, API_MAP machine ✅ · **S 시리즈 완결**
+- [완료] **T1–T4** delivery — 읽기 3종+hourly POST 구현/패리티, notes+prediction 스키마 LOCKED (recent_28·cum>2500·Unknown/기타)
+- [진행] **T5** notes 구현 — `internal/db/delivery.go` + `http/delivery/handlers.go` + router, build/vet/test PASS · Claude 위임 후 Hermes **라이브 curl 마감 미완** → CURRENT_TASK=T5🟡 → 다음 T6 prediction
+- [참고] skill refs: `vf-go-migration/references/t-series-status-and-gates-20260815.md`, `t5-notes-impl-and-delegation-guards.md`
+
+### Cron 운영 결과 (8/15)
+- [정상] OmniRoute 03:00 업데이트+재시작 `2587522b4350` — v3.8.49 latest 유지, health ok (pid 재기동)
+- [참고] OmniRoute 07:00 스모크 `f27aea7bb126` — 재기동 직후 `:20128 DOWN`으로 probe skip
+- [정상] Wiki 용량 검증 `d3349950eecd` — git pack 4.54 MiB / wiki 0.98 MiB
+- [부분] LS 14시 통합 `8a776545148d` — WEB-GATEWAY-SESSION OK, 템플릿 3건 SUBMITTED(90626/90628/90269) Batch 스킵 · VF 5176 DOWN·오늘 ls-data 없음 · **ls-coupang 스킬 부재** 지속 (상세는 파일 말미 14:06 entry)
+- [실패] LS PDF 인쇄 `8c57a12b627d` 16:30 — 쿠키 파일 없음 (`…/ls-coupang/references/coupang_cookies_browser.txt`)
+- [다음] ls-coupang 스킬·쿠키 복원, T5 curl 마감, VF 5176 기동 후 출차 동기화
+
 ## 2026-08-14
 
 ### VF 로케이션 정비·공간 확장 계획 수집
