@@ -1,5 +1,14 @@
 ###
 
+## 2026-08-15
+
+### 매일 출고데이터 동기화 cron
+- [정상] `manage.py daily_outbound_sync` (Python313, `VF-new - 복사본/backend`)
+- DB 최신: 2026-08-13 → 오늘 2026-08-15 / 기준일 2026-08-13~
+- 결과: **신규 0건, 갱신 224건** (exit 0)
+- Auto-Watcher: downloads 스캔, 신규 차량 3대 등록
+- [참고] 전일(8/14)은 OmniRoute admission 503으로 미실행 → 금일 정상 회복
+
 ## 2026-08-14
 
 ### VF 로케이션 정비·공간 확장 계획 수집
