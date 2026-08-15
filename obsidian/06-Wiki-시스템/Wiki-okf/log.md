@@ -700,3 +700,20 @@
 
 ## 2026-08-10
 - [Hermes] OmniRoute 매일 03:00 업데이트+재시작 cron `2587522b4350` 등록 — script=omniroute_daily_update_restart.py (npm -g update → :20128 kill → server-ws.mjs start → /v1/models health). 기존 07:00 스모크 `f27aea7bb126`와 분리. / 이유: 사용자 지시 / 다음: 내일 03:00 자동 실행
+
+- [업데이트] VF-new 입고 제한 수량(limitQty) Master↔Scanner 공유 + Scanner 4일 옵션 / 2026-08-15 / migrations 0039, barcode_scanner, spec-edit-dialog, restrictions API
+
+### 14:06 — LS 14시 통합 루프 (cron)
+- 날짜: 2026-08-15
+- skill ls-coupang: not found (skipped) → playwright-automation + vf-dispatch-request + ls_automation 사용
+- VF API 5176: DOWN (http 0) — ls-data 신선도 검증 불가 / 오늘 ls_data_2026-08-15.json 없음
+- ls_data.json: date=2026-06-21 stale (등록 근거로 미사용)
+- LS 로그인: OK (WEB-GATEWAY-SESSION)
+- LS VF67_H 조회: **3건 SUBMITTED** (이미 템플릿 등록됨)
+  - 90626 → truckRequestId 29443495 (1호)
+  - 90628 → truckRequestId 29443496 (2호)
+  - 90269 → truckRequestId 29443494 (3호)
+- Batch Create: **스킵** (already 3)
+- plate/기사: 미배정 (SUBMITTED)
+- 산출: `E:/coding/VF-new/backend/departure/data/ls_orders_2026-08-15.json`, `ls_14h_loop_2026-08-15.json`
+- 추가 VF 차량 등록: VF 다운 + 오늘 데이터 없음 → 불가
