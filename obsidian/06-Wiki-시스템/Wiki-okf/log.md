@@ -43,6 +43,9 @@
 - [문서] `물류/VF/제품배치도-복구기준-20260816.md` — 복구 기준 시점 문서화, Git 태그 `checkpoint-product-display-20260816`
 - [문서] `물류/VF/제품배치도-B동-옷걸이슬림핸들러-20260816.md` — B동 옷걸이/슬림형 서랍장/핸들러 배치(미배치 101품목 대상)
 
+### LS PDF 인쇄 cron (8/16 16:30)
+- [실패] `8c57a12b627d` — 쿠키 파일 없음 (`…/ls-coupang/references/coupang_cookies_browser.txt`) → **ls-coupang 스킬 부재 8/3 이후 지속**, LS 로그인 필요 (8/15와 동일)
+
 ## 2026-08-15
 
 ### 매일 출고데이터 동기화 cron
