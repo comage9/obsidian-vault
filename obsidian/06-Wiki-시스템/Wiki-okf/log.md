@@ -429,3 +429,14 @@
   - **원격 동기화 (merge)** — GitHub origin master에서 index.md + log.md 갱신, 의사결정 2건 신규 동기화 (`cronjob-에러-2건-자동수정-20260619.md`, `playwright-전환-20260621.md`)
   - 의사결정/ 폴더: 신규 로컬 생성 0건
   - Git working tree: clean
+
+## 2026-08-16
+
+### 14:43 — VF2 Production Plan Nightly 자가 점검 (cron 48144ff13cee, 58일만 실행)
+- DB 28/28 정상, production_logs 15,886행 (2026 한정 355행, max_date 06-09 미변동)
+- 🚨 **CRITICAL 1건**: 디스크 82% (90% 임계치 8%p 남음, 06-19 73%→+9%p) — 즉시 정리 필요
+- ⚠️ **MEDIUM 1건**: 운영 침묵 68일째 (06-10~08-16 production-log POST 성공 0건, 401 1건)
+- ⚠️ LOW 8건 (06-19과 동일, 58~69일째 잔존): 6-튜플 중복 mold 111, 빈 필드 4건, 데크타일 빈 color2, machine 표기 비일관 15건, WHITE 180 대소문자 148건
+- 🆕 **신규 3건**: 프론트엔드 포트 5174 미가동, DB 스키마 9→28개 확장, 2026-07-04 401 인증 오류 1건
+- 보고서: `Hermes/자가-학습-Cron/VF2-Production-Plan-Nightly-20260816.md`
+- Skip: `vf2-production-plan-conventions` 단일 스킬, `mandatory-verification` 스킬 부재 → umbrella `vf2` + references 우회
