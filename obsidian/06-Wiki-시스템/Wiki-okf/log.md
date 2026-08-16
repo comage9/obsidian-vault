@@ -2,6 +2,12 @@
 
 ## 2026-08-16
 
+### A동 순위 확장 배치
+- [자료] `1111-rank-extend` 저장 (Sources/docs)
+- [배치] 기존75(파랑)+추가43(초록 지그재그 5·6·하단) · 미배치739 표
+- rank-a-v10
+
+
 ### A동 배치 적용: 1111 slot순 L1~5
 - [적용] 첫열 로케이션 순 1~5번 라인 · 실배치105 스냅샷 유지 · rank-a-v2 · 미배치19
 
@@ -620,7 +626,6 @@
   - 의사결정/ 폴더: 신규 로컬 생성 0건
   - Git working tree: clean
 
-<<<<<<< HEAD
 ## 2026-08-16
 
 ### 14:43 — VF2 Production Plan Nightly 자가 점검 (cron 48144ff13cee, 58일만 실행)
@@ -631,7 +636,6 @@
 - 🆕 **신규 3건**: 프론트엔드 포트 5174 미가동, DB 스키마 9→28개 확장, 2026-07-04 401 인증 오류 1건
 - 보고서: `Hermes/자가-학습-Cron/VF2-Production-Plan-Nightly-20260816.md`
 - Skip: `vf2-production-plan-conventions` 단일 스킬, `mandatory-verification` 스킬 부재 → umbrella `vf2` + references 우회
-=======
 ## 2026-08-02
 
 ### 19:40 — create | 의사결정/LLM-Wiki-시스템-구축-계획서-20260802.md
@@ -772,4 +776,4 @@
 - plate/기사: 미배정 (SUBMITTED)
 - 산출: `E:/coding/VF-new/backend/departure/data/ls_orders_2026-08-15.json`, `ls_14h_loop_2026-08-15.json`
 - 추가 VF 차량 등록: VF 다운 + 오늘 데이터 없음 → 불가
->>>>>>> 0975b4e0e6c8eaa3501056e0a88f05c8015eb653
+- 2026-08-16: [제품배치도 미배치 통합+검색](물류/VF/제품배치도-미배치통합-검색-20260816.md) — 미배치=A/B동 배치 통합 제외(715→614), 위치 검색창(제품명/로케이션/제품번호/바코드) 추가, 결과 클릭 시 동·슬롯 이동
