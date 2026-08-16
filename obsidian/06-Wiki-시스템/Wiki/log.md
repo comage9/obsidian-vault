@@ -338,3 +338,33 @@
 - ls_orders_2026-08-16.json: 3건 (plate/driver null — 배차 전 상태)
 - VF 출차관리: 0건 → 추가 등록 대상 없음
 - skill ls-coupang: not found (skipped) — playwright-automation / vf-dispatch-request 참조로 대체
+
+###
+## 2026-08-16
+
+### 14:10 — LS 14시 통합 루프 (cron)
+- VF API: date=2026-08-16 data=0 (신선·빈값, stale 아님)
+- LS 로그인(patchright): 성공 welcomePage, 쿠키 12개 저장
+- 사전 조회 VF67_H: 0건 → 템플릿 Batch Create(90626/90628/90269) **200 성공**
+- 재조회: 3건 (SUBMITTED) — 29466212(90269/3호차), 29466213(90626/1호차), 29466214(90628/2호차)
+- ls_orders_2026-08-16.json: 3건 (plate/driver null — 배차 전 상태)
+- VF 출차관리: 0건 → 추가 등록 대상 없음
+
+### 14:38 — 거울형 주간보고서 자동 생성 (cron weekly)
+- 기간: 2026-08-09 ~ 2026-08-16 (7일)
+- 미결 질문 0건, 반복 패턴 0건, 콘텐츠 소재 0건, 시스템 개선점 0건, 사업 신호 0건
+- 입력 메시지 0개 (cron-only 기간)
+- 파일: 자기사고/거울형-보고서/2026-08-16-거울형-주간보고서.md
+
+### 14:45 — VF2 Project Nightly 자가 점검 (cron)
+- 백엔드/프론트 기동 확인 (API 6개 엔드포인트 200 OK)
+- DB 핵심 3개 테이블 데이터 존재 (outbound_records 489K, production_logs 15K, inventory_baseline 4K)
+- **운영 침묵 69일** — production_logs 최신 2026-06-09
+- **디스크 83% WARNING 초과** — 29일간 +11%p 재가속
+- 마스터 테이블 4개 비어있음 (master_specs, inventory_items, machine_plans, machine_users)
+- 파일: Hermes/자가-학습-Cron/VF2-Project-Nightly-20260816.md
+
+### 의사결정 폴더
+- 오늘 생성된 의사결정 파일 0건
+
+###
