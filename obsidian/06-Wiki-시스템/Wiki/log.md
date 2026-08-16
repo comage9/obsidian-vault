@@ -397,3 +397,19 @@
 - 오늘 생성된 의사결정 파일 0건
 
 ###
+
+## 2026-08-17
+
+### 05:31 — VF2 Production Plan Nightly 자가 점검 (1차 cron)
+- 백엔드/프론트 **DOWN** (systemd 미등록 6회째, 14시간째 미복구)
+- DB production_logs 15,886건 (started 10,916, pending 4,967, ended 3)
+- **운영 침묵 70일** — production_logs 최신 2026-06-09 (max_date 기준)
+- **디스크 73% (WARNING 해소)** — 08-16 83% → 73% (-10%p, 대폭 개선)
+- 미해결 결함 4건 잔존 (6-튜플 중복, 데크타일 color2 빈값, 빈 moldNumber, color2 대소문자)
+- 마스터 테이블 4개 비어있음 (master_specs, inventory_items, machine_plans, machine_users)
+- 파일: Hermes/자가-학습-Cron/VF2-Production-Plan-Nightly-20260817.md
+
+### 의사결정 폴더
+- 오늘 생성된 의사결정 파일 0건
+
+###
