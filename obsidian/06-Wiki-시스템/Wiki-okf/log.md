@@ -2,6 +2,15 @@
 
 ## 2026-08-16
 
+### VF-new 제품 배치도 A동 1번 라인
+- [수정] `frontend/client/src/pages/product-display.tsx` — A~E형→**A~E동**, 페이지 확대, **세로 슬롯(초기 렉 칸)** 양식
+- A동 1번 라인 로케이션 **1~19** (맨 아래 1 · 맨 위 19), id=`A-L1-{n}`
+- 2~4번 라인 확장용 `buildVerticalLineZones` + `A_LINES` 구조 준비 / B~E 대기
+- dashboard PAGE_META 설명 A~E동 반영
+- 실측: Playwright 19칸, order 19…1, slot 88×168, console error 0
+- 다음: 사용자 2·3·4번 라인 품목 수 지정 후 동일 양식 추가
+
+
 ### 매일 출고데이터 동기화 cron
 - [정상] `manage.py daily_outbound_sync` (Python313, `VF-new - 복사본/backend`)
 - DB 최신(전): 2026-08-13 → 동기화 후: **2026-08-14** / 오늘 2026-08-16 / 기준일 2026-08-14~
