@@ -8,6 +8,14 @@
 - 변경 파일: `obsidian/06-Wiki-시스템/Wiki/자기사고/거울형-보고서/2026-06-26-거울형-주간보고서.md` (신규, +38)
 - 잔존: `log.md` 미추적 (이번 sync 종료 시점에 기록용으로 수정됨 — 다음 sync 사이클에서 정리 예정)
 
+### 2026-08-16 14:45 — VF2 Project Nightly 자가 점검
+- 백엔드/프론트 기동 확인 (API 6개 엔드포인트 200 OK)
+- DB 핵심 3개 테이블 데이터 존재 (outbound_records 489K, production_logs 15K, inventory_baseline 4K)
+- **운영 침묵 69일** — production_logs 최신 2026-06-09
+- **디스크 83% WARNING 초과** — 29일간 +11%p 재가속
+- 마스터 테이블 4개 비어있음 (master_specs, inventory_items, machine_plans, machine_users)
+- 파일: Hermes/자가-학습-Cron/VF2-Project-Nightly-20260816.md
+
 ###
 
 ## 2026-06-26
@@ -290,3 +298,43 @@
 - 오늘 생성된 의사결정 파일 0건
 
 ###
+
+## 2026-08-11 (화)
+
+### 16:00~17:30 — VF-new 로케이션 전역 검색 구현
+- 모든 페이지에서 로케이션 코드로 검색 → 해당 로케이션 품목 표시
+- Backend: ?location= param on master/specs + inventory/integrated
+- Frontend: isLocationPattern() 유틸, inventory-table 정확일치 부스트
+- 커밋: 939fa69, 473b1ae, 7c4af42, 44fa627
+
+### 16:40 — VF 3개월 미출고 자동 동기화 + 수동 지정 보존
+- _sync_vf_no_outbound_to_db: OFF 방향 sync 제거 (수동 지정 보존)
+- spec-edit-dialog: "VF 3개월 미출고" 버튼 추가
+
+### 17:30 — KPP MCP 서버 py3.11 venv 전환
+- py3.13+pydantic_core → py3.11 venv (VF와 동일 패턴)
+- Hermes config: command=venv/python.exe 직접 실행
+- 게이트웨이 재시작 필요
+
+### 17:45 — MCP v2 업데이트 분석 (Bloom AI 영상)
+- FastMCP→MCPServer, Sampling/Roots deprecated, WebSocket 제거
+- 현재 VF/KPP MCP: stdio → 영향 없음, SDK v1→v2 마이그레이션 하위호환
+
+### 14:00 — LS 14시 통합 루프 (cron)
+- VF API: date=2026-08-14 data=[] (신선·빈값, stale 아님)
+- LS 조회(ls_automation): 로그인 성공 welcomePage, VF67_H **0건**
+- 템플릿 Batch Create(90626/90628/90269): **실패** — create 경로 Keycloak 고착 / WEB-GATEWAY-SESSION 미확보
+- ls_orders_2026-08-14.json = []
+- ls_watch supervisor: 15:00 대기 중
+- skill ls-coupang: not found (skipped)
+
+## 2026-08-16 (일)
+
+### 14:10 — LS 14시 통합 루프 (cron)
+- VF API: date=2026-08-16 data=0 (신선·빈값, stale 아님)
+- LS 로그인(patchright): 성공 welcomePage, 쿠키 12개 저장
+- 사전 조회 VF67_H: 0건 → 템플릿 Batch Create(90626/90628/90269) **200 성공**
+- 재조회: 3건 (SUBMITTED) — 29466212(90269/3호차), 29466213(90626/1호차), 29466214(90628/2호차)
+- ls_orders_2026-08-16.json: 3건 (plate/driver null — 배차 전 상태)
+- VF 출차관리: 0건 → 추가 등록 대상 없음
+- skill ls-coupang: not found (skipped) — playwright-automation / vf-dispatch-request 참조로 대체

@@ -1,0 +1,95 @@
+# OmniRoute Hermes /model 목록 정리 (2026-08-09)
+
+## 문제
+Telegram `/model`에서 OmniRoute 선택 시 `/v1/models` 라이브 디스커버리로 **289개** 모델이 노출되어 실사용 확인이 불가능.
+
+## 조치
+`C:\Users\kis\AppData\Local\hermes\config.yaml` → `providers.omniroute`:
+
+```yaml
+providers:
+  omniroute:
+    base_url: http://localhost:20128/v1
+    discover_models: false   # 라이브 /v1/models 덮어쓰기 차단
+    models:                  # dict = allowlist + context_length
+      auto/best-chat: {context_length: 1048576}
+      ...
+```
+
+Hermes 피커 검증 (`list_picker_providers`): **omniroute 13개만 표시**.
+
+## 실동작 테스트 (chat/completions, stream=false)
+PASS 13 / FAIL 0
+
+| 모델 | 결과 | 비고 |
+|------|------|------|
+| auto/best-chat | OK | 라우팅 |
+| auto/best-fast | OK | 라우팅 |
+| auto/cheap | OK | 라우팅 |
+| auto/best-free | OK | 라우팅 |
+| auto/coding | OK | 라우팅 |
+| xao/grok-4.5 | OK | xAI OAuth (현재 기본) |
+| xao/grok-4.3 | OK | xAI OAuth |
+| zai/glm-4.7-flash | OK | Z.AI API |
+| cw/claude-sonnet-4-6 | OK | Claude Web |
+| felo/felo-chat | OK | Felo free |
+| felo/felo-search | OK | Felo free |
+| oc/big-pickle | OK | OpenCode free |
+| oc/nemotron-3-ultra-free | OK | OpenCode free |
+
+## 제외 (실패 사유)
+| 모델/계열 | 실패 |
+|-----------|------|
+| qwen-web/* | empty content |
+| zai/glm-5.x | 429 Insufficient balance |
+| claude-web haiku | 429 rate limit |
+| gemini-web/* | playwright 모듈 경로 오류 500 |
+| zai-web/* | 403 Not authenticated |
+| tllm/* | 403 Vercel IP block |
+| ddgw/* | 418 anti-abuse |
+| aug/* | 502 auggie CLI 미설치 |
+| oc/deepseek-v4-flash-free 등 | 403 insufficient_quota |
+| pepper/* | 502 |
+
+## 활성 OmniRoute 연결 (storage.sqlite)
+- claude-web, gemini-web, grok-cli, qwen-web, xai-oauth, zai, zai-web = active
+- kimi-coding = credits_exhausted
+
+## 반영
+- 백업: `config.yaml.bak.omniroute_fix`
+- 게이트웨이 재시작 후 Telegram `/model`에서 omniroute 13개 확인
+- 스모크 결과: `~/.hermes/cache/omniroute_curated_probe_20260809.json`
+
+## 관련
+- 스킬: `omniroute-gateway`, `hermes-provider-troubleshooting`
+- fact_store #65 갱신
+
+
+## 2026-08-10 추가 — Telegram retry backoff + 일일 스모크
+
+### Telegram `Working — error retry backoff` 원인
+실측 로그 (`errors.log` 2026-08-10 00:46):
+1. primary `omniroute` / `xao/grok-4.5` → **HTTP 503** `chat_admission_busy`
+2. fallback `custom` OpenCodex `alibaba-token-plan-intl/qwen3.6-flash` → **HTTP 429** token-plan 1-week quota exhausted (reset **2026-08-16 02:59 UTC**)
+3. Hermes `Retrying API call in **600s**` → 텔레그램에 Working/backoff 표시, 실질 무응답
+
+### 조치
+- default model → **xai-oauth / grok-4.5** (직접 SuperGrok)
+- fallback 교체: OpenCodex flash 제거 → OmniRoute `auto/best-chat` → `zai/glm-4.7-flash` → `felo/felo-chat` → `xai-oauth/grok-4.5`
+- 일일 cron **f27aea7bb126** `0 7 * * *` no_agent script=`omniroute_daily_smoke.py`
+  - PASS 모델만 `providers.omniroute.models` 재기록 (`discover_models:false` 유지)
+  - 리포트: `~/.hermes/cache/omniroute_daily_smoke_latest.json`
+- 2026-08-10 01:02 스모크: PASS 13 allowlist, FAIL qwen-web empty content
+
+### 게이트웨이
+config 변경 후 **gateway 재시작** 필요 (텔레그램 세션 반영).
+
+
+## 2026-08-10 — 매일 03:00 패키지 업데이트+재시작
+
+- cron job_id: `2587522b4350`
+- schedule: `0 3 * * *`
+- script: `AppData/Local/hermes/scripts/omniroute_daily_update_restart.py` (no_agent)
+- 절차: `npm install -g omniroute` → kill `:20128` → `node --max-old-space-size=4096 .../dist/server-ws.mjs` → `GET /v1/models` health
+- 로그: `logs/omniroute-update.log`, 리포트: `cache/omniroute_daily_update_latest.json`
+- 관련: 07:00 모델 스모크 `f27aea7bb126` (별개)

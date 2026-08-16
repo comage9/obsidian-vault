@@ -1,3 +1,193 @@
+###
+
+## 2026-08-16
+
+### A동 배치 적용: 1111 slot순 L1~5
+- [적용] 첫열 로케이션 순 1~5번 라인 · 실배치105 스냅샷 유지 · rank-a-v2 · 미배치19
+
+
+### VF-new 제품배치도 A동 — 실배치 스냅샷·복구 가이드
+- [문서] `물류/VF/제품배치도-A동-이력-복구-20260816.md` + VF-new `docs/product-display/A동-배치-변경이력-복구가이드-20260816.md`
+- [스냅샷] 현재 실배치 제품번호 **105개** JSON/TXT (사용자 호명) — 복구 SoT
+- [대비] UI 계획v1(순위56칸) vs 실배치105 · 일렬 2~3품목 원칙 기록
+- [다음] 실배치→칸 매핑 / 미배치·B동
+
+
+### VF-new 제품 배치도 A동 1번 라인
+- [수정] `frontend/client/src/pages/product-display.tsx` — A~E형→**A~E동**, 페이지 확대, **세로 슬롯(초기 렉 칸)** 양식
+- A동 1번 라인 로케이션 **1~19** (맨 아래 1 · 맨 위 19), id=`A-L1-{n}`
+- 2~4번 라인 확장용 `buildVerticalLineZones` + `A_LINES` 구조 준비 / B~E 대기
+- dashboard PAGE_META 설명 A~E동 반영
+- 실측: Playwright 19칸, order 19…1, slot 88×168, console error 0
+- 다음: 사용자 2·3·4번 라인 품목 수 지정 후 동일 양식 추가
+
+
+### 매일 출고데이터 동기화 cron
+- [정상] `manage.py daily_outbound_sync` (Python313, `VF-new - 복사본/backend`)
+- DB 최신(전): 2026-08-13 → 동기화 후: **2026-08-14** / 오늘 2026-08-16 / 기준일 2026-08-14~
+- 결과: **신규 228건, 갱신 0건** (exit 0) — 전부 `2026-08-14` (08-15·08-16 시트 데이터 없음)
+- DB 검증: `OutboundRecord` ge 08-14 = 228 / total = 256753
+- Auto-Watcher: downloads 스캔, 신규 차량 3대 등록
+
+## 2026-08-15
+
+### 매일 출고데이터 동기화 cron
+- [정상] `manage.py daily_outbound_sync` (Python313, `VF-new - 복사본/backend`)
+- DB 최신: 2026-08-13 → 오늘 2026-08-15 / 기준일 2026-08-13~
+- 결과: **신규 0건, 갱신 224건** (exit 0)
+- Auto-Watcher: downloads 스캔, 신규 차량 3대 등록
+- [참고] 전일(8/14)은 OmniRoute admission 503으로 미실행 → 금일 정상 회복
+
+### VF-go 이관: S 완결 + T1–T5
+- [완료] **S3** machine 패리티 — Django vs Go 9케이스 일치, POST `/plans`→405 맞춤, API_MAP machine ✅ · **S 시리즈 완결**
+- [완료] **T1–T4** delivery — 읽기 3종+hourly POST 구현/패리티, notes+prediction 스키마 LOCKED (recent_28·cum>2500·Unknown/기타)
+- [진행] **T5** notes 구현 — `internal/db/delivery.go` + `http/delivery/handlers.go` + router, build/vet/test PASS · Claude 위임 후 Hermes **라이브 curl 마감 미완** → CURRENT_TASK=T5🟡 → 다음 T6 prediction
+- [참고] skill refs: `vf-go-migration/references/t-series-status-and-gates-20260815.md`, `t5-notes-impl-and-delegation-guards.md`
+
+### Cron 운영 결과 (8/15)
+- [정상] OmniRoute 03:00 업데이트+재시작 `2587522b4350` — v3.8.49 latest 유지, health ok (pid 재기동)
+- [참고] OmniRoute 07:00 스모크 `f27aea7bb126` — 재기동 직후 `:20128 DOWN`으로 probe skip
+- [정상] Wiki 용량 검증 `d3349950eecd` — git pack 4.54 MiB / wiki 0.98 MiB
+- [부분] LS 14시 통합 `8a776545148d` — WEB-GATEWAY-SESSION OK, 템플릿 3건 SUBMITTED(90626/90628/90269) Batch 스킵 · VF 5176 DOWN·오늘 ls-data 없음 · **ls-coupang 스킬 부재** 지속 (상세는 파일 말미 14:06 entry)
+- [실패] LS PDF 인쇄 `8c57a12b627d` 16:30 — 쿠키 파일 없음 (`…/ls-coupang/references/coupang_cookies_browser.txt`)
+- [다음] ls-coupang 스킬·쿠키 복원, T5 curl 마감, VF 5176 기동 후 출차 동기화
+
+## 2026-08-14
+
+### VF 로케이션 정비·공간 확장 계획 수집
+- [자료섭취] `Sources/텍스트/2026-08-14_보노하우스-VF-로케이션-정비-공간확장-보고.txt` 원문 보존 / 이유: 사용자 보고서 + 운영팀 구두 브리핑 / 다음: 현장 정비 실행
+- [문서화] `물류/VF/로케이션-정비-공간확장-감사대비-20260814.md` 생성 — 1:1 로케이션·임시 이동(전산 미입고)·외부 확장, 현황 875/773/403/370, 다음달 랜덤 감사·계약해지 리스크
+- [갱신] index.md 물류 33→34, VF 3→4, total pages 184→185
+- [업데이트] 공간 확보 방안 추가: 슬림 서랍장 파레트→수작업 적재, 와이드·저출고 모던플러스 2~3품목 연결 바깥 배치, 야외 추가계약 블로커, 벌크·칵투스 공간 필요 / 이유: 사용자 구두 보완 / 다음: 야외 계약·현장 전환 실행
+- [업데이트] 출고 많은 순 정리 + 저출고 개별 적재; 미출고·잔여 재고 반출(A) vs 보관+자리(B) 미결 결정 기록 / 이유: 사용자 구두 보완 / 다음: A/B 결정 후 자리 배정
+- [업데이트] 실행 계획: VF 3개월 미출고→FC 우선 전환, VF 출고 상위 순 파레트 재배치, 그 외 다품종 파레트 / 이유: 사용자 확정 방향 / 다음: 통합 보고서 Output
+- [output] `Output/2026-08-14/VF-로케이션-정비-공간확장-통합보고서.md` 통합 보고서 생성 / 이유: 사용자 보고서 형태 요청 / 다음: A/B·야외계약·FC 전환 실행
+
+### VF-go 이관: S2 완료
+- [완료] S2 machine PIN/plans Go 구현 — `internal/db/machine.go` + `http/machine/handlers.go` + router, curl 17시나리오 PASS (login/users/plans/apply/delete)
+- [함정] identity desync → INSERT `MAX(id)+1`; token timestamp `%.6f` (과학표기 방지); apply → production_logs
+- [다음] CURRENT_TASK=**S3** machine 패리티 (실측 진행 중, 미완)
+
+### OmniRoute 통로 확장
+- [시스템] `~/.omniroute/.env` → `OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT=3` (기본 1→3), 재시작 후 health 200 (v3.8.49)
+- [이유] 텔레그램+로컬 Hermes 동시 사용 시 admission 503 완화 / 다음: 잔여 503 시 무료 모델 한도 점검
+
+### Cron 운영 결과·차단 (8/14)
+- [실패] 매일 출고데이터 동기화 `7fb0ae1fa347` 09:03 — agent HTTP **503** admission busy (`Structurally heavy chat…`) → 동기화 미실행
+- [실패] LS 14시 통합 `8a776545148d` — VF 출차 **0건**(신선·빈값), LS 조회 0건·템플릿 Batch Create **Keycloak 고착**/WEB-GATEWAY-SESSION 미확보, **ls-coupang 스킬 부재** 지속
+- [실패] LS PDF 인쇄 `8c57a12b627d` 16:30 — 쿠키 파일 없음 (`…/ls-coupang/references/coupang_cookies_browser.txt`)
+- [정상] OmniRoute 03:00 업데이트+재시작 OK (이미 3.8.49 latest, pid health ok) · Wiki 용량 검증 OK (git pack 4.54 MiB)
+- [참고] OmniRoute 07:00 스모크 — 당시 :20128 DOWN으로 probe skip (03:00 재기동 이후 별도 이슈 아님으로 기록)
+- [다음] 사용자 LS 수동 로그인·쿠키/스킬 복원 + 출고 sync 재실행(503 회피 또는 no_agent 경로)
+
+## 2026-08-13
+
+### VF-new 전산재고: 장기 미발주 + 비고 수정
+- [기능] BarcodeMaster `is_long_term_no_order` 추가 (migration 0038) — 수동 설정 시 critical(위험) 집계 제외, 상단 카드 '장기 미발주 요청 품목' 별도 집계
+- [수정] 비고(notes) 표기: MasterSpec 우선 + BarcodeMaster 폴백, inventory/unified 응답에 notes·is_long_term_no_order·is_no_outbound_3m 포함
+- [다음] 모바일 inventory/enhanced 탭 UI(재고현황·VF 재고조사) 가시성 요청 미완 / finish_type 저장 롤백 이슈 조사 중(R003750270003 테스트 중단)
+
+### VF-go 이관: U1–U3 완결 + S1 스키마 확정
+- [완료] U1 inventory/unified 확장 · U2 PATCH `/api/inventory/unified/{_id}` · U3 barcode-master/master-specs notes·장기미발주 패리티 — **U 시리즈 완결** (build/vet/test + curl 검증)
+- [완료] S1 machine PIN/plans 스키마 확정 (7 API, machine_users 10col/91행, machine_plans 18col/2행, PIN SHA-256·5회실패→5분잠금, 함정 9건)
+- [다음] CURRENT_TASK=**S2** machine PIN/plans Go 구현 → S3 parity
+
+### Claude Code → OmniRoute 위임 설정
+- [시스템] `~/.claude/settings.json` ANTHROPIC_BASE_URL=http://127.0.0.1:20128, MODEL=auto/best-coding (OmniRoute 라우팅 확인)
+- [함정] subagent 600s 타임아웃 반복(deleg_35e3429d, deleg_da0b1d54) — 한 소단위만 짧게 위임 권장. U1 실제 완료는 Hermes 직접 검증 경로
+
+### LS 14시 통합 cron 재실패 (8/13)
+- [차단] ls-coupang 스킬 유실 + LS Keycloak OAuth 미인증(쿠키 없음, API 302) — 8/4·8/12에 이은 동일 차단
+- [상태] VF 5176 정상·work_date=8/13, 출차 차량 0건 → 등록 대상 없음. 수동 LS 로그인·쿠키 재발급 필요
+
+## 2026-08-12
+
+### Hermes OmniRoute config.yaml 최적화 + Gateway 재시작
+- config.yaml auxiliary 역할 16개 중 3개 모델 교체: skills_hub→aug/glm-5.2, approval→pplx-web/pplx-grok-4.5, mcp→oc/deepseek-v4-flash-free
+- 미지정 10개 역할 auto/best-fast로 채움, 백업 `config.yaml.bak.20260812_192623` 보존
+- OmniRoute 실제 목록 458개 중 16/16 존재 확인 (glm-5.2, pplx-grok-4.5, deepseek-v4-flash-free 모두 ✅)
+- Gateway PID 9664 → **9356** 재시작 (19:56 시작, config 수정 19:28 이후 → 새 구성 로드 확정)
+- Scheduled Task(Hermes_Gateway) 정상 등록
+
+### OmniRoute CLI 에이전트 감지 버그 진단
+- `/api/cli-tools/detect` (구버전, ~/.hermes/config.yaml) → Hermes Agent ✅ configured: true
+- `/api/cli-tools/all-statuses` (신규 동적 감지, HERMES_HOME/config.yaml) → Hermes Agent ❌ not_configured
+- **원인**: OmniRoute v3.8.49 내 `checkToolConfigStatus()` 파일 읽기/문자열 검색 버그. 두 config 파일 모두 `provider: omniroute` + 포트 20128 정상 포함
+- **영향**: 표시 문제만. 실제 Hermes Agent는 OmniRoute/auto/best-free로 정상 동작 중 (이 세션 자체가 증명)
+- 수정 불가 (OmniRoute 소스 코드 내부). 03:00 cron 업데이트에서 패치 가능성
+
+### LLM-wiki 스킬(v2.3.0) 검증 + Gateway 재시작
+- 스킬 구조 확인: SKILL.md(31,291B) + references 5개 + scripts 3개(migrate_wikilinks.py, validate.sh, vault_gate.py)
+- 실제 Wiki Vault: **E:\hermes-backup\obsidian\06-Wiki-시스템\Wiki-okf** (154개 md) — Wiki/는 껍데기, 별개
+- vault_gate.py 경로 결정 3단계: ①WIKI_PATH env ②~/.wiki_location ③OS 기본값 ~/wiki
+- Gateway PID 9664 실행 확인 후 재시작 (sleep 8 후 상태 확인)
+
+### 매일 출고데이터 동기화 cron 정상 완료
+- 명령: `manage.py daily_outbound_sync` (Python313)
+- DB 최신 날짜 2026-08-10 → 오늘 2026-08-12 기준
+- **신규 211건 추가, 기존 220건 갱신** (기준일 2026-08-10~), Auto-Watcher 신규 차량 3대 등록
+- Exit code 0, 정상 종료
+
+### LS 14시 통합 크론 — 데이터 0건 + 근본 차단 2건
+- VF 출차관리 데이터: **0건** (서버 5176 정상, 8/12 ls_count=0, vehicles=[]) → 등록 대상 없음
+- **차단 ① ls-coupang 스킬 유실**: skills/automation/ls-coupang/ 디렉토리 및 coupang_cookies_browser.txt 쿠키 파일 모두 없음 → 인증우회·템플릿 Batch Create 실행 불가 (Skill-First Lock 위반)
+- **차단 ② LS 인증 단절**: 회로차단 ls-daily 8/4 기록 — Keycloak 자격증명 거부 2회 + 쿠키파일 7/1 만료(302) → 8월 초부터 폼 인증 깨짐
+- 복구 필요: ls-coupang 스킬 복원 + LS Coupang 로그인 재수립 (Keycloak 자격증명 + 쿠키 재발급)
+
+### FC 입고 단가 업로드 반영 누락 원인 확인 시작
+- 파일: `C:\Users\kis\Downloads\Coupang_Stocked_Data_List(2026-08-01~2026-08-12).xlsx`
+- 증상: 8/3 입고 데이터 있는데 막대 그래프는 8/10,8/11,8/12만 표기, 다른 기간도 동일 현상
+- Pre-flight Tool-First Auto-Recall 시작: 스킬·위키·세션·fact_store 병렬 확인 중 (진행 중, 결론 대기)
+
+## 2026-08-11
+### VF-new 검색: 로케이션 전역 검색 구현
+- Backend: ?location= on master/specs + inventory/integrated
+- Frontend: isLocationPattern() + inventory-table 정확일치 부스트
+- 커밋: 939fa69, 473b1ae, 7c4af42, 44fa627
+
+### VF 3개월 미출고: 수동 지정 보존
+- _sync_vf_no_outbound_to_db: OFF 방향 sync 제거
+- spec-edit-dialog: "VF 3개월 미출고" 버튼
+
+### KPP MCP 서버 py3.11 venv 전환
+- py3.13 pydantic_core → py3.11 venv
+- Hermes config: command=venv/python.exe 직접 실행, PYTHONPATH env 추가
+- 게이트웨이 재시작 필요
+
+### MCP v2 업데이트 분석 (Bloom AI 영상)
+- FastMCP→MCPServer, Sampling/Roots deprecated, WebSocket 제거
+- 현 VF/KPP: stdio → 영향 없음, v1→v2 하위호환
+
+### 재고 현황: 비고(notes) 툴팁 컬럼
+- inventory-table: notesMap (barcodeMasterData 매핑)
+- '비고' 컬럼: notes 있으면 '📝 내용 있음' + title 툴팁
+- 커밋: 01ff5f0
+
+## 2026-08-10
+### VF MCP 서버 추가
+- 경로: `E:/coding/skill/VF/vf-mcp-server`
+- tools: status/departure/regions/plt/print_ls/print_kpp/stock/production
+- Hermes `mcp_servers.vf` 등록. Gateway 재시작 필요.
+- wiki-graph args 문자열 버그 → list 수정
+
+### KPP MCP v2 보안 + Py3.11 재생성
+- mcp 버전 상한 `<2` + venv Python 3.11.7 (3.13에서 pydantic_core 깨짐 방지), tools 4/4 검증
+- 문서: `의사결정/KPP-MCP-v2-보안-20260810.md`
+
+### 출력 이력 PrintLog
+- LS/KPP 출력 시 PrintLog 자동 저장 + `GET /departure/api/print-logs` + 대시보드 🖨️ 패널
+- 문서: `의사결정/출력-이력-PrintLog-20260810.md` (커밋 998a094)
+
+### 전산재고 개선
+- VF 마스터 비단종 전산재고 목록 포함, 미출고=부족 분류, 행 수정=제품마스터 SpecEditDialog 연동 (커밋 c7cc4f4/ec1e7d4/a87f412)
+
+### KPP PBM140 다중센터 by_both
+- 타센터 전표 보존 + 차량번호 매칭으로 VF 신규등록/수정 (호차만 보지 않음, 커밋 48b64e8)
+
+### OmniRoute cron 2종 등록
+- 03:00 패키지 업데이트+재시작 (2587522b4350), 07:00 일일 스모크 (f27aea7bb126, `omniroute_daily_smoke.py`)
+- Telegram retry backoff(600s) 원인 수정 — 문서: `Hermes/OmniRoute-Hermes-모델목록-정리-20260809.md`
+
 # 작업 로그
 
 ## 2026-05-28
@@ -430,6 +620,7 @@
   - 의사결정/ 폴더: 신규 로컬 생성 0건
   - Git working tree: clean
 
+<<<<<<< HEAD
 ## 2026-08-16
 
 ### 14:43 — VF2 Production Plan Nightly 자가 점검 (cron 48144ff13cee, 58일만 실행)
@@ -440,3 +631,145 @@
 - 🆕 **신규 3건**: 프론트엔드 포트 5174 미가동, DB 스키마 9→28개 확장, 2026-07-04 401 인증 오류 1건
 - 보고서: `Hermes/자가-학습-Cron/VF2-Production-Plan-Nightly-20260816.md`
 - Skip: `vf2-production-plan-conventions` 단일 스킬, `mandatory-verification` 스킬 부재 → umbrella `vf2` + references 우회
+=======
+## 2026-08-02
+
+### 19:40 — create | 의사결정/LLM-Wiki-시스템-구축-계획서-20260802.md
+- Wiki 구축 계획서 작성 (실행 전 문서). SSOT 권장=Wiki-okf. Phase 0~5.
+- 근거: llm-wiki + wiki-workflow + 실측 경로. Telegram 장세션 장애 반영.
+- 다음: 사용자 Phase 승인 후 진행.
+
+### 20:15 — update | Phase 1 완료: 경로·포인터 고정
+- vault_gate.py line 1 stray `>` 제거 (SyntaxError 수정)
+- ~/.wiki_location 생성 → E:\hermes-backup\obsidian\06-Wiki-시스템\Wiki-okf
+- Hermes .env에 WIKI_PATH 추가
+- Wiki/README.md 리다이렉트 안내 생성
+- 검증: vault_gate.py → "Wiki vault: E:\hermes-backup\obsidian\06-Wiki-시스템\Wiki-okf" ✅
+- 다음: Phase 2 (SCHEMA·index·log 정비)
+
+### 20:30 — update | Phase 2 완료: SCHEMA·index·log 정비
+- SCHEMA.md 개정: Domain "K.I. Trainer" → "보노하우스 VF + 물류 + Hermes 운영"
+- Tag Taxonomy 7그룹 재편 (시스템/생산/물류/트레이딩/지식/품질/상태)
+- Frontmatter: 신뢰도(EXTRACTED|INFERRED) + updated 필드 추가
+- index.md: 누락 38건 추가, 고아 1건(에이전트-루프-텔레그램-연동) 제거
+- index 헤더: 140→155 페이지, 2026-08-02 갱신
+- Sources/텍스트/ 폴더 생성
+- 검증: disk 155 = index 149 + system 3 + infra 3 → missing 0, stale 0 ✅
+- 다음: Phase 3 (이중 트리 정리)
+
+### 20:45 — update | Phase 3 완료: 이중 트리 정리
+- AppData\Local\hermes\.wiki_location 보강 (Phase 1 경미 보완)
+- only_okf 11건 → Wiki-obsidian에 cp -n 단방향 복사 (덮어쓰기 0)
+- 역방향 only_obsidian: 0건
+- Wiki/ README 리다이렉트 유지 (Phase 1 생성분)
+- junction 생략 (빈 Wiki/ 현행 유지)
+- okf 삭제·덮어쓰기 없음 ✅
+- 다음: Phase 4 (워크플로우 가동)
+
+### 21:00 — ingest | Phase 4 워크플로우 스모크
+- Source: Sources/텍스트/wiki-smoke/2026-08-02-phase4-smoke.txt 생성
+- /ingest → 의사결정/Wiki-Phase4-워크플로우-스모크-20260802.md (신규)
+- /output → Output/2026-08-02/wiki-ssot-한줄요약.md (신규)
+- index.md: +1줄 (의사결정), 헤더 155→156
+- Daily Maintenance: 헤더·신규만 갱신 (대규모 재번호 없음)
+- push: 사용자 승인 대기
+
+### 21:15 — lint | Phase 5 완료: Lint·Graph·온보딩
+- Lint: broken 41 (레거시, 미수정), orphan 4 (정상), index missing 4→0 수정
+- Hub top10: 카르파티-LLM-Wiki(6) > 구축계획서(4) > 하네스-장기기억(4)
+- 용량: Wiki 0.81MB, Git pack 3.98MiB ✅
+- 온보딩: 운영원칙/Wiki-SSOT-온보딩-20260802.md 신규
+- index: 156→160 (lint리포트+온보딩+지시서3)
+- push: 사용자 승인 대기
+
+### 21:30 — ingest | 개념/VF-go-이관-현황-20260802.md
+- VF-go Django→Go 이관 현황 요약 (4차 N1, 누적 40소단위 완료)
+- Source: E:/coding/VF-go/docs/handoff-tasks/INDEX.md
+- index +1 (개념 섹션), 헤더 161
+
+### 21:45 — ingest | 운영원칙/VF-제품번호-조회규칙-20260802.md
+- 제품 번호=로케이션 파생 규칙 + 양방향 조회 방법 + 약칭=카테고리 매핑
+- index +1, 헤더 162
+
+### 22:00 — ingest | 개념/Knowledge-Graph-확장도구-후보-20260802.md
+- 영상(1DEh042Rovg) 분석: Gbrain + nashsu LLM Wiki 앱 후보 기록
+- 현재 불필요, 500페이지 이상 시 검토. index +1, 헤더 163
+
+## [2026-08-03] ingest | 개념/AI-Agent-Stack-Harness-Loop-Graph-20260803.md
+- 영상(9WOpQqSO5aA, Cloud Codes) 분석: Harness→Loop→Graph 올바른 구축 순서
+- 우리 시스템 대비 표 포함 — 이미 준수, Graph는 의도적 보류. index +1, 헤더 164
+
+## [2026-08-03] ingest | 개념/디스코드-하네스-대시보드-컨텍스트-폴더봇-20260803.md
+- 영상(v40AFadpg4w, AI 치트키) 저장 — 검토 대기. index +1, 헤더 165
+
+## [2026-08-03] ingest | Hermes/OpenCodex-사용설정-ClaudeCode-위임-20260803.md
+- OpenCodex 2.10.0 업데이트 + Claude Code 위임 가능 실측 검증. index +1, 헤더 166
+
+## [2026-08-03] create | 의사결정/클로드코드-교재-적용-20260803.md
+- s2 교재 적용: 글로벌+ki-ai-trader CLAUDE.md 신설, 접수표 5칸 템플릿 스킬화. index +1, 헤더 167
+
+## 2026-08-03 20:30 — KPP+LS 새로고침 크론(6a2267104bab) error 수정
+- 원인: scripts/refresh_ctp.py 파일 누실(디스크에 없음, rc=2) + Hermes venv에 websocket-client 미설치
+- 조치: 스크립트 재작성(CDP WebSocket Page.reload 방식, /json/reload는 Chrome 150에서 404), Hermes venv에 websocket-client 1.9.0 설치
+- 검증: cronjob run → last_status ok (rc=0)
+- 잔여 이슈: WPPS 세션 만료 → 리로드 시 로그인 페이지로 전환됨. LS 탭 미열림
+
+## 2026-08-03
+- [의사결정] `의사결정/VF-출차관리-권역별-수량-음성합산-입력-20260803.md` — 사용자: 권역별 수량을 말하면 파싱·합산·DB 저장. 요구사항+제안 문서화 (검토중). / 이유: 구현 전 요구사항 확정 / 다음: 약어 G 모호성·저장경로·날짜명시 확정 후 구현
+- [업데이트] `의사결정/VF-출차관리-권역별-수량-음성합산-입력-20260803.md` 확장 — 저사양 모델용 실행 매뉴얼(Runbook) 추가: 권역 합산 입력 6단계 + LS 인쇄 + KPP 인쇄(전제조건 포함). / 이유: 저사양 모델도 사용자 말 듣고 대신 입력·인쇄 가능하게 / 다음: 약어G·저장경로 확정 후 실사용
+- [확정] 권역 약어·저장경로 확정 — G=GMH, 미들/M=MIDDLE, 저장=VF-new 원본(E:\coding\VF-new) 경로. 문서 status→확정. / 이유: 사용자 지시 / 다음: 실사용 테스트
+- [Hermes] `Hermes/DeepSeek-V4-Flash-모델-추가-20260803.md` 신규 — flash-0731 모델 추가 실측(403→404→200 OK), 추론모델 max_tokens 함정(4096 설정), config 수술적 패치+백업. 저사양 모델 역할 분담: 메인=qwen3.8, 단순작업=flash-0731. / 이유: 저사양 모델로 권역입력 등 단순 작업 대행 / 다음: 실사용
+- [정리] A안 환경 정리 — Hermes v0.19.1 업데이트(681 commits behind 경고 해소, 게이트웨이 재시작), 크론 7종 삭제→총 6종 잔존(출고동기화+업무 5종), 미사용 스킬 13종 아카이브(django-go-api-migration은 VF-go 직결로 유지). / 이유: 사용자 지시 A안 / 다음: 없음
+- [수정] fallback_providers 402 원인 규명+교체 — DeepSeek 공식 API 직접 연결이 잔액 $2.91 소진으로 402. `/model`에서 flash 선택 시 이 고장 항목이 잡혀 발생. 동작 검증된 `qwen3.6-flash`(OpenCodex)로 교체(백업 config.yaml.bak.20260803-4). flash-0731 자체는 정상(200 OK). / 이유: 고장 fallback 제거 / 다음: 게이트웨이 재시작 후 반영 (사용자 요청 대기)
+- [검증] KPP+LS 새로고침 크론(6a2267104bab) — 20:30 수정 후 23:06 자동 실행 silent 정상 통과(rc=0), 수정 유효 확인. LS 감시 크론(4c8d8807617e)도 정상
+
+- [결정] `의사결정/VF-제품번호-저사양모델-조회대책-20260804.md` 신규 — v4-flash가 제품번호 조회 실패(위키 미확인+빈 inventory_items 보고) 원인 분석. A=lookup 스크립트(검증: 2115번=북트롤리 화이트5단 51개, 178번=옷정리트레이 44개), B=rules.json 키워드 라우팅 추가, C=MEMORY 현재고 SoT 정정(master/specs current_stock), D=master_specs 제품번호 컬럼(Claude Code 위임 예정). / 이유: 저사양 모델 회수 실패 재발 방지 / 다음: D 위임, 게이트웨이 재시작(rules.json 반영)
+- [완료] VF 제품번호 저사양모델 조회대책 A/B/C/D 전체 완료 — A=lookup 스크립트(2115번=51개/178번=44개 실측), B=rules.json 키워드 라우팅, C=MEMORY 현재고 SoT 정정, D=master_specs product_number 컬럼(마이그레이션 0036/0037 적용+push, 프론트 컬럼 추가 tsc 검증). 문서: 의사결정/VF-제품번호-저사양모델-조회대책-20260804.md
+## 2026-08-04 14:00 — ❌ LS 14시 통합 루프 실패 (ls-daily 크론)
+- 증상: LS 세션 완전 만료. 쿠키파일(7/1) HTTP 302, CDP Chrome LS 미로그인(Keycloak 리다이렉트)
+- Keycloak 자동 로그인 시도 2회 실패: "사용자 이름 또는 비밀번호가 유효하지 않습니다" (mokicom/.bashrc 저장 비밀번호)
+- 부수 발견: ls-coupang 스킬 부재(8/3 정리 시 삭제 추정, .archive에도 없음), cron 프롬프트가 여전히 참조
+- 오늘 VF 출차관리 데이터 0건(14:02 기준) — 등록 대상 자체도 아직 없음
+- 조치: breaker.json 실패 기록, LS 로그인 탭(9222) 열어둠. 사용자 조치 필요: 비밀번호 변경 확인 또는 수동 1회 로그인
+
+- [추가] KPP 인쇄 저사양 모델 Runbook 보강 — vf_kpp_print.py 원클릭 스크립트(plt 저장→검증→CDP 확인→인쇄 5단계 자동). rules.json [VF-KPP-인쇄] 라우팅 추가. V4-flash 실패 사례(LS 파싱 오해) 방지용 / 문서: 의사결정/VF-출차관리-권역별-수량-음성합산-입력-20260803.md §5
+- [신규] 운영원칙/VF-작업-카탈로그-저사양모델-라우팅-20260804.md — VF 요청 10종 분류(스크립트 명령 매칭표). 저사양 모델=카탈로그 읽고 매칭된 명령만 실행, 우회 탐색 금지. rules.json 개별규칙 2개를 [VF-작업-라우팅] 1개로 통합. / 이유: V4-flash 실패 2건 + 저사양 모델 확대 운영 / 다음: 출고수량 조회 스크립트화(우선순위 1)
+- [개념] 개념/칸반-멀티에이전트-사람없이-굴러가는-AI팀-20260804.md 신규 — chutzrit 영상(qaGbNkFXiP8) 분석: 칸반으로 에이전트 팀 연결, 오케스트레이터 분배, 크론 자동 도착. 판정: Loop 단계 핸드오프 자동화 실전편, 도입은 시기상조(병렬 워크스트림 부재), 저사양 모델 카탈로그 선행 필요 / 다음: 검토 대기
+
+## 2026-08-09
+
+### KPP 인쇄도 printto 벡터
+- `backend/kpp_session.py` `_print_pdf_file` GDI 150dpi 폐기 → 벡터 회전+printto
+- 검증: 3호차 PLT16 → `printto 벡터 전송` 확인
+
+
+### LS 인쇄 printto 벡터 확정
+- 코드: VF-new `backend/departure/views.py` `_print_pdf_on_server` — GDI 비트맵 폐기, ShellExecute printto만
+- Wiki §4 / 카탈로그 §4 / README §6.0d / 스킬 departure-dispatch-system 반영
+- 검증: 3호차 API → `✅ 서버 printto 전송` 확인
+
+- [Hermes] `Hermes/OmniRoute-Hermes-모델목록-정리-20260809.md` 신규 — Telegram /model OmniRoute 289개 정리. providers.omniroute.discover_models:false + 실동작 13개만 고정. chat 스모크 PASS 13. / 이유: 실사용 불가 목록 과다 / 다음: 게이트웨이 재시작 후 Telegram 확인
+
+## 2026-08-10
+- [Hermes] OmniRoute 일일 스모크 cron `f27aea7bb126` + Telegram retry backoff 수정(fallback OpenCodex 429 제거, default=xai-oauth/grok-4.5). 문서 `Hermes/OmniRoute-Hermes-모델목록-정리-20260809.md` 보강. / 이유: 600s backoff 무응답 / 다음: gateway 재시작
+
+## 2026-08-10
+- [Hermes] OmniRoute 매일 03:00 업데이트+재시작 cron `2587522b4350` 등록 — script=omniroute_daily_update_restart.py (npm -g update → :20128 kill → server-ws.mjs start → /v1/models health). 기존 07:00 스모크 `f27aea7bb126`와 분리. / 이유: 사용자 지시 / 다음: 내일 03:00 자동 실행
+
+- [업데이트] VF-new 입고 제한 수량(limitQty) Master↔Scanner 공유 + Scanner 4일 옵션 / 2026-08-15 / migrations 0039, barcode_scanner, spec-edit-dialog, restrictions API
+
+### 14:06 — LS 14시 통합 루프 (cron)
+- 날짜: 2026-08-15
+- skill ls-coupang: not found (skipped) → playwright-automation + vf-dispatch-request + ls_automation 사용
+- VF API 5176: DOWN (http 0) — ls-data 신선도 검증 불가 / 오늘 ls_data_2026-08-15.json 없음
+- ls_data.json: date=2026-06-21 stale (등록 근거로 미사용)
+- LS 로그인: OK (WEB-GATEWAY-SESSION)
+- LS VF67_H 조회: **3건 SUBMITTED** (이미 템플릿 등록됨)
+  - 90626 → truckRequestId 29443495 (1호)
+  - 90628 → truckRequestId 29443496 (2호)
+  - 90269 → truckRequestId 29443494 (3호)
+- Batch Create: **스킵** (already 3)
+- plate/기사: 미배정 (SUBMITTED)
+- 산출: `E:/coding/VF-new/backend/departure/data/ls_orders_2026-08-15.json`, `ls_14h_loop_2026-08-15.json`
+- 추가 VF 차량 등록: VF 다운 + 오늘 데이터 없음 → 불가
+>>>>>>> 0975b4e0e6c8eaa3501056e0a88f05c8015eb653
