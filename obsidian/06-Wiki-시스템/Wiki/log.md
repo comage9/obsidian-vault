@@ -311,3 +311,22 @@
 ### 17:45 — MCP v2 업데이트 분석 (Bloom AI 영상)
 - FastMCP→MCPServer, Sampling/Roots deprecated, WebSocket 제거
 - 현재 VF/KPP MCP: stdio → 영향 없음, SDK v1→v2 마이그레이션 하위호환
+
+### 14:00 — LS 14시 통합 루프 (cron)
+- VF API: date=2026-08-14 data=[] (신선·빈값, stale 아님)
+- LS 조회(ls_automation): 로그인 성공 welcomePage, VF67_H **0건**
+- 템플릿 Batch Create(90626/90628/90269): **실패** — create 경로 Keycloak 고착 / WEB-GATEWAY-SESSION 미확보
+- ls_orders_2026-08-14.json = []
+- ls_watch supervisor: 15:00 대기 중
+- skill ls-coupang: not found (skipped)
+
+## 2026-08-16 (일)
+
+### 14:10 — LS 14시 통합 루프 (cron)
+- VF API: date=2026-08-16 data=0 (신선·빈값, stale 아님)
+- LS 로그인(patchright): 성공 welcomePage, 쿠키 12개 저장
+- 사전 조회 VF67_H: 0건 → 템플릿 Batch Create(90626/90628/90269) **200 성공**
+- 재조회: 3건 (SUBMITTED) — 29466212(90269/3호차), 29466213(90626/1호차), 29466214(90628/2호차)
+- ls_orders_2026-08-16.json: 3건 (plate/driver null — 배차 전 상태)
+- VF 출차관리: 0건 → 추가 등록 대상 없음
+- skill ls-coupang: not found (skipped) — playwright-automation / vf-dispatch-request 참조로 대체
