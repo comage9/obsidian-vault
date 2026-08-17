@@ -92,6 +92,19 @@
 - DB 검증: `OutboundRecord` ge 08-15 = 208 / total = 256961 (256753 + 208)
 - Auto-Watcher: downloads 스캔, 신규 차량 3대 등록
 
+### LS PDF 인쇄 cron (8/17 16:30)
+- [실패] `8c57a12b627d` — 쿠키 파일 없음 (`…/ls-coupang/references/coupang_cookies_browser.txt`) → **ls-coupang 스킬 부재 8/3 이후 지속** (8/15·8/16·8/17 **3일 연속 동일**), LS 로그인 필요
+
+### VF2 Production Plan Nightly (8/17 05:40, `48144ff13cee`)
+- [점검] 백엔드·프론트 **DOWN 14시간 43분** (포트 5176/5174 미Listen, 프로세스 0건) — **systemd 미등록 6회째 CRITICAL** (다음 재부팅 시 즉시 재발) · 운영 침묵 **70일째** · 디스크 83%→**73% (-10%p) WARNING 해소**
+- [문제] 보고서가 `E:\hermes-backup\Hermes\자가-학습-Cron\VF2-Production-Plan-Nightly-20260817.md` (**Wiki-okf 밖**)에 저장·커밋됨 (de4dfce) — 어제(8/16)는 Wiki-okf 안에 저장됐음 / 다음: VF2 Nightly cron 보고서 경로 복원
+
+### OmniRoute 일일 스모크 (8/17 07:00)
+- [참고] `f27aea7bb126` — :20128 DOWN으로 probe skip (03:00 재시작 직후, 8/16과 동일 패턴)
+
+### dsh(DeepSeek Harness) + OmniRoute API Key
+- [결정] `의사결정/DSH-OmniRoute-API-Key-문제-20260817.md` — dsh의 openai-completions 라우트는 **API 키 없이는 요청 자체를 시작 안 함** (`No API key for provider: omniroute`, OmniRoute는 무인증이지만 dummy 키 필요). 해결: `apiKeyEnv: OMNIROUTE_API_KEY` + credentials에 값 추가, 또는 Web UI에서 아무 키 입력 / 다음: dsh에서 OmniRoute 모델 사용 시 적용
+
 ## 2026-08-16
 
 ### A동 순위 확장 배치
