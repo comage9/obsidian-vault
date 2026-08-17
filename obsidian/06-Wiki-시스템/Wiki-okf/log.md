@@ -7,7 +7,7 @@
 - **임시 보관함(Staging)**: 별도 키 영속, 수정 모드 전용 패널, 넣기(칸 선택→버튼 / 셀 드래그→드롭존), 꺼내기(빈 칸=배치, 점유 칸=스왑 자동 보관), 총괄 우측 패널에도 배치.
 - **총괄 우측 패널 개선**: 배치/미배치 분류 아코디언(클릭→세부 펼침), 넓이 340→560px, 자리이탈 품목 클릭→이동 모드(미니맵 칸 클릭 배치+기존 제품 자동 자리이탈), 미배치로 삭제 버튼.
 - **제품 배정 다이얼로그 검색**: 번호/이름/분류/바코드/로케이션 검색 → 선택 배정, 기존 제품 자동 자리이탈(overflow) 이동.
-- **수정**: pointerWithin+autoScroll=false로 크로스동 오드롭 소실 방지, StagingPanel 컴포넌트 분리(useDroppable DndContext 컨텍스트 수신), ZoneCell 단일 useDraggable(이중 등록 충돌 제거), 자동 저장 useEffect.
+- **수정**: pointerWithin+autoScroll=false로 크로스동 오드롭 소실 방지, StagingPanel 컴포넌트 분리(useDroppable DndContext 컨텍스트 수신), ZoneCell 단일 useDraggable(이중 등록 충돌 제거), 자동 저장 useEffect. 배치/미배치 테이블 품목명 좌측 정렬(gap-2, 우측 정렬→번호 옆).
 - **임시 보관함 (Staging)**: 별도 키 vf_product_display_staging_v1(unique 배열, 자동 저장). 수정 모드 그리드 아래 📦 패널. 넣기=칸 선택→버튼/드래그→드롭존, 꺼내기=빈 칸 배치/점유 칸 스왑(자동 보관). 비수정=숨김(데이터 유지).
 - 검증: A동 1번→C-R5-C1 append · 1↔3 스왑 · 새로고침 유지 · B/C/D 키 보존 · 점유 A칸 거부 + tsc 0
 - 커밋: 1762207(보관함) · a671393(크로스동) · 백업 태그: backup-20260817-pre-cross-dong (417a28a)
