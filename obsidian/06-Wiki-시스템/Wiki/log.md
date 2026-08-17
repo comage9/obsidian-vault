@@ -413,3 +413,13 @@
 - 오늘 생성된 의사결정 파일 0건
 
 ###
+### 14:02 — LS 14시 통합 루프 (cron)
+- VF API: up (5176), 오늘(8/17) ls-data 0건 (신선·빈값, stale 아님) / 어제 파일 date=2026-08-16 data=3
+- LS 로그인(patchright): 성공 welcomePage, WEB-GATEWAY-SESSION 확보
+- 사전 조회 VF67_H(8/17): 0건 → 템플릿 Batch Create(90626/90628/90269) **200 성공**
+- 재조회: 3건 (SUBMITTED) — 29489030(90269/3호차/11T), 29489031(90626/1호차/5T), 29489032(90628/2호차/5T)
+- ls_orders_2026-08-17.json: 3건 (plate/driver null — 배차 전 상태)
+- VF 출차관리: 0건 → 추가 등록 대상 없음 (경기89바1454 매칭 대상 없음)
+- Circuit Breaker: ls-daily/ls-loop-14h 모두 🟢 OK
+- skill ls-coupang: not found (skipped) — vf-dispatch-request + 기존 _ls_14h_loop2 스크립트 재사용
+
