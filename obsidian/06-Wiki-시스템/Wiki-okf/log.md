@@ -947,3 +947,4 @@
 - [참고] OmniRoute 스모크 `f27aea7bb126` 07:00 — :20128 DOWN probe skip (**3일 연속**, 03:00 재시작 직후 패턴) · 03:00 업데이트+재시작 ok · 입고제한 04:00 재계산 ok
 - [정상] Wiki 용량 검증 `d3349950eecd` 12:00 — git pack 4.88 MiB / wiki 0.99 MiB
 ###
+- [정상] Nous Portal 로그인 완료 (2026-08-19) — comage9@gmail.com Free 구독 · OAuth 디바이스 코드 GMDV-AX79 승인 · 현재 모델 OmniRoute 유지(Skip) · auth.json providers/nous 저장 · 전환 시 `hermes model` → Portal. 상세: 의사결정/Nous-Portal-로그인-완료-20260819.md
