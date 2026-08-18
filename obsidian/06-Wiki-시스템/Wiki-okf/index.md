@@ -226,3 +226,4 @@
 - [SCHEMA](SCHEMA.md) — Wiki 구조 및 규칙 (domain, conventions, frontmatter, tag taxonomy)
 - [log](log.md) — 작업 로그 (append-only)
 - [index](index.md) — 현재 페이지
+- [[제품배치도-A동-카테고리순-재배치-20260818]]
