@@ -939,4 +939,10 @@
 - `daily_outbound_sync` 실행: **신규 229건, 갱신 0건** (기준일 2026-08-16~)
 - DB 최신 날짜 8/15 → 8/16 (총 257,190건)
 - [Auto-Watcher] downloads 폴더에서 신규 차량 3대 등록
+
+### Cron 운영 결과 (8/18)
+- [정상] LS 14시 통합 `8a776545148d` — 템플릿 3건(90626/90628/90269) 이미 등록 → `skip_create_already_3` (29511798~800 SUBMITTED, VF67_H→BUC1_H) · **patchright 로그인 성공** (`departure/data/_ls_14h_loop_2026-08-18.py`, WEB-GATEWAY-SESSION 확보) · VF ls-data 8/16 3건
+- [실패] LS PDF 인쇄 `8c57a12b627d` 16:30 — 쿠키 파일 없음 (`…/ls-coupang/references/coupang_cookies_browser.txt`) → **4일 연속 (8/15~18)** · 14시 통합은 로그인 성공하므로 16:30 스크립트의 쿠키 경로/방식 불일치가 복구 포인트
+- [참고] OmniRoute 스모크 `f27aea7bb126` 07:00 — :20128 DOWN probe skip (**3일 연속**, 03:00 재시작 직후 패턴) · 03:00 업데이트+재시작 ok · 입고제한 04:00 재계산 ok
+- [정상] Wiki 용량 검증 `d3349950eecd` 12:00 — git pack 4.88 MiB / wiki 0.99 MiB
 ###
