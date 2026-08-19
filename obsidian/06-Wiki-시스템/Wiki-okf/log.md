@@ -948,3 +948,4 @@
 - [정상] Wiki 용량 검증 `d3349950eecd` 12:00 — git pack 4.88 MiB / wiki 0.99 MiB
 ###
 - [정상] Nous Portal 로그인 완료 (2026-08-19) — comage9@gmail.com Free 구독 · OAuth 디바이스 코드 GMDV-AX79 승인 · 현재 모델 OmniRoute 유지(Skip) · auth.json providers/nous 저장 · 전환 시 `hermes model` → Portal. 상세: 의사결정/Nous-Portal-로그인-완료-20260819.md
+- [정상] 제품배치도 시프트 버그 + 검색 정렬 수정 (2026-08-19) — aSeq 물리 순서 정렬(구버전 L6→L1 역순 시프트 버그) + 칸 비우기 시 빈칸 메우기(emptied) + 검색 정확일치 우선 정렬 · 브라우저 실측 '28' 검색 → 28 1위 + 위치 A동 L6-14 표시 · 커밋 4937ed9. 상세: 물류/VF/제품배치도-시프트버그-검색정렬-20260819.md
