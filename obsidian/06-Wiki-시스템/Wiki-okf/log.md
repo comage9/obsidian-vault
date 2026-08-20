@@ -999,3 +999,5 @@
   | research-bot | auto/cheap | "연구·웹검색 전담, web_search·web_extract, 출처 URL+요약" | ✅ |
 - **프로필 목록**: default(running) + 3봇(stopped, 정상 — 데스크톱 클릭 시 활성화)
 - **함정 기록**: Description 필드 안 채우면 Create Agent 버튼이 렌더되지 않음 (다이얼로그 40→41 요소로 증가 후 나타남)
+- [수정] Hermes Desktop 앱 재빌드 확정 (2026-08-20) — Orca Router vs OmniRoute 논의 중 데스크톱 앱이 8월 19일 이전 빌드(옛 플러그인, "Move to group"만 존재)를Loaded 중임을 소스 확인(plugin.js 날짜 + desktop-build-stamp.json=2026-08-19). 사용자 "응" 확정으로 `hermes desktop --force-build` 진행 예정. 함정: `hermes update`는 CLI/소스만 갱신하고 데스크톱 재빌드는 실행하지 않음 (검증 없이 말한 내 실수).
+- [문서] `의사결정/리눅스-헤르메스-봇-데스크톱-설치-지시서-20260820.md` — 우분투 머신에 Windows 곰너이 환경(v0.20.1) 동일 구성 복제용 지시서. Hermes Agent 설치→API 키/.env→OmniRoute 원격/자체 설치 2경로→데스크톱+Bot Mode→플러그인. 5분2 우분투 머신 대상.

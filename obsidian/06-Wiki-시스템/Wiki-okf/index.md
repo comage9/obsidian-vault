@@ -1,7 +1,7 @@
 # Wiki Index
 
 > 콘텐츠 카탈로그 — 모든 Wiki 페이지를 분류별로 정리
-> 마지막 갱신: 2026-08-19 | 전체 페이지: 213
+> 마지막 갱신: 2026-08-20 | 전체 페이지: 214
 
 ---
 
@@ -169,7 +169,8 @@
 - [의사결정/Wiki-Phase1-2-검증-및-Phase3-지시서-20260802](의사결정/Wiki-Phase1-2-검증-및-Phase3-지시서-20260802.md) — Phase 1-2 검증 및 Phase 3 지시서
 - [의사결정/Wiki-Phase3-검증-및-Phase4-지시서-20260802](의사결정/Wiki-Phase3-검증-및-Phase4-지시서-20260802.md) — Phase 3 검증 및 Phase 4 지시서
 - [의사결정/Wiki-Phase4-검증-및-Phase5-지시서-20260802](의사결정/Wiki-Phase4-검증-및-Phase5-지시서-20260802.md) — Phase 4 검증 및 Phase 5 지시서
-- [의사결정/Wiki-Phase5-lint-리포트-20260802](의사결정/Wiki-Phase5-lint-리포트-20260802.md) — Phase 5 Lint 리포트 (broken 41, orphan 4, hub top10)
+- [의사결정/Wiki-Phase5-lint-리포트-20260802](의사결정/Wiki-Phase5-lint-리포트-20260802.md) — Wiki Phase5 린트 리포트
+- [의사결정/리눅스-헤르메스-봇-데스크톱-설치-지시서-20260820](의사결정/리눅스-헤르메스-봇-데스크톱-설치-지시서-20260820.md) — 우분투 머신에 Windows Hermes Bot Mode 환경 복제용 설치 지시서 (2026-08-20)
 
 ## Hermes (19)
 - [Hermes/OmniRoute-Hermes-모델목록-정리-20260809](Hermes/OmniRoute-Hermes-모델목록-정리-20260809.md) — OmniRoute /model 목록 정리, 실동작 13개 고정 (2026-08-09)
