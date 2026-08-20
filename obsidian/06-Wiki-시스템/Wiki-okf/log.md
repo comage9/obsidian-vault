@@ -983,3 +983,19 @@
 - **SOUL.md 작성**: VF 운영봇 전용 성격·운영원칙·담당영역(VF MCP 도구 표)·필수절차(Tool-First/3중완료/번호규칙) + 에이전트 간 메시징 섹션 유지
 - **검증**: `hermes profile list` → vf-op: auto/cheap 인식 ✅ · `hermes -p vf-op chat -q` 원샷 → SOUL 성격 반영 응답 정상 ✅
 - **함정 기록**: (1) cua_driver 0.17 — key_combo(ctrl+a)는 Chrome_WidgetWin_1에서 background 불가, foreground 에스컬레이션 필수 (2) IME 타이밍 — 한글 SendInput 타입 시 마지막 글자 누락 가능(vf-ops→vf-op, 보노하우스…→보노하), profile.yaml/SOUL.md는 파일 직접 수정으로 보정 (3) typed-browser cua_browser_state는 Electron 렌더러 PID 인식 불가
+
+### 09:30 — Hermes Desktop Bot Mode: 추가 봇 2개 생성 + 3봇 동작 테스트
+- **code-bot 생성**: Name=code-bot, Title=Coding Bot, Description="Coding assistant for development tasks"
+  - 모델 고정: omniroute/**auto/coding** (코딩 최적화 라우팅)
+  - SOUL.md: 코딩 전담 성격 — Claude Code 위임 우선, build·curl 검증, D7/D8 원칙, TDD
+- **research-bot 생성**: Name=research-bot, Title=Research Bot, Description="Research and web search assistant"
+  - 모델 고정: omniroute/**auto/cheap** (비용 효율)
+  - SOUL.md: 연구·웹검색 전담 — web_search/web_extract, 출처 URL 명시, 요약 정확
+- **3봇 원샷 테스트 결과** (전부 OmniRoute 경유, SOUL.md 성격 반영 확인):
+  | 봇 | 모델 | 응답 요약 | 상태 |
+  |---|---|---|:---:|
+  | vf-op | auto/cheap | "보노하우스 VF-new 출차·재고·생산·권역·KPP/LS 인쇄 전담" | ✅ |
+  | code-bot | auto/coding | "코딩 전담, Claude Code(CLI) 위임, build·curl·검증" | ✅ |
+  | research-bot | auto/cheap | "연구·웹검색 전담, web_search·web_extract, 출처 URL+요약" | ✅ |
+- **프로필 목록**: default(running) + 3봇(stopped, 정상 — 데스크톱 클릭 시 활성화)
+- **함정 기록**: Description 필드 안 채우면 Create Agent 버튼이 렌더되지 않음 (다이얼로그 40→41 요소로 증가 후 나타남)
