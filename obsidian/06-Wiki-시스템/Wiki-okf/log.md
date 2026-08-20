@@ -973,3 +973,13 @@
 - 결과: **신규 216건, 갱신 211건** (기준일 2026-08-18~)
 - Auto-Watcher: 다운로드 폴더 스캔 → 신규 차량 3대 등록
 - **함정 기록**: Hermes `PYTHONPATH`에 `hermes-agent/venv/Lib/site-packages`(cp311 numpy)가 주입되어 Python 3.13 실행 시 numpy `ModuleNotFoundError` 발생. 해결: `env -u PYTHONPATH -u PYTHONHOME .venv/Scripts/python.exe`로 실행. 시스템 Python313 직접 실행 시 항상 PYTHONPATH 제거 필요.
+
+### 09:00 — Hermes Desktop Bot Mode: VF 운영봇(@vf-op) 생성
+- **Bot Mode 활성화**(직전 세션 완료) → [+ New Agent] 다이얼로그로 용도별 봇 생성
+- **VF 운영봇 생성**: Name=vf-op, Title=VF 운영봇, Description="VF-new 보노하우스 출차·재고·생산 관리 전담"
+  - 데스크톱 New Agent 다이얼로그로 생성 (computer_use foreground typing — key_combo는 포그라운드 필수, AX 라벨은 React placeholder 표시 한계)
+  - 프로필 디렉토리 `profiles/vf-op/` = default 완전 복제(config.yaml, .env, memories, skills, mcp_servers 모두 동일)
+- **모델 고정**: `model.default` alibaba-coding-plan/qwen3.7-plus → **omniroute/auto/cheap** (비용 효율 라우팅)
+- **SOUL.md 작성**: VF 운영봇 전용 성격·운영원칙·담당영역(VF MCP 도구 표)·필수절차(Tool-First/3중완료/번호규칙) + 에이전트 간 메시징 섹션 유지
+- **검증**: `hermes profile list` → vf-op: auto/cheap 인식 ✅ · `hermes -p vf-op chat -q` 원샷 → SOUL 성격 반영 응답 정상 ✅
+- **함정 기록**: (1) cua_driver 0.17 — key_combo(ctrl+a)는 Chrome_WidgetWin_1에서 background 불가, foreground 에스컬레이션 필수 (2) IME 타이밍 — 한글 SendInput 타입 시 마지막 글자 누락 가능(vf-ops→vf-op, 보노하우스…→보노하), profile.yaml/SOUL.md는 파일 직접 수정으로 보정 (3) typed-browser cua_browser_state는 Electron 렌더러 PID 인식 불가
