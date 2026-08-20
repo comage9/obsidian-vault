@@ -965,3 +965,11 @@
 - [참고] OmniRoute 스모크 `f27aea7bb126` 07:00 — :20128 DOWN probe skip (**4일 연속**, 03:00 재시작 직후 패턴) · 03:00 업데이트 크론: latest=installed 3.8.49 확인 후 설치 스킵
 - [정상] Wiki 용량 검증 `d3349950eecd` 12:00 — git 4.88 MiB / wiki 0.99 MiB · KPP+LS 30분 새로고침·차량등록 감시 silent 정상
 - [문서] index.md 보강 — 오늘 생성 문서 3건 등록(의사결정/Nous-Portal-로그인-완료-20260819, 물류/VF/제품배치도-시프트버그-검색정렬-20260819, 물류/VF/제품번호-파생규칙-교정-20260819)
+
+## 2026-08-20
+
+### 07:00 — 출고 데이터 동기화 (cron `3ee5a6f5e8f1`)
+- `manage.py daily_outbound_sync` (Python313 → `.venv`, `VF-new - 복사본/backend`)
+- 결과: **신규 216건, 갱신 211건** (기준일 2026-08-18~)
+- Auto-Watcher: 다운로드 폴더 스캔 → 신규 차량 3대 등록
+- **함정 기록**: Hermes `PYTHONPATH`에 `hermes-agent/venv/Lib/site-packages`(cp311 numpy)가 주입되어 Python 3.13 실행 시 numpy `ModuleNotFoundError` 발생. 해결: `env -u PYTHONPATH -u PYTHONHOME .venv/Scripts/python.exe`로 실행. 시스템 Python313 직접 실행 시 항상 PYTHONPATH 제거 필요.
